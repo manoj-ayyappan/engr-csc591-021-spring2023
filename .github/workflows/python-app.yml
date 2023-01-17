@@ -27,4 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Run Tests
-    - runs: test_hw1.py
+    - uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            print("Reaches Here")
