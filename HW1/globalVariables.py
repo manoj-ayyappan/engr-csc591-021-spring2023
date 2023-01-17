@@ -5,7 +5,7 @@ script.lua : an example script with help text and a test suite
 USAGE:   python3 run.py  [OPTIONS] [-g ACTION]
 OPTIONS:
   -d  --dump  on crash, dump stack = false
-  -g  --go    start-up action      = all
+  -g  --go    start-up action      = data
   -h  --help  show help            = false
   -s  --seed  random number seed   = 937162211
 ACTIONS:
