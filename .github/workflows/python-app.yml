@@ -27,6 +27,4 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Run Tests
-      with:
-          script: |
-            print('Works')
+    - runs: test_hw1.py
