@@ -30,6 +30,8 @@ def cli(options):
 
 def main(options, help, funs=None, k=None, saved={}, fails=0):
     global Seed
+    passed = 0
+    failed = 0
     t = {}
     for k,v in cli(settings(globalVariables.help)).items():
         options[k] = v
@@ -46,15 +48,17 @@ def main(options, help, funs=None, k=None, saved={}, fails=0):
                 if funs[what]() == False:
                     fails += 1
                     print("❌ fail:",what) 
+                    failed += 1
                 else: 
                     print("✅ pass:",what)
+                    passed += 1
         for k,v in globals().items():
             if k not in b4:
                print(f"#W ?{k} {type(v)}")
-        # os._exit(fails) 
+        return passed,failed
 
 os.system('python3 ./examples.py')
-main(globalVariables.the, globalVariables.help, examples.examples_added)
+
 # print("------> 1 "+ str(examples.eg_function_1()))
 # print("------> 2 "+ str(examples.eg_function_2()))
 # print("------> 3 "+ str(examples.eg_function_3()))
