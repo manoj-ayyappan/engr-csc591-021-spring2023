@@ -22,7 +22,37 @@ classes={}
 
 args = {}
 args["dataMembers"] = "iD"
-args["functions"] = ["new","add","mid", "div"]
+
+def new(i):
+    i.n   = 0
+    i.has = {}
+    i.most, i.mode = 0, None
+
+def add(i,x): 
+    if x != "?":
+        i.n = i.n + 1 
+        i.has[x] = 1 + (i.has[x] or 0)
+        if i.has[x] > i.most:
+            i.most,i.mode = i.has[x], x 
+
+def mid(i,x):
+    return i.mode 
+
+def div(i,x, fun,e): 
+    def fun(p):
+        return p*math.log(p,2)
+    e=0; 
+    for _,n in enumerate(i.has):
+        e = e + fun(n/i.n) 
+    return -e 
+
+
+args["functions"] = {
+    "new" : lambda cls, i : new(i),
+    "add" : lambda cls : add,
+    "mid" : lambda cls : mid,
+    "div" : lambda cls : div,
+    }
 
 
 def obj(className): 
@@ -30,9 +60,8 @@ def obj(className):
         global id 
         id = id + 1
         self.iD = id
-        def method1():
-            print("hello")
-        setattr(className, 'func', classmethod(method1))
+        for key, value in arg['functions'].items():
+            setattr(classes[0], key, value)
 
 
     
@@ -61,7 +90,10 @@ def obj(className):
 
 obj("SYM")
 c1 = classes[0](args)
-c1.func()
+c1.new({})
+c1.add(1,2)
+c1.mid(2,3)
+# c1.div()
     
     
 
