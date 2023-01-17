@@ -28,6 +28,6 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run Tests
     - uses: jannekem/run-python-script-action@v1
-    - with:
-          script: |
-            print("Reaches Here")
+      with:
+        script: |
+          print("Reaches Here")
