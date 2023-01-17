@@ -1,3 +1,21 @@
+import SYM
+import NUM
+import helpers
+import strings
+import lists
+
+the,help = {},"""
+script.lua : an example script with help text and a test suite  
+(c)2022, Tim Menzies <timm@ieee.org>, BSD-2 
+USAGE:   script.lua  [OPTIONS] [-g ACTION]
+OPTIONS:
+  -d  --dump  on crash, dump stack = false
+  -g  --go    start-up action      = data
+  -h  --help  show help            = false
+  -s  --seed  random number seed   = 937162211
+ACTIONS:
+"""
+
 examples_added = {}
 
 # Register an example
@@ -29,14 +47,14 @@ def eg_function_2():
 
     Seed=the.seed
     for i in range(1, 10e3):
-        num1.add( rand(0,1) )
+        num1.add( helpers.rand(0,1) )
 
     Seed=the.seed
     for i in range(1, 10e3):
-        num2.add( rand(0,1) )
+        num2.add( helpers.rand(0,1) )
 
-    m1,m2 = rnd(num1.mid(),10), rnd(num2.mid(),10)
-    return m1==m2 and 0.5 == rnd(m1,1)
+    m1,m2 = helpers.rnd(num1.mid(),10), rnd(num2.mid(),10)
+    return m1==m2 and 0.5 == helpers.rnd(m1,1)
 
 add_example("rand", "generate, reset, regenerate same", eg_function_2)
 
@@ -46,7 +64,7 @@ def eg_function_3():
     sym=SYM()
     for x in ["a","a","a","a","b","b","c"]:
         sym.add(x)
-    return "a"==sym.mid() and 1.379 == rnd(sym.div())
+    return "a"==sym.mid() and 1.379 == helpers.rnd(sym.div())
 
 add_example("sym","check syms", eg_function_3)
 
@@ -55,7 +73,7 @@ def eg_function_4():
     num=NUM()
     for x in [1,1,1,1,2,2,3]:
         num.add(x)
-    return 11/7 == num.mid() and 0.787 == rnd(num.div()) 
+    return 11/7 == num.mid() and 0.787 == helpers.rnd(num.div()) 
   
 add_example("num", "check nums", eg_function_4 )
 
