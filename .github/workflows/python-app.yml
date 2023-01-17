@@ -27,5 +27,4 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Run Tests
-      uses: | 
-         /HW1/test/test_hw1.py
+      uses: HW1/test/test_hw1.py
