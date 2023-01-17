@@ -1,3 +1,5 @@
+import math
+
 Seed=937162211
 
 def rint(lo,hi):

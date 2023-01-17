@@ -1,3 +1,5 @@
+import math
+
 class NUM:
     def __init__(self):
         i=0 #remove this

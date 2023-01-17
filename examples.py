@@ -3,18 +3,9 @@ import NUM
 import helpers
 import strings
 import lists
+import globals
 
-the,help = {},"""
-script.lua : an example script with help text and a test suite  
-(c)2022, Tim Menzies <timm@ieee.org>, BSD-2 
-USAGE:   script.lua  [OPTIONS] [-g ACTION]
-OPTIONS:
-  -d  --dump  on crash, dump stack = false
-  -g  --go    start-up action      = data
-  -h  --help  show help            = false
-  -s  --seed  random number seed   = 937162211
-ACTIONS:
-"""
+
 
 examples_added = {}
 
@@ -25,7 +16,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    help = help + f"  -g  {key}\t{str}\n"
+    globals.help +=  f"  -g  {key}\t{str}\n"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
@@ -35,7 +26,7 @@ def add_example(key, str, fun):
 
 # Add an example that shows settings
 def eg_function_1():
-    return oo(the)
+    return strings.oo(globals.the)
 
 add_example("the", "show settings", eg_function_1)
 
@@ -45,15 +36,15 @@ def eg_function_2():
     global Seed
     num1,num2 = NUM(), NUM()
 
-    Seed=the.seed
+    Seed=globals.the.seed
     for i in range(1, 10e3):
         num1.add( helpers.rand(0,1) )
 
-    Seed=the.seed
+    Seed=globals.the.seed
     for i in range(1, 10e3):
         num2.add( helpers.rand(0,1) )
 
-    m1,m2 = helpers.rnd(num1.mid(),10), rnd(num2.mid(),10)
+    m1,m2 = helpers.rnd(num1.mid(),10), helpers.rnd(num2.mid(),10)
     return m1==m2 and 0.5 == helpers.rnd(m1,1)
 
 add_example("rand", "generate, reset, regenerate same", eg_function_2)
@@ -77,4 +68,5 @@ def eg_function_4():
   
 add_example("num", "check nums", eg_function_4 )
 
-main(the, help, examples_added)
+# main(the, help, examples_added)
+
