@@ -55,10 +55,10 @@ def main(options, help, funs=None, k=None, saved={}, fails=0):
 
 os.system('python3 ./examples.py')
 main(globalVariables.the, globalVariables.help, examples.examples_added)
-print("------> 1 "+ str(examples.eg_function_1()))
-print("------> 2 "+ str(examples.eg_function_2()))
-print("------> 3 "+ str(examples.eg_function_3()))
-print("------> 4 "+ str(examples.eg_function_4()))
+# print("------> 1 "+ str(examples.eg_function_1()))
+# print("------> 2 "+ str(examples.eg_function_2()))
+# print("------> 3 "+ str(examples.eg_function_3()))
+# print("------> 4 "+ str(examples.eg_function_4()))
 
 
 
