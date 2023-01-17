@@ -4,9 +4,38 @@ import helpers
 import strings
 import lists
 import globals
+import os
 
 
+#Main function to be called
+def main(options, help, funs, k, saved, fails):
+    global Seed
+    saved = {}
+    fails = 0
+    for k,v in enumerate(cli(settings(help))):
+        options[k] = v
+        [k] = v
+  
+    if options.help:
+        print(help) 
+    else:
+        for what, fun in enumerate(funs):
+            if options.go == "all" or what == options.go:
+                for k, v in enumerate(saved):
+                    options[k] = v
+                    Seed = options.seed
+                    if funs[what]() == False:
+                        fails += 1
+                        print("❌ fail:",what) 
+                    else: 
+                        print("✅ pass:",what)
+        for k,v in enumerate(_ENV):
+            if not b4[k]:
+               print( f"#W ?%s %s",k,type(v))
+        os.exit(fails) 
 
+
+# Examples Added to the CLI
 examples_added = {}
 
 # Register an example
