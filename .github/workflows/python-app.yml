@@ -36,7 +36,7 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run Tests
-      run: echo ${{ env.DEVOPS_DIR }}
+      run: echo ${{ env.DEVOPS_DIR }}/test_hw1.py
       shell: sh
       
 
