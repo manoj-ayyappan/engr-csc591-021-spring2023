@@ -5,6 +5,7 @@ name: Python application
 
 on:
   push:
+  # Add Rupin's branch
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]

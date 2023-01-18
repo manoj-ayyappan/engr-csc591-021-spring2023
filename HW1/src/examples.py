@@ -6,7 +6,6 @@ import lists
 import globalVariables
 import os
 
-
 # Examples Added to the CLI
 examples_added = {}
 
@@ -24,9 +23,14 @@ def add_example(key, str, fun):
 #   return the.some.missing.nested.field
 # eg("crash","show crashing behavior", eg_function_1)
 
+
 # Add an example that shows settings
 def eg_function_1():
     return strings.oo(globalVariables.the)
+
+add_example("the", "show settings", eg_function_1)
+
+global Seed
 
 #Add an example that deals with 'random' numbers
 def eg_function_2():
@@ -45,6 +49,9 @@ def eg_function_2():
     m1,m2 = helpers.rnd(num1.mid(),10), helpers.rnd(num2.mid(),10)
     return m1==m2 and 0.5 == helpers.rnd(m1,1)
 
+add_example("rand", "generate, reset, regenerate same", eg_function_2)
+
+
 #Add an example that deals with symbols
 def eg_function_3():
     sym=SYM.SYM()
@@ -52,15 +59,14 @@ def eg_function_3():
         sym.add(x)
     return "a"==sym.mid() and 1.379 == helpers.rnd(sym.div())
 
+add_example("sym","check syms", eg_function_3)
+
+
 def eg_function_4():
     num=NUM.NUM()
     for x in [1,1,1,1,2,2,3]:
         num.add(x)
     return 11/7 == num.mid() and 0.787 == helpers.rnd(num.div()) 
   
+add_example("num", "check nums", eg_function_4 )
 
-def add_all_examples():
-    add_example("the", "show settings", eg_function_1)
-    add_example("rand", "generate, reset, regenerate same", eg_function_2)
-    add_example("sym","check syms", eg_function_3)
-    add_example("num", "check nums", eg_function_4 )
