@@ -5,8 +5,7 @@ name: Python application
 
 on:
   push:
-  # Add Rupin's branch
-    branches: [ "main" ]
+    branches: [ "main", "rupintalwar-fixparse" ]
   pull_request:
     branches: [ "main" ]
 
