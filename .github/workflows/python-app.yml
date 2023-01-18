@@ -31,7 +31,7 @@ jobs:
     - name: Check-out engr-csc591-021-Spring2023 repository
       uses: actions/checkout@v2
       with:
-        repository: engr-csc591-021-spring2023
+        repository: manoj-ayyappan/engr-csc591-021-spring2023
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
 
