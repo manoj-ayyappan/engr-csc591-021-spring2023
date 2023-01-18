@@ -7,7 +7,5 @@ passed, failed = run.main(globalVariables.the, globalVariables.help, examples.ex
 print("✅ Number of tests passing -> " + str(passed))
 print("❌ Number of tests failing -> " + str(failed))
 
-failed = 1
-
 if(failed != 0):
     sys.exit(1)
