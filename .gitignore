@@ -13,3 +13,4 @@ venv.bak/
 .DS_Store
 *.pyproj
 *.sln
+/obj/Debug

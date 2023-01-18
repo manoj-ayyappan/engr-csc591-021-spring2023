@@ -12,11 +12,10 @@ for k, v in list(globals().items()):
 def settings(s, t=None):
     if t is None:
         t = {} 
-    matches = re.finditer(r'\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)', s)
-    for m in matches:
-        k = m.group(1)
-        v = m.group(2)
-        t[k] = strings.coerce(v, None)
+    for option in re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s):
+        # Use capture groups from the regex to get option name and default value
+        k, v = option
+        t[k] = strings.coerce(v)
     return t
 
 def cli(options):
@@ -25,7 +24,7 @@ def cli(options):
         for n in range(len(sys.argv)):
             if sys.argv[n]=="-" + (k[:1]) or sys.argv[n]=="--"+ k:
                 v = v=="false" and "true" or v=="true" and "false" or sys.argv[n+1]
-    options[k] = strings.coerce(v)
+        options[k] = strings.coerce(v)
     return options
 
 def main(options, help, funs=None, k=None, saved={}, fails=0):
@@ -57,13 +56,14 @@ def main(options, help, funs=None, k=None, saved={}, fails=0):
                print(f"#W ?{k} {type(v)}")
         return passed,failed
 
-os.system('python3 ./examples.py')
+examples.add_all_examples()
 
-# print("------> 1 "+ str(examples.eg_function_1()))
-# print("------> 2 "+ str(examples.eg_function_2()))
-# print("------> 3 "+ str(examples.eg_function_3()))
-# print("------> 4 "+ str(examples.eg_function_4()))
+if __name__ == '__main__':
+    main(globalVariables.the, globalVariables.help, examples.examples_added)
+    print("Args")
+    print(sys.argv)
 
-
-
-
+print("------> 1 "+ str(examples.eg_function_1()))
+#print("------> 2 "+ str(examples.eg_function_2()))
+#print("------> 3 "+ str(examples.eg_function_3()))
+#print("------> 4 "+ str(examples.eg_function_4()))
