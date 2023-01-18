@@ -4,11 +4,10 @@ sys.path.append(sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'src')
 import run, globalVariables, examples
 
 passed, failed = run.main(globalVariables.the, globalVariables.help, examples.examples_added)
-print("Number of tests passing -> " + str(passed))
-print("Number of tests failing -> " + str(failed))
+print("✅ Number of tests passing -> " + str(passed))
+print("❌ Number of tests failing -> " + str(failed))
 
 failed = 1
 
 if(failed != 0):
-    sys.stderr.write("There are Failing Tests\n")
     sys.exit(1)
