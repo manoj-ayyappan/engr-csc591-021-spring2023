@@ -28,7 +28,7 @@ def coerce(s, fun= None):
         return float(s)
     except:
         pass
-    return fun(s.strip())
+    return fun(s.lower().strip())
 
 
     
