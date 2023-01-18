@@ -2,7 +2,6 @@ import examples
 import re
 import strings
 import sys
-import os
 import globalVariables
 
 b4={} 
@@ -24,7 +23,7 @@ def cli(options):
         for n in range(len(sys.argv)):
             if sys.argv[n]=="-" + (k[:1]) or sys.argv[n]=="--"+ k:
                 v = v=="false" and "true" or v=="true" and "false" or sys.argv[n+1]
-    options[k] = strings.coerce(v)
+        options[k] = strings.coerce(v)
     return options
 
 def main(options, help, funs=None, k=None, saved={}, fails=0):
