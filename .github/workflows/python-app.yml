@@ -31,12 +31,12 @@ jobs:
     - name: Check-out repository
       uses: actions/checkout@v2
       with:
-        repository: manoj-ayyappan/engr-csc591-021-spring2023
+        repository: manoj-ayyappan/engr-csc591-021-spring2023/HW1/test
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run Tests
-      run: python ${{ env.DEVOPS_DIR }}/HW1/test/test_hw1.py
+      run: python ${{ env.DEVOPS_DIR }}/test_hw1.py
       shell: sh
       
 
