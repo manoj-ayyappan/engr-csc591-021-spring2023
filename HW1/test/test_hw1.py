@@ -10,4 +10,5 @@ print("Number of tests failing -> " + str(failed))
 failed = 1
 
 if(failed != 0):
+    sys.stderr.write("There are Failing Tests\n")
     sys.exit(1)
