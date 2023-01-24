@@ -1,5 +1,4 @@
 import math 
-
 class SYM:
     def __init__(self):
         self.n   = 0
