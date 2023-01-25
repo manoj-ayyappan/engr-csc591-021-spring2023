@@ -11,7 +11,7 @@ def map(t, fun, u): # t; map a function `fun`(v) over list (skip nil results)
         u[k] = v 
         return u
 
-def kap(t, fun) # map function `fun`(k,v) over list (skip nil results) 
+def kap(t, fun): # map function `fun`(k,v) over list (skip nil results) 
     u = {}
     for k,v in t.items():
         v, k = fun(k, v)
