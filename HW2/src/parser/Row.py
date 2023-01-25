@@ -1,6 +1,3 @@
-class Row(object):
-    pass
-
-
-
-
+class Row():
+    def __init__(self, t):
+        self.cells = t
