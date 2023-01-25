@@ -16,15 +16,15 @@ class Data(object):
            lists.map(src, self.add)
     
     def add(self, t):
-        if self.cols:
+        if self.cols != None:
             # true if we have already seen the column names
             if hasattr(t, "cells"):
                 t = t  
             else: 
                 t = Row.Row(t) # ensure is a ROW, reusing old rows in the are passed in
             # t =ROW(t.cells and t.cells or t) # make a new ROW
-            lists.push(self.rows, t) # add new data to "i.rows"
-            self.cols.add(t)  # update the summary information in "ic.ols"
+                lists.push(self.rows, t) # add new data to "i.rows"
+                self.cols.add(t)  # update the summary information in "i.cols"
         else:
            self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
 
@@ -33,9 +33,17 @@ class Data(object):
         lists.map(init, lambda x: data.add(x))
         return data
 
-    def stats(self, what, cols, nPlaces): # reports mid or div of cols (defaults to i.cols.y)
+    def stats(self, what=None, cols=None, nPlaces=None):
+        if what == None:
+            what = "mid"
+        if cols == None:
+            cols = self.cols.y
+        if nPlaces == None:
+            nPlaces = 2
+
         def fun(k, col):
-            return col.rnd(getattr(col)[what or "mid"](col), nPlaces), col.txt 
-        return lists.kap(cols or self.cols.y, fun)
+            return round(getattr(col, what)(), nPlaces), col.txt
+        return lists.kap(cols, fun)
+
 
 

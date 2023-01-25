@@ -6,7 +6,10 @@ class Num(object):
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
         self.lo, self.hi = math.inf, -math.inf
-        self.w = -1 if self.txt.endswith("-") else 1
+        if self.txt.endswith("-"):
+            self.w = -1 
+        else: 
+            self.w = 1 
 
     def add(self, n):
         if n != "?": 

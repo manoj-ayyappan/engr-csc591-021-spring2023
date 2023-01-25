@@ -12,11 +12,12 @@ def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results)
 
 def kap(t, fun, u={}): # map function `fun`(k,v) over list (skip nil results) 
     for k,v in t.items():
+        # print("------>" + str(v.txt))
         v, k = fun(k, v)
         if k is None:
             k = len(u) + 1
         u[k] = v
-        return u
+    return u
 
 def sort(t, fun): # t; return `t`,  sorted by `fun` (default= `<`)
     sort(t, key = fun)

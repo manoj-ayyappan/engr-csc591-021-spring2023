@@ -31,22 +31,38 @@ def coerce(s):  #return int or float or bool or string from `s`
         return float(s)
     except:
         pass
-    return fun(s.lower().strip())
+    return fun(s.strip())
 
 
     return int(s) or float(s) or fun(re.match("^\s*(.-)\s*$", s))
 
+# def csv(sFilename, fun): 
+#     # call `fun` on rows (after coercing cell text)
+#     with open(sFilename) as src:
+#         t = {}
+#         i = 0
+#         fileInput = src.read()
+#         for s in re.split(",|\n", fileInput):
+#             if(s != ""):
+#                 t[i] = coerce(s)
+#                 i += 1
+#                 fun(t)
+
 def csv(sFilename, fun): 
-    # call `fun` on rows (after coercing cell text)
     with open(sFilename) as src:
         t = {}
-        i = 0
-        fileInput = src.read()
-        for s in re.split(",|\n", fileInput):
-            if(s != ""):
-                t[i] = coerce(s)
-                i += 1
+
+        while True:
+            i = 0
+            fileInput = src.readline()
+            if(fileInput):
+                for s in re.split(",", fileInput):
+                    if(s != ""):
+                        t[i] = coerce(s)
+                        i += 1   
                 fun(t)
+            else:
+                break 
 
 # function csv(sFilename,fun,    src,s,t) --> nil; call `fun` on rows (after coercing cell text)
 #   src,s,t  = io.input(sFilename)
