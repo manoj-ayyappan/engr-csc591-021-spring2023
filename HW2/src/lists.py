@@ -1,5 +1,5 @@
 def push(t, x):
-  t.append(x) 
+  t[len(t)] = x
   return x 
 
 def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results) 

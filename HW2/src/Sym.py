@@ -10,14 +10,17 @@ class Sym(object):
     def add(self, x):
         if x != "?": 
             self.n += 1 
-            self.has[x] = 1 + (self.has[x] if self.has[x] else 0)
+            if x in self.has.keys():
+                self.has[x] = 1 + self.has[x]
+            else:
+                self.has[x] = 1
             if self.has[x] > self.most:
                 self.most, self.mode = self.has[x], x 
 
     def mid(self):
         return self.mode 
     
-    def entropy(p):
+    def entropy(self, p):
         return p * math.log(p,2) 
 
     def div(self):

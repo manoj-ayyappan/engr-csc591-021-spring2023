@@ -18,7 +18,10 @@ class Data(object):
     def add(self, t):
         if self.cols:
             # true if we have already seen the column names
-            t = t.cells and t or Row(t) # ensure is a ROW, reusing old rows in the are passed in
+            if hasattr(t, "cells"):
+                t = t  
+            else: 
+                t = Row.Row(t) # ensure is a ROW, reusing old rows in the are passed in
             # t =ROW(t.cells and t.cells or t) # make a new ROW
             lists.push(self.rows, t) # add new data to "i.rows"
             self.cols.add(t)  # update the summary information in "ic.ols"

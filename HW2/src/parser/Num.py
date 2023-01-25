@@ -1,5 +1,5 @@
 import math
-import numerics
+from .. import numerics
 
 class Num(object):
     def __init__(self, at = 0, txt = ""):
@@ -8,14 +8,14 @@ class Num(object):
         self.lo, self.hi = math.inf, -math.inf
         self.w = -1 if self.txt.endswith("-") else 1
 
-    def add(self, n):
+    def add(self, n, d):
         if n != "?": 
             self.n += 1 
             d = n - self.mu
             self.mu = self.mu + d / self.n
             self.m2 = self.m2 + d * (n - self.mu)
-            self.lo = min(n, self.lo)
-            self.hi = max(n, self.hi)
+            self.lo = math.min(n, self.lo)
+            self.hi = math.max(n, self.hi)
 
     def mid(self):
         return self.mu 

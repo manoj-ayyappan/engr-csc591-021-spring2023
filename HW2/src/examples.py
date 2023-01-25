@@ -43,15 +43,20 @@ def eg_function_3():
     return 11/7 == num.mid() and 0.787 == numerics.rnd(num.div()) 
 
 def eg_function_4():
-    n=0
+    global n 
+    n = 0
     def fun(t):
-        n += len(t)
-    strings.csv(d.the.file, fun )
-
+        global n
+        n += 1
+    strings.csv(d.the.get("file"), fun )
     return n == 8 * 399
 
 def eg_function_5():
     data = Data.Data(d.the.get("file"))
+    print("-- 398 -->" + str(len(data.rows)))
+    # print("-- -1 -->" + str(data.cols.y[1].w))
+    # print("-- 1 -->" + str(data.cols.x[1].at))
+    print("-- 4 -->" + str(len(data.cols.x)))
     return len(data.rows) == 398 and data.cols.y[1].w == -1 and data.cols.x[1].at == 1 and len(data.cols.x) == 4
 
 def eg_function_6():

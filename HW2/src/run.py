@@ -62,8 +62,7 @@ examples.add_all_examples()
 if __name__ == '__main__':
     main(globalVars.the, globalVars.help, examples.examples_added)
 
-
-# print("------> 1 "+ str(examples.eg_function_1()))
-#print("------> 2 "+ str(examples.eg_function_2()))
-#print("------> 3 "+ str(examples.eg_function_3()))
-#print("------> 4 "+ str(examples.eg_function_4()))
+print("------> 1 "+ str(examples.eg_function_1()))
+# print("------> 2 "+ str(examples.eg_function_2()))
+# print("------> 3 "+ str(examples.eg_function_3()))
+# print("------> 4 "+ str(examples.eg_function_4()))
