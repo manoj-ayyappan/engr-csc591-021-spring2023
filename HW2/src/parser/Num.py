@@ -9,7 +9,7 @@ class Num(object):
         self.w = -1 if self.txt.endswith("-") else 1
 
     def add(self, n, d):
-        if x != "?": 
+        if n != "?": 
             self.n += 1 
             d = n - self.mu
             self.mu = self.mu + d / self.n

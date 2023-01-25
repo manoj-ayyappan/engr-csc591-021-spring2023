@@ -1,6 +1,7 @@
 from .. import strings
 from .. import lists
 from . import Row
+from . import Cols
 
 
 # Store many rows, summarized into columns
@@ -22,11 +23,11 @@ class Data(object):
             lists.push(self.rows, t) # add new data to "i.rows"
             self.cols.add(t)  # update the summary information in "ic.ols"
         else:
-           self.cols=COLS(t)  #  here, we create "i.cols" from the first row
+           self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
 
     def clone(self, init = {}): # return a DATA with same structure as `ii. 
         data = Data({self.cols.names})
-        map(init, lambda x: data.add(x))
+        lists.map(init, lambda x: data.add(x))
         return data
 
     def stats(self, what, cols, nPlaces): # reports mid or div of cols (defaults to i.cols.y)

@@ -2,6 +2,15 @@ def push(t, x):
   t.append(x) 
   return x 
 
+def map(t, fun, u): # t; map a function `fun`(v) over list (skip nil results) 
+    u={}
+    for k,v in t.items():
+        v,k=fun(v)
+        if k is None:
+            k = 1+len(u)
+        u[k] = v 
+        return u
+
 def kap(t, fun) # map function `fun`(k,v) over list (skip nil results) 
     u = {}
     for k,v in t.items():
@@ -10,3 +19,10 @@ def kap(t, fun) # map function `fun`(k,v) over list (skip nil results)
             k = len(u) + 1
         u[k] = v
         return u
+
+def sort(t, fun): # t; return `t`,  sorted by `fun` (default= `<`)
+    sort(t, key = fun)
+    return t
+
+def keys(t): # ss; return list of table keys, sorted
+    return sort(kap(t, lambda k,_: k ))

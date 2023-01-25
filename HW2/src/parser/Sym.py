@@ -1,7 +1,5 @@
 import math
 
-
-
 class Sym(object):
     def __init__(self, at = 0, txt = ""):
         self.at, self.txt = at , txt 
