@@ -2,6 +2,9 @@ import re
 import strings
 import sys
 
+global the
+global help
+
 the,help = {},""" 
 data.lua : an example csv reader script
 (c)2022, Tim Menzies <timm@ieee.org>, BSD-2 
