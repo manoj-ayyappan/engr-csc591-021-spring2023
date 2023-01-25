@@ -2,8 +2,7 @@ def push(t, x):
   t.append(x) 
   return x 
 
-def map(t, fun, u): # t; map a function `fun`(v) over list (skip nil results) 
-    u={}
+def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results) 
     for k,v in t.items():
         v,k=fun(v)
         if k is None:
@@ -11,8 +10,7 @@ def map(t, fun, u): # t; map a function `fun`(v) over list (skip nil results)
         u[k] = v 
         return u
 
-def kap(t, fun): # map function `fun`(k,v) over list (skip nil results) 
-    u = {}
+def kap(t, fun, u={}): # map function `fun`(k,v) over list (skip nil results) 
     for k,v in t.items():
         v, k = fun(k, v)
         if k is None:

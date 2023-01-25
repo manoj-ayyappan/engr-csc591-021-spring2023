@@ -1,7 +1,7 @@
 import re
 import lists
 
-def fmt(sControl,...): 
+def fmt(sControl, *args): 
     # emulate printf
     return sControl.format(...)
 
@@ -13,7 +13,7 @@ def o(t, isKeys):
   # convert `t` to a string. sort named keys. 
     if type(t) != "table" :
         return str(t)
-    fun = lambda (k,v): fmt(":\s \s",o(k),o(v)) if not re.search("^_", str(k))
+    fun = lambda k,v: fmt(":\s \s",o(k),o(v)) if not re.search("^_", str(k)) else None
     return "{" + " ".join(lists.map(t,o) if (len(t) > 0 and not isKeys) else lists.sort(lists.kap(t,fun))) + "}"
 
 def coerce(s):  #return int or float or bool or string from `s`
@@ -23,13 +23,23 @@ def coerce(s):  #return int or float or bool or string from `s`
         elif s1=="false":
            return False
         return s1
+    try:
+        return int(s)
+    except:
+        pass
+    try:
+        return float(s)
+    except:
+        pass
+    return fun(s.lower().strip())
+
+
     return int(s) or float(s) or fun(re.match("^\s*(.-)\s*$", s))
 
 def csv(sFilename, fun): 
     # call `fun` on rows (after coercing cell text)
-
     with open(sFilename) as src:
-        t = {}
+        t = []
         for s in src:
             t.extend([coerce(s1) for s1 in s.strip().split(",")])
             fun(t)

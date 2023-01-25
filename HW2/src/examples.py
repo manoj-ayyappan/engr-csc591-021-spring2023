@@ -1,10 +1,10 @@
 import strings
 import numerics
-import data
+import globalVars as d
 
-import parser.Num.Num as Num
-import parser.Sym.Sym as Sym
-import parser.Data.Data as Data
+import Num
+import Sym
+import Data
 
 
 
@@ -18,7 +18,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    data.help +=  f"  -g  {key}\t{str}\n"
+    d.help +=  f"  -g  {key}\t{str}\n"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
@@ -27,36 +27,36 @@ def add_example(key, str, fun):
 
 # Add an example that shows settings
 def eg_function_1():
-    return strings.oo(data.the)
+    return strings.oo(d.the)
 
 #Add an example that deals with symbols
 def eg_function_2():
-    sym = Sym()
+    sym = Sym.Sym()
     for x in ["a","a","a","a","b","b","c"]:
         sym.add(x)
     return "a" == sym.mid() and 1.379 == numerics.rnd(sym.div())
 
 def eg_function_3():
-    num = Num()
+    num = Num.Num()
     for x in [1,1,1,1,2,2,3]:
         num.add(x)
     return 11/7 == num.mid() and 0.787 == numerics.rnd(num.div()) 
 
 def eg_function_4():
     n=0
-    csv(the.file, lambda (t): n += len(t))
+    def fun(t):
+        n += len(t)
+    strings.csv(d.the.file, fun )
+
     return n == 8 * 399
 
 def eg_function_5():
-    data = Data(the.file)
-    return len(data.rows) == 398 and
-         data.cols.y[1].w == -1 and
-         data.cols.x[1].at == 1 and 
-         len(data.cols.x) == 4
+    data = Data.Data(d.the.get("file"))
+    return len(data.rows) == 398 and data.cols.y[1].w == -1 and data.cols.x[1].at == 1 and len(data.cols.x) == 4
 
 def eg_function_6():
-    data = Data(the.file)
-    for k,cols in {y=data.cols.y,x=data.cols.x}.items():
+    data = Data.Data(d.the.file)
+    for k,cols in {"y":data.cols.y, "x":data.cols.x}.items():
         print(k,"mid", strings.o(data.stats("mid",cols,2 )))
         print("", "div", strings.o(data.stats("div",cols,2)))
 

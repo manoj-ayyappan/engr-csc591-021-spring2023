@@ -1,70 +1,38 @@
-import re
 import strings
-import sys
-
-global the
-global help
-
-the,help = {},""" 
-data.lua : an example csv reader script
-(c)2022, Tim Menzies <timm@ieee.org>, BSD-2 
-USAGE:   data.lua  [OPTIONS] [-g ACTION]
-OPTIONS:
-  -d  --dump  on crash, dump stack = false
-  -f  --file  name of file         = ../etc/data/auto93.csv
-  -g  --go    start-up action      = data
-  -h  --help  show help            = false
-  -s  --seed  random number seed   = 937162211
-ACTIONS:
-"""
-b4={}
-for k,v in globals().items():
-    b4[k]=v  
-    # cache old names (so later, we can find rogues)
-
-def settings(s, t={}):
-    for option in re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s):
-        # Use capture groups from the regex to get option name and default value
-        k, v = option
-        t[k] = strings.coerce(v)
-    return t
-
-def cli(options): # t; update key,vals in `t` from command-line flags
-    for k,v in options.items():
-        v = str(v)
-    for n,x in enumerate(sys.argv):
-        if x=="-" + (k.sub(1,1)) or x=="--" + k:
-            v = v=="false" and "true" or v=="true" and "false" or sys.argv[n+1]
-    options[k] = strings.coerce(v) 
-    return options 
+import lists
+import Row
+import Cols
 
 
-# `main` fills in the settings, updates them from the command line, runs
-# the start up actions (and before each run, it resets the random number seed and settings);
-# and, finally, returns the number of test crashed to the operating system.
-def main(options,help,funs):  # nil; main program
-    saved,fails={},0
-    passed = 0
-    failed = 0
-    for k,v in cli(settings(help)).items():
-        options[k] = v
-        saved[k]=v
-    if options.help:
-        print(help) 
-    else:
-        for what in funs.keys():
-            if options.go=="all" or what==options.go:
-                for k,v in saved.items:
-                    options[k]=v
-                Seed = options.seed
-                if funs[what]()==false:
-                    fails=fails+1
-                    print("❌ fail:",what) 
-                    failed += 1
-                else:
-                    print("✅ pass:",what) 
-                    passed += 1
-        for k,v in globals().items():
-            if k not in b4:
-                print(f"#W ?{k} {type(v)}")
-        return passed,failed
+# Store many rows, summarized into columns
+class Data(object):
+    def __init__(self, src={}):
+        self.rows, self.cols = {}, None
+        if str(type(src)) == "<class 'str'>":
+            # load from a csv file on disk
+            strings.csv(src,self.add)
+        else:
+           # load from a list
+           lists.map(src, self.add)
+    
+    def add(self, t):
+        if self.cols:
+            # true if we have already seen the column names
+            t = t.cells and t or Row(t) # ensure is a ROW, reusing old rows in the are passed in
+            # t =ROW(t.cells and t.cells or t) # make a new ROW
+            lists.push(self.rows, t) # add new data to "i.rows"
+            self.cols.add(t)  # update the summary information in "ic.ols"
+        else:
+           self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
+
+    def clone(self, init = {}): # return a DATA with same structure as `ii. 
+        data = Data({self.cols.names})
+        lists.map(init, lambda x: data.add(x))
+        return data
+
+    def stats(self, what, cols, nPlaces): # reports mid or div of cols (defaults to i.cols.y)
+        def fun(k, col):
+            return col.rnd(getattr(col)[what or "mid"](col), nPlaces), col.txt 
+        return lists.kap(cols or self.cols.y, fun)
+
+

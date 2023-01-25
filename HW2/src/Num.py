@@ -1,5 +1,5 @@
 import math
-from .. import numerics
+import numerics
 
 class Num(object):
     def __init__(self, at = 0, txt = ""):
