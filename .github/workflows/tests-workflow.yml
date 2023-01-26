@@ -45,4 +45,6 @@ jobs:
     - name: Save .out files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Save *.out files
         file_pattern: 'src/*.out'
