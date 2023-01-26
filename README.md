@@ -1,7 +1,9 @@
 CSC591 Spring 2023
 
 [![Tests](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/actions/workflows/tests-workflow.yml/badge.svg)](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/actions/workflows/tests-workflow.yml)
-[![version](https://img.shields.io/github/v/release/manoj-ayyappan/engr-csc591-021-spring2023)
+![version](https://img.shields.io/github/v/release/manoj-ayyappan/engr-csc591-021-spring2023)
+
+![repo size](https://img.shields.io/github/repo-size/manoj-ayyappan/engr-csc591-021-spring2023)
 [![DOI](https://zenodo.org/badge/589767774.svg)](https://zenodo.org/badge/latestdoi/589767774)
 
 
