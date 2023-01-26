@@ -4,7 +4,7 @@ import sys, os
 
 #Getting relative file path to import needed packages
 sys.path.append(sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'src')))
-import run, globalVariables, examples
+import run, globalVars, examples
 
 # Running tests from the main function in run/py
 passed, failed = run.main(globalVars.the, globalVars.help, examples.examples_added)
