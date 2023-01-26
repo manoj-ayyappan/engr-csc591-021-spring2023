@@ -12,7 +12,7 @@ env:
   DEVOPS_DIR: devops
 
 permissions:
-  contents: read
+  contents: read|write
 
 jobs:
   build:
