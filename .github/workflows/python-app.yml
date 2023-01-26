@@ -38,7 +38,9 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run HW1 Tests
-      run: python ${{ env.DEVOPS_DIR }}/HW1/test/test_hw1.py
+      run: python ../test/test_hw1.py
+      working-directory: ${{ env.DEVOPS_DIR }}/HW1/src
       
     - name: Run HW2 Tests
-      run: python ${{ env.DEVOPS_DIR }}/HW2/test/test_hw2.py
+      run: python ../test/test_hw2.py
+      working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
