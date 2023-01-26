@@ -1,0 +1,13 @@
+{'dump': False, 'go': 'all', 'help': False, 'seed': 937162211}
+✅ pass: the
+✅ pass: rand
+✅ pass: sym
+✅ pass: num
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?main <class 'function'>
+#W ?Seed <class 'int'>
+✅ Number of tests passing -> 4
+❌ Number of tests failing -> 0
