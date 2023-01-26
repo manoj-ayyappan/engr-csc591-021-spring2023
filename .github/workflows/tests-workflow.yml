@@ -45,4 +45,4 @@ jobs:
     - name: Save .out files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        file_pattern: '${{ env.DEVOPS_DIR }}/**/src/*.out'
+        file_pattern: 'src/*.out'
