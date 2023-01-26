@@ -46,5 +46,5 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Save *.out files
-        file_pattern: 'src/*.out'
+        file_pattern: '*.out'
         disable_globbing: true
