@@ -35,11 +35,11 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run HW1 Tests
-      run: python ../test/test_hw1.py > script.out; cat script.out >> $GITHUB_OUTPUT
+      run: python ../test/test_hw1.py > script.out; cat script.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW1/src
             
     - name: Run HW2 Tests
-      run: python ../test/test_hw2.py > data.out; cat data.out >> $GITHUB_OUTPUT
+      run: python ../test/test_hw2.py > data.out; cat data.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
     
     - name: Save .out files
