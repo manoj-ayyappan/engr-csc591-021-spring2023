@@ -44,3 +44,8 @@ jobs:
     - name: Run HW2 Tests
       run: python ../test/test_hw2.py > data.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
+    
+    - name: Save .out files
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        file_pattern: '${{ env.DEVOPS_DIR }}/**/src/*.out'
