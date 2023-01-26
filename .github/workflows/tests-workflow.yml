@@ -11,9 +11,6 @@ on:
 env:
   DEVOPS_DIR: devops
 
-permissions:
-  contents: read, write
-
 jobs:
   build:
 
