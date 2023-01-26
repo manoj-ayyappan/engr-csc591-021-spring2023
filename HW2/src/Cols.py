@@ -4,8 +4,12 @@ import lists
 class Cols(object):
     def __init__(self, t):
         self.names, self.all, self.x, self.y = t, {}, {}, {}
-        for n,s in t.items():  
-            col = Sym.Sym(n,s) if s.find('^[A-Z]+') != -1 else Num.Num(n,s)
+        for n,s in t.items(): 
+            match = re.match(r'^[A-Z]', s) 
+            if match:
+                col = Num.Num(n,s)
+            else:
+                col = Sym.Sym(n,s)  
             lists.push(self.all, col)
             if not s.endswith('X'):
                 if s.endswith('+') or s.endswith('-'):
