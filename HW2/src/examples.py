@@ -58,8 +58,8 @@ def eg_function_5():
 def eg_function_6():
     data = Data.Data(d.the.get("file"))
     for k,cols in {"y":data.cols.y, "x":data.cols.x}.items():
-        print(k,"mid", strings.o(data.stats("mid",cols,2 )))
-        print("", "div", strings.o(data.stats("div",cols,2)))
+        print(k,"\tmid\t", strings.o(data.stats("mid",cols,2 )))
+        print("", "\tdiv\t", strings.o(data.stats("div",cols,2)))
 
 def add_all_examples():
     add_example("the", "show settings", eg_function_1)

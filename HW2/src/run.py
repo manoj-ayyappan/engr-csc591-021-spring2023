@@ -46,10 +46,10 @@ def main(options,help,funs):  # nil; main program
                 Seed = options.get("seed")
                 if funs[what]()==False:
                     fails=fails+1
-                    print("❌ fail:",what) 
+                    print("❌ fail:\t",what) 
                     failed += 1
                 else:
-                    print("✅ pass:",what) 
+                    print("✅ pass:\t",what) 
                     passed += 1
         for k,v in globals().items():
             if k not in b4:
