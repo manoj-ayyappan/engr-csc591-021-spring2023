@@ -42,3 +42,4 @@ jobs:
       
     - name: Run HW2 Tests
       run: python ${{ env.DEVOPS_DIR }}/HW2/test/test_hw2.py
+      working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
