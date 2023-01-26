@@ -44,3 +44,8 @@ jobs:
     - name: Run HW2 Tests
       run: python ../test/test_hw2.py > data.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
+    
+    - name: out-files
+      uses: actions/upload-artifact@v3
+      with:
+        path: ${{ env.DEVOPS_DIR }}/**/src/*.out
