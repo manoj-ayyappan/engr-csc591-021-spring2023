@@ -48,3 +48,6 @@ jobs:
         commit_message: Save *.out files
         file_pattern: '*.out'
         disable_globbing: true
+        
+    - name: List dirs
+      run: tree ${{ env.DEVOPS_DIR }}
