@@ -4,6 +4,7 @@ CSC591 Spring 2023
 ![version](https://img.shields.io/github/v/release/manoj-ayyappan/engr-csc591-021-spring2023)
 <img src=https://img.shields.io/badge/language-python-orange></img>
 ![repo size](https://img.shields.io/github/repo-size/manoj-ayyappan/engr-csc591-021-spring2023)
+<img src=https://img.shields.io/badge/License-MIT-red></img>
 [![DOI](https://zenodo.org/badge/589767774.svg)](https://zenodo.org/badge/latestdoi/589767774)
 
 
