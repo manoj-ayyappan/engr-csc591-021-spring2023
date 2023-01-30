@@ -1,5 +1,6 @@
 import strings
 import lists
+import numerics
 import Row
 import Cols
 import globalVars as g
@@ -32,7 +33,7 @@ class Data(object):
            self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
 
     def clone(self, init = {}): # return a DATA with same structure as `ii. 
-        data = Data(self.cols.names)
+        data = Data({0:self.cols.names})
         lists.map(init, lambda x: data.add(x))
         return data
 
@@ -76,7 +77,7 @@ class Data(object):
 
     def half(self, rows=None, cols=None, above=None):
         def project(row):
-            return {"row": row, "dist": cosine(self.dist(row, A, cols), self.dist(row, B, cols), c)}
+            return {"row": row, "dist": numerics.cosine(self.dist(row, A, cols), self.dist(row, B, cols), c)}
 
         def dist(row1, row2):
             return self.dist(row1, row2, cols)

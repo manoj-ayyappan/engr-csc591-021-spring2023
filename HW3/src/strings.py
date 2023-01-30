@@ -50,9 +50,8 @@ def coerce(s):  #return int or float or bool or string from `s`
 
 def csv(sFilename, fun): 
     with open(sFilename) as src:
-        t = {}
-
         while True:
+            t = {}
             i = 0
             fileInput = src.readline()
             if(fileInput):
