@@ -32,7 +32,7 @@ class Data(object):
            self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
 
     def clone(self, init = {}): # return a DATA with same structure as `ii. 
-        data = Data({self.cols.names})
+        data = Data(self.cols.names)
         lists.map(init, lambda x: data.add(x))
         return data
 
