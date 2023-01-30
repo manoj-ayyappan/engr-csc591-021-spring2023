@@ -31,6 +31,16 @@ class Sym(object):
 
     def rnd(self,x):
         return x 
+    
+    def dist(self, s1, s2):
+        if s1 == "?" and s2 == "?":
+            retVal = 1
+        else:
+            if s1 == s2:
+                retVal = 0 
+            else:
+                retVal = 1
+        return retVal
 
 
 
