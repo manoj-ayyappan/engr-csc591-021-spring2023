@@ -1,3 +1,5 @@
+import random
+
 def push(t, x):
   t[len(t)] = x
   return x 
@@ -26,3 +28,18 @@ def sort(t, fun): # t; return `t`,  sorted by `fun` (default= `<`)
 
 def keys(t): # ss; return list of table keys, sorted
     return sort(kap(t, lambda k,_: k ))
+
+
+def lt(x):
+    def fun(a, b):
+        return a[x] < b[x]
+    return fun
+
+def any(t):
+    return t[random.randint(0, len(t) - 1)]
+
+def many(t, n):
+    u = []
+    for i in range(n):
+        u.append(random.choice(t))
+    return u

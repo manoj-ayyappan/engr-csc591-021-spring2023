@@ -6,9 +6,9 @@ data.lua : an example csv reader script
 USAGE:   data.lua  [OPTIONS] [-g ACTION]
 OPTIONS:
   -d  --dump    on crash, dump stack   = false
-  -f  --file    name of file           = ../etc/data/auto93.csv
+  -f  --file    name of file           = ../data/auto93.csv
   -F  --Far     distance to "faraway"  = .95
-  -g  --go      start-up action        = data
+  -g  --go      start-up action        = all
   -h  --help    show help              = false
   -m  --min     stop clusters at N^min = .5
   -p  --p       distance coefficient   = 2
