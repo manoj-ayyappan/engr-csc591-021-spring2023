@@ -4,6 +4,7 @@ import Row
 import Cols
 import globalVars as g
 import math
+import random
 
 
 # Store many rows, summarized into columns
