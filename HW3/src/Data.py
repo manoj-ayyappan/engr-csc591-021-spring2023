@@ -97,9 +97,13 @@ class Data(object):
         c = dist(A, B)
         left, right = [], []
         mid = None
-        print("----->" + str(len(lists.map(rows, project).values())))
-        for n, tmp in enumerate(sorted(lists.map(rows, project).values(), key=lambda x: x["dist"])):
-            if n <= len(rows) // 2:
+        
+        mapped_rows = lists.map(rows, project)
+        only_mapped_rows = list(mapped_rows.values())
+        sorted_mapped_rows = sorted(only_mapped_rows, key=lambda x: x["dist"])
+
+        for n, tmp in enumerate(sorted_mapped_rows):
+            if n < len(rows) // 2:
                 left.append(tmp["row"])
                 mid = tmp["row"]
             else:
