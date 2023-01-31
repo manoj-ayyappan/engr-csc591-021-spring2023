@@ -87,12 +87,17 @@ class Data(object):
 
         if rows is None:
             rows = self.rows
+       
         some = lists.many(rows, g.the.get("Sample"))
-        A = above or some[0]
+        if above is None:
+            A = some[0]
+        else:
+            A = above
         B = self.around(A, some)[int(g.the.get("Far") * len(rows))].get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None
+        print("----->" + str(len(lists.map(rows, project).values())))
         for n, tmp in enumerate(sorted(lists.map(rows, project).values(), key=lambda x: x["dist"])):
             if n <= len(rows) // 2:
                 left.append(tmp["row"])
@@ -109,9 +114,9 @@ class Data(object):
         cols = cols if cols else self.cols.x
         node["data"] = self.clone(rows)
         if len(rows) > 2*min:
-            left, right, node["A"], node["B"], node["mid"], asdlkfjasdf = self.half(rows, cols, above)
-            node["left"] = self.cluster(left, min, cols, node["A"])
-            node["right"] = self.cluster(right, min, cols, node["B"])
+            left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
+            # node["left"] = self.cluster(left, min, cols, node["A"])
+            # node["right"] = self.cluster(right, min, cols, node["B"])
         return node
 
 
