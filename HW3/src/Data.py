@@ -34,7 +34,8 @@ class Data(object):
 
     def clone(self, init = {}): # return a DATA with same structure as `ii. 
         data = Data({0:self.cols.names})
-        lists.map(init, lambda x: data.add(x))
+        for it, x in init.items():
+            data.add(x.cells)
         return data
 
     def stats(self, what=None, cols=None, nPlaces=None):
