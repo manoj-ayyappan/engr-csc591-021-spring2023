@@ -64,10 +64,8 @@ class Data(object):
             rows = self.rows
         else:
             rows = {k:v for k,v in enumerate(rows)}
-        return {k:v for k,v in enumerate(sorted(
-            [{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()],
-            key=lambda x: x["dist"],
-        ))}
+        sorted_stuff = sorted([{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()], key=lambda x: x["dist"])
+        return {k:v for k,v in enumerate(sorted_stuff)}
 
     
     def dist(self, row1, row2, cols=None, n=None, d=None):
@@ -93,7 +91,9 @@ class Data(object):
             A = some[0]
         else:
             A = above
-        B = self.around(A, some)[int(g.the.get("Far") * len(rows))].get("row")
+
+        asdfklasdf = int(g.the.get("Far") * len(rows))
+        B = self.around(A, some)[asdfklasdf].get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None
@@ -111,16 +111,16 @@ class Data(object):
         return left, right, A, B, mid, c
 
     
-    def cluster(self, rows=None, min=None, cols=None, above=None):
-        node, left, right, A, B, mid = {}, None, None, None, None, None
+    def cluster(self, rows=None, mini=None, cols=None, above=None):
+        node = {}
         rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-        min = min if min else (len(rows))**g.the.get("min")
+        mini = mini if mini else (len(rows))**g.the.get("min")
         cols = cols if cols else self.cols.x
         node["data"] = self.clone(rows)
-        if len(rows) > 2*min:
+        if len(rows) > 2*mini:
             left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
-            # node["left"] = self.cluster(left, min, cols, node["A"])
-            # node["right"] = self.cluster(right, min, cols, node["B"])
+            node["left"] = self.cluster(left, mini, cols, node["A"])
+            node["right"] = self.cluster(right, mini, cols, node["B"])
         return node
 
 

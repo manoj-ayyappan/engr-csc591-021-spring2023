@@ -16,7 +16,9 @@ def rnd(n, nPlaces = 3):
     return math.floor(n * mult + 0.5) / mult
 
 def cosine(a, b, c):
+    if c == 0:
+        return (0, 0)
     x1 = (a**2 + c**2 - b**2) / (2 * c)
     x2 = max(0, min(1, x1))
-    y = math.sqrt(a**2 - x2**2)
+    y = math.sqrt(abs(a**2 - x2**2))
     return x2, y
