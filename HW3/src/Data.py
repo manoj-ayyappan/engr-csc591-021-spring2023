@@ -59,22 +59,24 @@ class Data(object):
             s2 = s2 - math.exp(col.w * (y-x)/len(ys))
         return s1/len(ys) < s2/len(ys)
         
-    def around(i, row1, rows=None, cols=None):
+    def around(self, row1, rows=None, cols=None):
         if rows is None:
-            rows = i.rows
-        return sorted(
-            [{"row": row2, "dist": i.dist(row1, row2, cols)} for row2 in rows],
+            rows = self.rows
+        else:
+            rows = {k:v for k,v in enumerate(rows)}
+        return {k:v for k,v in enumerate(sorted(
+            [{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()],
             key=lambda x: x["dist"],
-        )
+        ))}
 
     
     def dist(self, row1, row2, cols=None, n=None, d=None):
         n, d = 0, 0
         cols = cols if cols else self.cols.x
-        for col in cols:
+        for k, col in cols.items():
             n = n + 1
-            d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.p)
-        return (d/n)(1/g.the.p)
+            d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.get("p"))
+        return (d/n)**(1/g.the.get("p"))
 
     def half(self, rows=None, cols=None, above=None):
         def project(row):
@@ -85,13 +87,13 @@ class Data(object):
 
         if rows is None:
             rows = self.rows
-        some = random.sample(rows, g.the.Sample)
+        some = lists.many(rows, g.the.get("Sample"))
         A = above or some[0]
-        B = self.around(A, some)[int(g.the.Far * len(rows))].row
+        B = self.around(A, some)[int(g.the.get("Far") * len(rows))].get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None
-        for n, tmp in enumerate(sorted(map(rows, project), key=lambda x: x["dist"])):
+        for n, tmp in enumerate(sorted(lists.map(rows, project).values(), key=lambda x: x["dist"])):
             if n <= len(rows) // 2:
                 left.append(tmp["row"])
                 mid = tmp["row"]
@@ -102,14 +104,14 @@ class Data(object):
     
     def cluster(self, rows=None, min=None, cols=None, above=None):
         node, left, right, A, B, mid = {}, None, None, None, None, None
-        rows = rows if rows else self.rows
-        min = min if min else (len(rows))**g.the.min
+        rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
+        min = min if min else (len(rows))**g.the.get("min")
         cols = cols if cols else self.cols.x
         node["data"] = self.clone(rows)
         if len(rows) > 2*min:
-            left, right, node["A"], node["B"], node["mid"] = self.half(rows, cols, above)
-            node["left"] = self.cluster(self, left, min, cols, node["A"])
-            node["right"] = self.cluster(self, right, min, cols, node["B"])
+            left, right, node["A"], node["B"], node["mid"], asdlkfjasdf = self.half(rows, cols, above)
+            node["left"] = self.cluster(left, min, cols, node["A"])
+            node["right"] = self.cluster(right, min, cols, node["B"])
         return node
 
 

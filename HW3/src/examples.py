@@ -79,7 +79,7 @@ def eg_function_8():
     print(0,0,strings.o(data.rows[0].cells))
     for n,t in data.around(data.rows[0]).items():
         if n % 50 == 0:
-           print(n, numerics.rnd(t.dist,2) , strings.o(t.row.cells))
+           print(n, numerics.rnd(t.get("dist"),2) , strings.o(t.get("row").cells))
 
 def eg_function_9():
     data=Data.Data(d.the.get("file"))

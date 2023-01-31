@@ -6,7 +6,7 @@ def push(t, x):
 
 def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results) 
     for k,v in t.items():
-        fun(v)
+        v = fun(v)
         if k is None:
             k = 1+len(u)
         u[k] = v 
