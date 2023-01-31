@@ -64,10 +64,13 @@ class Data(object):
             rows = self.rows
         else:
             rows = {k:v for k,v in enumerate(rows)}
-        return {k:v for k,v in enumerate(sorted(
+        return {k:v for k,v in enumerate(
+            sorted(
             [{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()],
             key=lambda x: x["dist"],
-        ))}
+        )
+        
+        )}
 
     
     def dist(self, row1, row2, cols=None, n=None, d=None):
@@ -89,6 +92,7 @@ class Data(object):
             rows = self.rows
        
         some = lists.many(rows, g.the.get("Sample"))
+
         if above is None:
             A = some[0]
         else:
@@ -97,9 +101,8 @@ class Data(object):
         c = dist(A, B)
         left, right = [], []
         mid = None
-        print("----->" + str(len(lists.map(rows, project).values())))
         for n, tmp in enumerate(sorted(lists.map(rows, project).values(), key=lambda x: x["dist"])):
-            if n <= len(rows) // 2:
+            if n < len(rows) // 2:
                 left.append(tmp["row"])
                 mid = tmp["row"]
             else:

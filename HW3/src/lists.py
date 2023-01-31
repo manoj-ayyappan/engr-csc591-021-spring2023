@@ -10,7 +10,7 @@ def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results)
         if k is None:
             k = 1+len(u)
         u[k] = v 
-        return u
+    return u
 
 def kap(t, fun): # map function `fun`(k,v) over list (skip nil results) 
     u={}
