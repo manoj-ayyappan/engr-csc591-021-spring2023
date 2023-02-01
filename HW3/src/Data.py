@@ -5,7 +5,6 @@ import Row
 import Cols
 import globalVars as g
 import math
-import random
 
 
 # Store many rows, summarized into columns
@@ -88,13 +87,17 @@ class Data(object):
        
         some = lists.many(rows, g.the.get("Sample"))
 
+        print("------>"+ str(some[0].cells))
+
         if above is None:
-            A = some[0]
+            A = lists.any(some)
         else:
             A = above
+        
+        # print(A.cells)
 
-        asdfklasdf = int(g.the.get("Far") * len(rows))
-        B = self.around(A, some)[asdfklasdf].get("row")
+        nonOut= int(g.the.get("Far") * len(rows))
+        B = self.around(A, some)[nonOut].get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None

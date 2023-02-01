@@ -1,4 +1,4 @@
-import random
+import numerics
 
 def push(t, x):
   t[len(t)] = x
@@ -36,10 +36,11 @@ def lt(x):
     return fun
 
 def any(t):
-    return t[random.randint(0, len(t) - 1)]
+    y = numerics.rint(len(t) - 1,0)
+    return t[y]
 
 def many(t, n):
     u = []
     for i in range(n):
-        u.append(random.choice(t))
+        u.append(any(t))
     return u

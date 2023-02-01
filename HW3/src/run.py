@@ -39,19 +39,19 @@ def main(options,help,funs):  # nil; main program
     if options.get("help"):
         print(help) 
     else:
-        for what in funs.keys():
+        for what in funs.keys(): 
             if options.get("go") == "all" or what==options.get("go"):
-                for k,v in saved.items():
-                    options[k]=v
-                Seed = options.get("seed")
-                if funs[what]()==False:
-                    fails=fails+1
+                for k,v in saved.items(): 
+                    options[k]=v 
+                Seed = options.get("seed") 
+                if funs[what]()==False: 
+                    fails=fails+1 
                     print("❌ fail:\t",what) 
-                    failed += 1
+                    failed += 1 
                 else:
                     print("✅ pass:\t",what) 
                     passed += 1
-        for k,v in globals().items():
+        for k,v in globals().items(): 
             if k not in b4:
                 print(f"#W ?{k} {type(v)}")
         return passed,failed

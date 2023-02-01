@@ -7,9 +7,14 @@ def rint(lo,hi):
 def rand(lo = 0,hi = 1):
     # n; a float "x" lo<=x < x
     global Seed
+    # print("Seed-> " + str(Seed))
     lo, hi = lo, hi
+    # print("lo-> " + str(lo))
+    # print("hi-> " + str(hi))
     Seed = (16807 * Seed) % 2147483647
-    return lo + (hi-lo) * Seed / 2147483647
+    retVal = lo + (hi-lo) * Seed / 2147483647
+    # print("retVal-> " + str(retVal))
+    return retVal
 
 def rnd(n, nPlaces = 3):
     mult = 10**nPlaces
