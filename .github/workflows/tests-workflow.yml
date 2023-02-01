@@ -46,7 +46,7 @@ jobs:
       working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
       
     - name: Run HW3 Tests
-      run: python ../test/test_hw3.py > data.out; cat cluster.out
+      run: python ../test/test_hw3.py > cluster.out; cat cluster.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW3/src
         
     - name: List dirs
