@@ -103,15 +103,15 @@ def eg_function_12():
     # print(str(data2.rows[0].cells))
 
 def add_all_examples():
-    # add_example("myOwnTest", "MyOwnTest", eg_function_12 )
-    # add_example("the", "show settings", eg_function_1)
-    # add_example("sym","check syms", eg_function_2)
-    # add_example("num", "check nums", eg_function_3 )
-    # #add_example("csv", "read from csv", eg_function_4 ) #Not Used
-    # add_example("data","read DATA csv", eg_function_5 )
-    # #add_example("stats","stats from DATA", eg_function_6 ) #Not Used
-    # add_example("clone", "duplicate structure", eg_function_7 )
-    # add_example("around", "sorting nearest neighbors", eg_function_8 )
-    # add_example( "half", "1-level bi-clustering", eg_function_9 )
-    # add_example("cluster", "N-level bi-clustering", eg_function_10 ) 
+    add_example("myOwnTest", "MyOwnTest", eg_function_12 )
+    add_example("the", "show settings", eg_function_1)
+    add_example("sym","check syms", eg_function_2)
+    add_example("num", "check nums", eg_function_3 )
+    #add_example("csv", "read from csv", eg_function_4 ) #Not Used
+    add_example("data","read DATA csv", eg_function_5 )
+    #add_example("stats","stats from DATA", eg_function_6 ) #Not Used
+    add_example("clone", "duplicate structure", eg_function_7 )
+    add_example("around", "sorting nearest neighbors", eg_function_8 )
+    add_example( "half", "1-level bi-clustering", eg_function_9 )
+    add_example("cluster", "N-level bi-clustering", eg_function_10 ) 
     add_example("optimize", "semi-supervised optimization", eg_function_11 )

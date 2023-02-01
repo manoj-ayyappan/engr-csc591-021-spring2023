@@ -51,7 +51,7 @@ class Data(object):
     
     def better(self, row1, row2, s1=0, s2=0, ys=None, x=None, y=None):
         s1, s2, ys, x, y = 0, 0, self.cols.y, None, None
-        for col in ys:
+        for n,col in ys.items():
             x = col.norm(row1.cells[col.at])
             y = col.norm(row2.cells[col.at])
             s1 = s1 - math.exp(col.w * (x-y)/len(ys))
@@ -126,12 +126,12 @@ class Data(object):
 
     def sway(self, rows=None, min=None, cols=None, above=None):
         node, left, right, A, B, mid = None, None, None, None, None, None
-        if rows is None:
-            rows = self.rows
+        rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
         if min is None:
             min = (len(rows))**g.the.get("min")
         if cols is None:
             cols = self.cols.x
+        temp = {}
         node = {"data": self.clone(rows)}
         if len(rows) > 2 * min:
             left, right, node["A"], node["B"], node["mid"], c= self.half(rows, cols, above)
