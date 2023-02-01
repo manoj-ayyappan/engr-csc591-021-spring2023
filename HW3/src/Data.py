@@ -84,10 +84,9 @@ class Data(object):
 
         if rows is None:
             rows = self.rows
+
        
         some = lists.many(rows, g.the.get("Sample"))
-
-        print("------>"+ str(some[0].cells))
 
         if above is None:
             A = lists.any(some)
@@ -96,8 +95,11 @@ class Data(object):
         
         # print(A.cells)
 
-        nonOut= int(g.the.get("Far") * len(rows))
-        B = self.around(A, some)[nonOut].get("row")
+        # nonOut= int(g.the.get("Far") * len(rows))
+        # B = self.around(A, some)[nonOut].get("row")
+        teuywdfeuy = self.around(A,some)
+        ehiufeiu = (g.the.get("Far") * len(rows))//1 + 2
+        B = self.around(A,some)[(g.the.get("Far") * len(rows))//1 - 1].get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None
