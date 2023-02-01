@@ -92,13 +92,6 @@ class Data(object):
             A = lists.any(some)
         else:
             A = above
-        
-        # print(A.cells)
-
-        # nonOut= int(g.the.get("Far") * len(rows))
-        # B = self.around(A, some)[nonOut].get("row")
-        teuywdfeuy = self.around(A,some)
-        ehiufeiu = (g.the.get("Far") * len(rows))//1 + 2
         B = self.around(A,some)[(g.the.get("Far") * len(rows))//1 - 1].get("row")
         c = dist(A, B)
         left, right = [], []
@@ -123,10 +116,28 @@ class Data(object):
         mini = mini if mini else (len(rows))**g.the.get("min")
         cols = cols if cols else self.cols.x
         node["data"] = self.clone(rows)
+        node["left"] = {}
+        node["right"] = {}
         if len(rows) > 2*mini:
             left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
             node["left"] = self.cluster(left, mini, cols, node["A"])
             node["right"] = self.cluster(right, mini, cols, node["B"])
+        return node
+
+    def sway(self, rows=None, min=None, cols=None, above=None):
+        node, left, right, A, B, mid = None, None, None, None, None, None
+        if rows is None:
+            rows = self.rows
+        if min is None:
+            min = (len(rows))**g.the.get("min")
+        if cols is None:
+            cols = self.cols.x
+        node = {"data": self.clone(rows)}
+        if len(rows) > 2 * min:
+            left, right, node["A"], node["B"], node["mid"], c= self.half(rows, cols, above)
+            if self.better(node["B"], node["A"]):
+                left, right, node["A"], node["B"] = right, left, node["B"], node["A"]
+            node["left"] = self.sway(left, min, cols, node["A"])
         return node
 
 

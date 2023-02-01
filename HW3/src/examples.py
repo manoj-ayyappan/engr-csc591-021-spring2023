@@ -113,5 +113,5 @@ def add_all_examples():
     # add_example("clone", "duplicate structure", eg_function_7 )
     # add_example("around", "sorting nearest neighbors", eg_function_8 )
     # add_example( "half", "1-level bi-clustering", eg_function_9 )
-    add_example("cluster", "N-level bi-clustering", eg_function_10 ) 
-    # add_example("optimize", "semi-supervised optimization", eg_function_11 )
+    # add_example("cluster", "N-level bi-clustering", eg_function_10 ) 
+    add_example("optimize", "semi-supervised optimization", eg_function_11 )

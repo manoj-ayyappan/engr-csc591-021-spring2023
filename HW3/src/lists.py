@@ -4,7 +4,8 @@ def push(t, x):
   t[len(t)] = x
   return x 
 
-def map(t, fun, u={}): # t; map a function `fun`(v) over list (skip nil results) 
+def map(t, fun): # t; map a function `fun`(v) over list (skip nil results) 
+    u = {}
     for k,v in t.items():
         v = fun(v)
         if k is None:
