@@ -12,6 +12,7 @@
 2. [Getting Started](#getting-started)
 3. [License](#license)
 4. [Homeworks](#homeworks)
+5. [Code of Conduct](#code-of-conduct)
 5. [Contributors](#contributors)
 
 ## Introduction
@@ -64,7 +65,13 @@ Further details regarding the license can be found [here](https://github.com/man
 
 [**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/cluster.lua)
 
+
+## Code of Conduct
+[Code of Conduct](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/CODE_OF_CONDUCT.md)
+
 ## Contributors
 1. [Manoj Ayyappan](https://github.com/manoj-ayyappan)
 2. [Pradeep Patil](https://github.com/PradeepPatil101)
 3. [Rupin Talwar](https://github.com/rupintalwar)
+
+
