@@ -1,4 +1,4 @@
-CSC591 Spring 2023
+# CSC591 Automated Software Engineering Spring 2023
 
 [![Tests](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/actions/workflows/tests-workflow.yml/badge.svg)](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/actions/workflows/tests-workflow.yml)
 ![version](https://img.shields.io/github/v/release/manoj-ayyappan/engr-csc591-021-spring2023)
@@ -7,11 +7,64 @@ CSC591 Spring 2023
 <img src=https://img.shields.io/badge/License-MIT-red></img>
 [![DOI](https://zenodo.org/badge/589767774.svg)](https://zenodo.org/badge/latestdoi/589767774)
 
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [License](#license)
+4. [Homeworks](#homeworks)
+5. [Contributors](#contributors)
 
-Homework 1 :
+## Introduction
+This is a public GitHub repository to showcase and document the learnings of Automated Software Engineering in the weekly homeworks given by Professor [Tim Menzies](https://github.com/timm) during the coursework of Spring 2023 at North Carolina State University, Raleigh.
 
-This aim of this homework was to convert the given Lua script into any language of our choice (Python) and create a Zenodo repository with the appropriate badge. The tests are to be included as an action in Github workflows.
+## Getting started
+Get going in 3 simple steps -
+1. Check whether python is installed in your system using:
+```bash
+python --version
+```
 
-Homework 2 :
+2. Clone this repository using:
 
-Converting Lua code into Python for loading data from a csv file and adding appropriate test cases for the same.
+```bash
+git clone https://github.com/manoj-ayyappan/engr-csc591-021-spring2023
+```
+
+3. Run the following command inside the /src folder to run all the corresponding test cases:
+```bash
+python3 run.py 
+```
+
+
+## License
+This project is licensed under [MIT](https://mit-license.org/).
+Further details regarding the license can be found [here](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/LICENSE).
+
+## Homeworks
+### Homework 1 (Script) :
+
+ - Convert the given Lua script into any language of our choice (Python)
+ - Create a [Zenodo](https://zenodo.org/record/7596655#.Y9sOP3bMKUk) repository
+ - Add appropriate badges to the README file
+ - Add [tests](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/actions/workflows/tests-workflow.yml) to GitHub workflows as an Action
+ 
+[**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/script.lua)
+
+### Homework 2 (Data) :
+
+ - Load data from a .csv [file](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/HW2/data/auto93.csv) 
+ - Add appropriate test cases
+
+[**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/data.lua)
+
+### Homework 3 (Cluster) :
+
+ - Cluster the data from the previous Homework 
+ - Implement using a [Greedy approach](https://www.programiz.com/dsa/greedy-algorithm)
+
+[**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/cluster.lua)
+
+## Contributors
+1. [Manoj Ayyappan](https://github.com/manoj-ayyappan)
+2. [Pradeep Patil](https://github.com/PradeepPatil101)
+3. [Rupin Talwar](https://github.com/rupintalwar)
