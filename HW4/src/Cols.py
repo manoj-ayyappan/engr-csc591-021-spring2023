@@ -1,8 +1,13 @@
+# CLASS Cols
+# Factory for managing a set of NUMs or SYMs
+
 import re, Num, Sym
 import lists
 
 class Cols(object):
+    # Initialization
     def __init__(self, t):
+        # Generate NUMs and SYMs from column names
         self.names, self.all, self.x, self.y = t, {}, {}, {}
         for n,s in t.items(): 
             match = re.match(r'^[A-Z]', s) 
@@ -18,6 +23,7 @@ class Cols(object):
                     lists.push(self.x ,col)
 
     def add(self, row):
+        # Update the (not skipped) columns with details from `row`
         for t in (self.x, self.y):
             for k,v in t.items():
                 v.add(row.cells[v.at])
