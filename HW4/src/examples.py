@@ -76,27 +76,22 @@ def eg_function_6():
   map(rows.rows,oo)
 end)
 
-def eg_function_7():
-
- function(    t,rows)
-  t=dofile(the.file)
+def eg_function_7(t, rows):
+  t=dofile(d.the.get("file"))
   rows = repRows(t, transpose(t.cols))
   show(rows:cluster())
-end)
+
 
 def eg_function_8():
 
  function(    t,rows)
-  t=dofile(the.file)
-  rows = repRows(t, transpose(t.cols))
-  rows:cluster()
-  repPlace(rows)
-end)
+  t=dofile(d.the.get("file"))
+  rows = misc.repRows(t, misc.transpose(t.cols))
+  rows: misc.cluster()
+  misc.repPlace(rows)
 
 def eg_function_9():
-
- function()
-    repgrid(the.file) end)
+    repgrid(d.the.get("file")) 
 
 
 
