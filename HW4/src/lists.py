@@ -1,10 +1,14 @@
+# Lists
+
 import numerics
 
 def push(t, x):
-  t[len(t)] = x
-  return x 
+    # Push `x` to end of list; return `x` 
+    t[len(t)] = x
+    return x 
 
-def map(t, fun): # t; map a function `fun`(v) over list (skip nil results) 
+def map(t, fun): 
+    # map a function `fun`(v) over list (skip nil results) 
     u = {}
     for k,v in t.items():
         v = fun(v)
@@ -13,7 +17,8 @@ def map(t, fun): # t; map a function `fun`(v) over list (skip nil results)
         u[k] = v 
     return u
 
-def kap(t, fun): # map function `fun`(k,v) over list (skip nil results) 
+def kap(t, fun): 
+    # map function `fun`(k,v) over list (skip nil results) 
     u={}
     for k,v in t.items():
         # print("------>" + str(v.txt))
@@ -23,25 +28,39 @@ def kap(t, fun): # map function `fun`(k,v) over list (skip nil results)
         u[k] = v
     return u
 
-def sort(t, fun): # t; return `t`,  sorted by `fun` (default= `<`)
+def sort(t, fun): 
+    # Return `t`,  sorted by `fun` (default= `<`)
     sort(t, key = fun)
     return t
 
-def keys(t): # ss; return list of table keys, sorted
+def keys(t): 
+    # Return list of table keys, sorted
     return sort(kap(t, lambda k,_: k ))
 
 
 def lt(x):
+    # Return a function that sorts ascending on `x`
     def fun(a, b):
         return a[x] < b[x]
     return fun
 
 def any(t):
+    # Returns one items at random
     y = numerics.rint(len(t) - 1,0)
     return t[y]
 
 def many(t, n):
+    # Returns some items from `t`
     u = []
     for i in range(n):
         u.append(any(t))
+    return u
+
+def last(t):
+    return t[-1]
+
+def copy(t, u):
+    if type(t) != "dict":
+        return t
+    u = {k: copy(v) for k, v in t.items()}
     return u
