@@ -7,6 +7,7 @@ import globalVars as d
 import Num
 import Sym
 import Data
+import lists
 
 
 
@@ -26,6 +27,7 @@ def add_example(key, str, fun):
 # def eg_function_0:
 #   return the.some.missing.nested.field
 # eg("crash","show crashing behavior", eg_function_1)
+
 
 def eg_function_0():
     return strings.oo(d.the)
@@ -49,44 +51,39 @@ def eg_function_3():
     return 11/7 == num.mid() and 0.787 == numerics.rnd(num.div()) 
 
 def eg_function_4():
+  t = misc.repCols( dofile(d.the.get("file")).cols )
+  map(t.cols.all,strings.oo)
+  map(t.rows,strings.oo)
 
- function(    t)
-  t=repCols( dofile(the.file).cols )
-  map(t.cols.all,oo)
-  map(t.rows,oo)
-end)
 
 def eg_function_5():
+# def function(    t)
+#   show(repCols( dofile(the.file).cols ):cluster())
+  cols = dofile(d.the.get("file")).cols
+  misc.show(misc.repCols(cols.cluster()))
 
- function(    t)
-  show(repCols( dofile(the.file).cols ):cluster())
-end)
 
 def eg_function_6():
+  t = dofile(t.the.get("file"))
+  rows = misc.repRows(t, misc.transpose(t.cols))
+  lists.map(rows.cols.all, strings.oo)
+  lists.map(rows.rows, strings.oo)
 
- function(    t,rows)
-  t=dofile(the.file)
-  rows = repRows(t, transpose(t.cols))
-  map(rows.cols.all,oo)
-  map(rows.rows,oo)
-end)
 
 def eg_function_7(t, rows):
-  t=dofile(d.the.get("file"))
-  rows = repRows(t, transpose(t.cols))
-  show(rows:cluster())
+  t= dofile(d.the.get("file"))
+  rows = misc.repRows(t, misc.transpose(t.cols))
+  misc.show(rows.cluster())
 
 
 def eg_function_8():
-
- function(    t,rows)
   t=dofile(d.the.get("file"))
   rows = misc.repRows(t, misc.transpose(t.cols))
-  rows: misc.cluster()
+  rows.cluster()
   misc.repPlace(rows)
 
 def eg_function_9():
-    repgrid(d.the.get("file")) 
+  misc.repgrid(d.the.get("file")) 
 
 
 
