@@ -33,9 +33,9 @@ def eg_function_0():
     return strings.oo(d.the)
 
 def eg_function_1():
-    t1={a:1,b:{c:2,d:{3}}}
+    t1={"a":1,"b":{"c":2,"d":[3]}}
     t2=lists.copy(t1)
-    t2.b.d[1]=10000
+    t2["b"]["d"][0]=10000
     print("b4",strings.o(t1),"\nafter",strings.o(t2))
 
 def eg_function_2():
@@ -51,33 +51,33 @@ def eg_function_3():
     return 11/7 == num.mid() and 0.787 == numerics.rnd(num.div()) 
 
 def eg_function_4():
-  t = misc.repCols( dofile(d.the.get("file")).cols )
-  map(t.cols.all,strings.oo)
-  map(t.rows,strings.oo)
+  t = misc.repCols( misc.dofile(d.the.get("file")).get("cols") )
+  map(t.get("cols").get("all"),strings.oo)
+  map(t.get("rows"),strings.oo)
 
 
 def eg_function_5():
 # def function(    t)
-#   show(repCols( dofile(the.file).cols ):cluster())
-  cols = dofile(d.the.get("file")).cols
+#   show(repCols( misc.dofile(the.file).cols ):cluster())
+  cols = misc.dofile(d.the.get("file")).cols
   misc.show(misc.repCols(cols.cluster()))
 
 
 def eg_function_6():
-  t = dofile(t.the.get("file"))
+  t = misc.dofile(t.the.get("file"))
   rows = misc.repRows(t, misc.transpose(t.cols))
   lists.map(rows.cols.all, strings.oo)
   lists.map(rows.rows, strings.oo)
 
 
 def eg_function_7(t, rows):
-  t= dofile(d.the.get("file"))
+  t= misc.dofile(d.the.get("file"))
   rows = misc.repRows(t, misc.transpose(t.cols))
   misc.show(rows.cluster())
 
 
 def eg_function_8():
-  t=dofile(d.the.get("file"))
+  t=misc.dofile(d.the.get("file"))
   rows = misc.repRows(t, misc.transpose(t.cols))
   rows.cluster()
   misc.repPlace(rows)

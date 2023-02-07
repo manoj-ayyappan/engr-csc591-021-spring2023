@@ -1,4 +1,6 @@
 import strings
+import json
+import Data
 
 def transpose(t):
   u = []
@@ -15,7 +17,7 @@ def repCols(cols):
     col.pop()
   cols.insert(0, [f"Num{j}" for j in range(1, len(cols[0])+1)])
   cols[0][-1] = "thingX"
-  return cols
+  return Data.Data(cols)
 
 def repRows(t, rows):
   rows = rows.copy()
@@ -62,3 +64,8 @@ def show(node, what, cols, nPlaces, lvl=0): #--> nil; prints the tree generated 
             print("")
         show(node.get("left") , what,cols, nPlaces, lvl+1)
         show(node.get("right"), what,cols, nPlaces, lvl+1)
+
+def dofile(fileName):
+    with open(fileName) as f:
+        s = f.read()
+    return json.loads(s)

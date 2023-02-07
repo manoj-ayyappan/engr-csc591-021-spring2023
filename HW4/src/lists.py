@@ -59,7 +59,7 @@ def many(t, n):
 def last(t):
     return t[-1]
 
-def copy(t, u):
+def copy(t, u=None):
     if type(t) != "dict":
         return t
     u = {k: copy(v) for k, v in t.items()}
