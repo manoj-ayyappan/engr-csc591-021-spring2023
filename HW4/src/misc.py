@@ -2,6 +2,7 @@ import strings
 import json
 import numerics
 import Data
+import lists
 
 def transpose(t):
   u = []
@@ -30,9 +31,9 @@ def repRows(t, rows):
     if n == 0:
       row.append("thingX")
     else:
-      u = t.rows[len(t.rows) - n - 1]
+      u = t.get("rows")[len(t.get("rows")) - n]
       row.append(u[-1])
-  return rows
+  return Data.Data(rows)
 
 def repPlace(data):
   n = 20
@@ -57,15 +58,16 @@ def repgrid(sFile):
   show(cols.cluster())
   repPlace(rows)
 
-def show(node, what, cols, nPlaces, lvl=0): #--> nil; prints the tree generated from `DATA:tree`.
+def show(node, nPlaces, lvl=0):
     if node:
-        print("|.. "*lvl + str(len(node.get("data").rows)) + "  ", end = "")
-        if not node.get("left") or lvl==0:
-            print(strings.o(node["data"].rows[-1].cells[-1]))
+        print("|.. " * lvl, end="")
+        if not node.get("left"):
+            print(lists.last(lists.last(node["data"].rows).cells))
         else:
-            print(numerics.rnd(100*node.get("c")))
-        show(node.get("left") , what,cols, nPlaces, lvl+1)
-        show(node.get("right"), what,cols, nPlaces, lvl+1)
+            print("%.f" % round(100 * node["c"], nPlaces))
+        show(node.get("left"), nPlaces, lvl + 1)
+        show(node.get("right"), nPlaces, lvl + 1)
+
 
 def dofile(fileName):
     with open(fileName) as f:

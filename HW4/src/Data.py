@@ -39,9 +39,14 @@ class Data(object):
     def clone(self, init = {}): 
         # return a DATA with same structure as `ii. 
         data = Data({0:self.cols.names})
-        for it, x in init.items():
-            data.add(x.cells)
-        return data
+        if(type(init) == dict):
+            for it, x in init.items():
+                data.add(x.cells)
+            return data
+        else:
+            for it, x in enumerate(init):
+                data.add(x.cells)
+            return data
 
     def stats(self, what=None, cols=None, nPlaces=None):
         # Reports mid or div of cols (defaults to i.cols.y)
@@ -76,7 +81,10 @@ class Data(object):
         if rows is None:
             rows = self.rows
         else:
-            rows = {k:v for k,v in rows.items()}
+            if(type(rows) == dict):
+                rows = {k:v for k,v in rows.items()}
+            else:
+                rows = {k:v for k,v in enumerate(rows)}
         sorted_stuff = sorted([{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()], key=lambda x: x["dist"])
         return {k:v for k,v in enumerate(sorted_stuff)}
 
@@ -124,19 +132,32 @@ class Data(object):
         return left, right, A, B, mid, c
 
     
-    def cluster(self, rows=None, mini=None, cols=None, above=None):
-        # returns `rows`, recursively halved
-        node = {}
-        rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-        cols = cols if cols else self.cols.x
-        node["data"] = self.clone(rows)
-        node["left"] = {}
-        node["right"] = {}
+    # def cluster(self, rows=None, mini=None, cols=None, above=None):
+    #     # returns `rows`, recursively halved
+    #     node = {}
+    #     rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
+    #     cols = cols if cols else self.cols.x
+    #     node["data"] = self.clone(rows)
+    #     node["left"] = {}
+    #     node["right"] = {}
+    #     if len(rows) >= 2:
+    #         left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
+    #         node["left"] = self.cluster(left, mini, cols, node["A"])
+    #         node["right"] = self.cluster(right, mini, cols, node["B"])
+    #     return node
+    
+    def cluster(i, rows=None, cols=None, above=None):
+        if rows is None:
+            rows = i.rows
+        if cols is None:
+            cols = i.cols.x
+        node = {'data': i.clone(rows)}
         if len(rows) >= 2:
-            left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
-            node["left"] = self.cluster(left, mini, cols, node["A"])
-            node["right"] = self.cluster(right, mini, cols, node["B"])
+            left, right, node['A'], node['B'], node['mid'], node['c'] = i.half(rows, cols, above)
+            node['left'] = i.cluster(left, cols, node['A'])
+            node['right'] = i.cluster(right, cols, node['B'])
         return node
+
 
     # def sway(self, rows=None, min=None, cols=None, above=None):
     #     node, left, right, A, B, mid = None, None, None, None, None, None

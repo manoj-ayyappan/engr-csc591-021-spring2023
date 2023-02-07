@@ -44,13 +44,16 @@ def o(t, isKeys = False):
     if type(t) == Row.Row:
         s = ""
         s+= "{:a Row "
-        s+= ":cells " + str(list(t.cells.values()))
+        if(type(t.cells) == dict):
+            f = list(t.cells.values())
+        else:
+            f = t.cells
+        s+= ":cells " + str(f)
         s += " }"
         return s
     if type(t) != dict:
         return str(t)
-    fun = lambda k,v: fmt(":\s \s",o(k),o(v)) if not re.search("^_", str(k)) else None
-    return "{" + " ".join(lists.map(t,o) if (len(t) > 0 and not isKeys) else lists.sort(lists.kap(t,fun))) + "}"
+    return str(t)
 
 def coerce(s):  #return int or float or bool or string from `s`
     def fun(s1):

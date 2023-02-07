@@ -9,7 +9,11 @@ class Cols(object):
     def __init__(self, t):
         # Generate NUMs and SYMs from column names
         self.names, self.all, self.x, self.y = t, {}, {}, {}
-        for n,s in t.items(): 
+        if(type(t) == dict):
+            f = t.items()
+        else:
+            f = enumerate(t)
+        for n,s in f: 
             match = re.match(r'^[A-Z]', s) 
             if match:
                 col = Num.Num(n,s)

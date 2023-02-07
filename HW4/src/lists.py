@@ -11,12 +11,20 @@ def push(t, x):
 def map(t, fun): 
     # map a function `fun`(v) over list (skip nil results) 
     u = {}
-    for k,v in t.items():
-        v = fun(v)
-        if k is None:
-            k = 1+len(u)
-        u[k] = v 
-    return u
+    if(type(t) == dict):
+        for k,v in t.items():
+            v = fun(v)
+            if k is None:
+                k = 1+len(u)
+            u[k] = v 
+        return u
+    else:
+        for k,v in enumerate(t):
+            v = fun(v)
+            if k is None:
+                k = 1+len(u)
+            u[k] = v 
+        return u
 
 def kap(t, fun): 
     # map function `fun`(k,v) over list (skip nil results) 
@@ -58,7 +66,7 @@ def many(t, n):
     return u
 
 def last(t):
-    return t[-1]
+    return list(t.values())[-1]
 
 # def copy(t, u=None):
 #     if type(t) != "dict":
