@@ -52,15 +52,15 @@ def eg_function_3():
 
 def eg_function_4():
   t = misc.repCols( misc.dofile(d.the.get("file")).get("cols") )
-  map(t.get("cols").get("all"),strings.oo)
-  map(t.get("rows"),strings.oo)
+  lists.map(t.cols.all,strings.oo)
+  lists.map(t.rows,strings.oo)
 
 
 def eg_function_5():
 # def function(    t)
 #   show(repCols( misc.dofile(the.file).cols ):cluster())
-  cols = misc.dofile(d.the.get("file")).cols
-  misc.show(misc.repCols(cols.cluster()))
+  cols = misc.dofile(d.the.get("file")).get("cols")
+  misc.show(misc.repCols(cols).cluster())
 
 
 def eg_function_6():

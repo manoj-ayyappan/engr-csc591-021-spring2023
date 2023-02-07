@@ -56,9 +56,9 @@ class Data(object):
             return round(getattr(col, what)(), nPlaces), col.txt
         return lists.kap(cols, fun)
     
-    def DATA_furthest(self, row1, rows, cols, t):
+    def furthest(self, row1, rows):
         # Sort other `rows` by distance to `row`
-        t = self.around(row1, rows, cols)
+        t = self.around(row1, rows, None)
         return t[len(t) - 1]
     
     
@@ -76,7 +76,7 @@ class Data(object):
         if rows is None:
             rows = self.rows
         else:
-            rows = {k:v for k,v in enumerate(rows)}
+            rows = {k:v for k,v in rows.items()}
         sorted_stuff = sorted([{"row": row2, "dist": self.dist(row1, row2, cols)} for k, row2 in rows.items()], key=lambda x: x["dist"])
         return {k:v for k,v in enumerate(sorted_stuff)}
 
@@ -102,13 +102,11 @@ class Data(object):
             rows = self.rows
 
        
-        some = lists.many(rows, g.the.get("Sample"))
-
         if above is None:
-            A = lists.any(some)
+            A = lists.any(rows)
         else:
             A = above
-        B = self.around(A,some)[(g.the.get("Far") * len(rows))//1 - 1].get("row")
+        B = self.furthest(A,rows).get("row")
         c = dist(A, B)
         left, right = [], []
         mid = None
@@ -130,12 +128,11 @@ class Data(object):
         # returns `rows`, recursively halved
         node = {}
         rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-        mini = mini if mini else (len(rows))**g.the.get("min")
         cols = cols if cols else self.cols.x
         node["data"] = self.clone(rows)
         node["left"] = {}
         node["right"] = {}
-        if len(rows) > 2*mini:
+        if len(rows) >= 2:
             left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
             node["left"] = self.cluster(left, mini, cols, node["A"])
             node["right"] = self.cluster(right, mini, cols, node["B"])

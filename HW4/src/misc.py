@@ -1,5 +1,6 @@
 import strings
 import json
+import numerics
 import Data
 
 def transpose(t):
@@ -17,6 +18,7 @@ def repCols(cols):
     col.pop()
   cols.insert(0, [f"Num{j}" for j in range(1, len(cols[0])+1)])
   cols[0][-1] = "thingX"
+  cols = {k:{j:l for j,l in enumerate(v)} for k,v in enumerate(cols)}
   return Data.Data(cols)
 
 def repRows(t, rows):
@@ -57,11 +59,11 @@ def repgrid(sFile):
 
 def show(node, what, cols, nPlaces, lvl=0): #--> nil; prints the tree generated from `DATA:tree`.
     if node:
-        print("| "*lvl + str(len(node.get("data").rows)) + "  ", end = "")
+        print("|.. "*lvl + str(len(node.get("data").rows)) + "  ", end = "")
         if not node.get("left") or lvl==0:
-            print(strings.o(node["data"].stats("mid",node["data"].cols.y,nPlaces)))
+            print(strings.o(node["data"].rows[-1].cells[-1]))
         else:
-            print("")
+            print(numerics.rnd(100*node.get("c")))
         show(node.get("left") , what,cols, nPlaces, lvl+1)
         show(node.get("right"), what,cols, nPlaces, lvl+1)
 
