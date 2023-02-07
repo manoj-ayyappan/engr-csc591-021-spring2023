@@ -88,12 +88,12 @@ def eg_function_9():
 
 def add_all_examples():
 
-        # add_example("the", "show settings", eg_function_0)
-        # add_example("copy", "check copy", eg_function_1)
-        # add_example("sym", "check syms", eg_function_2)
-        # add_example("num",  "check nums", eg_function_3)
-        # add_example("repcols", "checking repcols", eg_function_4)
-        # add_example("synonyms", "checking repcols cluster", eg_function_5)
+        add_example("the", "show settings", eg_function_0)
+        add_example("copy", "check copy", eg_function_1)
+        add_example("sym", "check syms", eg_function_2)
+        add_example("num",  "check nums", eg_function_3)
+        add_example("repcols", "checking repcols", eg_function_4)
+        add_example("synonyms", "checking repcols cluster", eg_function_5)
         add_example("reprows", "checking reprows", eg_function_6)
         # add_example("prototypes", "checking reprows cluster", eg_function_7)
         # add_example("position", "where's wally", eg_function_8)
