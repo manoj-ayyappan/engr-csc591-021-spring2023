@@ -66,7 +66,10 @@ def many(t, n):
     return u
 
 def last(t):
-    return list(t.values())[-1]
+    if(type(t) == dict):
+        return list(t.values())[-1]
+    else:
+        return t[-1]
 
 # def copy(t, u=None):
 #     if type(t) != "dict":

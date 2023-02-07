@@ -40,22 +40,24 @@ def repPlace(data):
   g = [[' ' for j in range(n+1)] for i in range(n+1)]
   maxy = 0
   print("")
-  for r, row in enumerate(data.rows):
-    c = chr(64 + r)
+  f = data.rows
+  for r, row in data.rows.items():
+    c = chr(64 + r + 1)
     print(c, row.cells[-1])
     x, y = int(row.x * n), int(row.y * n)
     maxy = max(maxy, y+1)
-    g[y+1][x+1] = c
+    g[y][x] = c
   print("")
-  for y in range(1, maxy):
-    print("".join(g[y]))
+  for y in range(0, maxy):
+    print(" ".join(g[y]))
+  print("")
 
 def repgrid(sFile):
-  t = __import__(sFile)
-  rows = repRows(t, transpose(t.cols))
-  cols = repCols(t.cols)
-  show(rows.cluster())
-  show(cols.cluster())
+  t = dofile(sFile)
+  rows = repRows(t, transpose(t.get("cols")))
+  cols = repCols(t.get("cols"))
+  show(rows.cluster(), 3)
+  show(cols.cluster(), 3)
   repPlace(rows)
 
 def show(node, nPlaces, lvl=0):

@@ -100,8 +100,16 @@ class Data(object):
 
     def half(self, rows=None, cols=None, above=None):
         # Divides data using 2 far points
+        # def project(row):
+        #     return {"row": row, "dist": numerics.cosine(self.dist(row, A, cols), self.dist(row, B, cols), c)}
+        
         def project(row):
-            return {"row": row, "dist": numerics.cosine(self.dist(row, A, cols), self.dist(row, B, cols), c)}
+            x, y = numerics.cosine(dist(row, A), dist(row, B), c)
+            if not hasattr(row,"x"):
+                row.x = x 
+            if not hasattr(row,"y"):
+                row.y = y
+            return {"row": row, "x": x, "y": y}
 
         def dist(row1, row2):
             return self.dist(row1, row2, cols)
@@ -121,7 +129,7 @@ class Data(object):
         
         mapped_rows = lists.map(rows, project)
         only_mapped_rows = list(mapped_rows.values())
-        sorted_mapped_rows = sorted(only_mapped_rows, key=lambda x: x["dist"])
+        sorted_mapped_rows = sorted(only_mapped_rows, key=lambda item: item["x"])
 
         for n, tmp in enumerate(sorted_mapped_rows):
             if n < len(rows) // 2:

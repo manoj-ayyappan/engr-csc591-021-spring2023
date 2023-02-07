@@ -69,15 +69,15 @@ def eg_function_6():
   lists.map(rows.rows, strings.oo)
 
 
-def eg_function_7(t, rows):
+def eg_function_7():
   t= misc.dofile(d.the.get("file"))
-  rows = misc.repRows(t, misc.transpose(t.cols))
-  misc.show(rows.cluster())
+  rows = misc.repRows(t, misc.transpose(t.get("cols")))
+  misc.show(rows.cluster(), 3)
 
 
 def eg_function_8():
   t=misc.dofile(d.the.get("file"))
-  rows = misc.repRows(t, misc.transpose(t.cols))
+  rows = misc.repRows(t, misc.transpose(t.get("cols")))
   rows.cluster()
   misc.repPlace(rows)
 
@@ -87,7 +87,6 @@ def eg_function_9():
 
 
 def add_all_examples():
-
         add_example("the", "show settings", eg_function_0)
         add_example("copy", "check copy", eg_function_1)
         add_example("sym", "check syms", eg_function_2)
@@ -95,6 +94,6 @@ def add_all_examples():
         add_example("repcols", "checking repcols", eg_function_4)
         add_example("synonyms", "checking repcols cluster", eg_function_5)
         add_example("reprows", "checking reprows", eg_function_6)
-        # add_example("prototypes", "checking reprows cluster", eg_function_7)
-        # add_example("position", "where's wally", eg_function_8)
-        # add_example("every", "the whole enchilada", eg_function_9)
+        add_example("prototypes", "checking reprows cluster", eg_function_7)
+        add_example("position", "where's wally", eg_function_8)
+        add_example("every", "the whole enchilada", eg_function_9)
