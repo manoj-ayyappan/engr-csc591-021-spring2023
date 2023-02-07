@@ -67,7 +67,7 @@ Further details regarding the license can be found [here](https://github.com/man
 
 ### Homework 4 (Repgrid Processor) :
 
- - Implement the Repgrid Processor
+ - Implement the [Repgrid Processor](https://www.kellysociety.org/repgrids.html)
  - Use it on 3 people
  - Write a report
 
