@@ -55,3 +55,12 @@ def many(t, n):
     for i in range(n):
         u.append(any(t))
     return u
+
+def last(t):
+    return t[-1]
+
+def copy(t, u):
+    if type(t) != "dict":
+        return t
+    u = {k: copy(v) for k, v in t.items()}
+    return u
