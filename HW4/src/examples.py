@@ -1,6 +1,7 @@
 import strings
 import numerics
 import misc
+import lists
 import globalVars as d
 
 import Num
@@ -19,8 +20,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    d.help +=  f"  -g  {key}    {str}
-"
+    d.help +=  f"  -g  {key}    {str}"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
@@ -28,30 +28,25 @@ def add_example(key, str, fun):
 # eg("crash","show crashing behavior", eg_function_1)
 
 def eg_function_0():
-
-function() oo(the) end)
+    return strings.oo(d.the)
 
 def eg_function_1():
-
- function(     t1,t2)
-  t1={a=1,b={c=2,d={3}}}
-  t2=copy(t1)
-  t2.b.d[1]=10000
-  print("b4",o(t1),"\nafter",o(t2))  end)
+    t1={a:1,b:{c:2,d:{3}}}
+    t2=lists.copy(t1)
+    t2.b.d[1]=10000
+    print("b4",strings.o(t1),"\nafter",strings.o(t2))
 
 def eg_function_2():
-
- function()
-  local sym=SYM()
-  for _,x in pairs{"a","a","a","a","b","b","c"} do sym:add(x) end
-  return "a"==sym:mid() and 1.379 == rnd(sym:div())end)
+    sym = Sym.Sym()
+    for x in ["a","a","a","a","b","b","c"]:
+        sym.add(x)
+    return "a" == sym.mid() and 1.379 == numerics.rnd(sym.div())
 
 def eg_function_3():
-
- function()
-  local num=NUM()
-  for _,x in pairs{1,1,1,1,2,2,3} do num:add(x) end
-  return 11/7 == num:mid() and 0.787 == rnd(num:div()) end )
+    num = Num.Num()
+    for x in [1,1,1,1,2,2,3]:
+        num.add(x)
+    return 11/7 == num.mid() and 0.787 == numerics.rnd(num.div()) 
 
 def eg_function_4():
 
