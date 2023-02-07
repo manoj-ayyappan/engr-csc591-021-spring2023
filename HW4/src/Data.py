@@ -1,3 +1,6 @@
+# CLASS Data
+# Store many rows, summarized into columns
+
 import strings
 import lists
 import numerics
@@ -7,8 +10,9 @@ import globalVars as g
 import math
 
 
-# Store many rows, summarized into columns
 class Data(object):
+    # Initialization
+    # A container of `i.rows`, to be summarized in `i.cols`
     def __init__(self, src={}):
         self.rows, self.cols = {}, None
         if str(type(src)) == "<class 'str'>":
@@ -19,6 +23,7 @@ class Data(object):
            lists.map(src, self.add)
     
     def add(self, t):
+        # Add a new row, update column headers
         if self.cols != None:
             # true if we have already seen the column names
             if hasattr(t, "cells"):
@@ -31,13 +36,15 @@ class Data(object):
         else:
            self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
 
-    def clone(self, init = {}): # return a DATA with same structure as `ii. 
+    def clone(self, init = {}): 
+        # return a DATA with same structure as `ii. 
         data = Data({0:self.cols.names})
         for it, x in init.items():
             data.add(x.cells)
         return data
 
     def stats(self, what=None, cols=None, nPlaces=None):
+        # Reports mid or div of cols (defaults to i.cols.y)
         if what == None:
             what = "mid"
         if cols == None:
@@ -49,6 +56,12 @@ class Data(object):
             return round(getattr(col, what)(), nPlaces), col.txt
         return lists.kap(cols, fun)
     
+    def DATA_furthest(self, row1, rows, cols, t):
+        # Sort other `rows` by distance to `row`
+        t = self.around(row1, rows, cols)
+        return t[len(t) - 1]
+    
+    
     def better(self, row1, row2, s1=0, s2=0, ys=None, x=None, y=None):
         s1, s2, ys, x, y = 0, 0, self.cols.y, None, None
         for n,col in ys.items():
@@ -59,6 +72,7 @@ class Data(object):
         return s1/len(ys) < s2/len(ys)
         
     def around(self, row1, rows=None, cols=None):
+        # sort other `rows` by distance to `row`
         if rows is None:
             rows = self.rows
         else:
@@ -68,6 +82,7 @@ class Data(object):
 
     
     def dist(self, row1, row2, cols=None, n=None, d=None):
+        # Returns 0..1 distance `row1` to `row2`
         n, d = 0, 0
         cols = cols if cols else self.cols.x
         for k, col in cols.items():
@@ -76,6 +91,7 @@ class Data(object):
         return (d/n)**(1/g.the.get("p"))
 
     def half(self, rows=None, cols=None, above=None):
+        # Divides data using 2 far points
         def project(row):
             return {"row": row, "dist": numerics.cosine(self.dist(row, A, cols), self.dist(row, B, cols), c)}
 
@@ -111,6 +127,7 @@ class Data(object):
 
     
     def cluster(self, rows=None, mini=None, cols=None, above=None):
+        # returns `rows`, recursively halved
         node = {}
         rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
         mini = mini if mini else (len(rows))**g.the.get("min")
@@ -124,21 +141,21 @@ class Data(object):
             node["right"] = self.cluster(right, mini, cols, node["B"])
         return node
 
-    def sway(self, rows=None, min=None, cols=None, above=None):
-        node, left, right, A, B, mid = None, None, None, None, None, None
-        rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-        if min is None:
-            min = (len(rows))**g.the.get("min")
-        if cols is None:
-            cols = self.cols.x
-        temp = {}
-        node = {"data": self.clone(rows)}
-        if len(rows) > 2 * min:
-            left, right, node["A"], node["B"], node["mid"], c= self.half(rows, cols, above)
-            if self.better(node["B"], node["A"]):
-                left, right, node["A"], node["B"] = right, left, node["B"], node["A"]
-            node["left"] = self.sway(left, min, cols, node["A"])
-        return node
+    # def sway(self, rows=None, min=None, cols=None, above=None):
+    #     node, left, right, A, B, mid = None, None, None, None, None, None
+    #     rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
+    #     if min is None:
+    #         min = (len(rows))**g.the.get("min")
+    #     if cols is None:
+    #         cols = self.cols.x
+    #     temp = {}
+    #     node = {"data": self.clone(rows)}
+    #     if len(rows) > 2 * min:
+    #         left, right, node["A"], node["B"], node["mid"], c= self.half(rows, cols, above)
+    #         if self.better(node["B"], node["A"]):
+    #             left, right, node["A"], node["B"] = right, left, node["B"], node["A"]
+    #         node["left"] = self.sway(left, min, cols, node["A"])
+    #     return node
 
 
 

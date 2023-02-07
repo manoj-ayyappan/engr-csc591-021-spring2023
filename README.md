@@ -65,6 +65,14 @@ Further details regarding the license can be found [here](https://github.com/man
 
 [**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/cluster.lua)
 
+### Homework 4 (Repgrid Processor) :
+
+ - Implement the Repgrid Processor
+ - Use it on 3 people
+ - Write a report
+
+[**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/grid.lua)
+
 
 ## Code of Conduct
 [Code of Conduct](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/CODE_OF_CONDUCT.md)
