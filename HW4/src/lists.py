@@ -1,6 +1,7 @@
 # Lists
 
 import numerics
+import copy as c
 
 def push(t, x):
     # Push `x` to end of list; return `x` 
@@ -59,8 +60,14 @@ def many(t, n):
 def last(t):
     return t[-1]
 
-def copy(t, u=None):
-    if type(t) != "dict":
+# def copy(t, u=None):
+#     if type(t) != "dict":
+#         return t
+#     u = {k: copy(v) for k, v in t.items()}
+#     return u
+
+def copy(t):
+    if type(t) != dict:
         return t
-    u = {k: copy(v) for k, v in t.items()}
+    u = c.deepcopy(t)
     return u

@@ -1,5 +1,10 @@
 import re
 import lists
+import Num
+import Sym
+import numerics
+import globalVars as g
+import Row
 
 def fmt(sControl, *args): 
     # emulate printf
@@ -11,7 +16,38 @@ def oo(t): # print `t` then return it
 
 def o(t, isKeys = False): 
   # convert `t` to a string. sort named keys. 
-    if type(t) != "table" :
+    if type(t) == Num.Num:
+        s = ""
+        s+= "{:a Num "
+        s+= ":at " + str(t.at + 1)
+        s+= " :hi " + str(t.hi)
+        # s+= ":id " + str(t.id)
+        s+= " :lo " + str(t.lo)
+        s+= " :m2 " + str(numerics.rnd(t.m2, 3))
+        s+= " :mu " + str(numerics.rnd(t.mu, 3))
+        s+= " :n " + str(t.n)
+        s+= " :txt " + str(t.txt)
+        s+= " :w " + str(t.w)
+        s += " }"
+        return s
+    if type(t) == Sym.Sym:
+        s = ""
+        s+= "{:a Sym "
+        s+= ":at " + str(t.at + 1)
+        # s+= ":id " + str(t.id)
+        s+= " :has " + str(t.has)
+        s+= " :most " + str(t.most)
+        s+= " :n " + str(t.n)
+        s+= " :txt " + str(t.txt)
+        s += " }"
+        return s
+    if type(t) == Row.Row:
+        s = ""
+        s+= "{:a Row "
+        s+= ":cells " + str(list(t.cells.values()))
+        s += " }"
+        return s
+    if type(t) != dict:
         return str(t)
     fun = lambda k,v: fmt(":\s \s",o(k),o(v)) if not re.search("^_", str(k)) else None
     return "{" + " ".join(lists.map(t,o) if (len(t) > 0 and not isKeys) else lists.sort(lists.kap(t,fun))) + "}"
