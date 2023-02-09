@@ -38,20 +38,20 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run HW1 Tests
-      run: python ../test/test_hw1.py > script.out; cat script.out
-      working-directory: ${{ env.DEVOPS_DIR }}/HW1/src
+      run: python test/test_hw1.py > out/script.out; cat script.out
+      # working-directory: ${{ env.DEVOPS_DIR }}/HW1/src
             
     - name: Run HW2 Tests
-      run: python ../test/test_hw2.py > data.out; cat data.out
-      working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
+      run: python test/test_hw2.py > out/data.out; cat data.out
+      # working-directory: ${{ env.DEVOPS_DIR }}/HW2/src
       
     - name: Run HW3 Tests
-      run: python ../test/test_hw3.py > cluster.out; cat cluster.out
-      working-directory: ${{ env.DEVOPS_DIR }}/HW3/src
+      run: python test/test_hw3.py > out/cluster.out; cat cluster.out
+      # working-directory: ${{ env.DEVOPS_DIR }}/HW3/src
     
     - name: Run HW4 Tests
-      run: python ../test/test_hw4.py > grid.out; cat grid.out
-      working-directory: ${{ env.DEVOPS_DIR }}/HW4/src
+      run: python test/test_hw4.py > out/grid.out; cat grid.out
+      # working-directory: ${{ env.DEVOPS_DIR }}/HW4/src
       
     - name: List dirs
       run: tree ${{ env.DEVOPS_DIR }}
