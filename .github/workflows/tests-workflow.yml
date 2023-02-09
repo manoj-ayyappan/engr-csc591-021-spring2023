@@ -48,7 +48,11 @@ jobs:
     - name: Run HW3 Tests
       run: python ../test/test_hw3.py > cluster.out; cat cluster.out
       working-directory: ${{ env.DEVOPS_DIR }}/HW3/src
-        
+    
+    - name: Run HW4 Tests
+      run: python ../test/test_hw4.py > grid.out; cat grid.out
+      working-directory: ${{ env.DEVOPS_DIR }}/HW4/src
+      
     - name: List dirs
       run: tree ${{ env.DEVOPS_DIR }}
       
