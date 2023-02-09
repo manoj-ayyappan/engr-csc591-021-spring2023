@@ -16,3 +16,4 @@ venv.bak/
 /obj/Debug
 *.user
 .vscode
+.vscode/
