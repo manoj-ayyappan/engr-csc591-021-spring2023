@@ -46,10 +46,10 @@ jobs:
     - name: Get HW Name
       run: |
         echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
-        echo "HW-EXISTS=$([ -d "src/${{ env.HW-NAME }}" ])" >> $GITHUB_ENV
+        echo "HW-EXISTS=$(if [ -d "src/${{ env.HW-NAME }}" ]; then echo true; fi)" >> $GITHUB_ENV
       
     - name: Run ${{ env.HW-NAME }} Tests
-      if: ${{ env.HW-EXISTS }}
+      if: ${{ env.HW-EXISTS }} == 'true'
       run: | 
         echo "src/${{ env.HW-NAME }}"
         echo ${{ env.HW-EXISTS }}
