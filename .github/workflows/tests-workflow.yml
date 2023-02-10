@@ -37,8 +37,8 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
     
-    - name: Run HW${{ strategy.job-index + 1}} Tests
-      run: python test/test_hw.py "HW${{strategy.job-index + 1}}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
+    - name: Run HW${{ strategy.job-index}} Tests
+      run: python test/test_hw.py "HW${{strategy.job-index}}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
     
     - name: Run HW1 Tests
