@@ -44,7 +44,7 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
         
     - name: Get HW Number
-      run: echo "HW-NAME=$(echo HW($NUM+1))" >> $GITHUB_ENV
+      run: echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
       
     - name: Run ${{ env.HW-NAME }} Tests
       if: $([ -d "src/${{ env.HW-NAME }}" ])
