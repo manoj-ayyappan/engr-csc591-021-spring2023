@@ -52,12 +52,15 @@ jobs:
         echo "src/${{ env.HW-NAME }}"
         echo "HW-EXISTS=$(if [ -d "src/${{ env.HW-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
       working-directory: ${{ env.DEVOPS_DIR }}
-      
-    - name: Run ${{ env.HW-NAME }} Tests
-      if: ${{ env.HW-EXISTS == true }}
+    
+    - name: Display Results
       run: | 
         echo Name: ${{ env.HW-NAME }}
         echo Exists: ${{ env.HW-EXISTS }}
+        
+    - name: Run ${{ env.HW-NAME }} Tests
+      if: ${{ env.HW-EXISTS == 'true' }}
+      run: |
         python test/test_hw.py "${{ env.HW-NAME }}" > out/${{matrix.hw-out}}.out
         cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
