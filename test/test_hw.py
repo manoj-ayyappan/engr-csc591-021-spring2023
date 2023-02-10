@@ -1,9 +1,12 @@
 #Test File
 
+
 import sys, os
 
 #Getting relative file path to import needed packages
-sys.path.append(sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'src')))
+hw_number = sys.argv[1]
+sys.path.append(os.path.join('src', hw_number))
+
 import run, globalVars, examples
 
 # Running tests from the main function in run/py
