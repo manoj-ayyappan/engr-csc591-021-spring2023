@@ -5,7 +5,7 @@
 <img src=https://img.shields.io/badge/language-python-orange></img>
 ![repo size](https://img.shields.io/github/repo-size/manoj-ayyappan/engr-csc591-021-spring2023)
 <img src=https://img.shields.io/badge/License-MIT-red></img>
-[![DOI](https://zenodo.org/badge/589767774.svg)](https://zenodo.org/badge/latestdoi/589767774)
+<a href="https://zenodo.org/badge/latestdoi/589767774"><img src="https://zenodo.org/badge/589767774.svg" alt="DOI"></a>
 
 ## Table of Contents
 1. [Introduction](#introduction)
