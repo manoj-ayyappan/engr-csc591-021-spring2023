@@ -44,10 +44,13 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
         
     - name: Get HW Number
-      run: echo "HW-NUM=$(($NUM+1))" >> $GITHUB_ENV
+      run: echo "HW-NAME=$(HW($NUM+1))" >> $GITHUB_ENV
       
-    - name: Run HW${{ env.HW-NUM }} Tests
-      run: python test/test_hw.py "HW${{ env.HW-NUM }}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
+    - name: Run ${{ env.HW-NAME }} Tests
+      if: $([ -d "src/${{ env.HW-NAME }}" ])
+      run: | 
+        python test/test_hw.py "${{ env.HW-NAME }}" > out/${{matrix.hw-out}}.out
+        cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
     - name: Save .out files
