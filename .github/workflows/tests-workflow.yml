@@ -41,10 +41,10 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
         
     - name: Get HW Number
-      run: echo ::set-env name=HW-NUM::$(($NUM+1))
+      run: echo "HW-NUM=$(($NUM+1))" >> $GITHUB_ENV
       
-    - name: Run HW$HW-NUM Tests
-      run: python test/test_hw.py "HW$HW-NUM" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
+    - name: Run HW${{ env.HW-NUM }} Tests
+      run: python test/test_hw.py "HW${{ env.HW-NUM }}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
     
     - name: List dirs
