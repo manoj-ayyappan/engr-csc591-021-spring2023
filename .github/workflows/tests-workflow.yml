@@ -17,7 +17,9 @@ jobs:
     
     permissions:
       contents: write
-      
+    strategy:
+      matrix:
+        hw-out: [script, data, cluster, grid]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -34,7 +36,11 @@ jobs:
         repository: manoj-ayyappan/engr-csc591-021-spring2023
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
-
+    
+    - name: Run HW${{ strategy.job-index + 1}} Tests
+      run: python test/test_hw.py "HW${{strategy.job-index + 1}}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
+      working-directory: ${{ env.DEVOPS_DIR }}
+    
     - name: Run HW1 Tests
       run: python test/test_hw.py "HW1" > out/script.out; cat out/script.out
       working-directory: ${{ env.DEVOPS_DIR }}
