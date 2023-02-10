@@ -7,7 +7,7 @@
   [ "Modern", 3, 1, 2, 2, 3, 1, 5, 5, "Old" ],
   [ "Attractive", 2, 1, 1, 2, 5, 4, 3, 5, "Ugly" ],
   [ "Difficult to Play", 3, 2, 3, 2, 4, 5, 4, 5, "Easy to Play" ],
-  [ "Safe", 1, 1, 4, 3, 4, 5, 2, 5, "Unsafe" ]
+  [ "Unsafe", 1, 1, 4, 3, 4, 5, 2, 5, "Safe" ]
  ],
  "rows": [  
   [ " ", " ", " ", " ", " ", " ", " ", "Saxophone" ],
