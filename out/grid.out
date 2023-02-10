@@ -1,0 +1,155 @@
+{'dump': False, 'file': 'data/repgrid/repgrid1.json', 'go': 'all', 'help': False, 'p': 2, 'seed': 937162211}
+✅ pass:	 the
+b4 {'a': 1, 'b': {'c': 2, 'd': [3]}} 
+after {'a': 1, 'b': {'c': 2, 'd': [10000]}}
+✅ pass:	 copy
+✅ pass:	 sym
+✅ pass:	 num
+{:a Num :at 1 :hi 5 :lo 1 :m2 10.875 :mu 2.875 :n 8 :txt Num1 :w 1 }
+{:a Num :at 2 :hi 5 :lo 1 :m2 13.875 :mu 1.625 :n 8 :txt Num2 :w 1 }
+{:a Num :at 3 :hi 5 :lo 1 :m2 10.875 :mu 2.875 :n 8 :txt Num3 :w 1 }
+{:a Num :at 4 :hi 5 :lo 1 :m2 10.0 :mu 2.5 :n 8 :txt Num4 :w 1 }
+{:a Num :at 5 :hi 5 :lo 1 :m2 17.875 :mu 3.375 :n 8 :txt Num5 :w 1 }
+{:a Num :at 6 :hi 5 :lo 1 :m2 20.0 :mu 3.5 :n 8 :txt Num6 :w 1 }
+{:a Num :at 7 :hi 5 :lo 1 :m2 16.0 :mu 3.5 :n 8 :txt Num7 :w 1 }
+{:a Num :at 8 :hi 5 :lo 1 :m2 15.5 :mu 4.25 :n 8 :txt Num8 :w 1 }
+{:a Sym :at 9 :has {} :most 0 :n 0 :txt thingX }
+{:a Row :cells [5, 5, 5, 5, 1, 1, 1, 1, 'Lots of Air Blowing:Minimal Air Blowing'] }
+{:a Row :cells [2, 1, 2, 3, 1, 5, 3, 5, 'Max Plucking Sound:Min Plucking Sound'] }
+{:a Row :cells [3, 1, 3, 1, 5, 3, 5, 3, 'Max Size:Min Size'] }
+{:a Row :cells [4, 1, 3, 2, 4, 4, 5, 5, 'High Cost:Low Cost'] }
+{:a Row :cells [3, 1, 2, 2, 3, 1, 5, 5, 'Modern:Old'] }
+{:a Row :cells [2, 1, 1, 2, 5, 4, 3, 5, 'Attractive:Ugly'] }
+{:a Row :cells [3, 2, 3, 2, 4, 5, 4, 5, 'Difficult to Play:Easy to Play'] }
+{:a Row :cells [1, 1, 4, 3, 4, 5, 2, 5, 'Unsafe:Safe'] }
+✅ pass:	 repcols
+84
+|.. 28
+|.. |.. 25
+|.. |.. |.. 4:High Cost:Low Cost
+|.. |.. |.. 3:Max Size:Min Size
+|.. |.. 27
+|.. |.. |.. 2:Attractive:Ugly
+|.. |.. |.. 3:Difficult to Play:Easy to Play
+|.. 79
+|.. |.. 75
+|.. |.. |.. 5:Lots of Air Blowing:Minimal Air Blowing
+|.. |.. |.. 1:Unsafe:Safe
+|.. |.. 47
+|.. |.. |.. 3:Modern:Old
+|.. |.. |.. 2:Max Plucking Sound:Min Plucking Sound
+✅ pass:	 synonyms
+{:a Num :at 1 :hi 5 :lo 1 :m2 32.0 :mu 3.0 :n 8 :txt Lots of Air Blowing:Minimal Air Blowing :w 1 }
+{:a Num :at 2 :hi 5 :lo 1 :m2 17.5 :mu 2.75 :n 8 :txt Max Plucking Sound:Min Plucking Sound :w 1 }
+{:a Num :at 3 :hi 5 :lo 1 :m2 16.0 :mu 3.0 :n 8 :txt Max Size:Min Size :w 1 }
+{:a Num :at 4 :hi 5 :lo 1 :m2 14.0 :mu 3.5 :n 8 :txt High Cost:Low Cost :w 1 }
+{:a Num :at 5 :hi 5 :lo 1 :m2 17.5 :mu 2.75 :n 8 :txt Modern:Old :w 1 }
+{:a Num :at 6 :hi 5 :lo 1 :m2 18.875 :mu 2.875 :n 8 :txt Attractive:Ugly :w 1 }
+{:a Num :at 7 :hi 5 :lo 2 :m2 10.0 :mu 3.5 :n 8 :txt Difficult to Play:Easy to Play :w 1 }
+{:a Num :at 8 :hi 5 :lo 1 :m2 18.875 :mu 3.125 :n 8 :txt Unsafe:Safe :w 1 }
+{:a Sym :at 9 :has {} :most 0 :n 0 :txt thingX }
+{:a Row :cells [5, 2, 3, 4, 3, 2, 3, 1, 'Guitar'] }
+{:a Row :cells [5, 1, 1, 1, 1, 1, 2, 1, 'Keyboard'] }
+{:a Row :cells [5, 2, 3, 3, 2, 1, 3, 4, 'Violin'] }
+{:a Row :cells [5, 3, 1, 2, 2, 2, 2, 3, 'Drums'] }
+{:a Row :cells [1, 1, 5, 4, 3, 5, 4, 4, 'Harmonica'] }
+{:a Row :cells [1, 5, 3, 4, 1, 4, 5, 5, 'Trumpet'] }
+{:a Row :cells [1, 3, 5, 5, 5, 3, 4, 2, 'Flute'] }
+{:a Row :cells [1, 5, 3, 5, 5, 5, 5, 5, 'Saxophone'] }
+✅ pass:	 reprows
+78
+|.. 47
+|.. |.. 36
+|.. |.. |.. Harmonica
+|.. |.. |.. Flute
+|.. |.. 38
+|.. |.. |.. Trumpet
+|.. |.. |.. Saxophone
+|.. 40
+|.. |.. 29
+|.. |.. |.. Keyboard
+|.. |.. |.. Drums
+|.. |.. 31
+|.. |.. |.. Violin
+|.. |.. |.. Guitar
+✅ pass:	 prototypes
+
+A Guitar
+B Keyboard
+C Violin
+D Drums
+E Harmonica
+F Trumpet
+G Flute
+H Saxophone
+
+E                             B          
+                                         
+                                         
+                                         
+                                         
+                  C     D                
+                                         
+  G                                      
+                                         
+H F                                      
+
+✅ pass:	 position
+70
+|.. 40
+|.. |.. 31
+|.. |.. |.. Violin
+|.. |.. |.. Guitar
+|.. |.. 29
+|.. |.. |.. Keyboard
+|.. |.. |.. Drums
+|.. 47
+|.. |.. 38
+|.. |.. |.. Saxophone
+|.. |.. |.. Trumpet
+|.. |.. 36
+|.. |.. |.. Harmonica
+|.. |.. |.. Flute
+77
+|.. 31
+|.. |.. 27
+|.. |.. |.. Difficult to Play:Easy to Play
+|.. |.. |.. Attractive:Ugly
+|.. |.. 25
+|.. |.. |.. Max Size:Min Size
+|.. |.. |.. High Cost:Low Cost
+|.. 79
+|.. |.. 76
+|.. |.. |.. Lots of Air Blowing:Minimal Air Blowing
+|.. |.. |.. Modern:Old
+|.. |.. 34
+|.. |.. |.. Unsafe:Safe
+|.. |.. |.. Max Plucking Sound:Min Plucking Sound
+
+A Guitar
+B Keyboard
+C Violin
+D Drums
+E Harmonica
+F Trumpet
+G Flute
+H Saxophone
+
+C                         H              
+                                         
+                                         
+                                         
+                                         
+D A                                      
+                  F                      
+                E G                      
+B                                        
+
+✅ pass:	 every
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?main <class 'function'>
+✅ Number of tests passing -> 10
+❌ Number of tests failing -> 0
