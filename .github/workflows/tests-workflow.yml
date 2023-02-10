@@ -19,7 +19,10 @@ jobs:
       contents: write
     strategy:
       matrix:
+        # Modify hw-out with the name of the .out file in the correct order
+        # script is for hw1, data for 2, cluster for 3...
         hw-out: [script, data, cluster, grid]
+        
     env:
       NUM: ${{ strategy.job-index }}    
     
@@ -46,9 +49,6 @@ jobs:
     - name: Run HW${{ env.HW-NUM }} Tests
       run: python test/test_hw.py "HW${{ env.HW-NUM }}" > out/${{matrix.hw-out}}.out; cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
-    
-    - name: List dirs
-      run: tree ${{ env.DEVOPS_DIR }}
       
     - name: Save .out files
       uses: stefanzweifel/git-auto-commit-action@v4
