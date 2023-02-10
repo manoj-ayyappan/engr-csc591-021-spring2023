@@ -43,11 +43,11 @@ jobs:
       run: python test/test_hw.py "HW2" > out/data.out; cat out/data.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
-    - name: Run HW1 Tests
+    - name: Run HW3 Tests
       run: python test/test_hw.py "HW3" > out/cluster.out; cat out/cluster.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
-    - name: Run HW1 Tests
+    - name: Run HW4 Tests
       run: python test/test_hw.py "HW4" > out/grid.out; cat out/grid.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
