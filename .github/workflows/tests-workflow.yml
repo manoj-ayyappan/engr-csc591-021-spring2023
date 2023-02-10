@@ -13,18 +13,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-    strategy:
-      matrix:
-        # Modify hw-out with the name of the .out file in the correct order
-        # script is for hw1, data for 2, cluster for 3...
-        hw-out: [script, data, cluster, grid, bins]
-        
-    env:
-      NUM: ${{ strategy.job-index }}    
+    runs-on: ubuntu-latest   
     
     steps:
     - uses: actions/checkout@v3
@@ -43,6 +32,25 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
         
+    
+  
+  run-tests:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    permissions:
+      contents: write
+      
+    strategy:
+      matrix:
+        # Modify hw-out with the name of the .out file in the correct order
+        # script is for hw1, data for 2, cluster for 3...
+        hw-out: [script, data, cluster, grid, bins]
+        
+    env:
+      NUM: ${{ strategy.job-index }} 
+      
+    steps:
     - name: Get HW Name
       run: |
         echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
@@ -53,7 +61,7 @@ jobs:
         echo "HW-EXISTS=$(if [ -d "src/${{ env.HW-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
       working-directory: ${{ env.DEVOPS_DIR }}
     
-    - name: Display Results
+    - name: Display Variables
       run: | 
         echo Name: ${{ env.HW-NAME }}
         echo Exists: ${{ env.HW-EXISTS }}
@@ -71,4 +79,3 @@ jobs:
         commit_message: Save *.out files
         file_pattern: '*.out'
         repository: ${{ env.DEVOPS_DIR }}
-        
