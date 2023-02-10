@@ -8,35 +8,16 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  DEVOPS_DIR: devops
-
 jobs:
-  build:
-    runs-on: ubuntu-latest   
-    
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-
-    - name: Install dependencies
-      run: python -m pip install --upgrade pip
-
-    - name: Check-out repository
-      uses: actions/checkout@v2
-      with:
-        repository: manoj-ayyappan/engr-csc591-021-spring2023
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ env.DEVOPS_DIR }}
-        
-    
-  
   run-tests:
     runs-on: ubuntu-latest
-    needs: build
+    
+    #- name: Check-out repository
+    #  uses: actions/checkout@v2
+    #  with:
+    #    repository: manoj-ayyappan/engr-csc591-021-spring2023
+    #    token: ${{ secrets.GITHUB_TOKEN }}
+    #    path: ${{ env.DEVOPS_DIR }}
     
     permissions:
       contents: write
@@ -51,6 +32,12 @@ jobs:
       NUM: ${{ strategy.job-index }} 
       
     steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - run: python -m pip install --upgrade pip
+    
     - name: Get HW Name
       run: |
         echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
@@ -59,7 +46,6 @@ jobs:
       run: |
         echo "src/${{ env.HW-NAME }}"
         echo "HW-EXISTS=$(if [ -d "src/${{ env.HW-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
-      working-directory: ${{ env.DEVOPS_DIR }}
     
     - name: Display Variables
       run: | 
@@ -71,11 +57,9 @@ jobs:
       run: |
         python test/test_hw.py "${{ env.HW-NAME }}" > out/${{matrix.hw-out}}.out
         cat out/${{matrix.hw-out}}.out
-      working-directory: ${{ env.DEVOPS_DIR }}
       
     - name: Save .out files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Save *.out files
         file_pattern: '*.out'
-        repository: ${{ env.DEVOPS_DIR }}
