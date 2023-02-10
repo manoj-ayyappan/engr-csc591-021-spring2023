@@ -69,7 +69,7 @@ Further details regarding the license can be found [here](https://github.com/man
 
  - Implement the [Repgrid Processor](https://www.kellysociety.org/repgrids.html)
  - Use it on 3 people
- - Write a report
+ - Write a [report](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/Analysis.md)
 
 [**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/grid.lua)
 
