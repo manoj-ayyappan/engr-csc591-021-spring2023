@@ -49,6 +49,8 @@ jobs:
     - name: Run ${{ env.HW-NAME }} Tests
       if: $([ -d "src/${{ env.HW-NAME }}" ])
       run: | 
+        echo "src/${{ env.HW-NAME }}"
+        echo $([ -d "src/${{ env.HW-NAME }}" ])
         python test/test_hw.py "${{ env.HW-NAME }}" > out/${{matrix.hw-out}}.out
         cat out/${{matrix.hw-out}}.out
       working-directory: ${{ env.DEVOPS_DIR }}
