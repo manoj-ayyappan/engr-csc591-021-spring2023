@@ -36,19 +36,19 @@ jobs:
         path: ${{ env.DEVOPS_DIR }}
 
     - name: Run HW1 Tests
-      run: python test/test_hw.py "HW1" > out/script.out; cat script.out
+      run: python test/test_hw.py "HW1" > out/script.out; cat out/script.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
     - name: Run HW2 Tests
-      run: python test/test_hw.py "HW2" > out/data.out; cat data.out
+      run: python test/test_hw.py "HW2" > out/data.out; cat out/data.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
     - name: Run HW1 Tests
-      run: python test/test_hw.py "HW3" > out/cluster.out; cat cluster.out
+      run: python test/test_hw.py "HW3" > out/cluster.out; cat out/cluster.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
     - name: Run HW1 Tests
-      run: python test/test_hw.py "HW4" > out/grid.out; cat grid.out
+      run: python test/test_hw.py "HW4" > out/grid.out; cat out/grid.out
       working-directory: ${{ env.DEVOPS_DIR }}
       
       
