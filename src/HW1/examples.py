@@ -3,7 +3,7 @@ import NUM
 import helpers
 import strings
 import lists
-import globalVariables
+import globalVars
 import os
 
 
@@ -17,7 +17,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    globalVariables.help +=  f"  -g  {key}\t{str}\n"
+    globalVars.help +=  f"  -g  {key}\t{str}\n"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
@@ -26,7 +26,7 @@ def add_example(key, str, fun):
 
 # Add an example that shows settings
 def eg_function_1():
-    return strings.oo(globalVariables.the)
+    return strings.oo(globalVars.the)
 
 #Add an example that deals with 'random' numbers
 def eg_function_2():
@@ -34,11 +34,11 @@ def eg_function_2():
     num1 = NUM.NUM()
     num2 = NUM.NUM()
 
-    helpers.Seed=globalVariables.the.get("seed")
+    helpers.Seed=globalVars.the.get("seed")
     for i in range(1, int(10e3)):
         num1.add( helpers.rand(0,1) )
 
-    helpers.Seed=globalVariables.the.get("seed")
+    helpers.Seed=globalVars.the.get("seed")
     for i in range(1, int(10e3)):
         num2.add( helpers.rand(0,1) )
 
