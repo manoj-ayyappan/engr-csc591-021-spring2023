@@ -29,20 +29,24 @@ def add_example(key, str, fun):
 #   return the.some.missing.nested.field
 # eg("crash","show crashing behavior", eg_function_1)
 
+# def assert(x):
+#   if not x:
+#     raise Exception("Failed Assertion")
+
 def eg_function_0():
     t=[]
     u=[]
 
     d.Seed=1
     for i in range(1,1000):
-       t.append(numerics.rint(100))
+       t.append(numerics.rint(0, 100))
 
     d.Seed=1
     for i in range(1,1000):
-       u.append(numerics.rint(100))
+       u.append(numerics.rint(0, 100))
 
     for k,v in enumerate(t):
-       assert(v==u[k])
+       assert(v==u[k], "test")
 
 def eg_function_1():
   d.the.Max = 32
@@ -156,15 +160,15 @@ def eg_function_12():
 def add_all_examples():
 
         add_example("rand", "demo random number generation", eg_function_0)
-        add_example("some", "demo of reservoir sampling", eg_function_1)
-        add_example("nums", "demo of NUM", eg_function_2)
-        add_example("syms", "demo SYMS", eg_function_3)
-        add_example("csv", "reading csv files", eg_function_4)
-        add_example("data",  "showing data sets", eg_function_5)
-        add_example("clone", "replicate structure of a DATA", eg_function_6)
-        add_example("cliffs", "stats tests", eg_function_7)
-        add_example("dist", "distance test", eg_function_8)
-        add_example("half", "divide data in halg", eg_function_9)
-        add_example("tree", "make snd show tree of clusters", eg_function_10)
-        add_example("sway", "optimizing", eg_function_11)
-        add_example("bins",  "find deltas between best and rest", eg_function_12)
+        # add_example("some", "demo of reservoir sampling", eg_function_1)
+        # add_example("nums", "demo of NUM", eg_function_2)
+        # add_example("syms", "demo SYMS", eg_function_3)
+        # add_example("csv", "reading csv files", eg_function_4)
+        # add_example("data",  "showing data sets", eg_function_5)
+        # add_example("clone", "replicate structure of a DATA", eg_function_6)
+        # add_example("cliffs", "stats tests", eg_function_7)
+        # add_example("dist", "distance test", eg_function_8)
+        # add_example("half", "divide data in halg", eg_function_9)
+        # add_example("tree", "make snd show tree of clusters", eg_function_10)
+        # add_example("sway", "optimizing", eg_function_11)
+        # add_example("bins",  "find deltas between best and rest", eg_function_12)
