@@ -26,7 +26,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    d.help +=  f"  -g  {key}\t{str}\n"
+    d.help +=  f"  -g  {key}\t{str}\\n"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
@@ -34,7 +34,7 @@ def add_example(key, str, fun):
 # eg("crash","show crashing behavior", eg_function_1)
 """
 
-lua_files = glob.glob('*.lua')
+lua_files = glob.glob('assist/*.lua')
 
 
 def create_output(examples):
@@ -54,15 +54,15 @@ def create_output(examples):
         print(f"\tadd_example({name}, {description}, eg_function_{i})")
         i += 1
 
-if True:
-    filename = "C:\\Users\\rupin\\source\\repos\\engr-csc591-021-spring2023\\HW4\\src\\assist\\grid.lua"
-#for filename in lua_files:
-    with open(filename, "r") as f:
+#if True:
+    #filename = "C:\\Users\\rupin\\source\\repos\\engr-csc591-021-spring2023\\HW4\\src\\assist\\grid.lua"
+for filename in lua_files:
+    with open(filename, "r", encoding="utf8") as f:
         s = f.read()
 
     examples = []
     i = 0
-    for option in re.findall("eg\(([^\,]+),([^\,]+),((.|\n)*?end\s*\)\n)", s):
+    for option in re.findall("go\(([^\,]+),([^\,]+),((.|\n)*?end\s*\)\n)", s):
         # Use capture groups from the regex to get option name and default value
         name, description, code, useless = option
         if i != 0:
