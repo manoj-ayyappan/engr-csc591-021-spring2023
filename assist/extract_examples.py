@@ -26,7 +26,7 @@ def add_example(key, str, fun):
     Adds an example that is runnable from the command line and updates the help menu
     '''
     examples_added[key] = fun
-    d.help +=  f"  -g  {key}\t{str}\\n"
+    d.help +=  f"  -g  {key}\\t{str}\\n"
 
 # How to use? First define a function, then add to the examples.
 # def eg_function_0:
