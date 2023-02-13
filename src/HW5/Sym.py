@@ -8,6 +8,7 @@ class Sym(object):
     def __init__(self, at = 0, txt = ""):
         self.at, self.txt = at , txt 
         self.n   = 0
+        self.isSym = True
         self.has = {}
         self.most, self.mode = 0, None
 
