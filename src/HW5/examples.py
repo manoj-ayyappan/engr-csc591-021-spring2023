@@ -33,6 +33,9 @@ def add_example(key, str, fun):
 #   if not x:
 #     raise Exception("Failed Assertion")
 
+def eg_function_13():
+    return strings.oo(d.the)
+
 def eg_function_0():
     t=[]
     u=[]
@@ -158,7 +161,7 @@ def eg_function_12():
 
 
 def add_all_examples():
-
+        add_example("the", "show settings", eg_function_13)
         add_example("rand", "demo random number generation", eg_function_0)
         # add_example("some", "demo of reservoir sampling", eg_function_1)
         # add_example("nums", "demo of NUM", eg_function_2)
