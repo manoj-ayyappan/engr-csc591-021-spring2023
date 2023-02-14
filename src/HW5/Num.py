@@ -29,6 +29,10 @@ class Num(object):
                 tn = 1
             self.n = self.n + tn
             d = n - self.mu
+            self.mu = self.mu + d / self.n
+            self.m2 = self.m2 + d * (n - self.mu)
+            self.lo = min(n, self.lo)
+            self.hi = max(n, self.hi)
         if self.isSym:
             self.has[x] = n + self.has.get(x, 0)
             if self.has[x] > self.most:

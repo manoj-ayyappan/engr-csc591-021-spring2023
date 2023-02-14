@@ -5,8 +5,15 @@ import copy as c
 import math
 
 def per(t, p=0.5):
-    p = math.floor((p * len(t)) + 0.5)
-    return t[max(1, min(len(t), p)) - 1]
+    p_index = math.floor((p * len(t)) + 0.5)
+    return get_nth_element(t,max(0, min(len(t)-1, p_index)))
+
+def get_nth_element(d, n):
+    keys = list(d.keys())
+    if n < len(keys):
+        return d[keys[n]]
+    else:
+        return None
 
 def push(t, x):
     # Push `x` to end of list; return `x` 
@@ -42,15 +49,19 @@ def kap(t, fun):
         u[k] = v
     return u
 
-def sort(t, fun=None): 
-    # Return `t`,  sorted by `fun` (default= `<`)
-    if type(t) == dict:
-        r = t.items()
-        return dict(sorted(r, key = fun))
-    else: 
-        return sorted(t, key = fun)
+# def sort(t, fun=None): 
+#     # Return `t`,  sorted by `fun` (default= `<`)
+#     if type(t) == dict:
+#         r = t.items()
+#         return dict(sorted(r, key = fun))
+#     else: 
+#         return sorted(t, key = fun)
     
-    
+def sort(d):
+    items = list(d.items())
+    items.sort(key=lambda x: x[1])
+    return dict(items)
+ 
 
 def keys(t): 
     # Return list of table keys, sorted
