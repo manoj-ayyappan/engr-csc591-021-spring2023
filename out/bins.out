@@ -2,17 +2,103 @@
 ✅ pass:	 the
 ✅ pass:	 rand
 Error in example 'some': name 'sort' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 60, in eg_function_1
+    strings.oo(query.has(num1))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/query.py", line 6, in has
+    sort(col.has)
+NameError: name 'sort' is not defined
+
 Error in example 'nums': module 'lists' has no attribute 'add'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 65, in eg_function_2
+    lists.add(num1, numerics.rand())
+AttributeError: module 'lists' has no attribute 'add'
+
 Error in example 'syms': module 'lists' has no attribute 'adds'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 73, in eg_function_3
+    sym=lists.adds(Sym.Sym(), {"a","a","a","a","b","b","c"})
+AttributeError: module 'lists' has no attribute 'adds'
+
 Error in example 'csv': 'dict' object has no attribute 'file'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 82, in eg_function_4
+    strings.csv(d.the.file, fun)
+AttributeError: 'dict' object has no attribute 'file'
+
 Error in example 'data': 'dict' object has no attribute 'file'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 86, in eg_function_5
+    data=Data.Data(d.the.file)
+AttributeError: 'dict' object has no attribute 'file'
+
 Error in example 'clone': 'dict' object has no attribute 'file'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 92, in eg_function_6
+    data1=Data.Data(d.the.file)
+AttributeError: 'dict' object has no attribute 'file'
+
 Error in example 'cliffs': name 'cliffsDelta' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 98, in eg_function_7
+    assert(False == cliffsDelta( {8,7,6,2,5,8,7,3},{8,7,6,2,5,8,7,3}),"1")
+NameError: name 'cliffsDelta' is not defined
+
 Error in example 'dist': 'dict' object has no attribute 'file'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 116, in eg_function_8
+    data = Data.Data(d.the.file)
+AttributeError: 'dict' object has no attribute 'file'
+
 Error in example 'half': too many values to unpack (expected 5)
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 127, in eg_function_9
+    left,right,A,B,c = data.half()
+ValueError: too many values to unpack (expected 5)
+
 Error in example 'tree': name 'showTree' is not defined
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 134, in eg_function_10
+    showTree(tree(Data.Data(d.the.file)))
+NameError: name 'showTree' is not defined
+
 Error in example 'sway': 'Data' object has no attribute 'sway'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 138, in eg_function_11
+    best,rest = data.sway()
+AttributeError: 'Data' object has no attribute 'sway'
+
 Error in example 'bins': 'Data' object has no attribute 'sway'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
+    if funs[what]()==False:
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 150, in eg_function_12
+    best,rest = data.sway()
+AttributeError: 'Data' object has no attribute 'sway'
+
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
