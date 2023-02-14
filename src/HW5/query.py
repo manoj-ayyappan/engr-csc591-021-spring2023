@@ -3,7 +3,7 @@ import lists
 
 def has(col):
     if not hasattr(col,"isSym") and not col.ok:
-        sort(col.has)
+        lists.sort(col.has)
         col.ok = True 
         return col.has
     

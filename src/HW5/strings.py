@@ -56,12 +56,13 @@ def o(t, isKeys = False):
     return str(t)
 
 def coerce(s):  #return int or float or bool or string from `s`
-    def fun(s1):
+    def fun(s2):
+        s1 = s2.lower()
         if s1=="true": 
             return True 
         elif s1=="false":
            return False
-        return s1
+        return s2
     try:
         return int(s)
     except:

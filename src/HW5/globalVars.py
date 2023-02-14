@@ -20,4 +20,5 @@ OPTIONS:
   -r  --rest    how many of rest to sample   = 4
   -R  --Reuse   child splits reuse a parent pole = true
   -s  --seed    random number seed           = 937162211
+  -d  --debug   debug mode on                = false
 """
