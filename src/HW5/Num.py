@@ -7,6 +7,7 @@ import numerics
 class Num(object):
     # Initialization
     def __init__(self, at = 0, txt = ""):
+        self.has = {}
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
         self.ok = False
