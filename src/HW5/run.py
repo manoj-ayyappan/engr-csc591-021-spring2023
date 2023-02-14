@@ -51,7 +51,7 @@ def main(options,help,funs):  # nil; main program
                     else:
                         print("✅ pass:\t",what) 
                         passed += 1
-                except():
+                except:
                     failed += 1
         for k,v in globals().items(): 
             if k not in b4:
