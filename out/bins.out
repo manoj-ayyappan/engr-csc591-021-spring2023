@@ -27,30 +27,31 @@ Traceback (most recent call last):
     sym=lists.adds(Sym.Sym(), {"a","a","a","a","b","b","c"})
 AttributeError: module 'lists' has no attribute 'adds'
 
-Error in example 'csv': 'dict' object has no attribute 'file'
+Error in example 'csv': local variable 'n' referenced before assignment
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
     if funs[what]()==False:
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 82, in eg_function_4
-    strings.csv(d.the.file, fun)
-AttributeError: 'dict' object has no attribute 'file'
+    strings.csv(d.the["file"], fun)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/strings.py", line 101, in csv
+    fun(t)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 80, in fun
+    n += len(t)
+UnboundLocalError: local variable 'n' referenced before assignment
 
-Error in example 'data': 'dict' object has no attribute 'file'
+Error in example 'data': 'Num' object has no attribute 'get'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
     if funs[what]()==False:
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 86, in eg_function_5
-    data=Data.Data(d.the.file)
-AttributeError: 'dict' object has no attribute 'file'
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 88, in eg_function_5
+    print(col.lo,col.hi, query.mid(col), query.div(col))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/query.py", line 11, in mid
+    if col.get("isSym"):
+AttributeError: 'Num' object has no attribute 'get'
 
-Error in example 'clone': 'dict' object has no attribute 'file'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
-    if funs[what]()==False:
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 92, in eg_function_6
-    data1=Data.Data(d.the.file)
-AttributeError: 'dict' object has no attribute 'file'
-
+{'Lbs-': 2970.42, 'Acc+': 15.57, 'Mpg+': 23.84}
+{'Lbs-': 2970.42, 'Acc+': 15.57, 'Mpg+': 23.84}
+✅ pass:	 clone
 Error in example 'cliffs': name 'cliffsDelta' is not defined
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
@@ -59,13 +60,15 @@ Traceback (most recent call last):
     assert(False == cliffsDelta( {8,7,6,2,5,8,7,3},{8,7,6,2,5,8,7,3}),"1")
 NameError: name 'cliffsDelta' is not defined
 
-Error in example 'dist': 'dict' object has no attribute 'file'
+Error in example 'dist': 'int' object has no attribute 'cells'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 49, in main
     if funs[what]()==False:
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 116, in eg_function_8
-    data = Data.Data(d.the.file)
-AttributeError: 'dict' object has no attribute 'file'
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 119, in eg_function_8
+    num.add(data.dist(row, data.rows[1]))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/Data.py", line 98, in dist
+    d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.get("p"))
+AttributeError: 'int' object has no attribute 'cells'
 
 Error in example 'half': too many values to unpack (expected 5)
 Traceback (most recent call last):
@@ -104,5 +107,5 @@ AttributeError: 'Data' object has no attribute 'sway'
 #W ?settings <class 'function'>
 #W ?cli <class 'function'>
 #W ?main <class 'function'>
-✅ Number of tests passing -> 2
-❌ Number of tests failing -> 12
+✅ Number of tests passing -> 3
+❌ Number of tests failing -> 11
