@@ -3,6 +3,7 @@
 
 import math
 import numerics
+import globalVars as g
 
 class Num(object):
     # Initialization
@@ -11,22 +12,38 @@ class Num(object):
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
         self.ok = False
+        self.isSym = False
         self.lo, self.hi = math.inf, -math.inf
         if self.txt.endswith("-"):
             self.w = -1 
         else: 
             self.w = 1 
 
-    def add(self, n):
+    def add(self, x, n = 1):
         # Add 'n'
         # Update lo and hi
-        if n != "?": 
-            self.n += 1 
+        if x != "?": 
+            if n is not None:
+                tn = n
+            else:
+                tn = 1
+            self.n = self.n + tn
             d = n - self.mu
-            self.mu = self.mu + d / self.n
-            self.m2 = self.m2 + d * (n - self.mu)
-            self.lo = min(n, self.lo)
-            self.hi = max(n, self.hi)
+        if self.isSym:
+            self.has[x] = n + self.has.get(x, 0)
+            if self.has[x] > self.most:
+                self.most, self.mode = self.has[x], x
+        else:
+            self.lo, self.hi = min(x, self.lo), max(x, self.hi)
+            all = len(self.has) - 1
+            if all < g.the.get("Max") - 1:
+                pos = all + 1
+            else:
+                if (numerics.rand() < g.the.get("Max")-1/self.n):
+                    pos = numerics.rint(0, all)
+            if pos is not None:
+                self.has[pos] = x
+                self.ok = False
 
     def mid(self):
         # Returns mean

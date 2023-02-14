@@ -33,9 +33,11 @@ def add_example(key, str, fun):
 #   if not x:
 #     raise Exception("Failed Assertion")
 
+# The
 def eg_function_13():
     return strings.oo(d.the)
 
+# rand
 def eg_function_0():
     t=[]
     u=[]
@@ -51,6 +53,7 @@ def eg_function_0():
     for k,v in enumerate(t):
        assert(v==u[k], "test")
 
+# some
 def eg_function_1():
   d.the["Max"] = 32
   num1 = Num.Num()

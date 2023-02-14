@@ -2,6 +2,11 @@
 
 import numerics
 import copy as c
+import math
+
+def per(t, p=0.5):
+    p = math.floor((p * len(t)) + 0.5)
+    return t[max(1, min(len(t), p)) - 1]
 
 def push(t, x):
     # Push `x` to end of list; return `x` 
