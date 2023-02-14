@@ -51,7 +51,8 @@ def main(options,help,funs):  # nil; main program
                     else:
                         print("✅ pass:\t",what) 
                         passed += 1
-                except:
+                except Exception as e:
+                    print(f"Error in example '{what}': {e}")
                     failed += 1
         for k,v in globals().items(): 
             if k not in b4:
