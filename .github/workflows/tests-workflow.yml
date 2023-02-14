@@ -51,6 +51,7 @@ jobs:
         cat out/${{matrix.hw-out}}.out
       
     - name: Save .out files
+      if: always()
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Save *.out files
