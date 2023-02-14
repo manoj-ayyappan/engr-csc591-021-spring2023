@@ -9,7 +9,7 @@ class Num(object):
     def __init__(self, at = 0, txt = ""):
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
-        self.ok = True
+        self.ok = False
         self.lo, self.hi = math.inf, -math.inf
         if self.txt.endswith("-"):
             self.w = -1 
