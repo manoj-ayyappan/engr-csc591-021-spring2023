@@ -1,8 +1,10 @@
+{'dump': False, 'file': 'data/repgrid/repgrid1.json', 'go': 'all', 'help': False, 'p': 2, 'seed': 937162211}
+✅ pass:	 the
 ✅ pass:	 rand
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
 #W ?cli <class 'function'>
 #W ?main <class 'function'>
-✅ Number of tests passing -> 1
+✅ Number of tests passing -> 2
 ❌ Number of tests failing -> 0
