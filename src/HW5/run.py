@@ -1,4 +1,5 @@
 import re
+import traceback
 import strings
 import sys
 import examples
@@ -53,6 +54,7 @@ def main(options,help,funs):  # nil; main program
                         passed += 1
                 except Exception as e:
                     print(f"Error in example '{what}': {e}")
+                    print(traceback.format_exc())
                     failed += 1
         for k,v in globals().items(): 
             if k not in b4:
