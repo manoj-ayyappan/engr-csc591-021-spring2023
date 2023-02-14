@@ -1,13 +1,13 @@
 {'bins': 16, 'cliffs': 0.147, 'file': 'data/auto93.csv', 'Far': 0.95, 'go': 'all', 'help': False, 'Halves': 512, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'Reuse': True, 'seed': 937162211, 'debug': False}
 ✅ pass:	 the
 ✅ pass:	 rand
-{}
+None
 ✅ pass:	 some
 Error in example 'nums': module 'lists' has no attribute 'add'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 65, in eg_function_2
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 68, in eg_function_2
     lists.add(num1, numerics.rand())
 AttributeError: module 'lists' has no attribute 'add'
 
@@ -16,7 +16,7 @@ Error in example 'syms': module 'lists' has no attribute 'adds'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 73, in eg_function_3
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 76, in eg_function_3
     sym=lists.adds(Sym.Sym(), {"a","a","a","a","b","b","c"})
 AttributeError: module 'lists' has no attribute 'adds'
 
@@ -25,34 +25,36 @@ Error in example 'csv': local variable 'n' referenced before assignment
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 82, in eg_function_4
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 85, in eg_function_4
     strings.csv(d.the["file"], fun)
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/strings.py", line 102, in csv
     fun(t)
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 80, in fun
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 83, in fun
     n += len(t)
 UnboundLocalError: local variable 'n' referenced before assignment
 
 ❌ fail:	 csv
-Error in example 'data': 'Num' object has no attribute 'get'
+Error in example 'data': object of type 'NoneType' has no len()
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 88, in eg_function_5
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 91, in eg_function_5
     print(col.lo,col.hi, query.mid(col), query.div(col))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/query.py", line 11, in mid
-    if col.get("isSym"):
-AttributeError: 'Num' object has no attribute 'get'
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/query.py", line 15, in mid
+    return lists.per(query.has(col), 0.5)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/lists.py", line 8, in per
+    p = math.floor((p * len(t)) + 0.5)
+TypeError: object of type 'NoneType' has no len()
 
 ❌ fail:	 data
-{'Lbs-': 2970.42, 'Acc+': 15.57, 'Mpg+': 23.84}
-{'Lbs-': 2970.42, 'Acc+': 15.57, 'Mpg+': 23.84}
+{'Lbs-': 0, 'Acc+': 0, 'Mpg+': 0}
+{'Lbs-': 0, 'Acc+': 0, 'Mpg+': 0}
 ✅ pass:	 clone
 Error in example 'cliffs': name 'cliffsDelta' is not defined
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 98, in eg_function_7
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 101, in eg_function_7
     assert(False == cliffsDelta( {8,7,6,2,5,8,7,3},{8,7,6,2,5,8,7,3}),"1")
 NameError: name 'cliffsDelta' is not defined
 
@@ -61,7 +63,7 @@ Error in example 'dist': 'int' object has no attribute 'cells'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 119, in eg_function_8
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 122, in eg_function_8
     num.add(data.dist(row, data.rows[1]))
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/Data.py", line 98, in dist
     d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.get("p"))
@@ -72,7 +74,7 @@ Error in example 'half': too many values to unpack (expected 5)
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 127, in eg_function_9
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 130, in eg_function_9
     left,right,A,B,c = data.half()
 ValueError: too many values to unpack (expected 5)
 
@@ -81,7 +83,7 @@ Error in example 'tree': name 'showTree' is not defined
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 134, in eg_function_10
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 137, in eg_function_10
     showTree(tree(Data.Data(d.the.file)))
 NameError: name 'showTree' is not defined
 
@@ -90,7 +92,7 @@ Error in example 'sway': 'Data' object has no attribute 'sway'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 138, in eg_function_11
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 141, in eg_function_11
     best,rest = data.sway()
 AttributeError: 'Data' object has no attribute 'sway'
 
@@ -99,7 +101,7 @@ Error in example 'bins': 'Data' object has no attribute 'sway'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 150, in eg_function_12
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 153, in eg_function_12
     best,rest = data.sway()
 AttributeError: 'Data' object has no attribute 'sway'
 
