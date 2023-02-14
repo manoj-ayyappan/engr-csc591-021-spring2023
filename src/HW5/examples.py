@@ -82,17 +82,17 @@ def eg_function_4():
   def fun(t):
       n += len(t)
 
-  strings.csv(d.the.file, fun)
+  strings.csv(d.the["file"], fun)
   return 3192 == n
 
 def eg_function_5():
-  data=Data.Data(d.the.file)
+  data=Data.Data(d.the["file"])
   col=data.cols.x[1]
   print(col.lo,col.hi, query.mid(col), query.div(col))
   strings.oo(data.stats())
 
 def eg_function_6():
-  data1=Data.Data(d.the.file)
+  data1=Data.Data(d.the["file"])
   data2=data1.clone(data1.rows)
   strings.oo(data1.stats())
   strings.oo(data2.stats())
@@ -116,7 +116,7 @@ def eg_function_7():
     t3=lists.map(t1,fun)
 
 def eg_function_8():
-  data = Data.Data(d.the.file)
+  data = Data.Data(d.the["file"])
   num  = Num.Num()
   for _,row in enumerate(data.rows):
     num.add(data.dist(row, data.rows[1]))
@@ -167,14 +167,14 @@ def add_all_examples():
         add_example("the", "show settings", eg_function_13)
         add_example("rand", "demo random number generation", eg_function_0)
         add_example("some", "demo of reservoir sampling", eg_function_1)
-        # add_example("nums", "demo of NUM", eg_function_2)
-        # add_example("syms", "demo SYMS", eg_function_3)
-        # add_example("csv", "reading csv files", eg_function_4)
-        # add_example("data",  "showing data sets", eg_function_5)
-        # add_example("clone", "replicate structure of a DATA", eg_function_6)
-        # add_example("cliffs", "stats tests", eg_function_7)
-        # add_example("dist", "distance test", eg_function_8)
-        # add_example("half", "divide data in halg", eg_function_9)
-        # add_example("tree", "make snd show tree of clusters", eg_function_10)
-        # add_example("sway", "optimizing", eg_function_11)
-        # add_example("bins",  "find deltas between best and rest", eg_function_12)
+        add_example("nums", "demo of NUM", eg_function_2)
+        add_example("syms", "demo SYMS", eg_function_3)
+        add_example("csv", "reading csv files", eg_function_4)
+        add_example("data",  "showing data sets", eg_function_5)
+        add_example("clone", "replicate structure of a DATA", eg_function_6)
+        add_example("cliffs", "stats tests", eg_function_7)
+        add_example("dist", "distance test", eg_function_8)
+        add_example("half", "divide data in halg", eg_function_9)
+        add_example("tree", "make snd show tree of clusters", eg_function_10)
+        add_example("sway", "optimizing", eg_function_11)
+        add_example("bins",  "find deltas between best and rest", eg_function_12)

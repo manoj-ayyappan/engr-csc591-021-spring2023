@@ -42,10 +42,15 @@ def kap(t, fun):
         u[k] = v
     return u
 
-def sort(t, fun): 
+def sort(t, fun=None): 
     # Return `t`,  sorted by `fun` (default= `<`)
-    sort(t, key = fun)
-    return t
+    if type(t) == dict:
+        r = t.items()
+        return dict(sorted(r, key = fun))
+    else: 
+        return sorted(t, key = fun)
+    
+    
 
 def keys(t): 
     # Return list of table keys, sorted

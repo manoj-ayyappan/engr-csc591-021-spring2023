@@ -4,11 +4,9 @@ import lists
 
 def has(col):
     if not hasattr(col,"isSym") and not col.ok:
-        myKeys = list(col.has.keys())
-        myKeys.sort()
-        sorted_dict = {i: col.has[i] for i in myKeys}
-    col.ok = True 
-    return col.has
+        lists.sort(col.has)
+        col.ok = True 
+        return col.has
     
 def mid(col, mode=None, most=None):
     if col.isSym:
