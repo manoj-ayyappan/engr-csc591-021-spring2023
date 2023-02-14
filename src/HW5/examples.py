@@ -52,10 +52,10 @@ def eg_function_0():
        assert(v==u[k], "test")
 
 def eg_function_1():
-  d.the.Max = 32
+  d.the["Max"] = 32
   num1 = Num.Num()
   for i in range(1,10000):
-    lists.add(num1,i)
+    num1.add(i)
 
   strings.oo(query.has(num1))
 
@@ -163,7 +163,7 @@ def eg_function_12():
 def add_all_examples():
         add_example("the", "show settings", eg_function_13)
         add_example("rand", "demo random number generation", eg_function_0)
-        # add_example("some", "demo of reservoir sampling", eg_function_1)
+        add_example("some", "demo of reservoir sampling", eg_function_1)
         # add_example("nums", "demo of NUM", eg_function_2)
         # add_example("syms", "demo SYMS", eg_function_3)
         # add_example("csv", "reading csv files", eg_function_4)

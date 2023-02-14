@@ -36,7 +36,7 @@ def main(options,help,funs):  # nil; main program
     for k,v in cli(settings(help)).items():
         options[k] = v
         saved[k]=v
-    if options.get("help"):
+    if options.get("help") == "true":
         print(help) 
     else:
         for what in funs.keys(): 

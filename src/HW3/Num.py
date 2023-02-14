@@ -6,6 +6,7 @@ class Num(object):
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
         self.lo, self.hi = math.inf, -math.inf
+
         if self.txt.endswith("-"):
             self.w = -1 
         else: 

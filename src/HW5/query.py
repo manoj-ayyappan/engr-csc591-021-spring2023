@@ -1,10 +1,10 @@
 import math
 
 def has(col):
-    if not col.get("isSym") and not col.get("ok"):
-        col["has"].sort()
-        col["ok"] = True 
-        return col.get("has")
+    if not hasattr(col,"isSym") and not col.ok:
+        col.has.sort()
+        col.ok = True 
+        return col.has
     
 def mid(col, mode=None, most=None):
     if col.get("isSym"):
