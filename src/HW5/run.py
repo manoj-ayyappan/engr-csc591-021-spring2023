@@ -30,7 +30,7 @@ def cli(options): # t; update key,vals in `t` from command-line flags
 # the start up actions (and before each run, it resets the random number seed and settings);
 # and, finally, returns the number of test crashed to the operating system.
 def main(options,help,funs):  # nil; main program
-    saved,fails={},0
+    saved={}
     passed = 0
     failed = 0
     for k,v in cli(settings(help)).items():
@@ -44,13 +44,15 @@ def main(options,help,funs):  # nil; main program
                 for k,v in saved.items(): 
                     options[k]=v 
                 Seed = options.get("seed") 
-                if funs[what]()==False: 
-                    fails=fails+1 
-                    print("❌ fail:\t",what) 
-                    failed += 1 
-                else:
-                    print("✅ pass:\t",what) 
-                    passed += 1
+                try:
+                    if funs[what]()==False: 
+                        print("❌ fail:\t",what) 
+                        failed += 1 
+                    else:
+                        print("✅ pass:\t",what) 
+                        passed += 1
+                except():
+                    failed += 1
         for k,v in globals().items(): 
             if k not in b4:
                 print(f"#W ?{k} {type(v)}")
