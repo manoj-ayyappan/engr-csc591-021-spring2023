@@ -1,16 +1,18 @@
-Error in example 'csv': local variable 'n' referenced before assignment
+Error in example 'sway': 'Data' object has no attribute 'cells'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 87, in eg_function_4
-    strings.csv(d.the["file"], fun)
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/strings.py", line 102, in csv
-    fun(t)
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 85, in fun
-    n += len(t)
-UnboundLocalError: local variable 'n' referenced before assignment
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/examples.py", line 150, in eg_function_11
+    best,rest = data.sway()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/Data.py", line 197, in sway
+    best, rest = workerF(self.rows, [])
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/Data.py", line 192, in workerF
+    if self.better(self, B, A):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW5/Data.py", line 73, in better
+    x = col.norm(row1.cells[col.at])
+AttributeError: 'Data' object has no attribute 'cells'
 
-❌ fail:	 csv
+❌ fail:	 sway
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
