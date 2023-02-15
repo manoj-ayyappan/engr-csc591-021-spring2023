@@ -75,9 +75,9 @@ def eg_function_2():
 
 
 def eg_function_3():
-  sym=lists.adds(Sym.Sym(), {"a","a","a","a","b","b","c"})
-  print (query.mid(sym), numerics.rnd(query.div(sym)))
-  return 1.38 == numerics.rnd(query.div(sym))
+  sym=lists.adds(Sym.Sym(), ["a","a","a","a","b","b","c"])
+  print (query.mid(sym), numerics.rnd(query.div(sym), 2))
+  return 1.38 == numerics.rnd(query.div(sym), 2)
 
 def eg_function_4():
   n=0
@@ -169,9 +169,9 @@ def add_all_examples():
         # add_example("the", "show settings", eg_function_13)
         # add_example("rand", "demo random number generation", eg_function_0)
         # add_example("some", "demo of reservoir sampling", eg_function_1)
-        add_example("nums", "demo of NUM", eg_function_2)
+        # add_example("nums", "demo of NUM", eg_function_2)
         # add_example("syms", "demo SYMS", eg_function_3)
-        # add_example("csv", "reading csv files", eg_function_4)
+        add_example("csv", "reading csv files", eg_function_4)
         # add_example("data",  "showing data sets", eg_function_5)
         # add_example("clone", "replicate structure of a DATA", eg_function_6)
         # add_example("cliffs", "stats tests", eg_function_7)

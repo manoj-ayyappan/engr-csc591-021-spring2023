@@ -14,6 +14,13 @@ def get_nth_element(d, n):
         return d[keys[n]]
     else:
         return None
+    
+def adds(col, t=None):
+    if t is None:
+        t = {}
+    for x in t:
+        col.add(x)
+    return col
 
 def push(t, x):
     # Push `x` to end of list; return `x` 
