@@ -182,6 +182,39 @@ class Data(object):
     #             left, right, node["A"], node["B"] = right, left, node["B"], node["A"]
     #         node["left"] = self.sway(left, min, cols, node["A"])
     #     return node
+    
+    def sway(self, cols=None, worker=None, best=None, rest=None):
+        def workerF(rows, worse, above = None):
+            if len(rows) <= (len(self.rows)**g.the["min"]):
+                return rows, lists.many(worse, g.the["rest"] * len(rows))
+            else:
+                l, r, A, B, mid, c = self.half( rows, cols, above)
+                if self.better(self, B, A):
+                    l, r, A, B = r, l, B, A
+                map(r, lambda row: lists.push(worse, row))
+                return workerF(l, worse, A)
+        if worker is None:
+            best, rest = workerF(self.rows, [])
+            return self.clone(self, best), self.clone(self, rest)
+        else:
+            best, rest = worker
+            return self.clone(self, best), self.clone(self, rest)
+
+
+
+    def tree(self, rows = None, cols = None, above=None, here=None):
+        if rows is None:
+            rows = self.rows
+        if here is None:
+            here = {'data': self.clone(rows)}
+        if len(rows) >= 2*(len(self.rows)**g.the["min"]):
+            left, right, A, B, mid, c = self.half(rows, cols, above)
+            here['left'] = self.tree( left, cols, A)
+            here['right'] = self.tree(right, cols, B)
+        return here
+    
+
+
 
 
 

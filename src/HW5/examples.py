@@ -5,7 +5,7 @@ import lists
 import query
 import discretization
 import globalVars as d
-
+import math
 import Num
 import Sym
 import Data
@@ -80,8 +80,10 @@ def eg_function_3():
   return 1.38 == numerics.rnd(query.div(sym), 2)
 
 def eg_function_4():
+  global n
   n=0
   def fun(t):
+      global n
       n += len(t)
 
   strings.csv(d.the["file"], fun)
@@ -100,43 +102,48 @@ def eg_function_6():
   strings.oo(data2.stats())
 
 def eg_function_7():
-  assert(False == cliffsDelta( {8,7,6,2,5,8,7,3},{8,7,6,2,5,8,7,3}),"1")
-  assert(True  == cliffsDelta( {8,7,6,2,5,8,7,3}, {9,9,7,8,10,9,6}),"2")
-  t1,t2={},{}
-  for i in range(1,1000):
-    lists.push(t1,numerics.rand())
-  for i in range(1,1000):
-      lists.push(t2,numerics.rand()**.5)
-  assert(False == cliffsDelta(t1,t1),"3")
-  assert(True  == cliffsDelta(t1,t2),"4")
-  diff,j = False,1.0
+  assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [8, 7, 6, 2, 5, 8, 7, 3]) == False, "1"
+  assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [9, 9, 7, 8, 10, 9, 6]) == True, "2"
+  t1, t2 = {}, {}
+  for i in range(1000):
+      lists.push(t1, numerics.rand())
+      lists.push(t2, math.sqrt(numerics.rand()))
+  assert numerics.cliffsDelta(t1, t1) == False, "3"
+  assert numerics.cliffsDelta(t1, t2) == True, "4"
+  diff, j = False, 1.0
+  while not diff:
+      t3 = list(map(lambda x: x*j, t1))
+      diff = numerics.cliffsDelta(t1, t3)
+      print(">", round(j, 3), diff)
+      j *= 1.025
 
   def fun(x):
+      global j
       return x*j
 
   while not diff:
     t3=lists.map(t1,fun)
 
-def eg_function_8():
-  data = Data.Data(d.the["file"])
-  num  = Num.Num()
-  for _,row in enumerate(data.rows):
-    num.add(data.dist(row, data.rows[1]))
+def eg_function_8(): 
+  data = Data.Data(d.the["file"]) 
+  num  = Num.Num() 
+  for _,row in data.rows.items(): 
+    num.add(data.dist(row, data.rows[0])) 
   strings.oo({"lo":num.lo, 
               "hi":num.hi, 
-              "mid":numerics.rnd(query.mid(num)), 
-              "div":numerics.rnd(query.div(num))})
+              "mid":numerics.rnd(query.mid(num), 2), 
+              "div":numerics.rnd(query.div(num), 2)}) 
 
 def eg_function_9():
   data = Data.Data(d.the.get("file"))
-  left,right,A,B,c = data.half()
+  left,right,A,B,mid,c = data.half()
   print(len(left),len(right))
   l,r = data.clone(left), data.clone(right)
   print("l",strings.o(l.stats()))
   print("r",strings.o(r.stats()))
 
 def eg_function_10():
-  showTree(tree(Data.Data(d.the.file)))
+  misc.showTree(Data.Data(d.the["file"]).tree())
 
 def eg_function_11():
   data = Data.Data(d.the["file"])
@@ -171,12 +178,12 @@ def add_all_examples():
         # add_example("some", "demo of reservoir sampling", eg_function_1)
         # add_example("nums", "demo of NUM", eg_function_2)
         # add_example("syms", "demo SYMS", eg_function_3)
-        add_example("csv", "reading csv files", eg_function_4)
+        # add_example("csv", "reading csv files", eg_function_4)
         # add_example("data",  "showing data sets", eg_function_5)
         # add_example("clone", "replicate structure of a DATA", eg_function_6)
         # add_example("cliffs", "stats tests", eg_function_7)
         # add_example("dist", "distance test", eg_function_8)
         # add_example("half", "divide data in halg", eg_function_9)
         # add_example("tree", "make snd show tree of clusters", eg_function_10)
-        # add_example("sway", "optimizing", eg_function_11)
+        add_example("sway", "optimizing", eg_function_11)
         # add_example("bins",  "find deltas between best and rest", eg_function_12)
