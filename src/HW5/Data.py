@@ -58,7 +58,10 @@ class Data(object):
             nPlaces = 2
 
         def fun(k, col):
-            return round(getattr(col, what)(), nPlaces), col.txt
+            if isinstance(what, str):
+                return round(getattr(col, what)(), nPlaces), col.txt
+            else:
+                return round(what(col), nPlaces), col.txt
         return lists.kap(cols, fun)
     
     def furthest(self, row1, rows):
@@ -189,16 +192,16 @@ class Data(object):
                 return rows, lists.many(worse, g.the["rest"] * len(rows))
             else:
                 l, r, A, B, mid, c = self.half( rows, cols, above)
-                if self.better(self, B, A):
+                if self.better(B, A):
                     l, r, A, B = r, l, B, A
-                map(r, lambda row: lists.push(worse, row))
+                lists.map(r, lambda row: lists.push(worse, row))
                 return workerF(l, worse, A)
         if worker is None:
             best, rest = workerF(self.rows, [])
-            return self.clone(self, best), self.clone(self, rest)
+            return self.clone(best), self.clone(rest)
         else:
             best, rest = worker
-            return self.clone(self, best), self.clone(self, rest)
+            return self.clone(best), self.clone(rest)
 
 
 

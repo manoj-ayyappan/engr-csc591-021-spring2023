@@ -53,3 +53,11 @@ def cliffsDelta(ns1, ns2):
             if x < y:
                 lt += 1
     return abs(lt - gt) / n > g.the["cliffs"]
+
+# Given two tables with the same keys, report if their
+# values are different.
+def diffs(nums1,nums2):
+    def fun(k, nums):
+        return cliffsDelta(nums.has,nums2[k].has),nums.txt
+    
+    return lists.kap(nums1, fun)

@@ -24,7 +24,10 @@ def adds(col, t=None):
 
 def push(t, x):
     # Push `x` to end of list; return `x` 
-    t[len(t)] = x
+    if(type(t) == dict):
+        t[len(t)] = x
+    else:
+        t.append(x)
     return x 
 
 def map(t, fun): 
