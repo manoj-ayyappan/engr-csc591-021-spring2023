@@ -59,13 +59,13 @@ def kap(t, fun):
         u[k] = v
     return u
 
-# def sort(t, fun=None): 
-#     # Return `t`,  sorted by `fun` (default= `<`)
-#     if type(t) == dict:
-#         r = t.items()
-#         return dict(sorted(r, key = fun))
-#     else: 
-#         return sorted(t, key = fun)
+def sort2(t, fun): 
+    # Return `t`,  sorted by `fun` (default= `<`)
+    if type(t) == dict:
+        r = t.items()
+        return dict(sorted(r, key = fun))
+    else: 
+        return sorted(t, key = fun)
     
 def sort(d):
     items = list(d.items())
@@ -82,6 +82,12 @@ def lt(x):
     # Return a function that sorts ascending on `x`
     def fun(a, b):
         return a[x] < b[x]
+    return fun
+
+def lt2(x):
+    # Return a function that sorts ascending on `x`
+    def fun(a):
+        return getattr(a[1], x)
     return fun
 
 def any(t):

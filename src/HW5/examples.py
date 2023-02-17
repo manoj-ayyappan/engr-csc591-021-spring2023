@@ -162,12 +162,12 @@ def eg_function_12():
   best,rest = data.sway()
   print("all","","","", strings.o({"best":len(best.rows), "rest":len(rest.rows)}))
   for k,t in discretization.bins(data.cols.x,{"best":best.rows, "rest":rest.rows}).items():
-    for _,range in enumerate(t):
-      if range.txt != b4:
-            print("")
-      b4 = range.txt
+    for _,range in t.items():
+      #if range.txt != b4:
+      #      print("")
+      #b4 = range.txt
       print(range.txt,range.lo,range.hi,
-           numerics.rnd(value(range.y.has, len(best.rows),len(rest.rows),"best")),
+           numerics.rnd(discretization.value(range.y.has, len(best.rows),len(rest.rows),"best")),
            strings.o(range.y.has))
 
 

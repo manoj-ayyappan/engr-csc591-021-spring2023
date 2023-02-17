@@ -13,13 +13,13 @@ class Sym(object):
         self.most, self.mode = 0, None
 
     # Updates count of things seen so far
-    def add(self, x):
+    def add(self, x, n = 1):
         if x != "?": 
-            self.n += 1 
+            self.n += n 
             if x in self.has.keys():
-                self.has[x] = 1 + self.has[x]
+                self.has[x] += n
             else:
-                self.has[x] = 1
+                self.has[x] = n
             if self.has[x] > self.most:
                 self.most, self.mode = self.has[x], x 
 
