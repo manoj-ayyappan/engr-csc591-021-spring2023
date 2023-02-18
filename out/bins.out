@@ -1,5 +1,11 @@
-> 1.0 True
-✅ pass:	 cliffs
+all    {'best': 13, 'rest': 52}
+Clndrs -inf inf 0.5 {'best': 13, 'rest': 52}
+Volume -inf inf 0.5 {'best': 13, 'rest': 52}
+Model -inf inf 0.5 {'rest': 52, 'best': 13}
+origin 1 1 0.0 {'rest': 35}
+origin 2 2 0.867 {'best': 13, 'rest': 8}
+origin 3 3 0.0 {'rest': 9}
+✅ pass:	 bins
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
