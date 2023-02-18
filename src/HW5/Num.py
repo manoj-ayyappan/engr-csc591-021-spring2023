@@ -31,8 +31,8 @@ class Num(object):
             d = n - self.mu
             self.mu = self.mu + d / self.n
             self.m2 = self.m2 + d * (n - self.mu)
-            self.lo = min(n, self.lo)
-            self.hi = max(n, self.hi)
+            self.lo = min(x, self.lo)
+            self.hi = max(x, self.hi)
         if self.isSym:
             self.has[x] = n + self.has.get(x, 0)
             if self.has[x] > self.most:
@@ -40,10 +40,11 @@ class Num(object):
         else:
             self.lo, self.hi = min(x, self.lo), max(x, self.hi)
             all = len(self.has) - 1
+            pos = None
             if all < g.the.get("Max") - 1:
                 pos = all + 1
             else:
-                if (numerics.rand() < g.the.get("Max")-1/self.n):
+                if (numerics.rand() < (g.the.get("Max")-1)/self.n):
                     pos = numerics.rint(0, all)
             if pos is not None:
                 self.has[pos] = x

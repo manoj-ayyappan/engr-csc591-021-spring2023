@@ -23,4 +23,5 @@ def div(col, e=None):
             e -= n/col.n * math.log(n/col.n, 2)
         return e
     else:
-        return (sorted(has(col))[int(len(has(col)) * 0.9)] - sorted(has(col))[int(len(has(col)) * 0.1)]) / 2.58
+        # return (sorted(has(col))[int(len(has(col)) * 0.9)] - sorted(has(col))[int(len(has(col)) * 0.1)]) / 2.58
+        return (lists.per(has(col), 0.9) - lists.per(has(col), 0.1)) / 2.58
