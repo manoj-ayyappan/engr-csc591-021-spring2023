@@ -23,7 +23,7 @@ def bin(col,x):
     if x=="?" or col.isSym:
        return x
     tmp = (col.hi - col.lo)/(d.the["bins"] - 1)
-    return 1 if col.hi == col.lo else math.floor(x/tmp + .5)
+    return 1 if col.hi == col.lo else math.floor(x/tmp + .5)*tmp
 
 def itself(x):
    return x
@@ -53,7 +53,7 @@ def bins(cols,rowss):
 # Called by function `bins`.
 def mergeAny(ranges0):
     def noGaps(t):
-        for j in range( 1,len(t) - 1):
+        for j in range( 1,len(t) ):
             t[j].lo = t[j-1].hi
         t[0].lo  = -math.inf
         t[len(t) - 1].hi =  math.inf
@@ -71,7 +71,7 @@ def mergeAny(ranges0):
         lists.push(ranges1,left)
         j = j+1 
 
-    return len(ranges0)==len(ranges1) and noGaps(ranges0) or mergeAny(ranges1)
+    return noGaps(ranges0) if len(ranges0)==len(ranges1) else mergeAny(ranges1)
 
 # If the whole is as good (or simpler) than the parts,
 # then return the 
@@ -79,6 +79,8 @@ def mergeAny(ranges0):
 # Called by function `mergeMany`.
 def merge2(col1,col2):
     new = merge(col1,col2)
+    a = query.div(new)
+    b = (query.div(col1)*col1.n + query.div(col2)*col2.n)/new.n
     if query.div(new) <= (query.div(col1)*col1.n + query.div(col2)*col2.n)/new.n:
         return new
 

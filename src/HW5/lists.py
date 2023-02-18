@@ -115,7 +115,5 @@ def last(t):
 #     return u
 
 def copy(t):
-    if type(t) != dict:
-        return t
     u = c.deepcopy(t)
     return u
