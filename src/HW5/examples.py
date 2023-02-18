@@ -93,13 +93,13 @@ def eg_function_5():
   data=Data.Data(d.the["file"])
   col=data.cols.x[0]
   print(col.lo, col.hi, query.mid(col), query.div(col))
-  strings.oo(data.stats())
+  strings.oo(query.stats(data))
 
 def eg_function_6():
   data1=Data.Data(d.the["file"])
   data2=data1.clone(data1.rows)
-  strings.oo(data1.stats())
-  strings.oo(data2.stats())
+  strings.oo(query.stats(data1))
+  strings.oo(query.stats(data2))
 
 def eg_function_7():
   assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [8, 7, 6, 2, 5, 8, 7, 3]) == False, "1"
@@ -179,9 +179,9 @@ def add_all_examples():
         # add_example("nums", "demo of NUM", eg_function_2)
         # add_example("syms", "demo SYMS", eg_function_3)
         # add_example("csv", "reading csv files", eg_function_4)
-        add_example("data",  "showing data sets", eg_function_5)
+        # add_example("data",  "showing data sets", eg_function_5)
         # add_example("clone", "replicate structure of a DATA", eg_function_6)
-        # add_example("cliffs", "stats tests", eg_function_7)
+        add_example("cliffs", "stats tests", eg_function_7)
         # add_example("dist", "distance test", eg_function_8)
         # add_example("half", "divide data in halg", eg_function_9)
         # add_example("tree", "make snd show tree of clusters", eg_function_10)

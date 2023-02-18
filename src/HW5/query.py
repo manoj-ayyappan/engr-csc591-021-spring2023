@@ -1,6 +1,7 @@
 import math
 import query
 import lists
+import numerics
     
 def has(col):
     if not col.isSym and not col.ok:
@@ -25,3 +26,10 @@ def div(col, e=None):
     else:
         # return (sorted(has(col))[int(len(has(col)) * 0.9)] - sorted(has(col))[int(len(has(col)) * 0.1)]) / 2.58
         return (lists.per(has(col), 0.9) - lists.per(has(col), 0.1)) / 2.58
+    
+def stats(data, cols = None, nPlaces = 2):
+    if cols == None:
+        cols = data.cols.y
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(mid(col), nPlaces), col.txt))
+    tmp["N"] = len(data.rows)
+    return tmp

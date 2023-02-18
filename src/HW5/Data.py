@@ -48,21 +48,21 @@ class Data(object):
                 data.add(x.cells)
             return data
 
-    def stats(self, what=None, cols=None, nPlaces=None):
-        # Reports mid or div of cols (defaults to i.cols.y)
-        if what == None:
-            what = "mid"
-        if cols == None:
-            cols = self.cols.y
-        if nPlaces == None:
-            nPlaces = 2
+    # def stats(self, what=None, cols=None, nPlaces=None):
+    #     # Reports mid or div of cols (defaults to i.cols.y)
+    #     if what == None:
+    #         what = "mid"
+    #     if cols == None:
+    #         cols = self.cols.y
+    #     if nPlaces == None:
+    #         nPlaces = 2
 
-        def fun(k, col):
-            if isinstance(what, str):
-                return round(getattr(col, what)(), nPlaces), col.txt
-            else:
-                return round(what(col), nPlaces), col.txt
-        return lists.kap(cols, fun)
+    #     def fun(k, col):
+    #         if isinstance(what, str):
+    #             return round(getattr(col, what)(), nPlaces), col.txt
+    #         else:
+    #             return round(what(col), nPlaces), col.txt
+    #     return lists.kap(cols, fun)
     
     def furthest(self, row1, rows):
         # Sort other `rows` by distance to `row`
