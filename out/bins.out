@@ -1,6 +1,5 @@
-3 8 4 1.5503875968992247
-{'Lbs-': 1.0, 'Acc+': 1.0, 'Mpg+': 1.0}
-✅ pass:	 data
+> 1.0 True
+✅ pass:	 cliffs
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
