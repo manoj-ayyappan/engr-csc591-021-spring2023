@@ -104,17 +104,19 @@ def eg_function_6():
 def eg_function_7():
   assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [8, 7, 6, 2, 5, 8, 7, 3]) == False, "1"
   assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [9, 9, 7, 8, 10, 9, 6]) == True, "2"
-  t1, t2 = {}, {}
+  t1, t2 = [], []
   for i in range(1000):
-      lists.push(t1, numerics.rand())
-      lists.push(t2, math.sqrt(numerics.rand()))
-  assert numerics.cliffsDelta(t1, t1) == False, "3"
-  assert numerics.cliffsDelta(t1, t2) == True, "4"
+      t1.append(numerics.rand())
+      t2.append(numerics.rand() ** 0.5)
+
+  assert(numerics.cliffsDelta(t1, t1) == False, "3")
+  assert(numerics.cliffsDelta(t1, t2) == True, "4")
+
   diff, j = False, 1.0
   while not diff:
-      t3 = list(map(lambda x: x*j, t1))
+      t3 = lists.map(t1, lambda x: x * j)
       diff = numerics.cliffsDelta(t1, t3)
-      print(">", round(j, 3), diff)
+      print(">", numerics.rnd(j, 2), diff)
       j *= 1.025
 
   def fun(x):
@@ -139,8 +141,8 @@ def eg_function_9():
   left,right,A,B,mid,c = data.half()
   print(len(left),len(right))
   l,r = data.clone(left), data.clone(right)
-  print("l",strings.o(l.stats()))
-  print("r",strings.o(r.stats()))
+  print("l",strings.o(query.stats(l)))
+  print("r",strings.o(query.stats(r)))
 
 def eg_function_10():
   misc.showTree(Data.Data(d.the["file"]).tree())
@@ -148,12 +150,12 @@ def eg_function_10():
 def eg_function_11():
   data = Data.Data(d.the["file"])
   best,rest = data.sway()
-  print("\nall ", strings.o(data.stats()))
-  print("    ",   strings.o(data.stats(query.div)))
-  print("\nbest", strings.o(best.stats()))
-  print("    ",   strings.o(best.stats(query.div)))
-  print("\nrest", strings.o(rest.stats()))
-  print("    ",   strings.o(rest.stats(query.div)))
+  print("\nall ", strings.o(query.stats(data)))
+  print("    ",   strings.o(query.stats(data,query.div)))
+  print("\nbest", strings.o(query.stats(best)))
+  print("    ",   strings.o(query.stats(best,query.div)))
+  print("\nrest", strings.o(query.stats(rest)))
+  print("    ",   strings.o(query.stats(rest,query.div)))
   print("\nall ~= best?", strings.o(numerics.diffs(best.cols.y, data.cols.y)))
   print("best ~= rest?", strings.o(numerics.diffs(best.cols.y, rest.cols.y)))
 
@@ -181,9 +183,9 @@ def add_all_examples():
         # add_example("csv", "reading csv files", eg_function_4)
         # add_example("data",  "showing data sets", eg_function_5)
         # add_example("clone", "replicate structure of a DATA", eg_function_6)
-        add_example("cliffs", "stats tests", eg_function_7)
+        # add_example("cliffs", "stats tests", eg_function_7)
         # add_example("dist", "distance test", eg_function_8)
         # add_example("half", "divide data in halg", eg_function_9)
         # add_example("tree", "make snd show tree of clusters", eg_function_10)
         # add_example("sway", "optimizing", eg_function_11)
-        # add_example("bins",  "find deltas between best and rest", eg_function_12)
+        add_example("bins",  "find deltas between best and rest", eg_function_12)

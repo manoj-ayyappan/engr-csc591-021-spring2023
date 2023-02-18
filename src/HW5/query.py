@@ -27,9 +27,12 @@ def div(col, e=None):
         # return (sorted(has(col))[int(len(has(col)) * 0.9)] - sorted(has(col))[int(len(has(col)) * 0.1)]) / 2.58
         return (lists.per(has(col), 0.9) - lists.per(has(col), 0.1)) / 2.58
     
-def stats(data, cols = None, nPlaces = 2):
+def stats(data, fun = None, cols = None, nPlaces = 2):
     if cols == None:
         cols = data.cols.y
-    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(mid(col), nPlaces), col.txt))
+
+    if(fun == None):
+        fun = mid
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
     tmp["N"] = len(data.rows)
     return tmp

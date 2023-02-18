@@ -52,7 +52,10 @@ def cliffsDelta(ns1, ns2):
                 gt += 1
             if x < y:
                 lt += 1
-    return abs(lt - gt) / n > g.the["cliffs"]
+    uyt = lt - gt
+    clidhui =  g.the["cliffs"]
+    ytr = abs(lt - gt) / n
+    return (abs(lt - gt) / n) > g.the["cliffs"]
 
 # Given two tables with the same keys, report if their
 # values are different.
