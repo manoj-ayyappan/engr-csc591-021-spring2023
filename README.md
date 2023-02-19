@@ -31,9 +31,9 @@ python --version
 git clone https://github.com/manoj-ayyappan/engr-csc591-021-spring2023
 ```
 
-3. Run the following command inside the /src folder to run all the corresponding test cases:
+3. Run the following command inside the /test folder to run all the test cases:
 ```bash
-python3 run.py 
+python3 test_hw.py [hw-number]
 ```
 
 
@@ -73,6 +73,11 @@ Further details regarding the license can be found [here](https://github.com/man
 
 [**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/grid.lua)
 
+### Homework 5 (Discretization) :
+
+ - Implement Discretization
+
+[**Example source code in Lua**](https://github.com/timm/tested/blob/main/src/bins.lua)
 
 ## Code of Conduct
 [Code of Conduct](https://github.com/manoj-ayyappan/engr-csc591-021-spring2023/blob/main/CODE_OF_CONDUCT.md)
