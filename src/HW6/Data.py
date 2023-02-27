@@ -192,22 +192,22 @@ class Data(object):
     #         node["left"] = self.sway(left, min, cols, node["A"])
     #     return node
     
-    def sway(self, cols=None, worker=None, best=None, rest=None):
-        def workerF(rows, worse, above = None):
+    def sway(self, data, cols=None, worker=None, best=None, rest=None, c=None, evals=None):
+        def workerF(rows, worse, evals0, above = None):
             if len(rows) <= (len(self.rows)**g.the["min"]):
-                return rows, lists.many(worse, g.the["rest"] * len(rows))
+                return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
             else:
-                l, r, A, B, mid, c = self.half( rows, cols, above)
+                l, r, A, B, mid, c, evals = self.half(data, rows, cols, above)
                 if self.better(B, A):
                     l, r, A, B = r, l, B, A
                 lists.map(r, lambda row: lists.push(worse, row))
-                return workerF(l, worse, A)
+                return workerF(l, worse, evals+evals0, A)
         if worker is None:
             best, rest = workerF(self.rows, [])
             return self.clone(best), self.clone(rest)
         else:
-            best, rest = worker
-            return self.clone(best), self.clone(rest)
+            best, rest, evals = workerF(self.rows, [], 0)
+            return self.clone(best), self.clone(rest), evals
 
 
 

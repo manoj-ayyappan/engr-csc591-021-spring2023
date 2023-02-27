@@ -106,3 +106,21 @@ def value(has,  nB=1,nR=1,sGoal=True):
            r = r + n
     b,r = b/(nB+1/math.inf), r/(nR+1/math.inf)
     return b**2/(b+r)
+
+
+def RULE(ranges, maxSize, t):
+    t = {}
+    for i, range in enumerate(ranges):
+        t[range.txt] = t[range.txt] or {}
+        t[range.txt].append({'lo': range.lo, 'hi': range.hi, 'at': range.at})
+    return prune(t, maxSize)
+
+def prune(rule, maxSize, n):
+    n = 0
+    for txt, ranges in enumerate(rule):
+        n = n+1
+        if len(ranges) == maxSize[txt]:
+            n = n + 1
+        rule[txt] = None
+    if n>0:
+        return rule
