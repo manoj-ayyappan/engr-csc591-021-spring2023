@@ -1,17 +1,18 @@
 
 global the,help
 the,help = {},""" 
-bins: multi-objective semi-supervised discetization
+xpln: multi-goal semi-supervised explanation
 (c) 2023 Tim Menzies <timm@ieee.org> BSD-2
   
-USAGE: lua bins.lua [OPTIONS] [-g ACTIONS]
+USAGE: lua xpln.lua [OPTIONS] [-g ACTIONS]
   
 OPTIONS:
   -b  --bins    initial number of bins       = 16
   -c  --cliffs  cliff's delta threshold      = .147
+  -D  --D       different is over sd*d       = .35
   -f  --file    data file                    = data/auto93.csv
   -F  --Far     distance to distant          = .95
-  -g  --go      start-up action              = all
+  -g  --go      start-up action              = nothing
   -h  --help    show help                    = false
   -H  --Halves  search space for clustering  = 512
   -m  --min     size of smallest cluster     = .5
