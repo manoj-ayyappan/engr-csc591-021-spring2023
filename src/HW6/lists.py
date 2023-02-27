@@ -117,3 +117,15 @@ def last(t):
 def copy(t):
     u = c.deepcopy(t)
     return u
+
+# Return a portion of `t`; go,stop,inc defaults to 1,#t,1.
+# Negative indexes are supported.
+def slice(t, go, stop, inc):
+  if go and go < 0:
+     go=len(t)+go
+  if stop and stop < 0:
+      stop=len(t)+stop
+  u=[]
+  for j in range((go or 1)//1,(stop or len(t))//1,(inc or 1)//1):
+     u[1+len(u)]=t[j]
+  return u

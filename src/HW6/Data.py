@@ -78,6 +78,12 @@ class Data(object):
             s1 = s1 - math.exp(col.w * (x-y)/len(ys))
             s2 = s2 - math.exp(col.w * (y-x)/len(ys))
         return s1/len(ys) < s2/len(ys)
+
+    def betters(self,  n):
+        def fun(r1, r2):
+            return self.better(r1,r2)
+        tmp=lists.sort(self.rows, fun) 
+        return  n and lists.slice(tmp,1,n), lists.slice(tmp,n+1)  or tmp
         
     def around(self, row1, rows=None, cols=None):
         # sort other `rows` by distance to `row`

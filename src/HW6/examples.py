@@ -175,7 +175,18 @@ def eg_function_12():
            strings.o(range.y.has))
     print("")
 
-
+def eg_function_13():
+    data=Data.Data(d.the["file"])
+    best,rest,evals = data.sway()
+    rule,most= data.xpln(best,rest)
+    print("\n-----------\nexplain=", strings.o(misc.showRule(rule)))
+    data1= Data.Data(misc.selects(rule,data.rows))
+    print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div)))
+    print(f"sway with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div)))
+    print(f"xpln on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div)))
+    top,_ = data.betters(len(best.rows))
+    top = Data.Data(top)
+    print(f"sort with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div)))
 
 def add_all_examples():
         add_example("the", "show settings", eg_function_13)
@@ -188,7 +199,8 @@ def add_all_examples():
         add_example("clone", "replicate structure of a DATA", eg_function_6)
         add_example("cliffs", "stats tests", eg_function_7)
         add_example("dist", "distance test", eg_function_8)
-        add_example("half", "divide data in halg", eg_function_9)
-        add_example("tree", "make snd show tree of clusters", eg_function_10)
+        add_example("half", "divide data in half", eg_function_9)
+        add_example("tree", "make and show tree of clusters", eg_function_10)
         add_example("sway", "optimizing", eg_function_11)
         add_example("bins",  "find deltas between best and rest", eg_function_12)
+        add_example("xpln", "explore explanation sets", eg_function_13)

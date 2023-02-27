@@ -83,3 +83,26 @@ def showTree(tree, lvl=0, post=""):
     print((lvl == 0 or not tree.get('left')) and strings.o(query.stats(tree['data'])) or "")
     showTree(tree.get('left'), lvl+1)
     showTree(tree.get('right'), lvl+1)
+
+
+def selects(rule,rows,    disjunction,conjunction):
+  def disjunction(ranges,row,    x):
+    for _,range in ranges.items():
+      lo, hi, at = range.lo, range.hi, range.at
+      x = row[at]
+      if x == "?":
+         return True
+      if lo==hi and lo==x:
+         return True
+      if lo<=x  and x< hi:
+          return True 
+    return False 
+  def conjunction(row):
+    for _,ranges in rule.items(): 
+      if not disjunction(ranges,row):
+         return False
+    return True 
+  def fun(r):
+      if conjunction(r):
+         return r
+  return lists.map(rows, fun)
