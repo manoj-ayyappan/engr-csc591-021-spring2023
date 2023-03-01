@@ -65,7 +65,7 @@ def sort2(t, fun):
         r = t.items()
         return dict(sorted(r, key = fun))
     else: 
-        return sorted(t, key = fun)
+        return t.sort( key = fun)
     
 def sort(d):
     items = list(d.items())
@@ -129,3 +129,5 @@ def slice(t, go, stop, inc):
   for j in range((go or 1)//1,(stop or len(t))//1,(inc or 1)//1):
      u[1+len(u)]=t[j]
   return u
+
+gt = lambda x: lambda a: a[x]

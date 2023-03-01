@@ -115,8 +115,7 @@ def RULE(ranges, maxSize, t):
         t[range.txt].append({'lo': range.lo, 'hi': range.hi, 'at': range.at})
     return prune(t, maxSize)
 
-def prune(rule, maxSize, n):
-    n = 0
+def prune(rule, maxSize, n = 0):
     for txt, ranges in enumerate(rule):
         n = n+1
         if len(ranges) == maxSize[txt]:

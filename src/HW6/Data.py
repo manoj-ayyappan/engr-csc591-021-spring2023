@@ -8,6 +8,9 @@ import Row
 import Cols
 import globalVars as g
 import math
+import query
+import Rule
+import discretization
 
 
 class Data(object):
@@ -146,22 +149,9 @@ class Data(object):
                 mid = tmp["row"]
             else:
                 right.append(tmp["row"])
-        return left, right, A, B, mid, c
+        evals = 1 if g.the.get("Reuse") and above else 2
+        return left, right, A, B, mid, c, evals
 
-    
-    # def cluster(self, rows=None, mini=None, cols=None, above=None):
-    #     # returns `rows`, recursively halved
-    #     node = {}
-    #     rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-    #     cols = cols if cols else self.cols.x
-    #     node["data"] = self.clone(rows)
-    #     node["left"] = {}
-    #     node["right"] = {}
-    #     if len(rows) >= 2:
-    #         left, right, node["A"], node["B"], node["mid"], c = self.half(rows, cols, above)
-    #         node["left"] = self.cluster(left, mini, cols, node["A"])
-    #         node["right"] = self.cluster(right, mini, cols, node["B"])
-    #     return node
     
     def cluster(i, rows=None, cols=None, above=None):
         if rows is None:
@@ -170,43 +160,27 @@ class Data(object):
             cols = i.cols.x
         node = {'data': i.clone(rows)}
         if len(rows) >= 2:
-            left, right, node['A'], node['B'], node['mid'], node['c'] = i.half(rows, cols, above)
+            left, right, node['A'], node['B'], node['mid'], node['c'], node['evals'] = i.half(rows, cols, above)
             node['left'] = i.cluster(left, cols, node['A'])
             node['right'] = i.cluster(right, cols, node['B'])
         return node
 
-
-    # def sway(self, rows=None, min=None, cols=None, above=None):
-    #     node, left, right, A, B, mid = None, None, None, None, None, None
-    #     rows = {k:v for k,v in enumerate(rows)} if rows else self.rows
-    #     if min is None:
-    #         min = (len(rows))**g.the.get("min")
-    #     if cols is None:
-    #         cols = self.cols.x
-    #     temp = {}
-    #     node = {"data": self.clone(rows)}
-    #     if len(rows) > 2 * min:
-    #         left, right, node["A"], node["B"], node["mid"], c= self.half(rows, cols, above)
-    #         if self.better(node["B"], node["A"]):
-    #             left, right, node["A"], node["B"] = right, left, node["B"], node["A"]
-    #         node["left"] = self.sway(left, min, cols, node["A"])
-    #     return node
-    
-    def sway(self, data, cols=None, worker=None, best=None, rest=None, c=None, evals=None):
-        def workerF(rows, worse, evals0, above = None):
+        
+    def sway(self, cols=None, worker=None, best=None, rest=None, evals=0):
+        def workerF(rows, worse, evals0,  above = None):
             if len(rows) <= (len(self.rows)**g.the["min"]):
                 return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
             else:
-                l, r, A, B, mid, c, evals = self.half(data, rows, cols, above)
+                l, r, A, B, mid, c, evals = self.half( rows, cols, above)
                 if self.better(B, A):
                     l, r, A, B = r, l, B, A
                 lists.map(r, lambda row: lists.push(worse, row))
-                return workerF(l, worse, evals+evals0, A)
+                return workerF(l, worse,evals+evals0, A)
         if worker is None:
-            best, rest = workerF(self.rows, [])
-            return self.clone(best), self.clone(rest)
-        else:
             best, rest, evals = workerF(self.rows, [], 0)
+            return self.clone(best), self.clone(rest), evals
+        else:
+            best, rest = worker
             return self.clone(best), self.clone(rest), evals
 
 
@@ -217,10 +191,64 @@ class Data(object):
         if here is None:
             here = {'data': self.clone(rows)}
         if len(rows) >= 2*(len(self.rows)**g.the["min"]):
-            left, right, A, B, mid, c = self.half(rows, cols, above)
+            left, right, A, B, mid, c, evals = self.half(rows, cols, above)
             here['left'] = self.tree( left, cols, A)
             here['right'] = self.tree(right, cols, B)
         return here
+    
+    def xpln(self, best, rest):
+        def v(has):
+            return query.value(has, len(best.rows), len(rest.rows), "best")
+        
+        def score(ranges):
+            rule = Rule.RULE(ranges, maxSizes)
+            if rule:
+                ltr = rule.showRule()
+                strings.oo(rule.showRule())
+                bestr = rule.selects( best.rows)
+                restr = rule.selects( rest.rows)
+                if len(bestr) + len(restr) > 0:
+                    return v({"best": len(bestr), "rest": len(restr)}), rule
+                else:
+                    return 0, rule
+        
+        tmp = []
+        maxSizes = {}
+        for _, ranges in discretization.bins(self.cols.x, {"best": best.rows, "rest": rest.rows}).items():
+            maxSizes[ranges[0].txt] = len(ranges)
+            print("")
+            for _, range in ranges.items():
+                print(range.txt, range.lo, range.hi)
+                lists.push(tmp, {"range": range, "max": len(ranges), "val": v(range.y.has)})
+        
+        rule, most = self.firstN(sorted(tmp, key=lambda d: -d['val']) , score)
+        return rule, most
+    
+    def firstN(self, sortedRanges, scoreFun, first=None, useful=None, most=None, out=None):
+        print("")
+        for r in sortedRanges:
+            print(r['range'].txt, r['range'].lo, r['range'].hi, numerics.rnd(r['val'], 2), strings.o(r['range'].y.has))
+        first = sortedRanges[0]['val']
+        
+        def useful(range):
+            if range['val'] > 0.05 and range['val'] > first / 10:
+                return range
+        
+        sortedRanges = list(filter(None, map(useful, sortedRanges))) # reject useless ranges
+        
+        most, out = -1, None
+        
+        for n in range(1, len(sortedRanges)+1):
+            tmp, rule = scoreFun(list(map(lambda x: x['range'], sortedRanges[:n])))
+            if tmp and tmp > most:
+                out, most = rule, tmp
+        
+        
+
+        return out, most
+
+
+
     
 
 

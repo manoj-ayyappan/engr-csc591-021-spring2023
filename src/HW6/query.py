@@ -36,3 +36,17 @@ def stats(data, fun = None, cols = None, nPlaces = 2):
     tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
     tmp["N"] = len(data.rows)
     return tmp
+
+def value(has, nB=None, nR=None, sGoal=True):
+    sGoal = sGoal or True
+    nB = nB or 1
+    nR = nR or 1
+    b, r = 0, 0
+    for x, n in has.items():
+        if x == sGoal:
+            b = b + n
+        else:
+            r = r + n
+    b = b / (nB + 1/math.inf)
+    r = r / (nR + 1/math.inf)
+    return b ** 2 / (b + r)
