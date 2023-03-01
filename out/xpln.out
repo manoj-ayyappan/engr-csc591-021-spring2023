@@ -45,25 +45,11 @@ origin 3 3 0.0 {'rest': 9}
 
 -----------
 explain= {'origin': [2]}
-Error in example 'xpln': expected string or bytes-like object
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/examples.py", line 183, in eg_function_13
-    data1= Data.Data(rule.selects(data.rows))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Data.py", line 26, in __init__
-    lists.map(src, self.add)
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/lists.py", line 45, in map
-    v = fun(v)
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Data.py", line 40, in add
-    self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Cols.py", line 17, in __init__
-    match = re.match(r'^[A-Z]', s)
-  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/re.py", line 190, in match
-    return _compile(pattern, flags).match(string)
-TypeError: expected string or bytes-like object
-
-❌ fail:	 xpln
+all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
+sway with 6 evals {'Lbs-': 2085.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 13} {'Lbs-': 525.19, 'Acc+': 4.19, 'Mpg+': 7.75, 'N': 13}
+xpln on 6 evals {'Lbs-': 2246.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 70} {'Lbs-': 490.31, 'Acc+': 2.98, 'Mpg+': 7.75, 'N': 70}
+sort with 398 evals {'Lbs-': 4633.0, 'Acc+': 12.5, 'Mpg+': 10.0, 'N': 12} {'Lbs-': 240.7, 'Acc+': 1.55, 'Mpg+': 0.0, 'N': 12}
+✅ pass:	 xpln
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -71,5 +57,5 @@ TypeError: expected string or bytes-like object
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 0
-❌ Number of tests failing -> 1
+✅ Number of tests passing -> 1
+❌ Number of tests failing -> 0
