@@ -1,0 +1,75 @@
+
+Clndrs -inf 4
+Clndrs 4 inf
+
+Volume -inf 90
+Volume 90 116
+Volume 116 141
+Volume 141 inf
+
+Model -inf 76
+Model 76 77
+Model 77 78
+Model 78 79
+Model 79 80
+Model 80 inf
+
+origin 1 1
+origin 2 2
+origin 3 3
+
+origin 2 2 0.87 {'best': 13, 'rest': 8}
+Clndrs -inf 4 0.71 {'best': 13, 'rest': 21}
+Volume -inf 90 0.49 {'best': 7, 'rest': 3}
+Model 76 77 0.29 {'best': 4, 'rest': 1}
+Model 77 78 0.18 {'best': 3, 'rest': 3}
+Model 79 80 0.18 {'best': 3, 'rest': 3}
+Model 78 79 0.17 {'best': 3, 'rest': 4}
+Volume 116 141 0.16 {'best': 3, 'rest': 5}
+Volume 90 116 0.12 {'best': 3, 'rest': 12}
+Clndrs 4 inf 0.0 {'rest': 31}
+Volume 141 inf 0.0 {'rest': 32}
+Model -inf 76 0.0 {'rest': 33}
+Model 80 inf 0.0 {'rest': 8}
+origin 1 1 0.0 {'rest': 35}
+origin 3 3 0.0 {'rest': 9}
+{'origin': [2]}
+{'origin': [2], 'Clndrs': [[-inf, 4]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 77]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78], [79, 80]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 80]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 90], [116, 141]], 'Model': [[76, 80]]}
+{'origin': [2], 'Clndrs': [[-inf, 4]], 'Volume': [[-inf, 141]], 'Model': [[76, 80]]}
+
+-----------
+explain= {'origin': [2]}
+Error in example 'xpln': expected string or bytes-like object
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/examples.py", line 183, in eg_function_13
+    data1= Data.Data(rule.selects(data.rows))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Data.py", line 26, in __init__
+    lists.map(src, self.add)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/lists.py", line 45, in map
+    v = fun(v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Data.py", line 40, in add
+    self.cols=Cols.Cols(t)  #  here, we create "i.cols" from the first row
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW6/Cols.py", line 17, in __init__
+    match = re.match(r'^[A-Z]', s)
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/re.py", line 190, in match
+    return _compile(pattern, flags).match(string)
+TypeError: expected string or bytes-like object
+
+❌ fail:	 xpln
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?make_attempt <class 'function'>
+#W ?main <class 'function'>
+#W ?Seed <class 'int'>
+✅ Number of tests passing -> 0
+❌ Number of tests failing -> 1
