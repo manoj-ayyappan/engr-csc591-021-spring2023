@@ -1,8 +1,0 @@
-#W ?k <class 'str'>
-#W ?v <class 'dict'>
-#W ?settings <class 'function'>
-#W ?cli <class 'function'>
-#W ?make_attempt <class 'function'>
-#W ?main <class 'function'>
-✅ Number of tests passing -> 0
-❌ Number of tests failing -> 0
