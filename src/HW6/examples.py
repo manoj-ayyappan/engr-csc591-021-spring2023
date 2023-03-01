@@ -180,12 +180,12 @@ def eg_function_13():
     best,rest, evals = data.sway() 
     rule,most= data.xpln(best,rest) 
     print("\n-----------\nexplain=", strings.o(rule.showRule())) 
-    data1= Data.Data(rule.selects(data.rows)) 
+    data1= Data.Data(rule.selects(data.rows), datai = data) 
     print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div))) 
     print(f"sway with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div))) 
     print(f"xpln on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div))) 
     top,_ = data.betters(len(best.rows)) 
-    top = Data.Data(top) 
+    top = Data.Data(top, data2 = data) 
     print(f"sort with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
 
 def add_all_examples():

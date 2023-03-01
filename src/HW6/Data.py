@@ -11,19 +11,31 @@ import math
 import query
 import Rule
 import discretization
+import functools
 
 
 class Data(object):
     # Initialization
     # A container of `i.rows`, to be summarized in `i.cols`
-    def __init__(self, src={}):
+    def __init__(self, src={}, datai=None, data2=None):
         self.rows, self.cols = {}, None
         if str(type(src)) == "<class 'str'>":
             # load from a csv file on disk
             strings.csv(src,self.add)
         else:
-           # load from a list
-           lists.map(src, self.add)
+            tmp = []
+            if(datai):
+                for i in range(len(src)):
+                    tmp.append(src[i][1])
+                self.cols=Cols.Cols(datai.cols.names)
+            if(data2):
+                for i in range(len(src)):
+                    tmp.append(src[i])
+                self.cols=Cols.Cols(data2.cols.names)
+            if len(tmp) > 0:
+                lists.map(tmp, self.add)
+            else:
+                lists.map(src, self.add)
     
     def add(self, t):
         # Add a new row, update column headers
@@ -31,6 +43,8 @@ class Data(object):
             # true if we have already seen the column names
             if hasattr(t, "cells"):
                 t = t  
+                lists.push(self.rows, t)
+                self.cols.add(t)
             else: 
                 t = Row.Row(t) # ensure is a ROW, reusing old rows in the are passed in
             # t =ROW(t.cells and t.cells or t) # make a new ROW
@@ -50,22 +64,6 @@ class Data(object):
             for it, x in enumerate(init):
                 data.add(x.cells)
             return data
-
-    # def stats(self, what=None, cols=None, nPlaces=None):
-    #     # Reports mid or div of cols (defaults to i.cols.y)
-    #     if what == None:
-    #         what = "mid"
-    #     if cols == None:
-    #         cols = self.cols.y
-    #     if nPlaces == None:
-    #         nPlaces = 2
-
-    #     def fun(k, col):
-    #         if isinstance(what, str):
-    #             return round(getattr(col, what)(), nPlaces), col.txt
-    #         else:
-    #             return round(what(col), nPlaces), col.txt
-    #     return lists.kap(cols, fun)
     
     def furthest(self, row1, rows):
         # Sort other `rows` by distance to `row`
@@ -83,9 +81,8 @@ class Data(object):
         return s1/len(ys) < s2/len(ys)
 
     def betters(self,  n):
-        def fun(r1, r2):
-            return self.better(r1,r2)
-        tmp=lists.sort(self.rows, fun) 
+        rowItems = list(self.rows.values())
+        tmp=sorted(rowItems, key = functools.cmp_to_key(self.better))
         return  n and lists.slice(tmp,1,n), lists.slice(tmp,n+1)  or tmp
         
     def around(self, row1, rows=None, cols=None):

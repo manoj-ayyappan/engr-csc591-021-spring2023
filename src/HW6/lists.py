@@ -120,14 +120,25 @@ def copy(t):
 
 # Return a portion of `t`; go,stop,inc defaults to 1,#t,1.
 # Negative indexes are supported.
-def slice(t, go, stop, inc):
-  if go and go < 0:
-     go=len(t)+go
-  if stop and stop < 0:
-      stop=len(t)+stop
-  u=[]
-  for j in range((go or 1)//1,(stop or len(t))//1,(inc or 1)//1):
-     u[1+len(u)]=t[j]
-  return u
+# def slice(t, go, stop, inc = 1):
+#   if go and go < 0:
+#      go=len(t)+go
+#   if stop and stop < 0:
+#       stop=len(t)+stop
+#   u=[]
+#   for j in range((go or 1)//1,(stop or len(t))//1,(inc)//1):
+#      u[1+len(u)]=t[j]
+#   return u
+
+def slice(t, go=None, stop=None, inc=None):
+    if go is not None and go < 0:
+        go = len(t) + go
+    if stop is not None and stop < 0:
+        stop = len(t) + stop
+    u = []
+    for j in range((go or 0), (stop or len(t)), (inc or 1)):
+        u.append(t[j])
+    return u
+
 
 gt = lambda x: lambda a: a[x]
