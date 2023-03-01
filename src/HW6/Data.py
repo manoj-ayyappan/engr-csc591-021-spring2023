@@ -1,6 +1,7 @@
 # CLASS Data
 # Store many rows, summarized into columns
 
+from audioop import reverse
 import strings
 import lists
 import numerics
@@ -81,9 +82,12 @@ class Data(object):
         return s1/len(ys) < s2/len(ys)
 
     def betters(self,  n):
+        def fun(r1, r2):
+            return -1 if self.better(r1, r2) else 1
+
         rowItems = list(self.rows.values())
-        tmp=sorted(rowItems, key = functools.cmp_to_key(self.better))
-        return  n and lists.slice(tmp,1,n), lists.slice(tmp,n+1)  or tmp
+        tmp=sorted(rowItems, key = functools.cmp_to_key(fun))
+        return (lists.slice(tmp,0,n), lists.slice(tmp,n)) if not n is None else (tmp, None)
         
     def around(self, row1, rows=None, cols=None):
         # sort other `rows` by distance to `row`
