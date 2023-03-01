@@ -204,7 +204,7 @@ class Data(object):
             rule = Rule.RULE(ranges, maxSizes)
             if rule:
                 ltr = rule.showRule()
-                strings.oo(rule.showRule())
+                strings.oo(ltr)
                 bestr = rule.selects( best.rows)
                 restr = rule.selects( rest.rows)
                 if len(bestr) + len(restr) > 0:
@@ -224,13 +224,16 @@ class Data(object):
         rule, most = self.firstN(sorted(tmp, key=lambda d: -d['val']) , score)
         return rule, most
     
-    def firstN(self, sortedRanges, scoreFun, first=None, useful=None, most=None, out=None):
+    def firstN(self, sortedRanges, scoreFun, useful=None, most=None, out=None):
         print("")
         for r in sortedRanges:
             print(r['range'].txt, r['range'].lo, r['range'].hi, numerics.rnd(r['val'], 2), strings.o(r['range'].y.has))
+        
+        global first
         first = sortedRanges[0]['val']
         
         def useful(range):
+            global first
             if range['val'] > 0.05 and range['val'] > first / 10:
                 return range
         
