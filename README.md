@@ -33,7 +33,7 @@ git clone https://github.com/manoj-ayyappan/engr-csc591-021-spring2023
 
 3. Run the following command inside the /test folder to run all the test cases:
 ```bash
-python3 test_hw.py [hw-number]
+python3 test_hw.py HW[hw-number]
 ```
 
 
