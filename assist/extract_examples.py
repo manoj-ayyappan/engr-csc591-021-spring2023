@@ -59,7 +59,8 @@ def create_output(examples):
 for filename in lua_files:
     with open(filename, "r", encoding="utf8") as f:
         s = f.read()
-
+    
+    print(filename)
     examples = []
     i = 0
     for option in re.findall("go\(([^\,]+),([^\,]+),((.|\n)*?end\s*\)\n)", s):

@@ -19,7 +19,7 @@ jobs:
       matrix:
         # Modify hw-out with the name of the .out file in the correct order
         # script is for hw1, data for 2, cluster for 3...
-        hw-out: [script, data, cluster, grid, bins, xpln]
+        hw-out: [script, data, cluster, grid, bins, xpln, stats]
         
     env:
       NUM: ${{ strategy.job-index }} 
