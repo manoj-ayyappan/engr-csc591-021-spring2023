@@ -7,17 +7,21 @@ import globalVars as g
 
 class Num(object):
     # Initialization
-    def __init__(self, at = 0, txt = ""):
+    def __init__(self, at = 0, txt = "", t=None):
         self.has = {}
         self.at, self.txt = at , txt 
         self.n, self.mu, self.m2 = 0, 0, 0
         self.ok = False
         self.isSym = False
+        self.sd = 0
         self.lo, self.hi = math.inf, -math.inf
         if self.txt.endswith("-"):
             self.w = -1 
         else: 
             self.w = 1 
+        if(t):
+            for i in range(len(t)):
+                self.add(t[i])
 
     def add(self, x, n = 1):
         # Add 'n'
@@ -28,11 +32,13 @@ class Num(object):
             else:
                 tn = 1
             self.n = self.n + tn
-            d = n - self.mu
+            d = x - self.mu
             self.mu = self.mu + d / self.n
-            self.m2 = self.m2 + d * (n - self.mu)
+            self.m2 = self.m2 + d*(x-self.mu)
+            self.sd = 0 if self.n<2 else (self.m2/(self.n - 1))**.5 
             self.lo = min(x, self.lo)
             self.hi = max(x, self.hi)
+            
         if self.isSym:
             self.has[x] = n + self.has.get(x, 0)
             if self.has[x] > self.most:
@@ -49,6 +55,7 @@ class Num(object):
             if pos is not None:
                 self.has[pos] = x
                 self.ok = False
+            
 
     def mid(self):
         # Returns mean

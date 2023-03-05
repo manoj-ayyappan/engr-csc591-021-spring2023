@@ -9,6 +9,7 @@ import math
 import Num
 import Sym
 import Data
+import random
 
 
 
@@ -189,48 +190,57 @@ def eg_function_13():
     print(f"sort with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
 
 
+# ok
 def eg_function_14(n=1):
-    math.randomseed(n)
+    random.seed(n)
 
+# sample
 def eg_function_15(): 
-    for i in range(1,10): 
-        print("","".join(numerics.samples(["a","b","c","d","e"])))
+    samples = ["a", "b", "c", "d", "e"]
+    for i in range(1, 11):
+        print("", ''.join(numerics.samples(samples, len(samples))))
 
+#num
 def eg_function_16():
-    n=Num.Num({1,2,3,4,5,6,7,8,9,10})
+    n=Num.Num(t=[1,2,3,4,5,6,7,8,9,10])
     print("",n.n, n.mu, n.sd)
 
+# Guass
 def eg_function_17():
     t=[]
-    for i in range(1,10**4): 
+    for i in range(0,10**4): 
         t.append(numerics.gaussian(10,2))
-    n=Num.Num(t)
+    n=Num.Num(t=t)
     print("",n.n,n.mu,n.sd) 
 
+# bootmu
 def eg_function_18():
     a=[]
     for i in range(1,100):
         a.append(numerics.gaussian(10,1))
+    numA = Num.Num(t=a)
     print("","mu","sd","cliffs","boot","both")
     print("","--","--","------","----","----")
-    for mu in range(10,11,.1):
+    for mu in numerics.float_range(10,11,.1):
         b=[]
         for i in range(1,100):
             b.append(numerics.gaussian(mu,1))
+        numB = Num.Num(t=b)
         cl=numerics.cliffsDelta(a,b)
         bs=numerics.bootstrap(a,b)
         print("",mu,1,cl,bs,cl and bs)
 
+#bootsd
 def eg_function_19():
     a=[]
     for i in range(1,100):
         a.append(numerics.gaussian(10,1))
     print("","mu","sd","cliffs","boot","both")
     print("","--","--","------","----","----")
-    for sd in range(1,10,1):
+    for sd in range(1,10):
         b=[]
         for i in range(1,100):
-           b.append(numerics.gaussian(12,sd))
+           b.append(numerics.gaussian(10,sd))
         cl=numerics.cliffsDelta(a,b)
         bs=numerics.bootstrap(a,b)
         print("",12,sd,cl, bs, cl and bs)
@@ -363,9 +373,9 @@ def add_all_examples():
     add_example("gauss", "", eg_function_17)
     add_example("bootmu", "", eg_function_18)
     add_example("bootsd", "", eg_function_19)
-    add_example("basic", "", eg_function_20)
-    add_example("pre", "", eg_function_21)
-    add_example("five", "", eg_function_22)
-    add_example("six", "", eg_function_23)
-    add_example("tiles", "", eg_function_24)
-    add_example("sk", "", eg_function_25)
+    # add_example("basic", "", eg_function_20)
+    # add_example("pre", "", eg_function_21)
+    # add_example("five", "", eg_function_22)
+    # add_example("six", "", eg_function_23)
+    # add_example("tiles", "", eg_function_24)
+    # add_example("sk", "", eg_function_25)

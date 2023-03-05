@@ -22,4 +22,9 @@ OPTIONS:
   -R  --Reuse   child splits reuse a parent pole = true
   -s  --seed    random number seed           = 937162211
   -d  --debug   debug mode on                = false
+
+  -z  --bootstrap   bootstrap                = 512
+  -y  --conf   conf                          = 0.05
+  -x  --cliffs   cliffs                      = .4
+  -w  --cohen   cohen                        = .35
 """
