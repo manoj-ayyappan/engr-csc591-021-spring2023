@@ -5,11 +5,11 @@ import lists
 import query
 import discretization
 import globalVars as d
-import math
 import Num
 import Sym
 import Data
 import random
+import stats
 
 
 
@@ -218,7 +218,7 @@ def eg_function_18():
     a=[]
     for i in range(1,100):
         a.append(numerics.gaussian(10,1))
-    numA = Num.Num(t=a)
+    
     print("","mu","sd","cliffs","boot","both")
     print("","--","--","------","----","----")
     for mu in numerics.float_range(10,11,.1):
@@ -240,13 +240,13 @@ def eg_function_19():
     for sd in range(1,10):
         b=[]
         for i in range(1,100):
-           b.append(numerics.gaussian(10,sd))
+           b.append(numerics.gaussian(12,sd))
         cl=numerics.cliffsDelta(a,b)
         bs=numerics.bootstrap(a,b)
         print("",12,sd,cl, bs, cl and bs)
 
 def eg_function_20():
-    print("\t\ttruee",  numerics.bootstrap(  {8, 7, 6, 2, 5, 8, 7, 3}, 
+    print("\t\ttrue",  numerics.bootstrap(  {8, 7, 6, 2, 5, 8, 7, 3}, 
                                     {8, 7, 6, 2, 5, 8, 7, 3}),
                         numerics.cliffsDelta({8, 7, 6, 2, 5, 8, 7, 3}, 
                                     {8, 7, 6, 2, 5, 8, 7, 3}))
@@ -262,25 +262,25 @@ def eg_function_20():
 def eg_function_21():
     print("\neg3")
     d=1
-    for i in range(1,10):
+    for i in range(1,11):
         t1,t2 = [],[]
         for j in range(1,32):
             t1.append(numerics.gaussian(10,1))
             t2.append(numerics.gaussian(d*10,1))
-        print("\t",d, str(d < 1.1), numerics.bootstrap(t1,t2), numerics.bootstrap(t1,t1))
+        print("\t",numerics.rnd(d,2), str(d < 1.1), numerics.bootstrap(t1,t2), numerics.bootstrap(t1,t1))
         d += 0.05 
 
 def eg_function_22():
-    for _,rx in tiles(scottKnot([
-            lists.RX({0.34,0.49,0.51,0.6,.34,.49,.51,.6},"rx1"),
-            lists.RX({0.6,0.7,0.8,0.9,.6,.7,.8,.9},"rx2"),
-            lists.RX({0.15,0.25,0.4,0.35,0.15,0.25,0.4,0.35},"rx3"),
-            lists.RX({0.6,0.7,0.8,0.9,0.6,0.7,0.8,0.9},"rx4"),
-            lists.RX({0.1,0.2,0.3,0.4,0.1,0.2,0.3,0.4},"rx5")])).items():
+    for _,rx in stats.tiles(stats.scottKnot([
+            lists.RX([0.34,0.49,0.51,0.6,.34,.49,.51,.6],"rx1"),
+            lists.RX([0.6,0.7,0.8,0.9,.6,.7,.8,.9],"rx2"),
+            lists.RX([0.15,0.25,0.4,0.35,0.15,0.25,0.4,0.35],"rx3"),
+            lists.RX([0.6,0.7,0.8,0.9,0.6,0.7,0.8,0.9],"rx4"),
+            lists.RX([0.1,0.2,0.3,0.4,0.1,0.2,0.3,0.4],"rx5")])).items():
         print(rx.name,rx.rank,rx.show)
 
 def eg_function_23():
-    for _,rx in tiles(scottKnot([
+    for _,rx in stats.tiles(stats.scottKnot([
             lists.RX({101,100,99,101,99.5,101,100,99,101,99.5},"rx1"),
             lists.RX({101,100,99,101,100,101,100,99,101,100},"rx2"),
             lists.RX({101,100,99.5,101,99,101,100,99.5,101,99},"rx3"),
@@ -311,14 +311,14 @@ def eg_function_24():
         k.append(numerics.gaussian(10,1))
 
     for k,v in enumerate([a,b,c,d,e,f,g,h,j,k]):
-        rxs[k] =  lists.RX(v,"rx"+str(k)) 
+        rxs.append(lists.RX(v,"rx"+str(k)) )
 
     def fun(a):
         return query.mid(a)
 
-    lists.sort(rxs,fun)
-    for _,rx in tiles(rxs).items():
-        print("",rx.name,rx.show)
+    lists.sort2(rxs,fun)
+    for rx in stats.tiles(rxs):
+        print("",rx["name"],rx["show"])
 
 def eg_function_25():
     rxs,a,b,c,d,e,f,g,h,j,k=[],[],[],[],[],[],[],[],[],[],[]
@@ -346,36 +346,36 @@ def eg_function_25():
     for k,v in enumerate([a,b,c,d,e,f,g,h,j,k]):
         rxs[k] =  lists.RX(v,"rx"+str(k)) 
         
-    for _,rx in tiles(scottKnot(rxs)).items():
+    for _,rx in stats.tiles(stats.scottKnot(rxs)).items():
         print("",rx.rank, rx.name,rx.show)
 
 
 def add_all_examples():
-    add_example("the", "show settings", eg_function_the)
-    add_example("rand", "demo random number generation", eg_function_0)
-    add_example("some", "demo of reservoir sampling", eg_function_1)
-    add_example("nums", "demo of NUM", eg_function_2)
-    add_example("syms", "demo SYMS", eg_function_3)
-    add_example("csv", "reading csv files", eg_function_4)
-    add_example("data",  "showing data sets", eg_function_5)
-    add_example("clone", "replicate structure of a DATA", eg_function_6)
-    add_example("cliffs", "stats tests", eg_function_7)
-    add_example("dist", "distance test", eg_function_8)
-    add_example("half", "divide data in half", eg_function_9)
-    add_example("tree", "make and show tree of clusters", eg_function_10)
-    add_example("sway", "optimizing", eg_function_11)
-    add_example("bins",  "find deltas between best and rest", eg_function_12)
-    add_example("xpln", "explore explanation sets", eg_function_13)
+    # add_example("the", "show settings", eg_function_the)
+    # add_example("rand", "demo random number generation", eg_function_0)
+    # add_example("some", "demo of reservoir sampling", eg_function_1)
+    # add_example("nums", "demo of NUM", eg_function_2)
+    # add_example("syms", "demo SYMS", eg_function_3)
+    # add_example("csv", "reading csv files", eg_function_4)
+    # add_example("data",  "showing data sets", eg_function_5)
+    # add_example("clone", "replicate structure of a DATA", eg_function_6)
+    # add_example("cliffs", "stats tests", eg_function_7)
+    # add_example("dist", "distance test", eg_function_8)
+    # add_example("half", "divide data in half", eg_function_9)
+    # add_example("tree", "make and show tree of clusters", eg_function_10)
+    # add_example("sway", "optimizing", eg_function_11)
+    # add_example("bins",  "find deltas between best and rest", eg_function_12)
+    # add_example("xpln", "explore explanation sets", eg_function_13)
 
-    add_example("ok", "", eg_function_14)
-    add_example("sample", "", eg_function_15)
-    add_example("num", "", eg_function_16)
-    add_example("gauss", "", eg_function_17)
-    add_example("bootmu", "", eg_function_18)
-    add_example("bootsd", "", eg_function_19)
+    # add_example("ok", "", eg_function_14)
+    # add_example("sample", "", eg_function_15)
+    # add_example("num", "", eg_function_16)
+    # add_example("gauss", "", eg_function_17)
+    # add_example("bootmu", "", eg_function_18)
+    # add_example("bootsd", "", eg_function_19)
     # add_example("basic", "", eg_function_20)
     # add_example("pre", "", eg_function_21)
-    # add_example("five", "", eg_function_22)
-    # add_example("six", "", eg_function_23)
     # add_example("tiles", "", eg_function_24)
+    add_example("five", "", eg_function_22)
+    # add_example("six", "", eg_function_23)
     # add_example("sk", "", eg_function_25)

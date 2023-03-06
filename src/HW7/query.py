@@ -10,7 +10,12 @@ def has(col):
     col.ok = True  # the invariant here is that "has" is ready to be shared.
     return col.has
 
-def mid(col, mode=None, most=None):
+def mid(col, mode="tiles", most=None):
+    if(mode == "tiles"):
+        dict = {}
+        for i in range(len(col["has"])):
+            dict[i] = col["has"][i]
+        return lists.per(dict, 0.5)
     if col.isSym:
         return col.mode
     else:

@@ -27,4 +27,5 @@ OPTIONS:
   -y  --conf   conf                          = 0.05
   -x  --cliffs   cliffs                      = .4
   -w  --cohen   cohen                        = .35
+  -v  --width   width                        = 40
 """
