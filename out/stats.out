@@ -1,95 +1,154 @@
-{'bins': 16, 'cliffs': 0.147, 'D': 0.35, 'file': 'data/auto93.csv', 'Far': 0.95, 'go': 'all', 'help': False, 'Halves': 512, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'Reuse': True, 'seed': 937162211, 'debug': False}
+{'bins': 16, 'cliffs': 0.4, 'D': 0.35, 'file': 'data/auto93.csv', 'Far': 0.95, 'go': 'all', 'help': False, 'Halves': 512, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cohen': 0.35, 'width': 40}
 ✅ pass:	 the
 ✅ pass:	 rand
 {31: 126, 14: 437, 29: 447, 0: 758, 3: 1301, 11: 1586, 21: 2116, 18: 2216, 2: 2269, 6: 2515, 19: 2715, 5: 2830, 4: 3905, 23: 3949, 20: 3999, 7: 4189, 27: 4768, 15: 5612, 30: 5636, 8: 5803, 16: 5993, 9: 6349, 24: 6417, 28: 6576, 13: 7090, 12: 7227, 22: 7360, 25: 7943, 17: 8308, 26: 8395, 1: 8549, 10: 8578}
 ✅ pass:	 some
-1 0.5 0.3
-2 0.3 0.32
-✅ pass:	 nums
-a 1.38
-✅ pass:	 syms
+Error in example 'nums': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 72, in eg_function_2
+    print(1,numerics.rnd(query.mid(num1), 1), numerics.rnd(query.div(num1), 1))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
+
+❌ fail:	 nums
+Error in example 'syms': 'Sym' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 80, in eg_function_3
+    print (query.mid(sym), numerics.rnd(query.div(sym), 2))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Sym' object is not subscriptable
+
+❌ fail:	 syms
 ✅ pass:	 csv
-3 8 4 1.5503875968992247
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-✅ pass:	 data
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-✅ pass:	 clone
-> 1.0 False
-> 1.02 False
-> 1.05 True
-✅ pass:	 cliffs
-{'lo': 0.0, 'hi': 0.8746495688429434, 'mid': 0.55, 'div': 0.26}
-✅ pass:	 dist
+Error in example 'data': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 96, in eg_function_5
+    print(col.lo, col.hi, query.mid(col), query.div(col))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
+
+❌ fail:	 data
+Error in example 'clone': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 102, in eg_function_6
+    strings.oo(query.stats(data1))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in stats
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 56, in kap
+    v, k = fun(k, v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in <lambda>
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
+
+❌ fail:	 clone
+Error in example 'cliffs': 1
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 106, in eg_function_7
+    assert numerics.cliffsDelta([8, 7, 6, 2, 5, 8, 7, 3], [8, 7, 6, 2, 5, 8, 7, 3]) == False, "1"
+AssertionError: 1
+
+❌ fail:	 cliffs
+Error in example 'dist': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 137, in eg_function_8
+    "mid":numerics.rnd(query.mid(num), 2),
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
+
+❌ fail:	 dist
 199 199
-l {'Lbs-': 2255.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 199}
-r {'Lbs-': 3609.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 199}
-✅ pass:	 half
-[398] {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-|.. [199] 
-|.. |.. [99] 
-|.. |.. |.. [49] 
-|.. |.. |.. |.. [24] {'Lbs-': 2223.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 24}
-|.. |.. |.. |.. [25] {'Lbs-': 2254.0, 'Acc+': 16.5, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2585.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2500.0, 'Acc+': 17.3, 'Mpg+': 30.0, 'N': 25}
-|.. |.. [100] 
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2278.0, 'Acc+': 16.5, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2110.0, 'Acc+': 16.6, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2265.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2210.0, 'Acc+': 16.1, 'Mpg+': 30.0, 'N': 25}
-|.. [199] 
-|.. |.. [99] 
-|.. |.. |.. [49] 
-|.. |.. |.. |.. [24] {'Lbs-': 4464.0, 'Acc+': 11.5, 'Mpg+': 10.0, 'N': 24}
-|.. |.. |.. |.. [25] {'Lbs-': 4135.0, 'Acc+': 13.0, 'Mpg+': 10.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 4054.0, 'Acc+': 13.2, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 4190.0, 'Acc+': 13.5, 'Mpg+': 10.0, 'N': 25}
-|.. |.. [100] 
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 3121.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2451.0, 'Acc+': 17.0, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 3380.0, 'Acc+': 16.6, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 3353.0, 'Acc+': 17.6, 'Mpg+': 20.0, 'N': 25}
-✅ pass:	 tree
+Error in example 'half': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 145, in eg_function_9
+    print("l",strings.o(query.stats(l)))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in stats
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 56, in kap
+    v, k = fun(k, v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in <lambda>
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
 
-all  {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-     {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
+❌ fail:	 half
+[398] Error in example 'tree': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 149, in eg_function_10
+    misc.showTree(Data.Data(d.the["file"]).tree())
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/misc.py", line 83, in showTree
+    print((lvl == 0 or not tree.get('left')) and strings.o(query.stats(tree['data'])) or "")
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in stats
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 56, in kap
+    v, k = fun(k, v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in <lambda>
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
 
-best {'Lbs-': 2205.0, 'Acc+': 16.2, 'Mpg+': 30.0, 'N': 12}
-     {'Lbs-': 271.32, 'Acc+': 1.47, 'Mpg+': 3.88, 'N': 12}
+❌ fail:	 tree
+Error in example 'sway': 'Num' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 154, in eg_function_11
+    print("\nall ", strings.o(query.stats(data)))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in stats
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 56, in kap
+    v, k = fun(k, v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in <lambda>
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
 
-rest {'Lbs-': 2933.0, 'Acc+': 15.4, 'Mpg+': 20.0, 'N': 48}
-     {'Lbs-': 1032.95, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 48}
+❌ fail:	 sway
 
-all ~= best? {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-best ~= rest? {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-✅ pass:	 sway
+all    {'best': 13, 'rest': 52}
 
-all    {'best': 12, 'rest': 48}
+Clndrs -inf 4 0.642 {'best': 13, 'rest': 29}
+Clndrs 4 inf 0.0 {'rest': 23}
 
-Clndrs -inf 3 0.0 {'rest': 2}
-Clndrs 3 4 0.64 {'best': 12, 'rest': 27}
-Clndrs 4 inf 0.0 {'rest': 19}
+Volume -inf 90 0.623 {'best': 9, 'rest': 4}
+Volume 90 112 0.176 {'best': 4, 'rest': 12}
+Volume 112 inf 0.0 {'rest': 36}
 
-Volume -inf 90 0.287 {'best': 5, 'rest': 9}
-Volume 90 116 0.454 {'best': 7, 'rest': 8}
-Volume 116 inf 0.0 {'rest': 31}
+Model -inf 73 0.0 {'rest': 15}
+Model 73 74 0.259 {'best': 4, 'rest': 3}
+Model 74 75 0.095 {'best': 2, 'rest': 5}
+Model 75 76 0.103 {'best': 2, 'rest': 4}
+Model 76 77 0.198 {'best': 3, 'rest': 2}
+Model 77 78 0.082 {'best': 2, 'rest': 7}
+Model 78 inf 0.0 {'rest': 16}
 
-Model -inf 73 0.0 {'rest': 17}
-Model 73 74 0.362 {'best': 5, 'rest': 3}
-Model 74 75 0.111 {'best': 2, 'rest': 4}
-Model 75 77 0.333 {'best': 5, 'rest': 5}
-Model 77 inf 0.0 {'rest': 19}
-
-origin 1 1 0.0 {'rest': 25}
-origin 2 2 0.0 {'rest': 12}
-origin 3 3 0.814 {'best': 12, 'rest': 11}
+origin 1 1 0.0 {'rest': 32}
+origin 2 2 0.867 {'best': 13, 'rest': 8}
+origin 3 3 0.0 {'rest': 12}
 
 ✅ pass:	 bins
 
@@ -97,172 +156,169 @@ Clndrs -inf 3
 Clndrs 3 4
 Clndrs 4 inf
 
-Volume -inf 85
-Volume 85 107
-Volume 107 inf
+Volume -inf 90
+Volume 90 116
+Volume 116 inf
 
-Model -inf 70
-Model 70 72
-Model 72 73
+Model -inf 73
 Model 73 74
-Model 74 inf
+Model 74 75
+Model 75 76
+Model 76 77
+Model 77 78
+Model 78 inf
 
 origin 1 1
 origin 2 2
 origin 3 3
 
-origin 3 3 0.81 {'best': 12, 'rest': 11}
-Volume -inf 85 0.54 {'best': 7, 'rest': 2}
-Clndrs 3 4 0.53 {'best': 10, 'rest': 23}
-Model 70 72 0.38 {'best': 6, 'rest': 8}
-Volume 85 107 0.29 {'best': 5, 'rest': 9}
-Model 73 74 0.21 {'best': 3, 'rest': 2}
-Clndrs -inf 3 0.17 {'best': 2}
-Model 72 73 0.11 {'best': 2, 'rest': 4}
-Model -inf 70 0.05 {'best': 1, 'rest': 3}
-Clndrs 4 inf 0.0 {'rest': 25}
-Volume 107 inf 0.0 {'rest': 37}
-Model 74 inf 0.0 {'rest': 31}
-origin 1 1 0.0 {'rest': 31}
-origin 2 2 0.0 {'rest': 6}
-{'origin': [3]}
-{'origin': [3], 'Volume': [[-inf, 85]]}
-{'origin': [3], 'Volume': [[-inf, 85]], 'Clndrs': [[3, 4]]}
-{'origin': [3], 'Volume': [[-inf, 85]], 'Clndrs': [[3, 4]], 'Model': [[70, 72]]}
-{'origin': [3], 'Volume': [[-inf, 107]], 'Clndrs': [[3, 4]], 'Model': [[70, 72]]}
-{'origin': [3], 'Volume': [[-inf, 107]], 'Clndrs': [[3, 4]], 'Model': [[70, 72], [73, 74]]}
-{'origin': [3], 'Volume': [[-inf, 107]], 'Clndrs': [[-inf, 4]], 'Model': [[70, 72], [73, 74]]}
-{'origin': [3], 'Volume': [[-inf, 107]], 'Clndrs': [[-inf, 4]], 'Model': [[70, 74]]}
+origin 2 2 0.8 {'best': 13, 'rest': 13}
+Volume -inf 90 0.62 {'best': 9, 'rest': 4}
+Clndrs 3 4 0.61 {'best': 13, 'rest': 33}
+Model 73 74 0.27 {'best': 4, 'rest': 2}
+Model 76 77 0.2 {'best': 3, 'rest': 2}
+Volume 90 116 0.15 {'best': 4, 'rest': 17}
+Model 75 76 0.1 {'best': 2, 'rest': 4}
+Model 77 78 0.09 {'best': 2, 'rest': 5}
+Model 74 75 0.08 {'best': 2, 'rest': 7}
+Clndrs -inf 3 0.0 {'rest': 3}
+Clndrs 4 inf 0.0 {'rest': 16}
+Volume 116 inf 0.0 {'rest': 31}
+Model -inf 73 0.0 {'rest': 16}
+Model 78 inf 0.0 {'rest': 16}
+origin 1 1 0.0 {'rest': 27}
+origin 3 3 0.0 {'rest': 12}
+{'origin': [2]}
+{'origin': [2], 'Volume': [[-inf, 90]]}
+{'origin': [2], 'Volume': [[-inf, 90]], 'Clndrs': [[3, 4]]}
+{'origin': [2], 'Volume': [[-inf, 90]], 'Clndrs': [[3, 4]], 'Model': [[73, 74]]}
+{'origin': [2], 'Volume': [[-inf, 90]], 'Clndrs': [[3, 4]], 'Model': [[73, 74], [76, 77]]}
+{'origin': [2], 'Volume': [[-inf, 116]], 'Clndrs': [[3, 4]], 'Model': [[73, 74], [76, 77]]}
+{'origin': [2], 'Volume': [[-inf, 116]], 'Clndrs': [[3, 4]], 'Model': [[73, 74], [75, 77]]}
+{'origin': [2], 'Volume': [[-inf, 116]], 'Clndrs': [[3, 4]], 'Model': [[73, 74], [75, 78]]}
+{'origin': [2], 'Volume': [[-inf, 116]], 'Clndrs': [[3, 4]], 'Model': [[73, 78]]}
 
 -----------
-explain= {'origin': [3]}
-all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
-sway with 6 evals {'Lbs-': 2124.0, 'Acc+': 17.0, 'Mpg+': 30.0, 'N': 12} {'Lbs-': 263.95, 'Acc+': 2.91, 'Mpg+': 7.75, 'N': 12}
-xpln on 6 evals {'Lbs-': 2160.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 79} {'Lbs-': 339.15, 'Acc+': 2.02, 'Mpg+': 7.75, 'N': 79}
-sort with 398 evals {'Lbs-': 2070.0, 'Acc+': 19.2, 'Mpg+': 40.0, 'N': 12} {'Lbs-': 197.67, 'Acc+': 2.6, 'Mpg+': 3.88, 'N': 12}
-✅ pass:	 xpln
-Error in example 'ok': module 'math' has no attribute 'randomseed'
+explain= {'origin': [2]}
+Error in example 'xpln': 'Num' object is not subscriptable
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 193, in eg_function_14
-    math.randomseed(n)
-AttributeError: module 'math' has no attribute 'randomseed'
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 185, in eg_function_13
+    print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div)))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in stats
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 56, in kap
+    v, k = fun(k, v)
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 41, in <lambda>
+    tmp = lists.kap(cols, lambda k, col: (numerics.rnd(fun(col), nPlaces), col.txt))
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/query.py", line 16, in mid
+    for i in range(len(col["has"])):
+TypeError: 'Num' object is not subscriptable
 
-❌ fail:	 ok
-Error in example 'sample': samples() missing 1 required positional argument: 'n'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 197, in eg_function_15
-    print("","".join(numerics.samples(["a","b","c","d","e"])))
-TypeError: samples() missing 1 required positional argument: 'n'
-
-❌ fail:	 sample
-Error in example 'num': 'Num' object has no attribute 'sd'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 201, in eg_function_16
-    print("",n.n, n.mu, n.sd)
-AttributeError: 'Num' object has no attribute 'sd'
-
-❌ fail:	 num
-Error in example 'gauss': module 'math' has no attribute 'random'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 206, in eg_function_17
-    t.append(numerics.gaussian(10,2))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
-
-❌ fail:	 gauss
-Error in example 'bootmu': module 'math' has no attribute 'random'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 213, in eg_function_18
-    a.append(numerics.gaussian(10,1))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
-
-❌ fail:	 bootmu
-Error in example 'bootsd': module 'math' has no attribute 'random'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 227, in eg_function_19
-    a.append(numerics.gaussian(10,1))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
-
-❌ fail:	 bootsd
-Error in example 'basic': 'set' object has no attribute 'items'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 239, in eg_function_20
-    print("\t\ttruee",  numerics.bootstrap(  {8, 7, 6, 2, 5, 8, 7, 3},
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 72, in bootstrap
-    for _,y1 in y0.items():
-AttributeError: 'set' object has no attribute 'items'
-
-❌ fail:	 basic
+❌ fail:	 xpln
+✅ pass:	 ok
+ beaca
+ ddddb
+ adadd
+ eadcb
+ eacaa
+ aeadb
+ daebd
+ debcb
+ bdcad
+ eabca
+✅ pass:	 sample
+ 10 5.5 3.0276503540974917
+✅ pass:	 num
+ 10000 10.013090245127714 1.9708063718547493
+✅ pass:	 gauss
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 10.0 1 True True True
+ 10.1 1 True True True
+ 10.2 1 True True True
+ 10.3 1 True True True
+ 10.4 1 True True True
+ 10.5 1 True False False
+ 10.6 1 True False False
+ 10.7 1 False False False
+ 10.8 1 True False False
+ 10.9 1 False False False
+✅ pass:	 bootmu
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 12 1 False False False
+ 12 2 False False False
+ 12 3 True False False
+ 12 4 False False False
+ 12 5 True False False
+ 12 6 True True True
+ 12 7 True False False
+ 12 8 True False False
+ 12 9 True False False
+✅ pass:	 bootsd
+		true True True
+		false True False
+		false False False
+✅ pass:	 basic
 
 eg3
-Error in example 'pre': module 'math' has no attribute 'random'
+	 1.0 True True True
+	 1.05 True True True
+	 1.1 False False True
+	 1.15 False False True
+	 1.2 False False True
+	 1.25 False False True
+	 1.3 False False True
+	 1.35 False False True
+	 1.4 False False True
+	 1.45 False False True
+✅ pass:	 pre
+ rx5   -*--              |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
+ rx6   -*--              |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
+ rx9   -*--              |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
+ rx0   -*--              |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
+ rx1   -*--              |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
+ rx2            --*-     |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
+ rx3                     |-*-                 { 28.64,  29.42,  30.02,  30.54,  31.37}
+ rx4                     |-*-                 { 28.80,  29.54,  30.03,  30.54,  31.31}
+ rx7                     |         -*-        { 38.70,  39.43,  40.05,  40.52,  41.18}
+ rx8                     |      ----*---      { 36.25,  38.60,  40.19,  41.61,  43.91}
+✅ pass:	 tiles
+Error in example 'five': 'dict' object has no attribute 'sort'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 258, in eg_function_21
-    t1.append(numerics.gaussian(10,1))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
-
-❌ fail:	 pre
-Error in example 'five': name 'tiles' is not defined
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 264, in eg_function_22
-    for _,rx in tiles(scottKnot([
-NameError: name 'tiles' is not defined
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 274, in eg_function_22
+    for _,rx in stats.tiles(stats.scottKnot([
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/stats.py", line 82, in scottKnot
+    cohen = query.div(merges(1, len(rxs))) * g.the['cohen']
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/stats.py", line 50, in merges
+    out = lists.RX({}, rxs[i]['name'])
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 144, in RX
+    t.sort()
+AttributeError: 'dict' object has no attribute 'sort'
 
 ❌ fail:	 five
-Error in example 'six': name 'tiles' is not defined
+Error in example 'six': 'set' object has no attribute 'sort'
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 273, in eg_function_23
-    for _,rx in tiles(scottKnot([
-NameError: name 'tiles' is not defined
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 284, in eg_function_23
+    lists.RX({101,100,99,101,99.5,101,100,99,101,99.5},"rx1"),
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/lists.py", line 144, in RX
+    t.sort()
+AttributeError: 'set' object has no attribute 'sort'
 
 ❌ fail:	 six
-Error in example 'tiles': module 'math' has no attribute 'random'
+Error in example 'sk': list assignment index out of range
 Traceback (most recent call last):
   File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
     passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 283, in eg_function_24
-    a.append(numerics.gaussian(10,1))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
-
-❌ fail:	 tiles
-Error in example 'sk': module 'math' has no attribute 'random'
-Traceback (most recent call last):
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/run.py", line 35, in make_attempt
-    passed = funs[what]()
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 316, in eg_function_25
-    a.append(numerics.gaussian(10,1))
-  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/numerics.py", line 98, in gaussian
-    sq,pi,log,cos,r = math.sqrt,math.pi,math.log,math.cos,math.random
-AttributeError: module 'math' has no attribute 'random'
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/HW7/examples.py", line 347, in eg_function_25
+    rxs[k] =  lists.RX(v,"rx"+str(k))
+IndexError: list assignment index out of range
 
 ❌ fail:	 sk
 #W ?k <class 'str'>
@@ -272,5 +328,5 @@ AttributeError: module 'math' has no attribute 'random'
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 15
-❌ Number of tests failing -> 12
+✅ Number of tests passing -> 14
+❌ Number of tests failing -> 13
