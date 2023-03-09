@@ -65,9 +65,9 @@ def scottKnot(rxs):
             if j < hi:
                 l = merges(lo, j)
                 r = merges(j+1, hi)
-                now = (l['n']*(query.mid(l) - query.mid(b4))**2 + r['n']*(query.mid(r) - query.mid(b4))**2) / (l['n'] + r['n'])
+                now = (l['n']*(query.mid(l, mode="tiles") - query.mid(b4, mode="tiles"))**2 + r['n']*(query.mid(r, mode="tiles") - query.mid(b4, mode="tiles"))**2) / (l['n'] + r['n'])
                 if now > best:
-                    if abs(query.mid(l) - query.mid(r)) >= cohen:
+                    if abs(query.mid(l, mode="tiles") - query.mid(r, mode="tiles")) >= cohen:
                         cut, best = j, now
         
         if cut and not same(lo, cut, hi):
@@ -78,8 +78,17 @@ def scottKnot(rxs):
                 rxs[i]['rank'] = rank
         return rank 
     
-    rxs.sort(key=lambda x: query.mid(x))
-    cohen = query.div(merges(1, len(rxs))) * g.the['cohen']
-    recurse(0, len(rxs)-1, 1)
+    rxs.sort(key=lambda x: query.mid(x, mode="tiles"))
+    cohen = query.div(merges(0, len(rxs)-1)) * g.the['cohen']
+    recurse(0, len(rxs)-1, 0)
     return rxs
 
+
+def merge(rx1,rx2):
+  rx3 = lists.RX({}, rx1["name"])
+  for t in [rx1["has"],rx2["has"]]:
+     for x in t:
+        rx3["has"][len(rx3["has"])]  = x
+  lists.sort(rx3["has"])
+  rx3["n"] = len(rx3["has"])
+  return rx3

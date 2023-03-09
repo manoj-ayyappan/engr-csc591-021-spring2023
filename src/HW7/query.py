@@ -10,11 +10,22 @@ def has(col):
     col.ok = True  # the invariant here is that "has" is ready to be shared.
     return col.has
 
-def mid(col, mode="tiles", most=None):
+
+def has2(col): 
+    col["has"] = lists.sort(col["has"])
+    return col["has"]
+
+def mid(col, mode=None, most=None):
+    
+    if type(col) == type({}):
+        has = col["has"]
+    else:
+        has = col.has
+
     if(mode == "tiles"):
         dict = {}
-        for i in range(len(col["has"])):
-            dict[i] = col["has"][i]
+        for i in range(len(has)):
+            dict[i] = has[i]
         return lists.per(dict, 0.5)
     if col.isSym:
         return col.mode
@@ -23,7 +34,9 @@ def mid(col, mode="tiles", most=None):
     
 
 def div(col, e=None):
-    if col.isSym:
+    if type(col) == type({}):
+        return (lists.per(has2(col), 0.9) - lists.per(has2(col), 0.1)) / 2.58
+    elif col.isSym:
         e = 0
         for _, n in col.has.items():
             e = e - n / col.n * math.log(n/col.n, 2)

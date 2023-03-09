@@ -141,7 +141,7 @@ def slice(t, go=None, stop=None, inc=None):
     return u
 
 def RX(t,s=""):
-  t.sort()
+  sort2(t, None)
   return {"name":s, "rank":0, "n":len(t), "show":"", "has":t}
 
 gt = lambda x: lambda a: a[x]
