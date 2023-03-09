@@ -20,10 +20,10 @@ def settings(s, t={}):
 def cli(options): # t; update key,vals in `t` from command-line flags
     for k,v in options.items():
         v = str(v)
-    for n,x in enumerate(sys.argv):
-        if x=="-" + (k[:1]) or x=="--" + k:
-            v = v=="False" and "True" or v=="True" and "False" or sys.argv[n+1]
-    options[k] = strings.coerce(v) 
+        for n,x in enumerate(sys.argv):
+            if x=="-" + (k[:1]) or x=="--" + k:
+                v = v=="False" and "True" or v=="True" and "False" or sys.argv[n+1]
+        options[k] = strings.coerce(v) 
     return options 
 
 
