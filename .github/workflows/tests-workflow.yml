@@ -19,7 +19,7 @@ jobs:
       matrix:
         # Modify hw-out with the name of the .out file in the correct order
         # script is for hw1, data for 2, cluster for 3...
-        hw-out: [script, data, cluster, grid, bins, xpln, stats]
+        hw-out: [script, data, cluster, grid, bins, xpln, stats, project]
         
     env:
       NUM: ${{ strategy.job-index }} 
@@ -32,7 +32,10 @@ jobs:
     
     - name: Get HW Name
       run: |
-        echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
+        if [ "${{matrix.hw-out}}" == "project" ]; 
+        then echo "HW-NAME=Project" >> $GITHUB_ENV; 
+        else echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV; fi
+        
         
     - name: Check if exists
       run: |
