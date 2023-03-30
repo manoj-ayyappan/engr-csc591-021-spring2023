@@ -1,0 +1,245 @@
+{'bins': 16, 'cliffs': 0.4, 'D': 0.35, 'file': 'data/auto93.csv', 'Far': 0.95, 'go': 'all', 'help': False, 'Halves': 512, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cohen': 0.35, 'width': 40}
+✅ pass:	 the
+✅ pass:	 rand
+{31: 126, 14: 437, 29: 447, 0: 758, 3: 1301, 11: 1586, 21: 2116, 18: 2216, 2: 2269, 6: 2515, 19: 2715, 5: 2830, 4: 3905, 23: 3949, 20: 3999, 7: 4189, 27: 4768, 15: 5612, 30: 5636, 8: 5803, 16: 5993, 9: 6349, 24: 6417, 28: 6576, 13: 7090, 12: 7227, 22: 7360, 25: 7943, 17: 8308, 26: 8395, 1: 8549, 10: 8578}
+✅ pass:	 some
+1 0.5 0.3
+2 0.3 0.32
+✅ pass:	 nums
+a 1.38
+✅ pass:	 syms
+✅ pass:	 csv
+3 8 4 1.5503875968992247
+{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
+✅ pass:	 data
+{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
+{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
+✅ pass:	 clone
+{'lo': 0.0, 'hi': 0.8746495688429434, 'mid': 0.55, 'div': 0.26}
+✅ pass:	 dist
+199 199
+l {'Lbs-': 3221.0, 'Acc+': 15.4, 'Mpg+': 20.0, 'N': 199}
+r {'Lbs-': 2490.0, 'Acc+': 15.6, 'Mpg+': 30.0, 'N': 199}
+✅ pass:	 half
+[398] {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
+|.. [199] 
+|.. |.. [99] 
+|.. |.. |.. [49] 
+|.. |.. |.. |.. [24] {'Lbs-': 4274.0, 'Acc+': 13.0, 'Mpg+': 10.0, 'N': 24}
+|.. |.. |.. |.. [25] {'Lbs-': 4422.0, 'Acc+': 11.5, 'Mpg+': 10.0, 'N': 25}
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 4054.0, 'Acc+': 13.2, 'Mpg+': 20.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 4082.0, 'Acc+': 13.5, 'Mpg+': 20.0, 'N': 25}
+|.. |.. [100] 
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 3459.0, 'Acc+': 17.7, 'Mpg+': 20.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 3365.0, 'Acc+': 16.6, 'Mpg+': 20.0, 'N': 25}
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 2451.0, 'Acc+': 16.5, 'Mpg+': 20.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 3264.0, 'Acc+': 16.0, 'Mpg+': 20.0, 'N': 25}
+|.. [199] 
+|.. |.. [99] 
+|.. |.. |.. [49] 
+|.. |.. |.. |.. [24] {'Lbs-': 2065.0, 'Acc+': 16.9, 'Mpg+': 30.0, 'N': 24}
+|.. |.. |.. |.. [25] {'Lbs-': 2171.0, 'Acc+': 16.8, 'Mpg+': 30.0, 'N': 25}
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 2585.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 2665.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 25}
+|.. |.. [100] 
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 2671.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 2065.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 25}
+|.. |.. |.. [50] 
+|.. |.. |.. |.. [25] {'Lbs-': 2230.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 25}
+|.. |.. |.. |.. [25] {'Lbs-': 2288.0, 'Acc+': 15.8, 'Mpg+': 30.0, 'N': 25}
+✅ pass:	 tree
+
+all  {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
+     {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
+
+best {'Lbs-': 1990.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 13}
+     {'Lbs-': 184.11, 'Acc+': 2.91, 'Mpg+': 3.88, 'N': 13}
+
+rest {'Lbs-': 2962.0, 'Acc+': 15.3, 'Mpg+': 20.0, 'N': 52}
+     {'Lbs-': 922.48, 'Acc+': 3.68, 'Mpg+': 7.75, 'N': 52}
+
+all ~= best? {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
+best ~= rest? {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
+✅ pass:	 sway
+
+all    {'best': 13, 'rest': 52}
+
+Clndrs -inf 4 0.619 {'best': 13, 'rest': 32}
+Clndrs 4 inf 0.0 {'rest': 20}
+
+Volume -inf 90 0.593 {'best': 9, 'rest': 6}
+Volume 90 113 0.17 {'best': 4, 'rest': 13}
+Volume 113 inf 0.0 {'rest': 33}
+
+Model -inf 73 0.0 {'rest': 13}
+Model 73 74 0.274 {'best': 4, 'rest': 2}
+Model 74 75 0.123 {'best': 2, 'rest': 2}
+Model 75 76 0.077 {'best': 2, 'rest': 8}
+Model 76 77 0.163 {'best': 3, 'rest': 5}
+Model 77 78 0.103 {'best': 2, 'rest': 4}
+Model 78 inf 0.0 {'rest': 18}
+
+origin 1 1 0.0 {'rest': 31}
+origin 2 2 0.867 {'best': 13, 'rest': 8}
+origin 3 3 0.0 {'rest': 13}
+
+✅ pass:	 bins
+
+Clndrs -inf 3
+Clndrs 3 4
+Clndrs 4 inf
+
+Volume -inf 90
+Volume 90 111
+Volume 111 141
+Volume 141 inf
+
+Model -inf 76
+Model 76 77
+Model 77 78
+Model 78 79
+Model 79 80
+Model 80 inf
+
+origin 1 1
+origin 2 2
+origin 3 3
+
+origin 2 2 0.87 {'best': 13, 'rest': 8}
+Clndrs 3 4 0.64 {'best': 13, 'rest': 29}
+Volume -inf 90 0.44 {'best': 7, 'rest': 6}
+Model 76 77 0.2 {'best': 4, 'rest': 9}
+Model 77 78 0.18 {'best': 3, 'rest': 3}
+Model 79 80 0.18 {'best': 3, 'rest': 3}
+Model 78 79 0.17 {'best': 3, 'rest': 4}
+Volume 111 141 0.14 {'best': 3, 'rest': 8}
+Volume 90 111 0.12 {'best': 3, 'rest': 12}
+Clndrs -inf 3 0.0 {'rest': 1}
+Clndrs 4 inf 0.0 {'rest': 22}
+Volume 141 inf 0.0 {'rest': 26}
+Model -inf 76 0.0 {'rest': 26}
+Model 80 inf 0.0 {'rest': 7}
+origin 1 1 0.0 {'rest': 32}
+origin 3 3 0.0 {'rest': 12}
+{'origin': [2]}
+{'origin': [2], 'Clndrs': [[3, 4]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 77]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78], [79, 80]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 80]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90], [111, 141]], 'Model': [[76, 80]]}
+{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 141]], 'Model': [[76, 80]]}
+
+-----------
+explain= {'origin': [2]}
+all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
+sway with 6 evals {'Lbs-': 2085.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 13} {'Lbs-': 525.19, 'Acc+': 4.19, 'Mpg+': 7.75, 'N': 13}
+xpln on 6 evals {'Lbs-': 2246.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 70} {'Lbs-': 490.31, 'Acc+': 2.98, 'Mpg+': 7.75, 'N': 70}
+sort with 398 evals {'Lbs-': 2070.0, 'Acc+': 19.2, 'Mpg+': 40.0, 'N': 13} {'Lbs-': 197.67, 'Acc+': 2.6, 'Mpg+': 3.88, 'N': 13}
+✅ pass:	 xpln
+✅ pass:	 ok
+ beaca
+ ddddb
+ adadd
+ eadcb
+ eacaa
+ aeadb
+ daebd
+ debcb
+ bdcad
+ eabca
+✅ pass:	 sample
+ 10 5.5 3.0276503540974917
+✅ pass:	 num
+ 10000 10.013090245127714 1.9708063718547493
+✅ pass:	 gauss
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 10.0 1 True True True
+ 10.1 1 True True True
+ 10.2 1 True True True
+ 10.3 1 True True True
+ 10.4 1 True True True
+ 10.5 1 True False False
+ 10.6 1 True False False
+ 10.7 1 False False False
+ 10.8 1 True False False
+ 10.9 1 False False False
+✅ pass:	 bootmu
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 12 1 False False False
+ 12 2 False False False
+ 12 3 True False False
+ 12 4 False False False
+ 12 5 True False False
+ 12 6 True True True
+ 12 7 True False False
+ 12 8 True False False
+ 12 9 True False False
+✅ pass:	 bootsd
+		true True True
+		false True False
+		false False False
+✅ pass:	 basic
+
+eg3
+	 1.0 True True True
+	 1.05 True True True
+	 1.1 False False True
+	 1.15 False False True
+	 1.2 False False True
+	 1.25 False False True
+	 1.3 False False True
+	 1.35 False False True
+	 1.4 False False True
+	 1.45 False False True
+✅ pass:	 pre
+ rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
+ rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
+ rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
+ rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
+ rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
+ rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
+ rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
+ rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
+ rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
+ rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
+✅ pass:	 tiles
+rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
+rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
+rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
+rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+✅ pass:	 five
+rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+✅ pass:	 six
+ 0 rx9  --*                |                    {  8.58,   9.40,   9.89,  10.49,  11.21}
+ 0 rx5  --*                |                    {  8.67,   9.44,   9.94,  10.48,  11.26}
+ 1 rx0  --*                |                    {  8.67,   9.38,   9.96,  10.45,  11.23}
+ 1 rx6  --*                |                    {  8.66,   9.51,  10.01,  10.56,  11.25}
+ 2 rx1  --*                |                    {  8.79,   9.57,  10.08,  10.59,  11.31}
+ 2 rx2           ---*      |                    { 18.79,  19.50,  20.07,  20.62,  21.29}
+ 3 rx3                     |-*                  { 28.72,  29.57,  30.02,  30.54,  31.25}
+ 4 rx4                     |-*                  { 28.83,  29.66,  30.11,  30.61,  31.46}
+ 4 rx7                     |        --*-        { 38.61,  39.44,  40.02,  40.55,  41.26}
+ 4 rx8                     |      --- *---      { 36.38,  38.52,  40.10,  41.72,  44.01}
+✅ pass:	 sk
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?make_attempt <class 'function'>
+#W ?main <class 'function'>
+#W ?Seed <class 'int'>
+✅ Number of tests passing -> 26
+❌ Number of tests failing -> 0
