@@ -12,8 +12,8 @@ class RULE():
         self.t = self.prune(maxSize)
     
     def prune(self, maxSize, n=0):
-        tmp = self.t.items()
-        for txt, ranges in tmp:
+        tmp = copy.deepcopy(self.t)
+        for txt, ranges in tmp.items():
             n += 1
             if len(ranges) == maxSize[txt]:
                 n += 1

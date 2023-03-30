@@ -39,22 +39,22 @@ class Num(object):
             self.lo = min(x, self.lo)
             self.hi = max(x, self.hi)
             
-        if self.isSym:
-            self.has[x] = n + self.has.get(x, 0)
-            if self.has[x] > self.most:
-                self.most, self.mode = self.has[x], x
-        else:
-            self.lo, self.hi = min(x, self.lo), max(x, self.hi)
-            all = len(self.has) - 1
-            pos = None
-            if all < g.the.get("Max") - 1:
-                pos = all + 1
+            if self.isSym:
+                self.has[x] = n + self.has.get(x, 0)
+                if self.has[x] > self.most:
+                    self.most, self.mode = self.has[x], x
             else:
-                if (numerics.rand() < (g.the.get("Max")-1)/self.n):
-                    pos = numerics.rint(0, all)
-            if pos is not None:
-                self.has[pos] = x
-                self.ok = False
+                self.lo, self.hi = min(x, self.lo), max(x, self.hi)
+                all = len(self.has) - 1
+                pos = None
+                if all < g.the.get("Max") - 1:
+                    pos = all + 1
+                else:
+                    if (numerics.rand() < (g.the.get("Max")-1)/self.n):
+                        pos = numerics.rint(0, all)
+                if pos is not None:
+                    self.has[pos] = x
+                    self.ok = False
             
 
     def mid(self):
