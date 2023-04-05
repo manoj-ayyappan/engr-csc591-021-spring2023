@@ -53,9 +53,16 @@ def bins(cols,rowss):
 # Called by function `bins`.
 def mergeAny(ranges0):
     def noGaps(t):
+        # if t[0].lo == t[0].hi:
+        #     t[0].lo  = -math.inf
+        #     t[0].hi = t[0].hi + 1
+        # else:
+        t[0].lo  = -math.inf
         for j in range( 1,len(t) ):
             t[j].lo = t[j-1].hi
-        t[0].lo  = -math.inf
+            # if t[j].hi == t[j].lo:
+            #     t[j].hi = t[j].hi + 1
+        
         t[len(t) - 1].hi =  math.inf
         return t 
   
@@ -67,6 +74,9 @@ def mergeAny(ranges0):
             y = merge2(left.y, right.y)
             if y:
                 j = j+1 # next round, skip over right.
+                # if right.hi == right.lo:
+                #     left.hi, left.y = right.hi + 1, y
+                # else:
                 left.hi, left.y = right.hi, y
         lists.push(ranges1,left)
         j = j+1 

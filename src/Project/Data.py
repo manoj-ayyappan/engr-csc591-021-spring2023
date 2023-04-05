@@ -206,8 +206,8 @@ class Data(object):
             if rule:
                 ltr = rule.showRule()
                 strings.oo(ltr)
-                bestr = rule.selects( best.rows)
-                restr = rule.selects( rest.rows)
+                bestr = rule.selects(best.rows)
+                restr = rule.selects(rest.rows)
                 if len(bestr) + len(restr) > 0:
                     return v({"best": len(bestr), "rest": len(restr)}), rule
                 else:
