@@ -1,239 +1,500 @@
-{'bins': 16, 'cliffs': 0.4, 'D': 0.35, 'file': 'data/auto93.csv', 'Far': 0.95, 'go': 'all', 'help': False, 'Halves': 512, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cohen': 0.35, 'width': 40}
-✅ pass:	 the
-✅ pass:	 rand
-{31: 126, 14: 437, 29: 447, 0: 758, 3: 1301, 11: 1586, 21: 2116, 18: 2216, 2: 2269, 6: 2515, 19: 2715, 5: 2830, 4: 3905, 23: 3949, 20: 3999, 7: 4189, 27: 4768, 15: 5612, 30: 5636, 8: 5803, 16: 5993, 9: 6349, 24: 6417, 28: 6576, 13: 7090, 12: 7227, 22: 7360, 25: 7943, 17: 8308, 26: 8395, 1: 8549, 10: 8578}
-✅ pass:	 some
-1 0.5 0.3
-2 0.3 0.32
-✅ pass:	 nums
-a 1.38
-✅ pass:	 syms
-✅ pass:	 csv
-3 8 4 1.5503875968992247
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-✅ pass:	 data
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-{'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-✅ pass:	 clone
-{'lo': 0.0, 'hi': 0.8746495688429434, 'mid': 0.55, 'div': 0.26}
-✅ pass:	 dist
-199 199
-l {'Lbs-': 3221.0, 'Acc+': 15.4, 'Mpg+': 20.0, 'N': 199}
-r {'Lbs-': 2490.0, 'Acc+': 15.6, 'Mpg+': 30.0, 'N': 199}
-✅ pass:	 half
-[398] {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-|.. [199] 
-|.. |.. [99] 
-|.. |.. |.. [49] 
-|.. |.. |.. |.. [24] {'Lbs-': 4274.0, 'Acc+': 13.0, 'Mpg+': 10.0, 'N': 24}
-|.. |.. |.. |.. [25] {'Lbs-': 4422.0, 'Acc+': 11.5, 'Mpg+': 10.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 4054.0, 'Acc+': 13.2, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 4082.0, 'Acc+': 13.5, 'Mpg+': 20.0, 'N': 25}
-|.. |.. [100] 
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 3459.0, 'Acc+': 17.7, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 3365.0, 'Acc+': 16.6, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2451.0, 'Acc+': 16.5, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 3264.0, 'Acc+': 16.0, 'Mpg+': 20.0, 'N': 25}
-|.. [199] 
-|.. |.. [99] 
-|.. |.. |.. [49] 
-|.. |.. |.. |.. [24] {'Lbs-': 2065.0, 'Acc+': 16.9, 'Mpg+': 30.0, 'N': 24}
-|.. |.. |.. |.. [25] {'Lbs-': 2171.0, 'Acc+': 16.8, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2585.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2665.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 25}
-|.. |.. [100] 
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2671.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2065.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. [50] 
-|.. |.. |.. |.. [25] {'Lbs-': 2230.0, 'Acc+': 16.0, 'Mpg+': 30.0, 'N': 25}
-|.. |.. |.. |.. [25] {'Lbs-': 2288.0, 'Acc+': 15.8, 'Mpg+': 30.0, 'N': 25}
-✅ pass:	 tree
 
-all  {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398}
-     {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
+ACAP -inf 1
+ACAP 1 2
+ACAP 2 3
+ACAP 3 4
+ACAP 4 inf
 
-best {'Lbs-': 1990.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 13}
-     {'Lbs-': 184.11, 'Acc+': 2.91, 'Mpg+': 3.88, 'N': 13}
+ARCH -inf 1
+ARCH 1 2
+ARCH 2 3
+ARCH 3 4
+ARCH 4 inf
 
-rest {'Lbs-': 2962.0, 'Acc+': 15.3, 'Mpg+': 20.0, 'N': 52}
-     {'Lbs-': 922.48, 'Acc+': 3.68, 'Mpg+': 7.75, 'N': 52}
+DATA -inf 2
+DATA 2 3
+DATA 3 4
+DATA 4 inf
 
-all ~= best? {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-best ~= rest? {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-✅ pass:	 sway
+DOCU -inf 1
+DOCU 1 2
+DOCU 2 3
+DOCU 3 4
+DOCU 4 inf
 
-all    {'best': 13, 'rest': 52}
+PCAP -inf 1
+PCAP 1 2
+PCAP 2 3
+PCAP 3 4
+PCAP 4 inf
 
-Clndrs -inf 4 0.619 {'best': 13, 'rest': 32}
-Clndrs 4 inf 0.0 {'rest': 20}
+PCON -inf 1
+PCON 1 2
+PCON 2 3
+PCON 3 4
+PCON 4 inf
 
-Volume -inf 90 0.593 {'best': 9, 'rest': 6}
-Volume 90 113 0.17 {'best': 4, 'rest': 13}
-Volume 113 inf 0.0 {'rest': 33}
+PMAT -inf 1
+PMAT 1 2
+PMAT 2 4
+PMAT 4 5
+PMAT 5 inf
 
-Model -inf 73 0.0 {'rest': 13}
-Model 73 74 0.274 {'best': 4, 'rest': 2}
-Model 74 75 0.123 {'best': 2, 'rest': 2}
-Model 75 76 0.077 {'best': 2, 'rest': 8}
-Model 76 77 0.163 {'best': 3, 'rest': 5}
-Model 77 78 0.103 {'best': 2, 'rest': 4}
-Model 78 inf 0.0 {'rest': 18}
+PREC -inf 1
+PREC 1 2
+PREC 2 3
+PREC 3 4
+PREC 4 5
+PREC 5 inf
 
-origin 1 1 0.0 {'rest': 31}
-origin 2 2 0.867 {'best': 13, 'rest': 8}
-origin 3 3 0.0 {'rest': 13}
+PVOL -inf 2
+PVOL 2 3
+PVOL 3 4
+PVOL 4 inf
 
-✅ pass:	 bins
+RELY -inf 1
+RELY 1 2
+RELY 2 3
+RELY 3 4
+RELY 4 inf
 
-Clndrs -inf 3
-Clndrs 3 4
-Clndrs 4 inf
+RUSE -inf 2
+RUSE 2 3
+RUSE 3 4
+RUSE 4 5
+RUSE 5 inf
 
-Volume -inf 90
-Volume 90 111
-Volume 111 141
-Volume 141 inf
+SCED -inf 1
+SCED 1 2
+SCED 2 3
+SCED 3 4
+SCED 4 inf
 
-Model -inf 76
-Model 76 77
-Model 77 78
-Model 78 79
-Model 79 80
-Model 80 inf
+SITE -inf 1
+SITE 1 2
+SITE 2 3
+SITE 3 4
+SITE 4 inf
 
-origin 1 1
-origin 2 2
-origin 3 3
+STOR -inf 3
+STOR 3 4
+STOR 4 5
+STOR 5 inf
 
-origin 2 2 0.87 {'best': 13, 'rest': 8}
-Clndrs 3 4 0.64 {'best': 13, 'rest': 29}
-Volume -inf 90 0.44 {'best': 7, 'rest': 6}
-Model 76 77 0.2 {'best': 4, 'rest': 9}
-Model 77 78 0.18 {'best': 3, 'rest': 3}
-Model 79 80 0.18 {'best': 3, 'rest': 3}
-Model 78 79 0.17 {'best': 3, 'rest': 4}
-Volume 111 141 0.14 {'best': 3, 'rest': 8}
-Volume 90 111 0.12 {'best': 3, 'rest': 12}
-Clndrs -inf 3 0.0 {'rest': 1}
-Clndrs 4 inf 0.0 {'rest': 22}
-Volume 141 inf 0.0 {'rest': 26}
-Model -inf 76 0.0 {'rest': 26}
-Model 80 inf 0.0 {'rest': 7}
-origin 1 1 0.0 {'rest': 32}
-origin 3 3 0.0 {'rest': 12}
-{'origin': [2]}
-{'origin': [2], 'Clndrs': [[3, 4]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 77]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 78], [79, 80]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90]], 'Model': [[76, 80]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 90], [111, 141]], 'Model': [[76, 80]]}
-{'origin': [2], 'Clndrs': [[3, 4]], 'Volume': [[-inf, 141]], 'Model': [[76, 80]]}
+TEAM -inf 1
+TEAM 1 2
+TEAM 2 3
+TEAM 3 4
+TEAM 4 5
+TEAM 5 inf
+
+TIME -inf 3
+TIME 3 4
+TIME 4 inf
+
+TOOL -inf 1
+TOOL 1 2
+TOOL 2 3
+TOOL 3 4
+TOOL 4 inf
+
+TIME -inf 3 0.64 {'best': 22, 'rest': 9}
+ARCH 2 3 0.33 {'best': 14, 'rest': 21}
+SCED 1 2 0.3 {'best': 14, 'rest': 28}
+TOOL 2 3 0.29 {'best': 13, 'rest': 24}
+TEAM 4 5 0.28 {'best': 13, 'rest': 25}
+PCON 1 2 0.28 {'best': 14, 'rest': 35}
+STOR 5 inf 0.28 {'best': 13, 'rest': 27}
+ARCH 1 2 0.27 {'best': 12, 'rest': 22}
+RUSE 3 4 0.25 {'best': 13, 'rest': 35}
+STOR 4 5 0.25 {'best': 13, 'rest': 37}
+PCAP 2 3 0.24 {'best': 12, 'rest': 31}
+SITE 1 2 0.23 {'best': 12, 'rest': 32}
+PCON 2 3 0.23 {'best': 12, 'rest': 33}
+DATA 4 inf 0.23 {'best': 10, 'rest': 17}
+PMAT 2 4 0.22 {'best': 14, 'rest': 58}
+SITE -inf 1 0.19 {'best': 9, 'rest': 18}
+PREC 3 4 0.19 {'best': 9, 'rest': 19}
+ACAP 1 2 0.19 {'best': 10, 'rest': 29}
+PVOL 2 3 0.18 {'best': 11, 'rest': 43}
+DOCU 3 4 0.17 {'best': 9, 'rest': 25}
+PREC 4 5 0.16 {'best': 9, 'rest': 31}
+PMAT 4 5 0.16 {'best': 8, 'rest': 21}
+PVOL 4 inf 0.16 {'best': 8, 'rest': 21}
+PCAP 1 2 0.15 {'best': 9, 'rest': 32}
+RELY 2 3 0.15 {'best': 9, 'rest': 32}
+RUSE -inf 2 0.15 {'best': 7, 'rest': 14}
+ACAP 2 3 0.15 {'best': 9, 'rest': 35}
+DOCU -inf 1 0.14 {'best': 6, 'rest': 9}
+PMAT 1 2 0.14 {'best': 7, 'rest': 18}
+DATA 3 4 0.14 {'best': 9, 'rest': 41}
+TOOL 4 inf 0.13 {'best': 6, 'rest': 11}
+RELY 1 2 0.13 {'best': 8, 'rest': 32}
+TIME 3 4 0.13 {'best': 9, 'rest': 47}
+ACAP -inf 1 0.13 {'best': 6, 'rest': 13}
+TEAM 1 2 0.12 {'best': 7, 'rest': 23}
+RUSE 2 3 0.11 {'best': 7, 'rest': 28}
+SITE 2 3 0.11 {'best': 7, 'rest': 29}
+TEAM 3 4 0.11 {'best': 7, 'rest': 29}
+DOCU 1 2 0.11 {'best': 8, 'rest': 43}
+PCAP 3 4 0.11 {'best': 7, 'rest': 30}
+SCED 3 4 0.11 {'best': 7, 'rest': 31}
+DATA 2 3 0.11 {'best': 8, 'rest': 46}
+ACAP 3 4 0.1 {'best': 6, 'rest': 24}
+RELY -inf 1 0.09 {'best': 5, 'rest': 14}
+SCED -inf 1 0.09 {'best': 5, 'rest': 14}
+TOOL -inf 1 0.09 {'best': 5, 'rest': 14}
+PVOL 3 4 0.09 {'best': 7, 'rest': 43}
+DOCU 2 3 0.09 {'best': 6, 'rest': 29}
+PVOL -inf 2 0.09 {'best': 5, 'rest': 17}
+RELY 3 4 0.09 {'best': 6, 'rest': 30}
+PREC 2 3 0.08 {'best': 5, 'rest': 21}
+PREC 5 inf 0.07 {'best': 4, 'rest': 14}
+ARCH -inf 1 0.06 {'best': 3, 'rest': 8}
+DATA -inf 2 0.06 {'best': 4, 'rest': 20}
+PREC 1 2 0.05 {'best': 4, 'rest': 27}
+TOOL 1 2 0.04 {'best': 4, 'rest': 32}
+STOR 3 4 0.04 {'best': 4, 'rest': 33}
+RELY 4 inf 0.04 {'best': 3, 'rest': 16}
+PCON 3 4 0.04 {'best': 4, 'rest': 34}
+SCED 4 inf 0.04 {'best': 3, 'rest': 21}
+SITE 3 4 0.03 {'best': 3, 'rest': 28}
+RUSE 4 5 0.03 {'best': 3, 'rest': 31}
+PCAP -inf 1 0.02 {'best': 2, 'rest': 16}
+TOOL 3 4 0.02 {'best': 3, 'rest': 43}
+DOCU 4 inf 0.02 {'best': 2, 'rest': 18}
+PMAT 5 inf 0.02 {'best': 2, 'rest': 18}
+TEAM 2 3 0.02 {'best': 2, 'rest': 24}
+ARCH 3 4 0.01 {'best': 2, 'rest': 30}
+SCED 2 3 0.01 {'best': 2, 'rest': 30}
+PCON -inf 1 0.01 {'best': 1, 'rest': 6}
+TEAM 5 inf 0.01 {'best': 1, 'rest': 10}
+TEAM -inf 1 0.01 {'best': 1, 'rest': 13}
+PCAP 4 inf 0.01 {'best': 1, 'rest': 15}
+RUSE 5 inf 0.01 {'best': 1, 'rest': 16}
+STOR -inf 3 0.0 {'best': 1, 'rest': 27}
+ACAP 4 inf 0.0 {'rest': 23}
+ARCH 4 inf 0.0 {'rest': 43}
+PCON 4 inf 0.0 {'rest': 16}
+PMAT -inf 1 0.0 {'rest': 9}
+PREC -inf 1 0.0 {'rest': 12}
+SITE 4 inf 0.0 {'rest': 17}
+TIME 4 inf 0.0 {'rest': 68}
+{'TIME': [[-inf, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]], 'SCED': [[1, 2]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[2, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[5, inf]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[5, inf]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[5, inf]], 'RUSE': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 2]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[1, 2]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[1, 2]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[1, 2]], 'DATA': [[4, inf]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[1, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]], 'PREC': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]], 'PREC': [[3, 4]], 'ACAP': [[1, 2]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]], 'PREC': [[3, 4]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]], 'PREC': [[3, 4]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3]], 'DOCU': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 4]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3]], 'DOCU': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3]], 'DOCU': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[2, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[3, 4]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 2]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[2, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[4, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[2, 3]]}
+{'TIME': [[-inf, 3]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[1, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 2], [3, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 2]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [4, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 3]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 3]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 1], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 3]], 'SITE': [[-inf, 3]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2], [3, 4]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[3, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2], [3, 4]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 3]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2], [3, 4]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[1, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[1, 2], [3, 4]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, 3], [4, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, inf]], 'DOCU': [[-inf, 2], [3, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'PVOL': [[2, inf]], 'DOCU': [[-inf, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'DOCU': [[-inf, 4]], 'RELY': [[-inf, 3]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[3, 5]], 'ACAP': [[-inf, 4]], 'DOCU': [[-inf, 4]], 'RELY': [[-inf, 4]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[2, 5]], 'ACAP': [[-inf, 4]], 'DOCU': [[-inf, 4]], 'RELY': [[-inf, 4]]}
+{'TIME': [[-inf, 4]], 'ARCH': [[1, 3]], 'SCED': [[-inf, 2], [3, 4]], 'TOOL': [[-inf, 1], [2, 3], [4, inf]], 'TEAM': [[1, 2], [3, 5]], 'PCON': [[1, 3]], 'STOR': [[4, inf]], 'RUSE': [[-inf, 4]], 'PCAP': [[1, 4]], 'SITE': [[-inf, 3]], 'DATA': [[2, inf]], 'PMAT': [[1, 5]], 'PREC': [[2, inf]], 'ACAP': [[-inf, 4]], 'DOCU': [[-inf, 4]], 'RELY': [[-inf, 4]]}
+Error in example 'xpln': 'NoneType' object has no attribute 'showRule'
+Traceback (most recent call last):
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/Project/run.py", line 35, in make_attempt
+    passed = funs[what]()
+  File "/home/runner/work/engr-csc591-021-spring2023/engr-csc591-021-spring2023/src/Project/examples.py", line 183, in eg_function_13
+    print("\n-----------\nexplain=", strings.o(rule.showRule()))
+AttributeError: 'NoneType' object has no attribute 'showRule'
+
+❌ fail:	 xpln
+
+ACAP -inf 1
+ACAP 1 2
+ACAP 2 3
+ACAP 3 4
+ACAP 4 inf
+
+ARCH -inf 1
+ARCH 1 2
+ARCH 2 3
+ARCH 3 4
+ARCH 4 5
+ARCH 5 inf
+
+DATA -inf 2
+DATA 2 3
+DATA 3 4
+DATA 4 inf
+
+DOCU -inf 1
+DOCU 1 2
+DOCU 2 3
+DOCU 3 4
+DOCU 4 inf
+
+PCAP -inf 1
+PCAP 1 2
+PCAP 2 3
+PCAP 3 4
+PCAP 4 inf
+
+PCON -inf 1
+PCON 1 2
+PCON 2 3
+PCON 3 4
+PCON 4 inf
+
+PMAT -inf 2
+PMAT 2 3
+PMAT 3 4
+PMAT 4 5
+PMAT 5 inf
+
+PREC -inf 1
+PREC 1 2
+PREC 2 3
+PREC 3 4
+PREC 4 5
+PREC 5 inf
+
+PVOL -inf 2
+PVOL 2 3
+PVOL 3 4
+PVOL 4 inf
+
+RELY -inf 1
+RELY 1 2
+RELY 2 3
+RELY 3 4
+RELY 4 inf
+
+RUSE -inf 2
+RUSE 2 3
+RUSE 3 4
+RUSE 4 5
+RUSE 5 inf
+
+SCED -inf 1
+SCED 1 2
+SCED 2 3
+SCED 3 4
+SCED 4 inf
+
+SITE -inf 1
+SITE 1 2
+SITE 2 3
+SITE 3 4
+SITE 4 inf
+
+STOR -inf 3
+STOR 3 4
+STOR 4 5
+STOR 5 inf
+
+TEAM -inf 1
+TEAM 1 2
+TEAM 2 3
+TEAM 3 4
+TEAM 4 5
+TEAM 5 inf
+
+TIME -inf 3
+TIME 3 4
+TIME 4 5
+TIME 5 inf
+
+TOOL -inf 1
+TOOL 1 2
+TOOL 2 3
+TOOL 3 4
+TOOL 4 inf
+
+DATA -inf 2 0.39 {'best': 16, 'rest': 20}
+PMAT 5 inf 0.38 {'best': 14, 'rest': 11}
+DOCU 3 4 0.34 {'best': 15, 'rest': 25}
+TOOL -inf 1 0.3 {'best': 13, 'rest': 21}
+ACAP 1 2 0.28 {'best': 13, 'rest': 27}
+TOOL 1 2 0.25 {'best': 13, 'rest': 35}
+TIME 4 5 0.24 {'best': 14, 'rest': 51}
+PVOL 3 4 0.23 {'best': 12, 'rest': 33}
+ARCH 5 inf 0.22 {'best': 9, 'rest': 12}
+RELY 2 3 0.21 {'best': 11, 'rest': 29}
+PCAP 4 inf 0.21 {'best': 9, 'rest': 13}
+RELY 1 2 0.21 {'best': 12, 'rest': 40}
+PCON 1 2 0.21 {'best': 11, 'rest': 30}
+PMAT 4 5 0.21 {'best': 10, 'rest': 22}
+STOR 3 4 0.2 {'best': 11, 'rest': 33}
+DATA 2 3 0.19 {'best': 11, 'rest': 37}
+PCAP 2 3 0.19 {'best': 11, 'rest': 37}
+SITE 2 3 0.19 {'best': 10, 'rest': 29}
+SCED 3 4 0.18 {'best': 10, 'rest': 30}
+SCED 2 3 0.18 {'best': 10, 'rest': 31}
+DOCU 4 inf 0.16 {'best': 7, 'rest': 11}
+PREC 3 4 0.16 {'best': 9, 'rest': 29}
+TEAM 5 inf 0.16 {'best': 6, 'rest': 5}
+PVOL 2 3 0.16 {'best': 11, 'rest': 56}
+RUSE 2 3 0.16 {'best': 9, 'rest': 31}
+RUSE 3 4 0.15 {'best': 9, 'rest': 32}
+SITE 3 4 0.15 {'best': 9, 'rest': 34}
+TEAM 4 5 0.13 {'best': 8, 'rest': 30}
+STOR -inf 3 0.13 {'best': 7, 'rest': 20}
+STOR 4 5 0.13 {'best': 9, 'rest': 46}
+TIME 3 4 0.12 {'best': 8, 'rest': 36}
+TEAM 3 4 0.12 {'best': 7, 'rest': 25}
+ARCH 4 5 0.12 {'best': 7, 'rest': 26}
+PCAP 3 4 0.11 {'best': 7, 'rest': 30}
+TEAM 2 3 0.1 {'best': 7, 'rest': 33}
+TIME 5 inf 0.1 {'best': 6, 'rest': 21}
+ACAP 2 3 0.1 {'best': 7, 'rest': 36}
+PCON 4 inf 0.09 {'best': 5, 'rest': 14}
+PCON 2 3 0.09 {'best': 7, 'rest': 40}
+ARCH 2 3 0.09 {'best': 6, 'rest': 27}
+PREC 5 inf 0.09 {'best': 5, 'rest': 16}
+PCON 3 4 0.09 {'best': 6, 'rest': 28}
+PREC -inf 1 0.09 {'best': 4, 'rest': 8}
+RUSE 4 5 0.08 {'best': 6, 'rest': 32}
+ARCH 3 4 0.08 {'best': 5, 'rest': 19}
+RELY 3 4 0.08 {'best': 6, 'rest': 33}
+RUSE 5 inf 0.08 {'best': 4, 'rest': 10}
+SITE 4 inf 0.08 {'best': 4, 'rest': 10}
+PVOL -inf 2 0.08 {'best': 4, 'rest': 11}
+ACAP 3 4 0.08 {'best': 5, 'rest': 23}
+PREC 2 3 0.07 {'best': 5, 'rest': 24}
+SCED 4 inf 0.07 {'best': 4, 'rest': 15}
+SCED 1 2 0.06 {'best': 5, 'rest': 33}
+SITE -inf 1 0.06 {'best': 4, 'rest': 18}
+ACAP -inf 1 0.06 {'best': 4, 'rest': 19}
+PREC 1 2 0.06 {'best': 4, 'rest': 21}
+DOCU 1 2 0.06 {'best': 5, 'rest': 38}
+PMAT 3 4 0.05 {'best': 4, 'rest': 23}
+PVOL 4 inf 0.05 {'best': 4, 'rest': 24}
+STOR 5 inf 0.05 {'best': 4, 'rest': 25}
+PREC 4 5 0.05 {'best': 4, 'rest': 26}
+ARCH 1 2 0.04 {'best': 4, 'rest': 33}
+DOCU 2 3 0.04 {'best': 4, 'rest': 33}
+SITE 1 2 0.04 {'best': 4, 'rest': 33}
+TIME -inf 3 0.04 {'best': 3, 'rest': 16}
+RUSE -inf 2 0.04 {'best': 3, 'rest': 19}
+RELY 4 inf 0.03 {'best': 2, 'rest': 7}
+PMAT 2 3 0.03 {'best': 3, 'rest': 23}
+DATA 3 4 0.03 {'best': 4, 'rest': 47}
+PCAP 1 2 0.03 {'best': 3, 'rest': 29}
+PCON -inf 1 0.03 {'best': 2, 'rest': 12}
+TOOL 2 3 0.03 {'best': 3, 'rest': 34}
+SCED -inf 1 0.02 {'best': 2, 'rest': 15}
+TEAM 1 2 0.02 {'best': 2, 'rest': 16}
+ACAP 4 inf 0.02 {'best': 2, 'rest': 19}
+TOOL 3 4 0.02 {'best': 2, 'rest': 23}
+PCAP -inf 1 0.01 {'best': 1, 'rest': 15}
+TEAM -inf 1 0.01 {'best': 1, 'rest': 15}
+ARCH -inf 1 0.0 {'rest': 7}
+DATA 4 inf 0.0 {'rest': 20}
+DOCU -inf 1 0.0 {'rest': 17}
+PMAT -inf 2 0.0 {'rest': 45}
+RELY -inf 1 0.0 {'rest': 15}
+TOOL 4 inf 0.0 {'rest': 11}
+{'DATA': [[-inf, 2]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 1]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 1]], 'ACAP': [[1, 2]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[2, 3]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[2, 3]], 'PCAP': [[4, inf]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[4, inf]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[5, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[4, inf]], 'PCON': [[1, 2]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[4, inf]], 'PCON': [[1, 2]]}
+{'DATA': [[-inf, 2]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[3, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, 4]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]], 'PREC': [[3, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[3, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[5, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[5, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[5, inf]], 'RUSE': [[2, 3]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 3]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[5, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[5, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[3, 4]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[4, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 4]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[4, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[4, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[4, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[4, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, 5]], 'PVOL': [[2, 4]], 'ARCH': [[5, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[3, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, 5]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, 3], [4, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[3, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, 5]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[3, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, 5]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 2]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 2]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 2], [4, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 3], [4, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, 3], [4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 3], [4, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, 3], [4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, 3], [4, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, 3], [4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, 3], [4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 4]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, 3], [4, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 5]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 3]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 5]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, 5]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, 4]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[2, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 3]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [3, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[2, 4]], 'PREC': [[-inf, 1], [2, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[2, inf]], 'PREC': [[-inf, 1], [2, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 1], [2, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[1, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 1], [2, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 1], [2, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[4, inf]], 'DOCU': [[1, 2], [3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[3, inf]], 'DOCU': [[1, 2], [3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'PVOL': [[-inf, 4]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[3, inf]], 'DOCU': [[1, 2], [3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'STOR': [[-inf, 5]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
+{'DATA': [[-inf, 3]], 'PMAT': [[3, inf]], 'DOCU': [[1, 2], [3, inf]], 'TOOL': [[-inf, 2]], 'ACAP': [[-inf, 4]], 'TIME': [[3, inf]], 'ARCH': [[2, inf]], 'RELY': [[1, 4]], 'PCAP': [[2, inf]], 'PCON': [[1, inf]], 'SITE': [[-inf, 1], [2, inf]], 'SCED': [[1, inf]], 'PREC': [[-inf, 4], [5, inf]], 'TEAM': [[2, inf]], 'RUSE': [[2, inf]]}
 
 -----------
-explain= {'origin': [2]}
-all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
-sway with 6 evals {'Lbs-': 2085.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 13} {'Lbs-': 525.19, 'Acc+': 4.19, 'Mpg+': 7.75, 'N': 13}
-xpln on 6 evals {'Lbs-': 2246.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 70} {'Lbs-': 490.31, 'Acc+': 2.98, 'Mpg+': 7.75, 'N': 70}
-sort with 398 evals {'Lbs-': 2070.0, 'Acc+': 19.2, 'Mpg+': 40.0, 'N': 13} {'Lbs-': 197.67, 'Acc+': 2.6, 'Mpg+': 3.88, 'N': 13}
-✅ pass:	 xpln
-✅ pass:	 ok
- beaca
- ddddb
- adadd
- eadcb
- eacaa
- aeadb
- daebd
- debcb
- bdcad
- eabca
-✅ pass:	 sample
- 10 5.5 3.0276503540974917
-✅ pass:	 num
- 10000 10.013090245127714 1.9708063718547493
-✅ pass:	 gauss
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 10.0 1 True True True
- 10.1 1 True True True
- 10.2 1 True True True
- 10.3 1 True True True
- 10.4 1 True True True
- 10.5 1 True False False
- 10.6 1 True False False
- 10.7 1 False False False
- 10.8 1 True False False
- 10.9 1 False False False
-✅ pass:	 bootmu
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 12 1 False False False
- 12 2 False False False
- 12 3 True False False
- 12 4 False False False
- 12 5 True False False
- 12 6 True True True
- 12 7 True False False
- 12 8 True False False
- 12 9 True False False
-✅ pass:	 bootsd
-		true True True
-		false True False
-		false False False
-✅ pass:	 basic
-
-eg3
-	 1.0 True True True
-	 1.05 True True True
-	 1.1 False False True
-	 1.15 False False True
-	 1.2 False False True
-	 1.25 False False True
-	 1.3 False False True
-	 1.35 False False True
-	 1.4 False False True
-	 1.45 False False True
-✅ pass:	 pre
- rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
- rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
- rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
- rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
- rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
- rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
- rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
- rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
- rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
- rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
-✅ pass:	 tiles
-rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
-rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
-rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
-rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-✅ pass:	 five
-rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-✅ pass:	 six
- 0 rx9  --*                |                    {  8.58,   9.40,   9.89,  10.49,  11.21}
- 0 rx5  --*                |                    {  8.67,   9.44,   9.94,  10.48,  11.26}
- 1 rx0  --*                |                    {  8.67,   9.38,   9.96,  10.45,  11.23}
- 1 rx6  --*                |                    {  8.66,   9.51,  10.01,  10.56,  11.25}
- 2 rx1  --*                |                    {  8.79,   9.57,  10.08,  10.59,  11.31}
- 2 rx2           ---*      |                    { 18.79,  19.50,  20.07,  20.62,  21.29}
- 3 rx3                     |-*                  { 28.72,  29.57,  30.02,  30.54,  31.25}
- 4 rx4                     |-*                  { 28.83,  29.66,  30.11,  30.61,  31.46}
- 4 rx7                     |        --*-        { 38.61,  39.44,  40.02,  40.55,  41.26}
- 4 rx8                     |      --- *---      { 36.38,  38.52,  40.10,  41.72,  44.01}
-✅ pass:	 sk
+explain= {'DATA': [[-inf, 3], [2, 3]], 'PMAT': [[3, 5], [4, inf]], 'DOCU': [[1, 2], [3, inf], [4, inf]], 'TOOL': [[-inf, 2], [1, 2]], 'ACAP': [[-inf, 2], [1, 4], [3, 4]], 'TIME': [[3, 5], [4, inf]], 'ARCH': [[2, 4], [3, inf], [5, inf]], 'RELY': [[1, 3], [2, 4]], 'PCAP': [[2, 4], [3, inf]], 'PCON': [[1, 3], [2, inf], [4, inf]], 'SITE': [[-inf, 1], [2, 4], [3, inf]], 'SCED': [[1, 3], [2, inf], [4, inf]], 'PREC': [[-inf, 2], [1, 4], [3, 4], [5, inf]], 'TEAM': [[2, 4], [3, inf], [5, inf]], 'RUSE': [[2, 4], [3, inf], [5, inf]]}
+all                {'LOC+': 1092.0, 'AEXP-': 3.0, 'PLEX-': 3.0, 'RISK-': 5.0, 'EFFORT-': 19831.0, 'N': 1000} {'LOC+': 620.54, 'AEXP-': 1.55, 'PLEX-': 1.55, 'RISK-': 5.81, 'EFFORT-': 27484.88, 'N': 1000}
+sway1 with 6 evals {'LOC+': 965.0, 'AEXP-': 3.0, 'PLEX-': 4.0, 'RISK-': 5.0, 'EFFORT-': 13752.0, 'N': 31} {'LOC+': 707.36, 'AEXP-': 0.78, 'PLEX-': 1.55, 'RISK-': 5.43, 'EFFORT-': 26201.55, 'N': 31}
+xpln1 on 6 evals {'LOC+': 1544.0, 'AEXP-': 2.0, 'PLEX-': 4.0, 'RISK-': 5.0, 'EFFORT-': 76644.0, 'N': 3} {'LOC+': 542.25, 'AEXP-': 0.0, 'PLEX-': 0.78, 'RISK-': 0.78, 'EFFORT-': 29504.26, 'N': 3}
+top with 1000 evals {'LOC+': 1543.0, 'AEXP-': 2.0, 'PLEX-': 1.0, 'RISK-': 3.0, 'EFFORT-': 31323.0, 'N': 31} {'LOC+': 268.6, 'AEXP-': 0.39, 'PLEX-': 0.78, 'RISK-': 4.65, 'EFFORT-': 16789.53, 'N': 31}
+✅ pass:	 xpln2
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -241,5 +502,5 @@ rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 26
-❌ Number of tests failing -> 0
+✅ Number of tests passing -> 1
+❌ Number of tests failing -> 1
