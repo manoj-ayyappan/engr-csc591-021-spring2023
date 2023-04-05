@@ -22,6 +22,7 @@ OPTIONS:
   -R  --Reuse   child splits reuse a parent pole = true
   -s  --seed    random number seed           = 937162211
   -d  --debug   debug mode on                = false
+  -u  --clustering_alg   hierarchial or DBSCAN                = DBSCAN
 
   -z  --bootstrap   bootstrap                = 512
   -y  --conf   conf                          = 0.05

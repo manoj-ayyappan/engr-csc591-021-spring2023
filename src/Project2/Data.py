@@ -223,24 +223,36 @@ class Data(object):
     ###########
     # ORIGINAL - Hierarchical agglomerative clustering algorithm
     ###########
+    def hierarchial_cluster(i, rows=None, cols=None, above=None):
+        if rows is None:
+            rows = i.rows
+        if cols is None:
+            cols = i.cols.x
+        node = {'data': i.clone(rows)}
+        if len(rows) >= 2:
+            left, right, node['A'], node['B'], node['mid'], node['c'], node['evals'] = i.half(rows, cols, above)
+            node['left'] = i.cluster(left, cols, node['A'])
+            node['right'] = i.cluster(right, cols, node['B'])
+        return node
+
     # def cluster(i, rows=None, cols=None, above=None):
-    #     if rows is None:
-    #         rows = i.rows
-    #     if cols is None:
-    #         cols = i.cols.x
-    #     node = {'data': i.clone(rows)}
-    #     if len(rows) >= 2:
-    #         left, right, node['A'], node['B'], node['mid'], node['c'], node['evals'] = i.half(rows, cols, above)
-    #         node['left'] = i.cluster(left, cols, node['A'])
-    #         node['right'] = i.cluster(right, cols, node['B'])
-    #     return node
+    #     if g.the.get('clustering_alg') == "DBSCAN":
+    #         print()
+    #         print("\n\n\n\n\n\n\n\n\n\n\n\n\nDBSCANNNNNNNNNNNNN")
+    #         print()
+    #         return i.dbscan_cluster(rows=None, cols=None)
+    #     else:
+    #         print()
+    #         print("\n\n\n\n\n\n\n\n\n\n\n\n\nHHHHHHHHHH")
+    #         print()
+    #         return i.hierarchial_cluster(rows=None, cols=None, above=None)
 
     
 
     ###########
     # DBScan
     ###########
-    def cluster(i, rows=None, cols=None):
+    def dbscan_cluster(i, rows=None, cols=None):
         if rows is None:
             rows = i.rows
         if cols is None:

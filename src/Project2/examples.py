@@ -373,7 +373,7 @@ def eg_function_26():
 def add_all_examples():
     add_example("xpln", "explore explanation sets", eg_function_13)
     # add_example("xpln2", "Try to Do Better", eg_function_26)
-    # add_example("the", "show settings", eg_function_the)
+    add_example("the", "show settings", eg_function_the)
     # add_example("rand", "demo random number generation", eg_function_0)
     # add_example("some", "demo of reservoir sampling", eg_function_1)
     # add_example("nums", "demo of NUM", eg_function_2)
