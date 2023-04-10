@@ -174,6 +174,7 @@ class Data(object):
         for k, col in cols.items():
             n = n + 1
             d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.get("p"))
+        # print((d/n)**(1/g.the.get("p")))
         return (d/n)**(1/g.the.get("p"))
 
 
@@ -235,78 +236,122 @@ class Data(object):
             node['right'] = i.cluster(right, cols, node['B'])
         return node
 
-    # def cluster(i, rows=None, cols=None, above=None):
-    #     if g.the.get('clustering_alg') == "DBSCAN":
-    #         print()
-    #         print("\n\n\n\n\n\n\n\n\n\n\n\n\nDBSCANNNNNNNNNNNNN")
-    #         print()
-    #         return i.dbscan_cluster(rows=None, cols=None)
-    #     else:
-    #         print()
-    #         print("\n\n\n\n\n\n\n\n\n\n\n\n\nHHHHHHHHHH")
-    #         print()
-    #         return i.hierarchial_cluster(rows=None, cols=None, above=None)
-
+    def cluster(i, rows=None, cols=None, above=None):
+        if g.the.get('clustering_alg') == "DBSCAN":
+            print()
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\nDBSCANNNNNNNNNNNNN")
+            print()
+            return i.dbscan_cluster(rows=None, cols=None)
+        else:
+            print()
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\nHHHHHHHHHH")
+            print()
+            return i.hierarchial_cluster(rows=None, cols=None, above=None)
     
-
-    ###########
-    # DBScan
-    ###########
-    def dbscan_cluster(i, rows=None, cols=None):
-        if rows is None:
-            rows = i.rows
-        if cols is None:
-            cols = i.cols.x
-        data = i.clone(rows)
-
-        # compute pairwise distances
-        distances = [[i.dist(row1, row2, cols) for row2 in rows] for row1 in rows]
-
-        # run DBSCAN
-        db = DBSCAN(metric='euclidean', eps=0.5, min_samples=5).fit(distances)
-
-        # create dictionary to map labels to clusters
-        clusters = {}
-        for idx, label in enumerate(db.labels_):
-            if label not in clusters:
-                clusters[label] = []
-            clusters[label].append(rows[idx])
-
-        # create nodes for each cluster
-        cluster_nodes = []
-        for label, cluster_rows in clusters.items():
-            cluster_data = i.clone(cluster_rows)
-            node = {'data': cluster_data, 'label': label}
-            cluster_nodes.append(node)
-
-        # return list of cluster nodes
-        return cluster_nodes
 
 
     ###########
     # ORIGINAL - Sway using Hierarchical clustering 
     ###########    
-    def sway(self, cols=None, worker=None, best=None, rest=None, evals=0):
-        def workerF(rows, worse, evals0,  above = None):
-            if len(rows) <= (len(self.rows)**g.the["min"]):
-                return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
+    # def sway(self, cols=None, worker=None, best=None, rest=None, evals=0):
+    #     def workerF(rows, worse, evals0,  above = None):
+    #         if len(rows) <= (len(self.rows)**g.the["min"]):
+    #             return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
+    #         else:
+    #             l, r, A, B, mid, c, evals = self.half( rows, cols, above)
+    #             if self.better(B, A):
+    #                 l, r, A, B = r, l, B, A
+    #             lists.map(r, lambda row: lists.push(worse, row))
+    #             return workerF(l, worse,evals+evals0, A)
+    #     if worker is None:
+    #         best, rest, evals = workerF(self.rows, [], 0)
+    #         return self.clone(best), self.clone(rest), evals
+    #     else:
+    #         best, rest = worker
+    #         return self.clone(best), self.clone(rest), evals
+
+    ###########
+    # Sway Using DBSCAN
+    ###########      
+
+    def dbscan(self, rows, eps, min_pts):
+        clusters = []
+        visited = set()
+        noise = set()
+        for i, row in rows.items():
+            if i in visited:
+                continue
+            visited.add(i)
+            neighbors = []
+            for j, other_row in rows.items():
+                if j != i and self.dist(row, other_row) <= eps:
+                    neighbors.append(j)
+            if len(neighbors) < min_pts:
+                noise.add(rows[i])
             else:
-                l, r, A, B, mid, c, evals = self.half( rows, cols, above)
-                if self.better(B, A):
-                    l, r, A, B = r, l, B, A
-                lists.map(r, lambda row: lists.push(worse, row))
-                return workerF(l, worse,evals+evals0, A)
-        if worker is None:
-            best, rest, evals = workerF(self.rows, [], 0)
-            return self.clone(best), self.clone(rest), evals
-        else:
-            best, rest = worker
-            return self.clone(best), self.clone(rest), evals
-        
+                cluster = set()
+                self.expand_cluster(rows, i, neighbors, cluster, visited, eps, min_pts)
+                clusters.append(list(cluster))
+        return clusters, list(noise)
 
 
+    def expand_cluster(self, rows, i, neighbors, cluster, visited, eps, min_pts):
+        cluster.add(rows[i])
+        for j in neighbors:
+            if j not in visited:
+                visited.add(j)
+                other_neighbors = []
+                for k, other_row in rows.items():
+                    if k != j and self.dist(other_row, rows[j]) <= eps:
+                        other_neighbors.append(k)
+                if len(other_neighbors) >= min_pts:
+                    neighbors.extend(other_neighbors)
+            if j not in cluster:
+                cluster.add(rows[j])
 
+    # Use eps 0.05 for auto93
+    # Use eps 0.25 for coc1000
+    # Use eps 0.07 for china
+    def sway(self, eps=0.07, min_pts=5):
+        clusters, noise = self.dbscan(self.rows, eps, min_pts)
+        best, rest, evals = self.find_best_cluster(clusters)
+        rest = lists.many(rest, g.the["rest"] * len(best))
+        return self.clone(best), self.clone(rest) , evals
     
+    def find_best_cluster(self, clusters):
+        best_cluster = None
+        bestIndex = -1
+        best_score = float('-inf')
+        evals = 0
+        for n, cluster in enumerate(clusters):
+            score, evals1 = self.compute_cluster_score(cluster)
+            evals += 1
+            if score > best_score:
+                best_cluster = cluster
+                best_score = score
+                best_index = n
+        rest = []
+        for n, cluster in enumerate(clusters):
+            if(n != best_index):
+                rest.extend(cluster)
+        return best_cluster, rest, evals
+
+    def compute_cluster_score(self, cluster):
+        score = 0
+        count = 0
+        for i, row1 in enumerate(cluster):
+            for j, row2 in enumerate(cluster):
+                if i < j:
+                    count += 1
+                    if self.better(row1, row2):
+                        score -= 1
+                    else:
+                        score += 1
+        return score, count
+
+
+
+
 
     
 
@@ -377,9 +422,6 @@ class Data(object):
             tmp, rule = scoreFun(list(map(lambda x: x['range'], sortedRanges[:n])))
             if tmp and tmp > most:
                 out, most = rule, tmp
-        
-        
-
         return out, most
 
 
