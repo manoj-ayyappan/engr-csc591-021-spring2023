@@ -249,26 +249,31 @@ class Data(object):
             return i.hierarchial_cluster(rows=None, cols=None, above=None)
     
 
+    def sway(self):
+        if g.the["sway"] == 'original':
+            return self.sway_original()
+        else:
+            return self.sway_dbscan()
 
     ###########
     # ORIGINAL - Sway using Hierarchical clustering 
     ###########    
-    # def sway(self, cols=None, worker=None, best=None, rest=None, evals=0):
-    #     def workerF(rows, worse, evals0,  above = None):
-    #         if len(rows) <= (len(self.rows)**g.the["min"]):
-    #             return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
-    #         else:
-    #             l, r, A, B, mid, c, evals = self.half( rows, cols, above)
-    #             if self.better(B, A):
-    #                 l, r, A, B = r, l, B, A
-    #             lists.map(r, lambda row: lists.push(worse, row))
-    #             return workerF(l, worse,evals+evals0, A)
-    #     if worker is None:
-    #         best, rest, evals = workerF(self.rows, [], 0)
-    #         return self.clone(best), self.clone(rest), evals
-    #     else:
-    #         best, rest = worker
-    #         return self.clone(best), self.clone(rest), evals
+    def sway_original(self, cols=None, worker=None, best=None, rest=None, evals=0):
+        def workerF(rows, worse, evals0,  above = None):
+            if len(rows) <= (len(self.rows)**g.the["min"]):
+                return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
+            else:
+                l, r, A, B, mid, c, evals = self.half( rows, cols, above)
+                if self.better(B, A):
+                    l, r, A, B = r, l, B, A
+                lists.map(r, lambda row: lists.push(worse, row))
+                return workerF(l, worse,evals+evals0, A)
+        if worker is None:
+            best, rest, evals = workerF(self.rows, [], 0)
+            return self.clone(best), self.clone(rest), evals
+        else:
+            best, rest = worker
+            return self.clone(best), self.clone(rest), evals
 
     ###########
     # Sway Using DBSCAN
@@ -312,11 +317,14 @@ class Data(object):
     # Use eps 0.05 for auto93
     # Use eps 0.25 for coc1000
     # Use eps 0.07 for china
-    def sway(self, eps=0.07, min_pts=5):
+    def sway_dbscan(self, eps= 0.05, min_pts=5):
+        eps = g.the["eps"]
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
         best, rest, evals = self.find_best_cluster(clusters)
         rest = lists.many(rest, g.the["rest"] * len(best))
         return self.clone(best), self.clone(rest) , evals
+    
+    
     
     def find_best_cluster(self, clusters):
         best_cluster = None
