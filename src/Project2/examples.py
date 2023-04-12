@@ -398,8 +398,11 @@ def eg_function_26():
 
     bestXpln = ""
     bestXplnHPs = []
+    bestXplnEvals = -1
     bestSway = ""
     bestSwayHPs = []
+    bestSwayEvals = -1
+    
     for hps in list:
         d.the["bins"] = hps[0]
         d.the["better"] = hps[1]
@@ -429,26 +432,26 @@ def eg_function_26():
                 bestXplnHPs = hps
                 bestSway = query.stats(best)
                 bestSwayHPs = hps
+                bestSwayEvals = evals
+                bestXplnEvals = evals
             else:
                 if compare_dicts(currSway, bestSway, data):
                     bestSway = currSway
                     bestSwayHPs = hps
+                    bestSwayEvals = evals
                 if compare_dicts(currXpln, bestXpln, data):
                     bestXpln = currXpln
                     bestXplnHPs = hps
                     bestXplnRule = strings.o(rule.showRule())
-
-
-
+                    bestXplnEvals = evals
         except:
             print("Error -> ", hps)
-    hpList = ['bins', 'better',
-                     'Far', 'min_size', 'Max', 'dist',
-                     'rest']
+
+    hpList = ['bins', 'better','Far', 'min_size', 'Max', 'dist', 'rest']
         
     print("------------------")
     print("------------------")
-    print("HPs=") 
+    print("HPs") 
     print("------------------")
     index = 0
     for hp in bestSwayHPs:
@@ -457,10 +460,10 @@ def eg_function_26():
     print("------------------")
     print("------------------")
     print()
-    print("sway",  strings.o(bestSway) )
+    print(f"sway on {bestSwayEvals} evals",  strings.o(bestSway) )
     print("------------------")
     print("explain=", bestXplnRule) 
-    print("HPs=" ) 
+    print("HPs" ) 
     print("------------------")
     index = 0
     for hp in bestXplnHPs:
@@ -468,7 +471,7 @@ def eg_function_26():
         index += 1
     print("------------------")
     print("------------------")
-    print("xpln",  strings.o(bestXpln))
+    print(f"xpln on {bestXplnEvals} evals",  strings.o(bestXpln))
     print("Best Xpln HPs")
 
 
