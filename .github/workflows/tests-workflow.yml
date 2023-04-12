@@ -55,6 +55,8 @@ jobs:
         cat out/${{matrix.hw-out}}.out
       
     - uses: actions/checkout@v3
+      with:
+        clean: false
     - name: Save .out files
       if: always()
       uses: stefanzweifel/git-auto-commit-action@v4
@@ -103,6 +105,8 @@ jobs:
           cat out/${{matrix.proj-out}}.out
 
       - uses: actions/checkout@v3
+        with:
+          clean: false
       - name: Save .out files
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -153,6 +157,8 @@ jobs:
           cat out/project2-${{matrix.dataset}}.out
 
       - uses: actions/checkout@v3
+        with:
+          clean: false
       - name: Save .out files
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v4
