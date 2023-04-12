@@ -10,6 +10,8 @@ import Sym
 import Data
 import random
 import stats
+import math
+
 
 
 
@@ -354,24 +356,126 @@ def eg_function_25():
         print("",rx["rank"], rx["name"],rx["show"])
     
 
-def eg_function_26():
-    data=Data.Data(d.the["file"]) 
-    best,rest, evals = data.sway() 
-    rule,most= data.xpln(best,rest) 
-    print("\n-----------\nexplain=", strings.o(rule.showRule())) 
-    data1= Data.Data(rule.selects(data.rows), datai = data) 
-    print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div))) 
-    print(f"sway1 with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div))) 
-    print(f"xpln1 on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div))) 
-    top,_ = data.betters(len(best.rows)) 
-    top = Data.Data(top, data2 = data) 
-    print(f"top with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
 
+def compare_dicts(dict1, dict2, data):
+    s1, s2, ys, x, y = 0, 0, data.cols.y, None, None
+
+    index = 0
+    for n, col in ys.items():
+        x = dict1.get(col.txt)
+        y = dict2.get(col.txt)
+        x = col.norm(x)
+        y = col.norm(y)
+        s1 = s1 - math.exp(col.w * (x - y) / len(ys))
+        s2 = s2 - math.exp(col.w * (y - x) / len(ys))
+
+    return s1 / len(ys) < s2 / len(ys)
+
+
+
+def eg_function_26():
+
+    list = [
+        
+        [9, 'bdom', 0.7, 0.4, 2600, 1.5, 3 ],
+
+
+        [11, 'bdom', 0.9, 0.1, 100, 0.5, 2 ],
+        [5, 'bdom', 0.7, 0.2, 100, 3.0, 2 ],
+
+        [3, 'zitler', 0.86, 0.1, 2600, 1.0, 5 ],
+        [3, 'bdom', 0.82, 0.2, 2100, 1.0, 5 ],
+
+
+        [13,' hv', 0.86, 0.1, 600, 2.5, 5 ],
+        [7, 'hv', 0.94, 0.3, 2100, 4.5, 2 ],
+
+        [3, 'zitler', 0.74, 0.2, 1600, 4.5, 5 ],
+        [9, 'zitler', 0.94, 0.4, 100, 1.0, 5 ],
+        [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
+    
+    ]
+
+    bestXpln = ""
+    bestXplnHPs = []
+    bestSway = ""
+    bestSwayHPs = []
+    for hps in list:
+        d.the["bins"] = hps[0]
+        d.the["better"] = hps[1]
+        d.the["Far"] = hps[2]
+        d.the["min"] = hps[3]
+        d.the["Max"] = hps[4]
+        d.the["p"] = hps[5]
+        d.the["rest"] = hps[6]
+        try:
+            data=Data.Data(d.the["file"]) 
+            best,rest, evals = data.sway() 
+            rule,most= data.xpln(best,rest) 
+            print("\n-----------\nexplain=", strings.o(rule.showRule())) 
+            data1= Data.Data(rule.selects(data.rows), datai = data) 
+            print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div))) 
+            print(f"sway1 with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div))) 
+            currSway =  query.stats(best)
+            currXpln = query.stats(data1)
+            print(f"xpln1 on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div))) 
+            top,_ = data.betters(len(best.rows)) 
+            top = Data.Data(top, data2 = data) 
+            print(f"top with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
+
+            if(bestXpln == ""):
+                bestXpln = query.stats(data1) 
+                bestXplnRule = strings.o(rule.showRule())
+                bestXplnHPs = hps
+                bestSway = query.stats(best)
+                bestSwayHPs = hps
+            else:
+                if compare_dicts(currSway, bestSway, data):
+                    bestSway = currSway
+                    bestSwayHPs = hps
+                if compare_dicts(currXpln, bestXpln, data):
+                    bestXpln = currXpln
+                    bestXplnHPs = hps
+                    bestXplnRule = strings.o(rule.showRule())
+
+
+
+        except:
+            print("Error -> ", hps)
+    hpList = ['bins', 'better',
+                     'Far', 'min_size', 'Max', 'dist',
+                     'rest']
+        
+    print("------------------")
+    print("------------------")
+    print("HPs=") 
+    print("------------------")
+    index = 0
+    for hp in bestSwayHPs:
+        print(hpList[index], ": ", hp)
+        index += 1
+    print("------------------")
+    print("------------------")
+    print()
+    print("sway",  strings.o(bestSway) )
+    print("------------------")
+    print("explain=", bestXplnRule) 
+    print("HPs=" ) 
+    print("------------------")
+    index = 0
+    for hp in bestXplnHPs:
+        print(hpList[index], ": ", hp)
+        index += 1
+    print("------------------")
+    print("------------------")
+    print("xpln",  strings.o(bestXpln))
+    print("Best Xpln HPs")
 
 
 
 def add_all_examples():
-    add_example("xpln", "explore explanation sets", eg_function_13)
+    add_example("hpo", "Find Most accurate hyper parameter set", eg_function_26)
+    # add_example("xpln", "explore explanation sets", eg_function_13)
     # add_example("xpln2", "Try to Do Better", eg_function_26)
     add_example("the", "show settings", eg_function_the)
     # add_example("rand", "demo random number generation", eg_function_0)

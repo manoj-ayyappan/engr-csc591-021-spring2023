@@ -10,6 +10,13 @@ def fmt(sControl, *args):
     # emulate printf
     return sControl.format(...)
 
+def ooo(t): 
+    s = " "
+    for k,v in t.cells.items():
+        s += str(v) + ", "
+    s += ""
+    return s
+
 def oo(t): # print `t` then return it
     print(o(t))
     return t 

@@ -80,7 +80,7 @@ def showTree(tree, lvl=0, post=""):
   if tree:
     lvl = lvl or 0
     print("{}[{}] ".format(("|.. ") * lvl, len(tree['data'].rows)), end="")
-    print((lvl == 0 or not tree.get('left')) and strings.o(query.stats(tree['data'])) or "")
+    print((lvl == 0 or not tree.get('left')) and strings.o(query.stats(tree['data'])) + (strings.ooo(lists.any(tree['data'].rows)))or "")
     showTree(tree.get('left'), lvl+1)
     showTree(tree.get('right'), lvl+1)
 

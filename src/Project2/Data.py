@@ -15,6 +15,7 @@ import discretization
 import functools
 from sklearn.cluster import DBSCAN
 import numpy as np
+import random
 
 
 
@@ -74,10 +75,20 @@ class Data(object):
         t = self.around(row1, rows, None)
         return t[len(t) - 1]
     
+    def better(self, row1, row2, s1=0, s2=0, ys=None, x=None, y=None):
+        s1, s2, ys, x, y = 0, 0, self.cols.y, None, None
+        if g.the["better"] == 'zitler':
+            return self.better_original(row1, row2, s1, s2, ys, x, y)
+        if g.the["better"] == 'hv':
+            return self.better_hv(row1, row2, ys=ys)
+        if g.the["better"] == 'bdom':
+            return self.better_bdom( row1, row2, ys=ys)
+        return None
+
     ###########
     # ORIGINAL
     ###########
-    def better(self, row1, row2, s1=0, s2=0, ys=None, x=None, y=None):
+    def better_original(self, row1, row2, s1=0, s2=0, ys=None, x=None, y=None):
         s1, s2, ys, x, y = 0, 0, self.cols.y, None, None
         for n,col in ys.items():
             x = col.norm(row1.cells[col.at])
@@ -89,61 +100,58 @@ class Data(object):
     ###########
     # Substituting zitler's predicate with boolean domination
     ###########
-    # def is_dominant(self, row1, row2, ys=None):
-    #     ys = self.cols.y if ys is None else ys
+    def is_dominant_bdom(self, row1, row2, ys=None):
+        ys = self.cols.y if ys is None else ys
         
-    #     dominates = False
-    #     for n, col in ys.items():
-    #         x = col.norm(row1.cells[col.at])
-    #         y = col.norm(row2.cells[col.at])
-    #         if x > y:
-    #             return False
-    #         elif x < y:
-    #             dominates = True
-    #     return dominates
+        dominates = False
+        for n, col in ys.items():
+            x = col.norm(row1.cells[col.at]) * col.w * -1
+            y = col.norm(row2.cells[col.at]) * col.w * -1
+            if x > y:
+                return False
+            elif x < y:
+                dominates = True
+        return dominates
 
-    # def better(self, row1, row2, ys=None):
-    #     is_row1_dominant = self.is_dominant(row1, row2, ys=ys)
-    #     is_row2_dominant = self.is_dominant(row2, row1, ys=ys)
-    #     if is_row1_dominant and not is_row2_dominant:
-    #         return True
-    #     else:
-    #         return False
+    def better_bdom(self, row1, row2, ys=None):
+        is_row1_dominant = self.is_dominant_bdom(row1, row2, ys=ys)
+        is_row2_dominant = self.is_dominant_bdom(row2, row1, ys=ys)
+        if is_row1_dominant and not is_row2_dominant:
+            return True
+        else:
+            return False
 
 
     ###########
     # Substituting zitler's predicate with hyper volume
     ###########
-    # def is_dominant(self, row1, row2, ys=None):
-    #     ys = self.cols.y if ys is None else ys
-        
-    #     hv1 = 1
-    #     hv2 = 1
-    #     for n, col in ys.items():
-    #         x1 = col.norm(row1.cells[col.at])
-    #         x2 = col.norm(row2.cells[col.at])
-    #         hv1 *= x1
-    #         hv2 *= x2
-            
-    #     return hv1 >= hv2
+    
 
-    # def hypervolume(self, row, ys=None):
-    #     ys = self.cols.y if ys is None else ys
+    def hypervolume(self, row, ys=None):
+        ys = self.cols.y if ys is None else ys
         
-    #     hv = 1
-    #     for n, col in ys.items():
-    #         x = col.norm(row.cells[col.at])
-    #         hv *= x
+        hv = 1
+        for n, col in ys.items():
+            x = col.norm(row.cells[col.at]) * col.w 
+            hv *= x
         
-    #     return hv
+        return hv
 
-    # def better(self, row1, row2, ys=None):
-    #     hv1 = self.hypervolume(row1, ys=ys)
-    #     hv2 = self.hypervolume(row2, ys=ys)
-    #     if hv1 > hv2:
-    #         return True
-    #     else:
-    #         return False
+    def better_hv(self, row1, row2, ys=None):
+        ys = self.cols.y if ys is None else ys
+        hv1 = 1
+        hv2 = 1
+        for n, col in ys.items():
+            x1 = col.norm(row1.cells[col.at]) * col.w 
+            x2 = col.norm(row2.cells[col.at]) * col.w 
+            hv1 *= x1
+            hv2 *= x2
+        
+        if hv1 > hv2:
+            return False
+        else:
+            return True
+
 
 
     def betters(self,  n):
@@ -176,7 +184,53 @@ class Data(object):
             d = d + (col.dist(row1.cells[col.at], row2.cells[col.at])**g.the.get("p"))
         # print((d/n)**(1/g.the.get("p")))
         return (d/n)**(1/g.the.get("p"))
+    
+    
 
+    # def half_2(self, rows=None, cols=None, above=None):
+    #     # Divides data using 3 far points
+    #     def project(row):
+    #         x, y = numerics.cosine(dist(row, A), dist(row, B), c)
+    #         if not hasattr(row,"x"):
+    #             row.x = x 
+    #         if not hasattr(row,"y"):
+    #             row.y = y
+    #         return {"row": row, "x": x, "y": y}
+
+    #     def dist(row1, row2):
+    #         return self.dist(row1, row2, cols)
+
+    #     if rows is None:
+    #         rows = self.rows
+
+       
+
+    #     if above is None:
+    #         A = lists.any(rows)
+    #     else:
+    #         A = above
+    #     B = self.furthest(A,rows).get("row")
+    #     for i in range(100):
+    #         C = self.furthest(B,rows).get("row")
+    #         if self.dist(B, C) > self.dist(A, B):
+    #             A = B
+    #             B = C
+    #     c = dist(A, B)
+    #     left, right = [], []
+    #     mid = None
+        
+    #     mapped_rows = lists.map(rows, project)
+    #     only_mapped_rows = list(mapped_rows.values())
+    #     sorted_mapped_rows = sorted(only_mapped_rows, key=lambda item: item["x"])
+
+    #     for n, tmp in enumerate(sorted_mapped_rows):
+    #         if n < len(rows) // 2:
+    #             left.append(tmp["row"])
+    #             mid = tmp["row"]
+    #         else:
+    #             right.append(tmp["row"])
+    #     evals = 1 if g.the.get("Reuse") and above else 2
+    #     return left, right, A, B, mid, c, evals
 
    
     def half(self, rows=None, cols=None, above=None):
@@ -263,6 +317,11 @@ class Data(object):
             if len(rows) <= (len(self.rows)**g.the["min"]):
                 return rows, lists.many(worse, g.the["rest"] * len(rows)), evals0
             else:
+                if type(rows) is list:
+                    rows = {i: rows[i] for i in range(len(rows))}
+                else:
+                    rows = rows
+
                 l, r, A, B, mid, c, evals = self.half( rows, cols, above)
                 if self.better(B, A):
                     l, r, A, B = r, l, B, A
@@ -319,6 +378,7 @@ class Data(object):
     # Use eps 0.07 for china
     def sway_dbscan(self, eps= 0.05, min_pts=5):
         eps = g.the["eps"]
+        min_pts = g.the["minpts"]
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
         best, rest, evals = self.find_best_cluster(clusters)
         rest = lists.many(rest, g.the["rest"] * len(best))
@@ -352,9 +412,9 @@ class Data(object):
                 if i < j:
                     count += 1
                     if self.better(row1, row2):
-                        score -= 1
-                    else:
                         score += 1
+                    else:
+                        score -= 1
         return score, count
 
 

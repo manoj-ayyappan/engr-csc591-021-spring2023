@@ -371,7 +371,7 @@ def eg_function_26():
 
 
 def add_all_examples():
-    add_example("xpln", "explore explanation sets", eg_function_13)
+    # add_example("xpln", "explore explanation sets", eg_function_13)
     # add_example("xpln2", "Try to Do Better", eg_function_26)
     # add_example("the", "show settings", eg_function_the)
     # add_example("rand", "demo random number generation", eg_function_0)
@@ -384,7 +384,7 @@ def add_all_examples():
     ##add_example("cliffs", "stats tests", eg_function_7)
     # add_example("dist", "distance test", eg_function_8)
     # add_example("half", "divide data in half", eg_function_9)
-    # add_example("tree", "make and show tree of clusters", eg_function_10)
+    add_example("tree", "make and show tree of clusters", eg_function_10)
     # add_example("sway", "optimizing", eg_function_11)
     # add_example("bins",  "find deltas between best and rest", eg_function_12)
     
