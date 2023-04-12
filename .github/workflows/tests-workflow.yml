@@ -149,7 +149,7 @@ jobs:
         if: ${{ (env.PROJ-EXISTS == 'true') && (env.DATA-EXISTS == 'true')}}
         run: |
           python test/test_hw.py "${{ env.PROJ-NAME }}" -f "data/${{ env.DATA-NAME }}"> out/project2-${{matrix.dataset}}.out
-          cat out/project2-${{matrix.proj-out}}.out
+          cat out/project2-${{matrix.dataset}}.out
 
       - name: Save .out files
         if: always()
