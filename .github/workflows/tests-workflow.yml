@@ -136,7 +136,7 @@ jobs:
           echo "src/${{ env.PROJ-NAME }}"
           echo "data/${{ env.DATA-NAME }}"
           echo "PROJ-EXISTS=$(if [ -d "src/${{ env.PROJ-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
-          echo "DATA-EXISTS=$(if [ -d "data/${{ env.DATA-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
+          echo "DATA-EXISTS=$(if [ -f "data/${{ env.DATA-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
 
       - name: Display Variables
         run: | 
