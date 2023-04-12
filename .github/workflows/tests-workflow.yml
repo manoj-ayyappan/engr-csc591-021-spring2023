@@ -9,7 +9,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  run-tests:
+  hw-tests:
     runs-on: ubuntu-latest
     
     permissions:
@@ -19,7 +19,7 @@ jobs:
       matrix:
         # Modify hw-out with the name of the .out file in the correct order
         # script is for hw1, data for 2, cluster for 3...
-        hw-out: [script, data, cluster, grid, bins, xpln, stats, project]
+        hw-out: [script, data, cluster, grid, bins, xpln, stats]
         
     env:
       NUM: ${{ strategy.job-index }} 
@@ -32,9 +32,10 @@ jobs:
     
     - name: Get HW Name
       run: |
-        if [ "${{matrix.hw-out}}" == "project" ]; 
-        then echo "HW-NAME=Project" >> $GITHUB_ENV; 
-        else echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV; fi
+        echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV
+        #if [ "${{matrix.hw-out}}" == "project" ]; 
+        #then echo "HW-NAME=Project" >> $GITHUB_ENV; 
+        #else echo "HW-NAME=HW$(($NUM+1))" >> $GITHUB_ENV; fi
         
         
     - name: Check if exists
@@ -59,3 +60,50 @@ jobs:
       with:
         commit_message: Save *.out files
         file_pattern: '*.out'
+        
+  project-tests:
+      runs-on: ubuntu-latest
+
+      permissions:
+        contents: write
+
+      strategy:
+        matrix:
+          # Modify project-out with the name of the .out file in the correct order
+          proj-out: [project1, project2]
+
+      env:
+        NUM: ${{ strategy.job-index }} 
+
+      steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Get Project Name
+        run: |
+          echo "PROJ-NAME=Project$(($NUM+1))" >> $GITHUB_ENV
+
+      - name: Check if exists
+        run: |
+          echo "src/${{ env.PROJ-NAME }}"
+          echo "PROJ-EXISTS=$(if [ -d "src/${{ env.PROJ-NAME }}" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
+
+      - name: Display Variables
+        run: | 
+          echo Name: ${{ env.PROJ-NAME }}
+          echo Exists: ${{ env.PROJ-EXISTS }}
+
+      - name: Run ${{ env.PROJ-NAME }} Tests
+        if: ${{ env.PROJ-EXISTS == 'true' }}
+        run: |
+          python test/test_hw.py "${{ env.PROJ-NAME }}" > out/${{matrix.proj-out}}.out
+          cat out/${{matrix.proj-out}}.out
+
+      - name: Save .out files
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Save *.out files
+          file_pattern: '*.out'
