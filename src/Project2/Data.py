@@ -13,8 +13,6 @@ import query
 import Rule
 import discretization
 import functools
-import numpy as np
-import random
 
 
 
