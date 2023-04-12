@@ -157,4 +157,3 @@ jobs:
         with:
           commit_message: Save *.out files
           file_pattern: '*.out'
-          push_options: '--force'
