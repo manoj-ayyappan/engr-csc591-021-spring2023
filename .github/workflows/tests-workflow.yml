@@ -141,6 +141,8 @@ jobs:
         run: | 
           echo Name: ${{ env.PROJ-NAME }}
           echo Exists: ${{ env.PROJ-EXISTS }}
+          echo Name: ${{ env.DATA-NAME }}
+          echo Exists: ${{ env.DATA-EXISTS }}
 
       - name: Run ${{ env.PROJ-NAME }} on ${{ env.DATA-NAME }}
         if: ${{ (env.PROJ-EXISTS == 'true') && (env.DATA-EXISTS == 'true')}}
