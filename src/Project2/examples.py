@@ -396,6 +396,8 @@ def eg_function_26():
     
     ]
 
+    parameter_names = ["bins", "better", "Far", "min", "Max", "p", "rest"]
+
     bestXpln = ""
     bestXplnHPs = []
     bestXplnEvals = -1
@@ -404,13 +406,9 @@ def eg_function_26():
     bestSwayEvals = -1
     
     for hps in list:
-        d.the["bins"] = hps[0]
-        d.the["better"] = hps[1]
-        d.the["Far"] = hps[2]
-        d.the["min"] = hps[3]
-        d.the["Max"] = hps[4]
-        d.the["p"] = hps[5]
-        d.the["rest"] = hps[6]
+        #Modify global vars based on hyperparameters
+        d.the.update(dict(zip(parameter_names, hps)))
+
         try:
             data=Data.Data(d.the["file"]) 
             best,rest, evals = data.sway() 
