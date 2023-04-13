@@ -57,7 +57,7 @@ jobs:
     - name: Upload out file artifact
       uses: actions/upload-artifact@v3
       with:
-        name: out-file ${{matrix.hw-out}}
+        name: out-files
         path: out/${{matrix.hw-out}}.out
         
   project-tests:
@@ -103,7 +103,7 @@ jobs:
       - name: Upload out file artifact
         uses: actions/upload-artifact@v3
         with:
-          name: out-file ${{matrix.proj-out}}
+          name: out-files
           path: out/${{matrix.proj-out}}.out
 
   project-all:
@@ -151,7 +151,7 @@ jobs:
       - name: Upload out file artifact
         uses: actions/upload-artifact@v3
         with:
-          name: out-file project2-${{matrix.dataset}}
+          name: out-files
           path: out/project2-${{matrix.dataset}}.out
       
   save-out:
@@ -165,6 +165,7 @@ jobs:
       - name: Download out files
         uses: actions/download-artifact@v3
         with:
+          name: out-files
           path: out
       - name: Save .out files
         if: always()
