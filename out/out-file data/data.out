@@ -1,0 +1,18 @@
+{'dump': False, 'file': 'data/auto93.csv', 'go': 'all', 'help': False, 'seed': 937162211}
+✅ pass:	 the
+✅ pass:	 sym
+✅ pass:	 num
+✅ pass:	 csv
+✅ pass:	 data
+y 	mid	 {'Lbs-': 2970.42, 'Acc+': 15.57, 'Mpg+': 23.84}
+ 	div	 {'Lbs-': 846.84, 'Acc+': 2.76, 'Mpg+': 8.34}
+x 	mid	 {'Clndrs': 5.45, 'Volume': 193.43, 'Model': 76.01, 'origin': 1}
+ 	div	 {'Clndrs': 1.7, 'Volume': 104.27, 'Model': 3.7, 'origin': 1.33}
+✅ pass:	 stats
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?main <class 'function'>
+✅ Number of tests passing -> 6
+❌ Number of tests failing -> 0

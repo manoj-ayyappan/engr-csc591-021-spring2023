@@ -1,0 +1,12 @@
+1 0.5 0.3
+2 0.3 0.32
+✅ pass:	 nums
+#W ?k <class 'str'>
+#W ?v <class 'dict'>
+#W ?settings <class 'function'>
+#W ?cli <class 'function'>
+#W ?make_attempt <class 'function'>
+#W ?main <class 'function'>
+#W ?Seed <class 'int'>
+✅ Number of tests passing -> 1
+❌ Number of tests failing -> 0
