@@ -98,7 +98,7 @@ def any(t):
 def many(t, n):
     # Returns some items from `t`
     u = []
-    for i in range(n):
+    for i in range(int(n)):
         u.append(any(t))
     return u
 

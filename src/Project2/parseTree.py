@@ -2,7 +2,7 @@ def parse_tree(tree, hyperparams_list):
     for node in tree:
         if '{' in node:
             hyperparams = node.split(", ")
-            input_str = "|.. |.. |.. |.. |.. |.. |.. |.. |.. [1727] {'N': 1727} 8, bdom, 0.93, 0.65, 1100, 1.0, 5.5,"
+            input_str = node
             # find the index of the '}'
             end_index = input_str.find('}') + 1
             # get the substring that starts after '}'
@@ -13,7 +13,7 @@ def parse_tree(tree, hyperparams_list):
             firstnum = int(lst[0])
             # get the last number
             lastnum = float(lst[-2])
-            hyperparams_list.append([float(firstnum), hyperparams[1], float(hyperparams[2]), float(hyperparams[3]), int(hyperparams[4]), float(hyperparams[5]), float(lastnum)])
+            hyperparams_list.append([int(firstnum), hyperparams[1], float(hyperparams[2]), float(hyperparams[3]), int(hyperparams[4]), float(hyperparams[5]), float(lastnum)])
         
 def main():
     input_file = "src/Project2/input.txt"

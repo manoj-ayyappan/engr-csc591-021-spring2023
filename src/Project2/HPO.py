@@ -24,7 +24,7 @@ Max_values = [round(i, 3) for i in list(np.arange(100, 3000, 500))]
 print("------->Done9",len(Max_values))
 dist_values = [round(i, 3) for i in list(np.arange(0.5, 5, 0.5))]
 print("------->Done10",len(dist_values ))
-rest_values = [round(i, 3) for i in list(np.arange(2, 7, 0.5))]
+rest_values = [round(i, 0) for i in list(np.arange(2, 7, 1))]
 print("------->Done11", len(rest_values))
 
 # Generate all possible combinations of hyperparameters

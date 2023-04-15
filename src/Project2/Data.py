@@ -478,9 +478,9 @@ class Data(object):
         return rule, most
     
     def firstN(self, sortedRanges, scoreFun, useful=None, most=None, out=None):
-        print("")
-        for r in sortedRanges:
-            print(r['range'].txt, r['range'].lo, r['range'].hi, numerics.rnd(r['val'], 2), strings.o(r['range'].y.has))
+        # print("")
+        # for r in sortedRanges:
+            # print(r['range'].txt, r['range'].lo, r['range'].hi, numerics.rnd(r['val'], 2), strings.o(r['range'].y.has))
         
         global first
         first = sortedRanges[0]['val']
@@ -499,6 +499,34 @@ class Data(object):
             if tmp and tmp > most:
                 out, most = rule, tmp
         return out, most
+    
+    def xpln_noprint(self, best, rest):
+        def v(has):
+            return query.value(has, len(best.rows), len(rest.rows), "best")
+        
+        def score(ranges):
+            rule = Rule.RULE(ranges, maxSizes)
+            if rule:
+                # ltr = rule.showRule()
+                # strings.oo(ltr)
+                bestr = rule.selects(best.rows)
+                restr = rule.selects(rest.rows)
+                if len(bestr) + len(restr) > 0:
+                    return v({"best": len(bestr), "rest": len(restr)}), rule
+                else:
+                    return 0, rule
+        
+        tmp = []
+        maxSizes = {}
+        for _, ranges in discretization.bins(self.cols.x, {"best": best.rows, "rest": rest.rows}).items():
+            maxSizes[ranges[0].txt] = len(ranges)
+            # print("")
+            for _, range in ranges.items():
+                # print(range.txt, range.lo, range.hi)
+                lists.push(tmp, {"range": range, "max": len(ranges), "val": v(range.y.has)})
+        
+        rule, most = self.firstN(sorted(tmp, key=lambda d: -d['val']) , score)
+        return rule, most
 
 
 
