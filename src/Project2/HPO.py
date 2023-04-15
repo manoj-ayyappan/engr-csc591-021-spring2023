@@ -18,7 +18,7 @@ print("------->Done5",len(better_values))
 # print("------->Done6",len(file_values))
 Far_values = my_list = [round(i, 3) for i in list(np.arange(0.65, 1.0, 0.04))]
 print("------->Done7",len(Far_values))
-min_size_values = [round(i, 3) for i in list(np.arange(0.5, 0.95, 0.05))]
+min_size_values = [round(i, 3) for i in list(np.arange(0.5, 0.54, 0.05))]
 print("------->Done8",len(min_size_values))
 Max_values = [round(i, 3) for i in list(np.arange(100, 3000, 500))]
 print("------->Done9",len(Max_values))
