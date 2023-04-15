@@ -253,7 +253,18 @@ class Data(object):
         if above is None:
             A = lists.any(rows)
         else:
-            A = above
+            A = above 
+        
+        # fastmap2, fastmap3
+        # resuse = true/false
+        # for all datasets
+        
+        # if above is None:
+        #     A = lists.any(rows)
+        # else:
+        #     A = above if g.the["Reuse"] else lists.any(rows)
+        # B = self.furthest(A,rows).get("row")
+
         B = self.furthest(A,rows).get("row")
         c = dist(A, B)
         left, right = [], []

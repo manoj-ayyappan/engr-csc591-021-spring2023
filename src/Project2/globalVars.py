@@ -12,7 +12,7 @@ OPTIONS:
   -b  --bins    initial number of bins       = 16
   -t  --sway    dbscan or original           = original
   -e  --better       better                  = zitler
-  -f  --file    data file                    = data/china.csv
+  -f  --file    data file                    = data/auto93.csv
   -F  --Far     distance to distant          = .95
   -m  --min     size of smallest cluster     = .5
   -M  --Max     numbers                      = 512
@@ -21,7 +21,7 @@ OPTIONS:
 
   -g  --go      start-up action              = all
   -h  --help    show help                    = false
-  -R  --Reuse   child splits reuse a parent pole = true
+  -R  --Reuse   child splits reuse a parent pole = True
   -s  --seed    random number seed           = 937162211
   -d  --debug   debug mode on                = false
 

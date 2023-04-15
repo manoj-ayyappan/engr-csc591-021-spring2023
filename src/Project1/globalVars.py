@@ -15,7 +15,7 @@ OPTIONS:
   -g  --go      start-up action              = all
   -h  --help    show help                    = false
   -H  --Halves  search space for clustering  = 512
-  -m  --min     size of smallest cluster     = .8
+  -m  --min     size of smallest cluster     = .5
   -M  --Max     numbers                      = 512
   -p  --p       dist coefficient             = 2
   -r  --rest    how many of rest to sample   = 4

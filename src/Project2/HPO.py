@@ -10,21 +10,21 @@ import numpy as np
 # print("------->Done2",len(minpts_values))
 # sway_values = ['original', 'dbscan']
 # print("------->Done3",len(sway_values))
-bins_values = [round(i, 0) for i in list(np.arange(1, 15, 2))]
+bins_values = [round(i, 3) for i in list(np.arange(2, 15, 2))]
 print("------->Done4",len(bins_values))
-better_values = ['zitler', 'bdom', 'hv']
+better_values = ['zitler', 'bdom']
 print("------->Done5",len(better_values))
 # file_values = ["data/auto93.csv", "data/auto2.csv", "data/china.csv","data/coc1000.csv","data/coc10000.csv","data/healthCloseIsses12mths0001-hard.csv","data/healthCloseIsses12mths0001-easy.csv","data/nasa93dem.csv","data/pom.csv","data/SSM.csv","data/SSN.csv"]
 # print("------->Done6",len(file_values))
-Far_values = my_list = [round(i, 2) for i in list(np.arange(0.7, 1.0, 0.04))]
+Far_values = my_list = [round(i, 3) for i in list(np.arange(0.65, 1.0, 0.04))]
 print("------->Done7",len(Far_values))
-min_size_values = [round(i, 1) for i in list(np.arange(0.1, 0.5, 0.1))]
+min_size_values = [round(i, 3) for i in list(np.arange(0.3, 0.95, 0.05))]
 print("------->Done8",len(min_size_values))
-Max_values = [round(i, 0) for i in list(np.arange(100, 3000, 500))]
+Max_values = [round(i, 3) for i in list(np.arange(100, 3000, 500))]
 print("------->Done9",len(Max_values))
-dist_values = [round(i, 1) for i in list(np.arange(0.5, 5, 0.5))]
+dist_values = [round(i, 3) for i in list(np.arange(0.5, 5, 0.5))]
 print("------->Done10",len(dist_values ))
-rest_values = [round(i, 1) for i in list(np.arange(2, 7, 1))]
+rest_values = [round(i, 3) for i in list(np.arange(2, 7, 0.5))]
 print("------->Done11", len(rest_values))
 
 # Generate all possible combinations of hyperparameters
