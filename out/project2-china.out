@@ -1,106 +1,94 @@
+✅ pass:	 ok
+ beaca
+ ddddb
+ adadd
+ eadcb
+ eacaa
+ aeadb
+ daebd
+ debcb
+ bdcad
+ eabca
+✅ pass:	 sample
+ 10 5.5 3.0276503540974917
+✅ pass:	 num
+ 10000 10.013090245127714 1.9708063718547493
+✅ pass:	 gauss
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 10.0 1 True True True
+ 10.1 1 True True True
+ 10.2 1 False True False
+ 10.3 1 True True True
+ 10.4 1 True True True
+ 10.5 1 False False False
+ 10.6 1 False False False
+ 10.7 1 False False False
+ 10.8 1 False False False
+ 10.9 1 False False False
+✅ pass:	 bootmu
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 12 1 False False False
+ 12 2 False False False
+ 12 3 False False False
+ 12 4 False False False
+ 12 5 False False False
+ 12 6 True True True
+ 12 7 False False False
+ 12 8 False False False
+ 12 9 True False False
+✅ pass:	 bootsd
+		true True True
+		false True False
+		false False False
+✅ pass:	 basic
 
-AFP -inf 856
-AFP 856 inf
-
-Input -inf inf
-
-Output -inf 118
-Output 118 inf
-
-Enquiry -inf 54
-Enquiry 54 112
-Enquiry 112 inf
-
-File -inf 175
-File 175 inf
-
-Interface -inf 80
-Interface 80 inf
-
-Added -inf 729
-Added 729 inf
-
-Changed -inf 243
-Changed 243 inf
-
-Deleted -inf 136
-Deleted 136 inf
-
-PDR_AFP -inf 5.1
-PDR_AFP 5.1 inf
-
-PDR_UFP -inf 5.8
-PDR_UFP 5.8 inf
-
-NPDR_AFP -inf 6
-NPDR_AFP 6 inf
-
-NPDU_UFP -inf 6.5
-NPDU_UFP 6.5 inf
-
-Resource -inf 2
-Resource 2 inf
-
-DevType -inf inf
-
-Duration -inf 5
-Duration 5 inf
-{'PDR_AFP': [[-inf, 5.1]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]], 'Changed': [[-inf, 243]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]], 'Changed': [[-inf, 243]], 'Deleted': [[-inf, 136]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]], 'Changed': [[-inf, 243]], 'Deleted': [[-inf, 136]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]], 'Changed': [[-inf, 243]], 'Deleted': [[-inf, 136]]}
-{'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]], 'NPDU_UFP': [[-inf, 6.5]], 'Resource': [[-inf, 2]], 'Output': [[-inf, 118]], 'File': [[-inf, 175]], 'Interface': [[-inf, 80]], 'Added': [[-inf, 729]], 'AFP': [[-inf, 856]], 'Changed': [[-inf, 243]], 'Deleted': [[-inf, 136]], 'Enquiry': [[-inf, 54]]}
-
------------
-explain= {'PDR_AFP': [[-inf, 5.1]], 'Duration': [[-inf, 5]], 'PDR_UFP': [[-inf, 5.8]], 'NPDR_AFP': [[-inf, 6]]}
-all                {'N_effort-': 2109.0, 'N': 499} {'N_effort-': 3799.61, 'N': 499}
-sway1 with 6 evals {'N_effort-': 296.0, 'N': 15} {'N_effort-': 224.81, 'N': 15}
-xpln1 on 6 evals {'N_effort-': 450.0, 'N': 55} {'N_effort-': 388.76, 'N': 55}
-top with 499 evals {'N_effort-': 155.0, 'N': 15} {'N_effort-': 35.27, 'N': 15}
-------------------
-------------------
-HPs
-------------------
-bins :  10
-better :  bdom
-Far :  0.93
-min_size :  0.5
-Max :  2600
-dist :  3.0
-rest :  6.0
-------------------
-------------------
-
-sway on 6 evals {'N_effort-': 198.0, 'N': 15}
-------------------
-explain= {'NPDR_AFP': [[-inf, 4.5]], 'NPDU_UFP': [[-inf, 4.9]], 'PDR_UFP': [[-inf, 4.1]], 'PDR_AFP': [[-inf, 2.6]], 'Enquiry': [[-inf, 41]], 'Resource': [[-inf, 2]]}
-HPs
-------------------
-bins :  12
-better :  bdom
-Far :  0.81
-min_size :  0.5
-Max :  1600
-dist :  4.0
-rest :  4.0
-------------------
-------------------
-xpln on 6 evals {'N_effort-': 225.0, 'N': 24}
-Best Xpln HPs
-✅ pass:	 hpo
-{'eps': 0.05, 'minpts': 5, 'bins': 16, 'sway': 'original', 'better': 'zitler', 'file': 'data/china.csv', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'go': 'all', 'help': False, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cliffs': 0.147, 'cohen': 0.35, 'width': 40}
-✅ pass:	 the
+eg3
+	 1.0 True True True
+	 1.05 True True True
+	 1.1 False False True
+	 1.15 False False True
+	 1.2 False False True
+	 1.25 False False True
+	 1.3 False False True
+	 1.35 False False True
+	 1.4 False False True
+	 1.45 False False True
+✅ pass:	 pre
+ rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
+ rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
+ rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
+ rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
+ rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
+ rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
+ rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
+ rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
+ rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
+ rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
+✅ pass:	 tiles
+rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
+rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
+rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
+rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+✅ pass:	 five
+rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+✅ pass:	 six
+ 0 rx0  --*                |                    {  8.71,   9.48,   9.98,  10.51,  11.38}
+ 0 rx5  --*                |                    {  8.73,   9.43,  10.00,  10.53,  11.29}
+ 1 rx6  --*                |                    {  8.66,   9.46,  10.01,  10.55,  11.32}
+ 1 rx9  --*                |                    {  8.72,   9.54,  10.09,  10.57,  11.35}
+ 2 rx1  --*                |                    {  8.84,   9.66,  10.19,  10.67,  11.42}
+ 2 rx2           --*       |                    { 18.70,  19.50,  20.00,  20.49,  21.25}
+ 3 rx3                    -|*                   { 28.73,  29.50,  30.02,  30.53,  31.22}
+ 4 rx4                    -|*                   { 28.95,  29.64,  30.11,  30.58,  31.25}
+ 4 rx8                     |    ---  *--        { 36.20,  38.32,  39.83,  41.44,  43.84}
+ 4 rx7                     |       --*          { 38.67,  39.37,  39.95,  40.48,  41.35}
+✅ pass:	 sk
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -108,5 +96,5 @@ Best Xpln HPs
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 2
+✅ Number of tests passing -> 12
 ❌ Number of tests failing -> 0

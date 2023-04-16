@@ -1,176 +1,94 @@
+✅ pass:	 ok
+ beaca
+ ddddb
+ adadd
+ eadcb
+ eacaa
+ aeadb
+ daebd
+ debcb
+ bdcad
+ eabca
+✅ pass:	 sample
+ 10 5.5 3.0276503540974917
+✅ pass:	 num
+ 10000 10.013090245127714 1.9708063718547493
+✅ pass:	 gauss
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 10.0 1 True True True
+ 10.1 1 True True True
+ 10.2 1 False True False
+ 10.3 1 True True True
+ 10.4 1 True True True
+ 10.5 1 False False False
+ 10.6 1 False False False
+ 10.7 1 False False False
+ 10.8 1 False False False
+ 10.9 1 False False False
+✅ pass:	 bootmu
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 12 1 False False False
+ 12 2 False False False
+ 12 3 False False False
+ 12 4 False False False
+ 12 5 False False False
+ 12 6 True True True
+ 12 7 False False False
+ 12 8 False False False
+ 12 9 True False False
+✅ pass:	 bootsd
+		true True True
+		false True False
+		false False False
+✅ pass:	 basic
 
-no_mbtree 0 0
-no_mbtree 1 1
-
-no_asm 0 0
-no_asm 1 1
-
-no_cabac 0 0
-no_cabac 1 1
-
-no_scenecut 0 0
-no_scenecut 1 1
-
-Aq_strength -inf 1.1
-Aq_strength 1.1 3
-Aq_strength 3 7
-Aq_strength 7 9
-Aq_strength 9 inf
-
-Bframes -inf 2
-Bframes 2 4
-Bframes 4 7
-Bframes 7 9
-Bframes 9 inf
-
-Qcomp -inf 0.6
-Qcomp 0.6 2
-Qcomp 2 inf
-
-Qp -inf 3
-Qp 3 8
-Qp 8 14
-Qp 14 21
-Qp 21 27
-Qp 27 34
-Qp 34 46
-Qp 46 inf
-
-Ref -inf 1
-Ref 1 2
-Ref 2 3
-Ref 3 4
-Ref 4 5
-Ref 5 6
-Ref 6 8
-Ref 8 9
-Ref 9 inf
-
-Rc_lookahead -inf 2
-Rc_lookahead 2 43
-Rc_lookahead 43 77
-Rc_lookahead 77 101
-Rc_lookahead 101 140
-Rc_lookahead 140 170
-Rc_lookahead 170 199
-Rc_lookahead 199 222
-Rc_lookahead 222 inf
-
-B_bias -inf -65
-B_bias -65 -41
-B_bias -41 -13
-B_bias -13 10
-B_bias 10 37
-B_bias 37 62
-B_bias 62 82
-B_bias 82 inf
-
-Threads -inf 52
-Threads 52 71
-Threads 71 87
-Threads 87 97
-Threads 97 119
-Threads 119 inf
-
-Keyint -inf 168
-Keyint 168 304
-Keyint 304 434
-Keyint 434 559
-Keyint 559 682
-Keyint 682 773
-Keyint 773 909
-Keyint 909 inf
-
-Crf -inf 167
-Crf 167 inf
-
-Scenecut -inf 18
-Scenecut 18 28
-Scenecut 28 43
-Scenecut 43 55
-Scenecut 55 67
-Scenecut 67 80
-Scenecut 80 90
-Scenecut 90 inf
-
-Seek -inf 1
-Seek 1 209
-Seek 209 364
-Seek 364 537
-Seek 537 627
-Seek 627 836
-Seek 836 1017
-Seek 1017 1105
-Seek 1105 inf
-
-Ipratio -inf 1.1
-Ipratio 1.1 3
-Ipratio 3 inf
-{'no_scenecut': [1]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]], 'Aq_strength': [[-inf, 1.1]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21], [27, 34]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[-41, -13], [10, 37]], 'Qp': [[14, 21], [27, 34]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
-
------------
-explain= {'no_scenecut': [1]}
-all                {'PSNR-': 45.94, 'Energy-': 1182.9, 'N': 53662} {'PSNR-': 5.48, 'Energy-': 1288.15, 'N': 53662}
-sway1 with 9 evals {'PSNR-': 45.86, 'Energy-': 555.13, 'N': 209} {'PSNR-': 5.04, 'Energy-': 369.24, 'N': 209}
-xpln1 on 9 evals {'PSNR-': 45.91, 'Energy-': 1243.36, 'N': 12556} {'PSNR-': 5.48, 'Energy-': 716.18, 'N': 12556}
-top with 53662 evals {'PSNR-': 26.75, 'Energy-': 467.1, 'N': 209} {'PSNR-': 2.72, 'Energy-': 209.56, 'N': 209}
-------------------
-------------------
-HPs
-------------------
-bins :  6
-better :  zitler
-Far :  0.97
-min_size :  0.5
-Max :  1600
-dist :  1.5
-rest :  2.0
-------------------
-------------------
-
-sway on 9 evals {'PSNR-': 41.4, 'Energy-': 571.06, 'N': 209}
-------------------
-explain= {'Seek': [[615, inf]], 'Qp': [[25, inf]], 'Threads': [[63, inf]], 'no_mbtree': [0], 'no_cabac': [0], 'no_asm': [0], 'no_scenecut': [0]}
-HPs
-------------------
-bins :  2
-better :  bdom
-Far :  0.93
-min_size :  0.5
-Max :  2100
-dist :  3.5
-rest :  4.0
-------------------
-------------------
-xpln on 9 evals {'PSNR-': 42.43, 'Energy-': 529.75, 'N': 1203}
-Best Xpln HPs
-✅ pass:	 hpo
-{'eps': 0.05, 'minpts': 5, 'bins': 16, 'sway': 'original', 'better': 'zitler', 'file': 'data/SSN.csv', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'go': 'all', 'help': False, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cliffs': 0.147, 'cohen': 0.35, 'width': 40}
-✅ pass:	 the
+eg3
+	 1.0 True True True
+	 1.05 True True True
+	 1.1 False False True
+	 1.15 False False True
+	 1.2 False False True
+	 1.25 False False True
+	 1.3 False False True
+	 1.35 False False True
+	 1.4 False False True
+	 1.45 False False True
+✅ pass:	 pre
+ rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
+ rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
+ rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
+ rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
+ rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
+ rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
+ rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
+ rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
+ rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
+ rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
+✅ pass:	 tiles
+rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
+rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
+rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
+rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+✅ pass:	 five
+rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+✅ pass:	 six
+ 0 rx0  --*                |                    {  8.71,   9.48,   9.98,  10.51,  11.38}
+ 0 rx5  --*                |                    {  8.73,   9.43,  10.00,  10.53,  11.29}
+ 1 rx6  --*                |                    {  8.66,   9.46,  10.01,  10.55,  11.32}
+ 1 rx9  --*                |                    {  8.72,   9.54,  10.09,  10.57,  11.35}
+ 2 rx1  --*                |                    {  8.84,   9.66,  10.19,  10.67,  11.42}
+ 2 rx2           --*       |                    { 18.70,  19.50,  20.00,  20.49,  21.25}
+ 3 rx3                    -|*                   { 28.73,  29.50,  30.02,  30.53,  31.22}
+ 4 rx4                    -|*                   { 28.95,  29.64,  30.11,  30.58,  31.25}
+ 4 rx8                     |    ---  *--        { 36.20,  38.32,  39.83,  41.44,  43.84}
+ 4 rx7                     |       --*          { 38.67,  39.37,  39.95,  40.48,  41.35}
+✅ pass:	 sk
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -178,5 +96,5 @@ Best Xpln HPs
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 2
+✅ Number of tests passing -> 12
 ❌ Number of tests failing -> 0
