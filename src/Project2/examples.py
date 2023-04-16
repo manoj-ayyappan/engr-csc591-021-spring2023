@@ -603,7 +603,7 @@ def eg_function_26():
 
 
 def add_all_examples():
-    # add_example("hpo", "Find Most accurate hyper parameter set", eg_function_26)
+    add_example("hpo", "Find Most accurate hyper parameter set", eg_function_26)
     # add_example("xpln", "explore explanation sets", eg_function_13)
     # add_example("xpln2", "Try to Do Better", eg_function_26)
     # add_example("the", "show settings", eg_function_the)
@@ -622,15 +622,15 @@ def add_all_examples():
     # add_example("bins",  "find deltas between best and rest", eg_function_12)
     
 
-    add_example("ok", "", eg_function_14)
-    add_example("sample", "", eg_function_15)
-    add_example("num", "", eg_function_16)
-    add_example("gauss", "", eg_function_17)
-    add_example("bootmu", "", eg_function_18)
-    add_example("bootsd", "", eg_function_19)
-    add_example("basic", "", eg_function_20)
-    add_example("pre", "", eg_function_21)
-    add_example("tiles", "", eg_function_24)
-    add_example("five", "", eg_function_22)
-    add_example("six", "", eg_function_23)
-    add_example("sk", "", eg_function_25)
+    # add_example("ok", "", eg_function_14)
+    # add_example("sample", "", eg_function_15)
+    # add_example("num", "", eg_function_16)
+    # add_example("gauss", "", eg_function_17)
+    # add_example("bootmu", "", eg_function_18)
+    # add_example("bootsd", "", eg_function_19)
+    # add_example("basic", "", eg_function_20)
+    # add_example("pre", "", eg_function_21)
+    # add_example("tiles", "", eg_function_24)
+    # add_example("five", "", eg_function_22)
+    # add_example("six", "", eg_function_23)
+    # add_example("sk", "", eg_function_25)
