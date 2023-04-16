@@ -1,94 +1,140 @@
-✅ pass:	 ok
- beaca
- ddddb
- adadd
- eadcb
- eacaa
- aeadb
- daebd
- debcb
- bdcad
- eabca
-✅ pass:	 sample
- 10 5.5 3.0276503540974917
-✅ pass:	 num
- 10000 10.013090245127714 1.9708063718547493
-✅ pass:	 gauss
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 10.0 1 True True True
- 10.1 1 True True True
- 10.2 1 False True False
- 10.3 1 True True True
- 10.4 1 True True True
- 10.5 1 False False False
- 10.6 1 False False False
- 10.7 1 False False False
- 10.8 1 False False False
- 10.9 1 False False False
-✅ pass:	 bootmu
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 12 1 False False False
- 12 2 False False False
- 12 3 False False False
- 12 4 False False False
- 12 5 False False False
- 12 6 True True True
- 12 7 False False False
- 12 8 False False False
- 12 9 True False False
-✅ pass:	 bootsd
-		true True True
-		false True False
-		false False False
-✅ pass:	 basic
 
-eg3
-	 1.0 True True True
-	 1.05 True True True
-	 1.1 False False True
-	 1.15 False False True
-	 1.2 False False True
-	 1.25 False False True
-	 1.3 False False True
-	 1.35 False False True
-	 1.4 False False True
-	 1.45 False False True
-✅ pass:	 pre
- rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
- rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
- rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
- rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
- rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
- rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
- rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
- rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
- rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
- rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
-✅ pass:	 tiles
-rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
-rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
-rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
-rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-✅ pass:	 five
-rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-✅ pass:	 six
- 0 rx0  --*                |                    {  8.71,   9.48,   9.98,  10.51,  11.38}
- 0 rx5  --*                |                    {  8.73,   9.43,  10.00,  10.53,  11.29}
- 1 rx6  --*                |                    {  8.66,   9.46,  10.01,  10.55,  11.32}
- 1 rx9  --*                |                    {  8.72,   9.54,  10.09,  10.57,  11.35}
- 2 rx1  --*                |                    {  8.84,   9.66,  10.19,  10.67,  11.42}
- 2 rx2           --*       |                    { 18.70,  19.50,  20.00,  20.49,  21.25}
- 3 rx3                    -|*                   { 28.73,  29.50,  30.02,  30.53,  31.22}
- 4 rx4                    -|*                   { 28.95,  29.64,  30.11,  30.58,  31.25}
- 4 rx8                     |    ---  *--        { 36.20,  38.32,  39.83,  41.44,  43.84}
- 4 rx7                     |       --*          { 38.67,  39.37,  39.95,  40.48,  41.35}
-✅ pass:	 sk
+prec h h
+
+flex h h
+
+resl h h
+
+team vh vh
+
+pmat h h
+pmat l l
+pmat n n
+
+rely h h
+rely l l
+rely n n
+rely vh vh
+
+data h h
+data l l
+data n n
+data vh vh
+
+cplx h h
+cplx l l
+cplx n n
+cplx vh vh
+cplx xh xh
+
+ruse n n
+
+docu n n
+
+time h h
+time n n
+time vh vh
+time xh xh
+
+stor h h
+stor n n
+stor vh vh
+stor xh xh
+
+pvol h h
+pvol l l
+pvol n n
+
+acap h h
+acap n n
+acap vh vh
+
+pcap h h
+pcap n n
+pcap vh vh
+
+pcon n n
+
+apex h h
+apex n n
+apex vh vh
+
+plex h h
+plex l l
+plex n n
+plex vl vl
+
+ltex h h
+ltex l l
+ltex n n
+
+tool h h
+tool n n
+
+site n n
+
+sced l l
+sced n n
+{'data': ['l']}
+{'data': ['l'], 'acap': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'data': ['l'], 'acap': ['n'], 'sced': ['l'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'cplx': ['h'], 'stor': ['n'], 'pcap': ['n'], 'plex': ['n'], 'time': ['n'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+
+-----------
+explain= {'data': ['l'], 'acap': ['n'], 'sced': ['l']}
+all                {'Kloc+': 48.5, 'Effort-': 278.0, 'Defects-': 2077.0, 'Months-': 21.5, 'N': 93} {'Kloc+': 102.13, 'Effort-': 673.06, 'Defects-': 3200.39, 'Months-': 10.23, 'N': 93}
+sway1 with 5 evals {'Kloc+': 9.7, 'Effort-': 36.0, 'Defects-': 302.0, 'Months-': 11.0, 'N': 6} {'Kloc+': 7.05, 'Effort-': 35.81, 'Defects-': 220.16, 'Months-': 2.02, 'N': 6}
+xpln1 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 15} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 15}
+top with 93 evals {'Kloc+': 9.7, 'Effort-': 36.0, 'Defects-': 302.0, 'Months-': 11.0, 'N': 6} {'Kloc+': 7.05, 'Effort-': 35.81, 'Defects-': 220.16, 'Months-': 2.02, 'N': 6}
+------------------
+------------------
+HPs
+------------------
+bins :  6.8
+better :  bdom
+Far :  0.85
+min_size :  0.5
+Max :  1200
+dist :  2.375
+rest :  5.55
+------------------
+------------------
+
+sway on 5 evals {'Kloc+': 9.7, 'Effort-': 36.0, 'Defects-': 302.0, 'Months-': 11.0, 'N': 6}
+------------------
+explain= {'data': ['l'], 'acap': ['n'], 'sced': ['l']}
+HPs
+------------------
+bins :  6.8
+better :  bdom
+Far :  0.85
+min_size :  0.5
+Max :  1200
+dist :  2.375
+rest :  5.55
+------------------
+------------------
+xpln on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 15}
+Best Xpln HPs
+✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -96,5 +142,5 @@ rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 12
+✅ Number of tests passing -> 1
 ❌ Number of tests failing -> 0
