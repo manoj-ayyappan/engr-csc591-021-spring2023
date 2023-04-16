@@ -1,149 +1,94 @@
+✅ pass:	 ok
+ beaca
+ ddddb
+ adadd
+ eadcb
+ eacaa
+ aeadb
+ daebd
+ debcb
+ bdcad
+ eabca
+✅ pass:	 sample
+ 10 5.5 3.0276503540974917
+✅ pass:	 num
+ 10000 10.013090245127714 1.9708063718547493
+✅ pass:	 gauss
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 10.0 1 True True True
+ 10.1 1 True True True
+ 10.2 1 False True False
+ 10.3 1 True True True
+ 10.4 1 True True True
+ 10.5 1 False False False
+ 10.6 1 False False False
+ 10.7 1 False False False
+ 10.8 1 False False False
+ 10.9 1 False False False
+✅ pass:	 bootmu
+ mu sd cliffs boot both
+ -- -- ------ ---- ----
+ 12 1 False False False
+ 12 2 False False False
+ 12 3 False False False
+ 12 4 False False False
+ 12 5 False False False
+ 12 6 True True True
+ 12 7 False False False
+ 12 8 False False False
+ 12 9 True False False
+✅ pass:	 bootsd
+		true True True
+		false True False
+		false False False
+✅ pass:	 basic
 
-Culture -inf 0.105963995
-Culture 0.105963995 0.118546086
-Culture 0.118546086 0.130827285
-Culture 0.130827285 0.143608776
-Culture 0.143608776 0.156058121
-Culture 0.156058121 0.168397488
-Culture 0.168397488 0.181041327
-Culture 0.181041327 0.193594538
-Culture 0.193594538 inf
-
-Criticality -inf 0.851563043
-Criticality 0.851563043 0.906997934
-Criticality 0.906997934 0.96050418
-Criticality 0.96050418 1.015622321
-Criticality 1.015622321 1.071614658
-Criticality 1.071614658 1.126801375
-Criticality 1.126801375 inf
-
-Criticality Modifier -inf 3
-Criticality Modifier 3 4
-Criticality Modifier 4 5
-Criticality Modifier 5 6
-Criticality Modifier 6 7
-Criticality Modifier 7 inf
-
-Initial Known -inf 0.633637172
-Initial Known 0.633637172 0.677648472
-Initial Known 0.677648472 0.721774763
-Initial Known 0.721774763 0.763217625
-Initial Known 0.763217625 0.804698507
-Initial Known 0.804698507 0.852428685
-Initial Known 0.852428685 0.896178012
-Initial Known 0.896178012 0.94024157
-Initial Known 0.94024157 inf
-
-InterDependency -inf 81
-InterDependency 81 84
-InterDependency 84 86
-InterDependency 86 89
-InterDependency 89 91
-InterDependency 91 93
-InterDependency 93 96
-InterDependency 96 98
-InterDependency 98 inf
-
-Dynamism -inf 2
-Dynamism 2 3
-Dynamism 3 4
-Dynamism 4 5
-Dynamism 5 6
-Dynamism 6 7
-Dynamism 7 8
-Dynamism 8 9
-Dynamism 9 inf
-
-Size -inf 1
-Size 1 inf
-
-Plan -inf 1
-Plan 1 2
-Plan 2 3
-Plan 3 4
-Plan 4 inf
-
-Team Size -inf 13
-Team Size 13 14
-Team Size 14 15
-Team Size 15 16
-Team Size 16 17
-Team Size 17 18
-Team Size 18 inf
-
-Score: -inf 0.810630622
-Score: 0.810630622 0.937215848
-Score: 0.937215848 inf
-{'Size': [[1, inf]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[0.851563043, 0.906997934]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[0.851563043, 0.906997934]], 'Criticality Modifier': [[4, 5]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[0.851563043, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]], 'Dynamism': [[9, inf]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]], 'Dynamism': [[9, inf]], 'Initial Known': [[0.896178012, 0.94024157]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]], 'Dynamism': [[9, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 96]]}
-{'Size': [[1, inf]], 'Plan': [[4, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 96]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, 18]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 96]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 96]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 98]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.896178012, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.906997934]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[8, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[7, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[17, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[16, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, 0.937215848]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 5]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[93, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[4, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776], [0.156058121, 0.168397488]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[3, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, 98]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776], [0.156058121, 0.168397488]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 0.96050418]], 'Criticality Modifier': [[3, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, inf]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776], [0.156058121, 0.168397488]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 1.015622321]], 'Criticality Modifier': [[3, 6]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, inf]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776], [0.156058121, 0.168397488]]}
-{'Size': [[1, inf]], 'Plan': [[3, inf]], 'Score:': [[0.810630622, inf]], 'Criticality': [[-inf, 1.015622321]], 'Criticality Modifier': [[3, 7]], 'Team Size': [[15, inf]], 'Dynamism': [[6, inf]], 'Initial Known': [[0.852428685, 0.94024157]], 'InterDependency': [[91, inf]], 'Culture': [[0.105963995, 0.118546086], [0.130827285, 0.143608776], [0.156058121, 0.168397488]]}
-
------------
-explain= {'Size': [[1, inf]]}
-all                {'Cost-': 331.13, 'Completion+': 0.89, 'Idle-': 0.24, 'N': 10000} {'Cost-': 190.75, 'Completion+': 0.11, 'Idle-': 0.2, 'N': 10000}
-sway1 with 8 evals {'Cost-': 342.09, 'Completion+': 0.93, 'Idle-': 0.2, 'N': 78} {'Cost-': 137.94, 'Completion+': 0.1, 'Idle-': 0.17, 'N': 78}
-xpln1 on 8 evals {'Cost-': 428.77, 'Completion+': 0.91, 'Idle-': 0.21, 'N': 5002} {'Cost-': 232.79, 'Completion+': 0.13, 'Idle-': 0.19, 'N': 5002}
-top with 10000 evals {'Cost-': 138.75, 'Completion+': 1.0, 'Idle-': 0.0, 'N': 78} {'Cost-': 56.68, 'Completion+': 0.04, 'Idle-': 0.0, 'N': 78}
-------------------
-------------------
-HPs
-------------------
-bins :  8
-better :  bdom
-Far :  0.97
-min_size :  0.5
-Max :  2100
-dist :  2.0
-rest :  4.0
-------------------
-------------------
-
-sway on 8 evals {'Cost-': 197.55, 'Completion+': 0.88, 'Idle-': 0.08, 'N': 78}
-------------------
-explain= {'Size': [[-inf, 1]], 'Score:': [[0.928537856, inf]]}
-HPs
-------------------
-bins :  8
-better :  zitler
-Far :  0.77
-min_size :  0.5
-Max :  1600
-dist :  3.5
-rest :  3.0
-------------------
-------------------
-xpln on 8 evals {'Cost-': 269.07, 'Completion+': 0.88, 'Idle-': 0.13, 'N': 2703}
-Best Xpln HPs
-✅ pass:	 hpo
-{'eps': 0.05, 'minpts': 5, 'bins': 16, 'sway': 'original', 'better': 'zitler', 'file': 'data/pom.csv', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4, 'go': 'all', 'help': False, 'Reuse': True, 'seed': 937162211, 'debug': False, 'bootstrap': 512, 'conf': 0.05, 'cliffs': 0.147, 'cohen': 0.35, 'width': 40}
-✅ pass:	 the
+eg3
+	 1.0 True True True
+	 1.05 True True True
+	 1.1 False False True
+	 1.15 False False True
+	 1.2 False False True
+	 1.25 False False True
+	 1.3 False False True
+	 1.35 False False True
+	 1.4 False False True
+	 1.45 False False True
+✅ pass:	 pre
+ rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
+ rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
+ rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
+ rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
+ rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
+ rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
+ rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
+ rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
+ rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
+ rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
+✅ pass:	 tiles
+rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
+rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
+rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
+rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
+✅ pass:	 five
+rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
+rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
+✅ pass:	 six
+ 0 rx0  --*                |                    {  8.71,   9.48,   9.98,  10.51,  11.38}
+ 0 rx5  --*                |                    {  8.73,   9.43,  10.00,  10.53,  11.29}
+ 1 rx6  --*                |                    {  8.66,   9.46,  10.01,  10.55,  11.32}
+ 1 rx9  --*                |                    {  8.72,   9.54,  10.09,  10.57,  11.35}
+ 2 rx1  --*                |                    {  8.84,   9.66,  10.19,  10.67,  11.42}
+ 2 rx2           --*       |                    { 18.70,  19.50,  20.00,  20.49,  21.25}
+ 3 rx3                    -|*                   { 28.73,  29.50,  30.02,  30.53,  31.22}
+ 4 rx4                    -|*                   { 28.95,  29.64,  30.11,  30.58,  31.25}
+ 4 rx8                     |    ---  *--        { 36.20,  38.32,  39.83,  41.44,  43.84}
+ 4 rx7                     |       --*          { 38.67,  39.37,  39.95,  40.48,  41.35}
+✅ pass:	 sk
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -151,5 +96,5 @@ Best Xpln HPs
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 2
+✅ Number of tests passing -> 12
 ❌ Number of tests failing -> 0
