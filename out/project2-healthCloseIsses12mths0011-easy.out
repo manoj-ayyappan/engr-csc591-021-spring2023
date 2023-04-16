@@ -1,49 +1,54 @@
 
 N_estimators -inf 11
-N_estimators 11 40
-N_estimators 40 80
-N_estimators 80 inf
+N_estimators 11 30
+N_estimators 30 50
+N_estimators 50 80
+N_estimators 80 100
+N_estimators 100 inf
 
 criterion absolute_error absolute_error
 criterion poisson poisson
 criterion squared_error squared_error
 
 Min_sample_leaves -inf 2
-Min_sample_leaves 2 4
-Min_sample_leaves 4 8
-Min_sample_leaves 8 11
-Min_sample_leaves 11 14
-Min_sample_leaves 14 inf
+Min_sample_leaves 2 3
+Min_sample_leaves 3 5
+Min_sample_leaves 5 8
+Min_sample_leaves 8 10
+Min_sample_leaves 10 inf
 
-Min_impurity_decrease -inf 0.75
-Min_impurity_decrease 0.75 2.5
-Min_impurity_decrease 2.5 4.25
-Min_impurity_decrease 4.25 6
-Min_impurity_decrease 6 inf
+Min_impurity_decrease -inf 5.5
+Min_impurity_decrease 5.5 6.75
+Min_impurity_decrease 6.75 8
+Min_impurity_decrease 8 9.25
+Min_impurity_decrease 9.25 inf
 
-Max_depth -inf 8
-Max_depth 8 11
-Max_depth 11 14
-Max_depth 14 18
-Max_depth 18 inf
+Max_depth -inf 10
+Max_depth 10 13
+Max_depth 13 15
+Max_depth 15 17
+Max_depth 17 inf
 {'criterion': ['absolute_error']}
-{'criterion': ['absolute_error'], 'N_estimators': [[11, 40]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[11, 40]], 'Min_impurity_decrease': [[0.75, 2.5]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[11, 40]], 'Min_impurity_decrease': [[0.75, 2.5]], 'Min_sample_leaves': [[4, 8]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[0.75, 2.5]], 'Min_sample_leaves': [[4, 8]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[0.75, 2.5]], 'Min_sample_leaves': [[4, 8]], 'Max_depth': [[14, 18]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[0.75, 2.5]], 'Min_sample_leaves': [[4, 8]], 'Max_depth': [[14, inf]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[0.75, 2.5]], 'Min_sample_leaves': [[4, 11]], 'Max_depth': [[14, inf]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[-inf, 2.5]], 'Min_sample_leaves': [[4, 11]], 'Max_depth': [[14, inf]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[-inf, 2.5]], 'Min_sample_leaves': [[4, 11]], 'Max_depth': [[11, inf]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[-inf, 4.25]], 'Min_sample_leaves': [[4, 11]], 'Max_depth': [[11, inf]]}
-{'criterion': ['absolute_error'], 'N_estimators': [[-inf, 40]], 'Min_impurity_decrease': [[-inf, 4.25]], 'Min_sample_leaves': [[2, 11]], 'Max_depth': [[11, inf]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 8]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[2, 3]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[2, 3]], 'Max_depth': [[17, inf]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 3]], 'Max_depth': [[17, inf]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 3]], 'Max_depth': [[17, inf]], 'N_estimators': [[11, 30]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 3]], 'Max_depth': [[15, inf]], 'N_estimators': [[11, 30]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 3]], 'Max_depth': [[15, inf]], 'N_estimators': [[11, 30], [50, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 5]], 'Max_depth': [[15, inf]], 'N_estimators': [[11, 30], [50, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 5]], 'Max_depth': [[13, inf]], 'N_estimators': [[11, 30], [50, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 5]], 'Max_depth': [[13, inf]], 'N_estimators': [[-inf, 30], [50, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 5]], 'Max_depth': [[13, inf]], 'N_estimators': [[-inf, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 5]], 'Max_depth': [[10, inf]], 'N_estimators': [[-inf, 80]]}
+{'criterion': ['absolute_error'], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[-inf, 8]], 'Max_depth': [[10, inf]], 'N_estimators': [[-inf, 80]]}
 
 -----------
 explain= {'criterion': ['absolute_error']}
-all                {'MRE-': 119.42, 'ACC+': -12.25, 'PRED40+': 0.0, 'N': 10000} {'MRE-': 47.03, 'ACC+': 5.04, 'PRED40+': 32.3, 'N': 10000}
+all                {'MRE-': 119.4, 'ACC+': -12.24, 'PRED40+': 0.0, 'N': 10000} {'MRE-': 46.91, 'ACC+': 5.03, 'PRED40+': 32.3, 'N': 10000}
 sway1 with 8 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 78} {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 0.0, 'N': 78}
-xpln1 on 8 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 3302} {'MRE-': 39.24, 'ACC+': 0.53, 'PRED40+': 32.3, 'N': 3302}
+xpln1 on 8 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 3302} {'MRE-': 39.31, 'ACC+': 0.47, 'PRED40+': 32.3, 'N': 3302}
 top with 10000 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 78} {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 0.0, 'N': 78}
 ------------------
 ------------------

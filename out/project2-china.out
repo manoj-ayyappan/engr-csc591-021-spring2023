@@ -1,108 +1,108 @@
 
-AFP -inf 1437
-AFP 1437 inf
+AFP -inf 1092
+AFP 1092 inf
 
-Input -inf 711
-Input 711 inf
+Input -inf 555
+Input 555 inf
 
-Output -inf 195
-Output 195 inf
+Output -inf 145
+Output 145 432
+Output 432 inf
 
-Enquiry -inf 78
-Enquiry 78 inf
+Enquiry -inf 59
+Enquiry 59 170
+Enquiry 170 inf
 
-File -inf 239
-File 239 inf
+File -inf 173
+File 173 inf
 
-Interface -inf inf
+Interface -inf 80
+Interface 80 inf
 
-Added -inf 828
-Added 828 inf
+Added -inf 796
+Added 796 inf
 
-Changed -inf 352
-Changed 352 inf
+Changed -inf 312
+Changed 312 inf
 
-Deleted -inf inf
+Deleted -inf 61
+Deleted 61 inf
 
-PDR_AFP -inf 7.1
-PDR_AFP 7.1 19.2
-PDR_AFP 19.2 35.7
-PDR_AFP 35.7 inf
+PDR_AFP -inf 5.1
+PDR_AFP 5.1 inf
 
-PDR_UFP -inf 7.8
-PDR_UFP 7.8 24.4
-PDR_UFP 24.4 inf
+PDR_UFP -inf 6
+PDR_UFP 6 inf
 
-NPDR_AFP -inf 8.2
-NPDR_AFP 8.2 23.2
-NPDR_AFP 23.2 41.1
-NPDR_AFP 41.1 inf
+NPDR_AFP -inf 6.2
+NPDR_AFP 6.2 inf
 
-NPDU_UFP -inf 9.2
-NPDU_UFP 9.2 25.6
-NPDU_UFP 25.6 inf
+NPDU_UFP -inf 6.5
+NPDU_UFP 6.5 inf
 
 Resource -inf 2
 Resource 2 inf
 
 DevType -inf inf
 
-Duration -inf 7
-Duration 7 21
-Duration 21 inf
-{'NPDU_UFP': [[9.2, 25.6]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]], 'Duration': [[-inf, 7]]}
-{'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]], 'NPDR_AFP': [[8.2, 23.2]], 'PDR_AFP': [[7.1, 19.2]], 'Resource': [[-inf, 2]], 'Enquiry': [[-inf, 78]], 'Output': [[-inf, 195]], 'Added': [[-inf, 828]], 'AFP': [[-inf, 1437]], 'File': [[-inf, 239]], 'Input': [[-inf, 711]], 'Changed': [[-inf, 352]], 'Duration': [[-inf, 21]]}
+Duration -inf 5
+Duration 5 15
+Duration 15 inf
+{'PDR_AFP': [[-inf, 5.1]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Changed': [[-inf, 312]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Changed': [[-inf, 312]], 'Enquiry': [[-inf, 59]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Changed': [[-inf, 312]], 'Enquiry': [[-inf, 59]], 'Duration': [[-inf, 5]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Changed': [[-inf, 312]], 'Enquiry': [[-inf, 59]], 'Duration': [[-inf, 15]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Changed': [[-inf, 312]], 'Enquiry': [[-inf, 170]], 'Duration': [[-inf, 15]]}
+{'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]], 'Interface': [[-inf, 80]], 'Input': [[-inf, 555]], 'Output': [[-inf, 145]], 'Deleted': [[-inf, 61]], 'Enquiry': [[-inf, 170]], 'Duration': [[-inf, 15]]}
 
 -----------
-explain= {'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]]}
+explain= {'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]]}
 all                {'N_effort-': 2109.0, 'N': 499} {'N_effort-': 3799.61, 'N': 499}
-sway1 with 6 evals {'N_effort-': 1351.0, 'N': 15} {'N_effort-': 656.59, 'N': 15}
-xpln1 on 6 evals {'N_effort-': 2933.0, 'N': 179} {'N_effort-': 4961.24, 'N': 179}
-top with 499 evals {'N_effort-': 155.0, 'N': 15} {'N_effort-': 35.27, 'N': 15}
+sway1 with 6 evals {'N_effort-': 575.0, 'N': 16} {'N_effort-': 346.51, 'N': 16}
+xpln1 on 6 evals {'N_effort-': 668.0, 'N': 93} {'N_effort-': 631.01, 'N': 93}
+top with 499 evals {'N_effort-': 155.0, 'N': 16} {'N_effort-': 35.27, 'N': 16}
 ------------------
 ------------------
 HPs
 ------------------
-bins :  6.8
-better :  bdom
-Far :  0.85
+bins :  9
+better :  zitler
+Far :  0.95
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  512
+dist :  2
+rest :  4
 ------------------
 ------------------
 
-sway on 6 evals {'N_effort-': 1351.0, 'N': 15}
+sway on 6 evals {'N_effort-': 575.0, 'N': 16}
 ------------------
-explain= {'NPDU_UFP': [[9.2, 25.6]], 'PDR_UFP': [[7.8, 24.4]]}
+explain= {'PDR_AFP': [[-inf, 5.1]], 'NPDR_AFP': [[-inf, 6.2]], 'NPDU_UFP': [[-inf, 6.5]], 'PDR_UFP': [[-inf, 6]], 'Resource': [[-inf, 2]], 'Added': [[-inf, 796]], 'AFP': [[-inf, 1092]], 'File': [[-inf, 173]]}
 HPs
 ------------------
-bins :  6.8
-better :  bdom
-Far :  0.85
+bins :  9
+better :  zitler
+Far :  0.95
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  512
+dist :  2
+rest :  4
 ------------------
 ------------------
-xpln on 6 evals {'N_effort-': 2933.0, 'N': 179}
+xpln on 6 evals {'N_effort-': 668.0, 'N': 93}
 Best Xpln HPs
 ✅ pass:	 hpo
 #W ?k <class 'str'>

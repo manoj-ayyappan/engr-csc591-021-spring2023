@@ -1,57 +1,68 @@
 
-Clndrs -inf 5
+Clndrs -inf 4
+Clndrs 4 5
 Clndrs 5 inf
 
-Volume -inf 98
-Volume 98 156
+Volume -inf 71
+Volume 71 112
+Volume 112 156
 Volume 156 inf
 
-Model -inf 81
-Model 81 inf
+Model -inf 71
+Model 71 72
+Model 72 74
+Model 74 75
+Model 75 77
+Model 77 inf
 
 origin 1 1
 origin 2 2
 origin 3 3
-{'Model': [[81, inf]]}
-{'Model': [[81, inf]], 'Volume': [[98, 156]]}
-{'Model': [[81, inf]], 'Volume': [[98, 156]], 'Clndrs': [[-inf, 5]]}
-{'Model': [[81, inf]], 'Volume': [[98, 156]], 'Clndrs': [[-inf, 5]], 'origin': [1]}
+{'Clndrs': [[4, 5]]}
+{'Clndrs': [[4, 5]], 'origin': [1]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 112]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]], 'Model': [[72, 74]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]], 'Model': [[72, 74], [75, 77]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]], 'Model': [[72, 77]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]], 'Model': [[71, 77]]}
+{'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156]], 'Model': [[-inf, 77]]}
 
 -----------
-explain= {'Model': [[81, inf]], 'Volume': [[98, 156]], 'Clndrs': [[-inf, 5]], 'origin': [1]}
+explain= {'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156], [112, 156]], 'Model': [[71, 74], [72, 77], [75, 77]]}
 all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
-sway1 with 6 evals {'Lbs-': 2575.0, 'Acc+': 17.3, 'Mpg+': 30.0, 'N': 12} {'Lbs-': 286.82, 'Acc+': 2.56, 'Mpg+': 3.88, 'N': 12}
-xpln1 on 6 evals {'Lbs-': 2575.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 22} {'Lbs-': 319.77, 'Acc+': 2.91, 'Mpg+': 3.88, 'N': 22}
-top with 398 evals {'Lbs-': 1955.0, 'Acc+': 20.5, 'Mpg+': 30.0, 'N': 12} {'Lbs-': 293.8, 'Acc+': 1.94, 'Mpg+': 3.88, 'N': 12}
+sway1 with 6 evals {'Lbs-': 2164.0, 'Acc+': 18.5, 'Mpg+': 30.0, 'N': 12} {'Lbs-': 234.11, 'Acc+': 2.79, 'Mpg+': 3.88, 'N': 12}
+xpln1 on 6 evals {'Lbs-': 2310.0, 'Acc+': 17.0, 'Mpg+': 30.0, 'N': 22} {'Lbs-': 211.63, 'Acc+': 2.95, 'Mpg+': 3.88, 'N': 22}
+top with 398 evals {'Lbs-': 2070.0, 'Acc+': 19.2, 'Mpg+': 40.0, 'N': 12} {'Lbs-': 197.67, 'Acc+': 2.6, 'Mpg+': 3.88, 'N': 12}
 ------------------
 ------------------
 HPs
 ------------------
-bins :  6.8
-better :  bdom
-Far :  0.85
+bins :  9
+better :  zitler
+Far :  0.95
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  512
+dist :  2
+rest :  4
 ------------------
 ------------------
 
-sway on 6 evals {'Lbs-': 2575.0, 'Acc+': 17.3, 'Mpg+': 30.0, 'N': 12}
+sway on 6 evals {'Lbs-': 2164.0, 'Acc+': 18.5, 'Mpg+': 30.0, 'N': 12}
 ------------------
-explain= {'Model': [[81, inf]], 'Volume': [[98, 156]], 'Clndrs': [[-inf, 5]], 'origin': [1]}
+explain= {'Clndrs': [[4, 5]], 'origin': [1], 'Volume': [[71, 156], [112, 156]], 'Model': [[71, 74], [72, 77], [74, 77], [75, 77]]}
 HPs
 ------------------
-bins :  6.8
-better :  bdom
-Far :  0.85
+bins :  9
+better :  zitler
+Far :  0.95
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  512
+dist :  2
+rest :  4
 ------------------
 ------------------
-xpln on 6 evals {'Lbs-': 2575.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 22}
+xpln on 6 evals {'Lbs-': 2310.0, 'Acc+': 17.0, 'Mpg+': 30.0, 'N': 22}
 Best Xpln HPs
 ✅ pass:	 hpo
 #W ?k <class 'str'>
