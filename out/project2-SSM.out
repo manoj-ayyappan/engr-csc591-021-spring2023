@@ -84,7 +84,7 @@ top with 239360 evals {'NUMBERITERATIONS-': 4.0, 'TIMETOSOLUTION-': 60.05, 'N': 
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200

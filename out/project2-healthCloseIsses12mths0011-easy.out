@@ -55,7 +55,7 @@ top with 10000 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 78} {'MRE
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200
@@ -70,7 +70,7 @@ explain= {'criterion': ['absolute_error']}
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200

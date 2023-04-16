@@ -182,7 +182,7 @@ explain= {'STOR': [[-inf, 5]]}
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200

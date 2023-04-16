@@ -217,7 +217,7 @@ top with 10000 evals {'Loc+': 1961.0, 'Risk-': 0.0, 'Effort-': 17752.0, 'N': 78}
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200

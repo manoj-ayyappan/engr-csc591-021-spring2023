@@ -115,7 +115,7 @@ top with 93 evals {'Kloc+': 5.5, 'Effort-': 18.0, 'Defects-': 172.0, 'Months-': 
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200
@@ -130,7 +130,7 @@ explain= {'data': ['l'], 'acap': ['n'], 'sced': ['l']}
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200

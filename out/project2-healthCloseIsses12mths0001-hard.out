@@ -61,7 +61,7 @@ top with 10000 evals {'MRE-': 64.91, 'ACC+': 11.4, 'PRED40+': 25.0, 'N': 78} {'M
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200
@@ -76,7 +76,7 @@ explain= {'criterion': ['squared_error']}
 HPs
 ------------------
 bins :  6.8
-better :  bdom
+better :  zitler
 Far :  0.85
 min_size :  0.5
 Max :  1200
