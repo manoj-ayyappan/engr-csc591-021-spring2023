@@ -1,94 +1,184 @@
-✅ pass:	 ok
- beaca
- ddddb
- adadd
- eadcb
- eacaa
- aeadb
- daebd
- debcb
- bdcad
- eabca
-✅ pass:	 sample
- 10 5.5 3.0276503540974917
-✅ pass:	 num
- 10000 10.013090245127714 1.9708063718547493
-✅ pass:	 gauss
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 10.0 1 True True True
- 10.1 1 True True True
- 10.2 1 False True False
- 10.3 1 True True True
- 10.4 1 True True True
- 10.5 1 False False False
- 10.6 1 False False False
- 10.7 1 False False False
- 10.8 1 False False False
- 10.9 1 False False False
-✅ pass:	 bootmu
- mu sd cliffs boot both
- -- -- ------ ---- ----
- 12 1 False False False
- 12 2 False False False
- 12 3 False False False
- 12 4 False False False
- 12 5 False False False
- 12 6 True True True
- 12 7 False False False
- 12 8 False False False
- 12 9 True False False
-✅ pass:	 bootsd
-		true True True
-		false True False
-		false False False
-✅ pass:	 basic
 
-eg3
-	 1.0 True True True
-	 1.05 True True True
-	 1.1 False False True
-	 1.15 False False True
-	 1.2 False False True
-	 1.25 False False True
-	 1.3 False False True
-	 1.35 False False True
-	 1.4 False False True
-	 1.45 False False True
-✅ pass:	 pre
- rx5  --*-               |                    {  8.70,   9.47,   9.95,  10.50,  11.26}
- rx6  --*-               |                    {  8.70,   9.49,   9.97,  10.53,  11.36}
- rx9  --*-               |                    {  8.68,   9.51,  10.02,  10.50,  11.21}
- rx0  --*-               |                    {  8.81,   9.51,  10.04,  10.57,  11.40}
- rx1  --*-               |                    {  8.76,   9.53,  10.09,  10.63,  11.37}
- rx2           ---*      |                    { 18.59,  19.41,  20.00,  20.56,  21.27}
- rx3                    -|-*                  { 28.64,  29.42,  30.02,  30.54,  31.37}
- rx4                     |-*                  { 28.80,  29.54,  30.03,  30.54,  31.31}
- rx7                     |        --*         { 38.70,  39.43,  40.05,  40.52,  41.18}
- rx8                     |     ---- *--       { 36.25,  38.60,  40.19,  41.61,  43.91}
-✅ pass:	 tiles
-rx5 0 -----   -*-----     |                    {  0.10,   0.20,   0.30,   0.30,   0.40}
-rx3 0  ------    -*--     |                    {  0.15,   0.25,   0.35,   0.35,   0.40}
-rx1 1            ---------*----                {  0.34,   0.49,   0.51,   0.51,   0.60}
-rx2 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-rx4 1                     |   ------    -*---- {  0.60,   0.70,   0.80,   0.80,   0.90}
-✅ pass:	 five
-rx1 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx2 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-rx3 0 ----------          *                  - { 99.00,  99.50, 100.00, 101.00, 101.00}
-rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 101.00}
-✅ pass:	 six
- 0 rx0  --*                |                    {  8.71,   9.48,   9.98,  10.51,  11.38}
- 0 rx5  --*                |                    {  8.73,   9.43,  10.00,  10.53,  11.29}
- 1 rx6  --*                |                    {  8.66,   9.46,  10.01,  10.55,  11.32}
- 1 rx9  --*                |                    {  8.72,   9.54,  10.09,  10.57,  11.35}
- 2 rx1  --*                |                    {  8.84,   9.66,  10.19,  10.67,  11.42}
- 2 rx2           --*       |                    { 18.70,  19.50,  20.00,  20.49,  21.25}
- 3 rx3                    -|*                   { 28.73,  29.50,  30.02,  30.53,  31.22}
- 4 rx4                    -|*                   { 28.95,  29.64,  30.11,  30.58,  31.25}
- 4 rx8                     |    ---  *--        { 36.20,  38.32,  39.83,  41.44,  43.84}
- 4 rx7                     |       --*          { 38.67,  39.37,  39.95,  40.48,  41.35}
-✅ pass:	 sk
+maker Buick Buick
+maker Cadillac Cadillac
+maker Chevrolet Chevrolet
+maker Dodge Dodge
+maker Eagle Eagle
+maker Ford Ford
+maker Geo Geo
+maker Honda Honda
+maker Hyundai Hyundai
+maker Lexus Lexus
+maker Mazda Mazda
+maker Mercedes-Benz Mercedes-Benz
+maker Mercury Mercury
+maker Mitsubishi Mitsubishi
+maker Nissan Nissan
+maker Pontiac Pontiac
+maker Subaru Subaru
+maker Suzuki Suzuki
+maker Toyota Toyota
+maker Volkswagen Volkswagen
+
+type Compact Compact
+type Large Large
+type Midsize Midsize
+type Small Small
+type Sporty Sporty
+type Van Van
+
+Air_Bags_standard -inf 1
+Air_Bags_standard 1 2
+Air_Bags_standard 2 inf
+
+Drive_train_type -inf 1
+Drive_train_type 1 2
+Drive_train_type 2 inf
+
+Number_of_cylinders -inf 4
+Number_of_cylinders 4 5
+Number_of_cylinders 5 inf
+
+Engine_size -inf 2.2
+Engine_size 2.2 2
+Engine_size 2 inf
+
+Horsepower -inf 105
+Horsepower 105 140
+Horsepower 140 inf
+
+RPM -inf 4800
+RPM 4800 5200
+RPM 5200 5800
+RPM 5800 6000
+RPM 6000 inf
+
+Engine_revolutions_per_mile -inf 2285
+Engine_revolutions_per_mile 2285 2710
+Engine_revolutions_per_mile 2710 2875
+Engine_revolutions_per_mile 2875 inf
+
+manual_transmission_available 0 0
+manual_transmission_available 1 1
+
+Fuel_tank_capacity -inf 10.6
+Fuel_tank_capacity 10.6 13.7
+Fuel_tank_capacity 13.7 inf
+
+Passenger_capacity -inf 3
+Passenger_capacity 3 4
+Passenger_capacity 4 5
+Passenger_capacity 5 inf
+
+Length -inf 147
+Length 147 168
+Length 168 181
+Length 181 inf
+
+Wheelbase -inf 91
+Wheelbase 91 97
+Wheelbase 97 102
+Wheelbase 102 inf
+
+Width -inf 64
+Width 64 66
+Width 66 69
+Width 69 inf
+
+U-turn_space -inf 33
+U-turn_space 33 34
+U-turn_space 34 36
+U-turn_space 36 inf
+
+Rear_seat_room -inf 20
+Rear_seat_room 20 24.5
+Rear_seat_room 24.5 27.5
+Rear_seat_room 27.5 inf
+
+Luggage_capacity -inf 9
+Luggage_capacity 9 12
+Luggage_capacity 12 inf
+
+domestic 0 0
+domestic 1 1
+{'type': ['Small']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[4, 5]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[4, 5]], 'U-turn_space': [[34, 36]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[10.6, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[34, 36]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[34, 36]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[34, 36]], 'Engine_revolutions_per_mile': [[2875, inf]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2875, inf]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 64]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[24.5, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]]}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[2.2, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[4, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[147, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[91, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[33, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 168]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5800, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Nissan', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 1]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Nissan', 'Subaru', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 2]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Mitsubishi', 'Nissan', 'Subaru', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 2]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Hyundai', 'Mitsubishi', 'Nissan', 'Subaru', 'Suzuki']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 2]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, 2710], [2875, inf]], 'maker': ['Hyundai', 'Mitsubishi', 'Nissan', 'Subaru', 'Suzuki', 'Toyota']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 2]], 'Drive_train_type': [[1, 2]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, inf]], 'maker': ['Hyundai', 'Mitsubishi', 'Nissan', 'Subaru', 'Suzuki', 'Toyota']}
+{'type': ['Small'], 'Luggage_capacity': [[9, 12]], 'domestic': [0], 'Horsepower': [[-inf, 105]], 'manual_transmission_available': [1], 'Engine_size': [[-inf, 2]], 'Fuel_tank_capacity': [[-inf, 13.7]], 'Wheelbase': [[-inf, 97]], 'Width': [[-inf, 66]], 'Air_Bags_standard': [[-inf, 2]], 'Drive_train_type': [[1, inf]], 'RPM': [[5200, 6000]], 'Rear_seat_room': [[20, 27.5]], 'Passenger_capacity': [[3, 5]], 'Length': [[-inf, 181]], 'Number_of_cylinders': [[-inf, 5]], 'U-turn_space': [[-inf, 36]], 'Engine_revolutions_per_mile': [[2285, inf]], 'maker': ['Hyundai', 'Mitsubishi', 'Nissan', 'Subaru', 'Suzuki', 'Toyota']}
+
+-----------
+explain= {'type': ['Small']}
+all                {'CityMPG+': 21.0, 'HighwayMPG+': 28.0, 'Weight-': 3050.0, 'Class-': 18.2, 'N': 93} {'CityMPG+': 4.65, 'HighwayMPG+': 5.04, 'Weight-': 625.97, 'Class-': 9.5, 'N': 93}
+sway1 with 5 evals {'CityMPG+': 32.0, 'HighwayMPG+': 37.0, 'Weight-': 2295.0, 'Class-': 9.8, 'N': 6} {'CityMPG+': 3.88, 'HighwayMPG+': 3.88, 'Weight-': 193.8, 'Class-': 1.32, 'N': 6}
+xpln1 on 5 evals {'CityMPG+': 29.0, 'HighwayMPG+': 33.0, 'Weight-': 2350.0, 'Class-': 10.1, 'N': 21} {'CityMPG+': 7.36, 'HighwayMPG+': 6.2, 'Weight-': 273.26, 'Class-': 1.51, 'N': 21}
+top with 93 evals {'CityMPG+': 29.0, 'HighwayMPG+': 34.0, 'Weight-': 2490.0, 'Class-': 11.4, 'N': 6} {'CityMPG+': 8.14, 'HighwayMPG+': 6.59, 'Weight-': 364.34, 'Class-': 2.91, 'N': 6}
+------------------
+------------------
+HPs
+------------------
+bins :  6.8
+better :  bdom
+Far :  0.85
+min_size :  0.5
+Max :  1200
+dist :  2.375
+rest :  5.55
+------------------
+------------------
+
+sway on 5 evals {'CityMPG+': 32.0, 'HighwayMPG+': 37.0, 'Weight-': 2295.0, 'Class-': 9.8, 'N': 6}
+------------------
+explain= {'type': ['Small']}
+HPs
+------------------
+bins :  6.8
+better :  bdom
+Far :  0.85
+min_size :  0.5
+Max :  1200
+dist :  2.375
+rest :  5.55
+------------------
+------------------
+xpln on 5 evals {'CityMPG+': 29.0, 'HighwayMPG+': 33.0, 'Weight-': 2350.0, 'Class-': 10.1, 'N': 21}
+Best Xpln HPs
+✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
 #W ?settings <class 'function'>
@@ -96,5 +186,5 @@ rx4 0 --------------------*                  - { 99.00, 100.00, 100.00, 101.00, 
 #W ?make_attempt <class 'function'>
 #W ?main <class 'function'>
 #W ?Seed <class 'int'>
-✅ Number of tests passing -> 12
+✅ Number of tests passing -> 1
 ❌ Number of tests failing -> 0
