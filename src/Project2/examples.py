@@ -379,137 +379,137 @@ def eg_function_26():
 
     list = [
         
-# [4, 'zitler', 0.65, 0.5, 100, 1.0, 2.0],
-# [4, 'zitler', 0.65, 0.5, 600, 1.5, 2.0],
-# [4, 'zitler', 0.69, 0.5, 600, 3.0, 2.0],
-# [6, 'zitler', 0.69, 0.5, 1600, 0.5, 4.0],
-# [8, 'zitler', 0.65, 0.5, 600, 1.0, 2.0],
-# [2, 'bdom', 0.81, 0.5, 100, 0.5, 6.0],
-# [6, 'zitler', 0.77, 0.5, 100, 1.0, 5.0],
-# [4, 'zitler', 0.97, 0.5, 100, 0.5, 2.0],
-# [6, 'zitler', 0.85, 0.5, 100, 2.5, 5.0],
-# [4, 'zitler', 0.73, 0.5, 2100, 3.5, 5.0],
-# [8, 'zitler', 0.65, 0.5, 1600, 1.5, 4.0],
-# [2, 'zitler', 0.89, 0.5, 600, 4.5, 4.0],
-# [6, 'zitler', 0.69, 0.5, 1600, 2.5, 2.0],
-# [2, 'zitler', 0.93, 0.5, 600, 1.5, 6.0],
-# [10, 'zitler', 0.73, 0.5, 1100, 2.0, 6.0],
-# [6, 'zitler', 0.89, 0.5, 100, 3.0, 5.0],
-# [2, 'zitler', 0.73, 0.5, 600, 2.5, 5.0],
-# [10, 'zitler', 0.97, 0.5, 1100, 1.5, 2.0],
-# [6, 'zitler', 0.97, 0.5, 1600, 1.5, 2.0],
-# [14, 'zitler', 0.77, 0.5, 2100, 1.0, 5.0],
-# [8, 'zitler', 0.89, 0.5, 1600, 0.5, 3.0],
-# [8, 'zitler', 0.93, 0.5, 100, 0.5, 4.0],
-# [6, 'zitler', 0.97, 0.5, 100, 2.0, 3.0],
-# [10, 'zitler', 0.85, 0.5, 2100, 1.0, 5.0],
-# [8, 'zitler', 0.89, 0.5, 1100, 1.5, 3.0],
-# [4, 'zitler', 0.81, 0.5, 2600, 3.5, 3.0],
-# [2, 'zitler', 0.97, 0.5, 2600, 3.5, 2.0],
-# [8, 'zitler', 0.73, 0.5, 2600, 2.5, 4.0],
-# [2, 'zitler', 0.77, 0.5, 2100, 0.5, 3.0],
-# [4, 'zitler', 0.97, 0.5, 1600, 2.5, 5.0],
-# [4, 'zitler', 0.85, 0.5, 1100, 2.0, 3.0],
-# [6, 'zitler', 0.81, 0.5, 1600, 0.5, 6.0],
-# [4, 'zitler', 0.93, 0.5, 2600, 1.5, 5.0],
-# [14, 'bdom', 0.65, 0.5, 100, 2.5, 3.0],
-# [10, 'bdom', 0.69, 0.5, 600, 2.0, 4.0],
-# [8, 'bdom', 0.89, 0.5, 100, 1.5, 2.0],
-# [6, 'bdom', 0.73, 0.5, 100, 3.5, 4.0],
-# [12, 'zitler', 0.69, 0.5, 600, 1.5, 4.0],
-# [14, 'zitler', 0.65, 0.5, 600, 2.0, 3.0],
-# [14, 'zitler', 0.77, 0.5, 1100, 1.0, 3.0],
-# [14, 'zitler', 0.65, 0.5, 600, 2.5, 2.0],
-# [2, 'bdom', 0.69, 0.5, 1100, 2.0, 5.0],
-# [4, 'bdom', 0.65, 0.5, 1600, 1.5, 3.0],
-# [2, 'bdom', 0.77, 0.5, 100, 1.0, 5.0],
-# [2, 'bdom', 0.65, 0.5, 1100, 2.0, 3.0],
-# [12, 'bdom', 0.69, 0.5, 100, 1.0, 6.0],
-# [8, 'bdom', 0.69, 0.5, 100, 1.0, 4.0],
-# [6, 'bdom', 0.93, 0.5, 100, 0.5, 4.0],
-# [6, 'bdom', 0.77, 0.5, 1100, 1.5, 4.0],
-# [6, 'zitler', 0.89, 0.5, 1100, 4.5, 3.0],
-# [6, 'zitler', 0.85, 0.5, 1100, 3.5, 2.0],
-# [6, 'zitler', 0.77, 0.5, 2600, 4.5, 2.0],
-# [8, 'zitler', 0.77, 0.5, 1600, 3.5, 3.0],
-# [12, 'zitler', 0.89, 0.5, 100, 2.0, 3.0],
-# [10, 'zitler', 0.93, 0.5, 100, 3.0, 4.0],
-# [8, 'zitler', 0.77, 0.5, 100, 3.5, 2.0],
-# [12, 'zitler', 0.85, 0.5, 1100, 1.5, 2.0],
-# [2, 'bdom', 0.77, 0.5, 1100, 2.0, 3.0],
-# [4, 'bdom', 0.89, 0.5, 1600, 1.0, 2.0],
-# [6, 'zitler', 0.65, 0.5, 2100, 3.0, 2.0],
-# [4, 'bdom', 0.93, 0.5, 100, 3.0, 2.0],
-# [14, 'zitler', 0.77, 0.5, 1100, 2.0, 4.0],
-# [8, 'zitler', 0.73, 0.5, 100, 3.5, 5.0],
-# [12, 'zitler', 0.65, 0.5, 2100, 3.5, 4.0],
-# [8, 'zitler', 0.69, 0.5, 1600, 3.0, 3.0],
-# [14, 'bdom', 0.97, 0.5, 1600, 4.5, 6.0],
-# [10, 'bdom', 0.93, 0.5, 2600, 3.0, 6.0],
-# [6, 'bdom', 0.93, 0.5, 2600, 4.5, 4.0],
-# [12, 'bdom', 0.89, 0.5, 1600, 4.0, 4.0],
-# [14, 'bdom', 0.77, 0.5, 2100, 4.5, 6.0],
-# [12, 'bdom', 0.69, 0.5, 2100, 1.0, 6.0],
-# [8, 'bdom', 0.81, 0.5, 600, 4.0, 6.0],
-# [12, 'bdom', 0.81, 0.5, 1600, 4.0, 4.0],
-# [2, 'zitler', 0.93, 0.5, 2600, 2.5, 6.0],
-# [8, 'zitler', 0.97, 0.5, 2600, 4.0, 3.0],
-# [4, 'bdom', 0.97, 0.5, 2600, 1.0, 6.0],
-# [6, 'zitler', 0.89, 0.5, 2100, 4.5, 6.0],
-# [14, 'zitler', 0.73, 0.5, 2100, 3.0, 6.0],
-# [10, 'zitler', 0.77, 0.5, 2100, 4.0, 6.0],
-# [10, 'zitler', 0.93, 0.5, 2100, 4.0, 4.0],
-# [12, 'zitler', 0.81, 0.5, 2100, 3.0, 5.0],
-# [10, 'bdom', 0.97, 0.5, 600, 4.0, 3.0],
-# [12, 'bdom', 0.89, 0.5, 100, 2.5, 5.0],
-# [8, 'bdom', 0.97, 0.5, 2100, 2.0, 4.0],
-# [14, 'bdom', 0.93, 0.5, 1100, 3.5, 4.0],
-# [14, 'bdom', 0.65, 0.5, 1600, 1.5, 6.0],
-# [14, 'bdom', 0.97, 0.5, 2100, 0.5, 4.0],
-# [12, 'bdom', 0.85, 0.5, 600, 2.5, 5.0],
-# [14, 'bdom', 0.77, 0.5, 100, 1.5, 6.0],
-# [14, 'zitler', 0.81, 0.5, 600, 4.5, 4.0],
-# [8, 'zitler', 0.97, 0.5, 1600, 3.0, 4.0],
-# [14, 'zitler', 0.93, 0.5, 2600, 1.0, 4.0],
-# [10, 'zitler', 0.89, 0.5, 1600, 3.0, 4.0],
-# [10, 'bdom', 0.85, 0.5, 100, 4.0, 6.0],
-# [6, 'bdom', 0.85, 0.5, 600, 4.5, 5.0],
-# [4, 'bdom', 0.97, 0.5, 1600, 1.5, 6.0],
-# [14, 'zitler', 0.81, 0.5, 2100, 1.5, 5.0],
-# [4, 'bdom', 0.69, 0.5, 1600, 4.5, 3.0],
-# [2, 'bdom', 0.85, 0.5, 1600, 3.5, 3.0],
-# [10, 'bdom', 0.69, 0.5, 2600, 2.0, 4.0],
-# [14, 'bdom', 0.73, 0.5, 2600, 3.5, 2.0],
-# [4, 'bdom', 0.65, 0.5, 1100, 3.5, 5.0],
-# [4, 'bdom', 0.77, 0.5, 1100, 4.0, 4.0],
-# [10, 'bdom', 0.81, 0.5, 2600, 4.0, 4.0],
-# [6, 'bdom', 0.69, 0.5, 2100, 2.5, 4.0],
-# [6, 'bdom', 0.77, 0.5, 2600, 0.5, 6.0],
-# [2, 'bdom', 0.93, 0.5, 2100, 3.5, 4.0],
-# [14, 'zitler', 0.69, 0.5, 2600, 4.0, 2.0],
-# [2, 'zitler', 0.93, 0.5, 2600, 4.5, 2.0],
-# [4, 'bdom', 0.77, 0.5, 100, 4.0, 5.0],
-# [4, 'bdom', 0.77, 0.5, 1600, 2.0, 6.0],
-# [6, 'bdom', 0.77, 0.5, 1600, 2.5, 4.0],
-# [2, 'bdom', 0.73, 0.5, 2600, 2.0, 5.0],
-# [14, 'bdom', 0.85, 0.5, 2600, 1.0, 2.0],
-# [12, 'bdom', 0.81, 0.5, 600, 3.5, 2.0],
-# [6, 'bdom', 0.93, 0.5, 2100, 1.0, 3.0],
-# [8, 'bdom', 0.89, 0.5, 1100, 1.5, 3.0],
-# [2, 'bdom', 0.97, 0.5, 100, 3.0, 4.0],
-# [10, 'bdom', 0.89, 0.5, 1100, 4.0, 2.0],
-# [2, 'bdom', 0.93, 0.5, 1600, 1.0, 5.0],
-# [4, 'bdom', 0.89, 0.5, 1100, 3.0, 3.0],
-# [14, 'bdom', 0.69, 0.5, 2600, 1.5, 3.0],
-# [12, 'zitler', 0.81, 0.5, 1600, 4.5, 2.0],
-# [14, 'bdom', 0.69, 0.5, 2100, 3.5, 4.0],
-# [12, 'bdom', 0.81, 0.5, 2600, 0.5, 3.0],
-# [2, 'bdom', 0.89, 0.5, 600, 2.5, 6.0],
-# [12, 'bdom', 0.65, 0.5, 1100, 3.0, 5.0],
-# [6, 'bdom', 0.85, 0.5, 1600, 2.5, 4.0],
-# [12, 'bdom', 0.77, 0.5, 1600, 3.0, 4.0],
+[4, 'zitler', 0.65, 0.5, 100, 1.0, 2.0],
+[4, 'zitler', 0.65, 0.5, 600, 1.5, 2.0],
+[4, 'zitler', 0.69, 0.5, 600, 3.0, 2.0],
+[6, 'zitler', 0.69, 0.5, 1600, 0.5, 4.0],
+[8, 'zitler', 0.65, 0.5, 600, 1.0, 2.0],
+[2, 'bdom', 0.81, 0.5, 100, 0.5, 6.0],
+[6, 'zitler', 0.77, 0.5, 100, 1.0, 5.0],
+[4, 'zitler', 0.97, 0.5, 100, 0.5, 2.0],
+[6, 'zitler', 0.85, 0.5, 100, 2.5, 5.0],
+[4, 'zitler', 0.73, 0.5, 2100, 3.5, 5.0],
+[8, 'zitler', 0.65, 0.5, 1600, 1.5, 4.0],
+[2, 'zitler', 0.89, 0.5, 600, 4.5, 4.0],
+[6, 'zitler', 0.69, 0.5, 1600, 2.5, 2.0],
+[2, 'zitler', 0.93, 0.5, 600, 1.5, 6.0],
+[10, 'zitler', 0.73, 0.5, 1100, 2.0, 6.0],
+[6, 'zitler', 0.89, 0.5, 100, 3.0, 5.0],
+[2, 'zitler', 0.73, 0.5, 600, 2.5, 5.0],
+[10, 'zitler', 0.97, 0.5, 1100, 1.5, 2.0],
+[6, 'zitler', 0.97, 0.5, 1600, 1.5, 2.0],
+[14, 'zitler', 0.77, 0.5, 2100, 1.0, 5.0],
+[8, 'zitler', 0.89, 0.5, 1600, 0.5, 3.0],
+[8, 'zitler', 0.93, 0.5, 100, 0.5, 4.0],
+[6, 'zitler', 0.97, 0.5, 100, 2.0, 3.0],
+[10, 'zitler', 0.85, 0.5, 2100, 1.0, 5.0],
+[8, 'zitler', 0.89, 0.5, 1100, 1.5, 3.0],
+[4, 'zitler', 0.81, 0.5, 2600, 3.5, 3.0],
+[2, 'zitler', 0.97, 0.5, 2600, 3.5, 2.0],
+[8, 'zitler', 0.73, 0.5, 2600, 2.5, 4.0],
+[2, 'zitler', 0.77, 0.5, 2100, 0.5, 3.0],
+[4, 'zitler', 0.97, 0.5, 1600, 2.5, 5.0],
+[4, 'zitler', 0.85, 0.5, 1100, 2.0, 3.0],
+[6, 'zitler', 0.81, 0.5, 1600, 0.5, 6.0],
+[4, 'zitler', 0.93, 0.5, 2600, 1.5, 5.0],
+[14, 'bdom', 0.65, 0.5, 100, 2.5, 3.0],
+[10, 'bdom', 0.69, 0.5, 600, 2.0, 4.0],
+[8, 'bdom', 0.89, 0.5, 100, 1.5, 2.0],
+[6, 'bdom', 0.73, 0.5, 100, 3.5, 4.0],
+[12, 'zitler', 0.69, 0.5, 600, 1.5, 4.0],
+[14, 'zitler', 0.65, 0.5, 600, 2.0, 3.0],
+[14, 'zitler', 0.77, 0.5, 1100, 1.0, 3.0],
+[14, 'zitler', 0.65, 0.5, 600, 2.5, 2.0],
+[2, 'bdom', 0.69, 0.5, 1100, 2.0, 5.0],
+[4, 'bdom', 0.65, 0.5, 1600, 1.5, 3.0],
+[2, 'bdom', 0.77, 0.5, 100, 1.0, 5.0],
+[2, 'bdom', 0.65, 0.5, 1100, 2.0, 3.0],
+[12, 'bdom', 0.69, 0.5, 100, 1.0, 6.0],
+[8, 'bdom', 0.69, 0.5, 100, 1.0, 4.0],
+[6, 'bdom', 0.93, 0.5, 100, 0.5, 4.0],
+[6, 'bdom', 0.77, 0.5, 1100, 1.5, 4.0],
+[6, 'zitler', 0.89, 0.5, 1100, 4.5, 3.0],
+[6, 'zitler', 0.85, 0.5, 1100, 3.5, 2.0],
+[6, 'zitler', 0.77, 0.5, 2600, 4.5, 2.0],
+[8, 'zitler', 0.77, 0.5, 1600, 3.5, 3.0],
+[12, 'zitler', 0.89, 0.5, 100, 2.0, 3.0],
+[10, 'zitler', 0.93, 0.5, 100, 3.0, 4.0],
+[8, 'zitler', 0.77, 0.5, 100, 3.5, 2.0],
+[12, 'zitler', 0.85, 0.5, 1100, 1.5, 2.0],
+[2, 'bdom', 0.77, 0.5, 1100, 2.0, 3.0],
+[4, 'bdom', 0.89, 0.5, 1600, 1.0, 2.0],
+[6, 'zitler', 0.65, 0.5, 2100, 3.0, 2.0],
+[4, 'bdom', 0.93, 0.5, 100, 3.0, 2.0],
+[14, 'zitler', 0.77, 0.5, 1100, 2.0, 4.0],
+[8, 'zitler', 0.73, 0.5, 100, 3.5, 5.0],
+[12, 'zitler', 0.65, 0.5, 2100, 3.5, 4.0],
+[8, 'zitler', 0.69, 0.5, 1600, 3.0, 3.0],
+[14, 'bdom', 0.97, 0.5, 1600, 4.5, 6.0],
+[10, 'bdom', 0.93, 0.5, 2600, 3.0, 6.0],
+[6, 'bdom', 0.93, 0.5, 2600, 4.5, 4.0],
+[12, 'bdom', 0.89, 0.5, 1600, 4.0, 4.0],
+[14, 'bdom', 0.77, 0.5, 2100, 4.5, 6.0],
+[12, 'bdom', 0.69, 0.5, 2100, 1.0, 6.0],
+[8, 'bdom', 0.81, 0.5, 600, 4.0, 6.0],
+[12, 'bdom', 0.81, 0.5, 1600, 4.0, 4.0],
+[2, 'zitler', 0.93, 0.5, 2600, 2.5, 6.0],
+[8, 'zitler', 0.97, 0.5, 2600, 4.0, 3.0],
+[4, 'bdom', 0.97, 0.5, 2600, 1.0, 6.0],
+[6, 'zitler', 0.89, 0.5, 2100, 4.5, 6.0],
+[14, 'zitler', 0.73, 0.5, 2100, 3.0, 6.0],
+[10, 'zitler', 0.77, 0.5, 2100, 4.0, 6.0],
+[10, 'zitler', 0.93, 0.5, 2100, 4.0, 4.0],
+[12, 'zitler', 0.81, 0.5, 2100, 3.0, 5.0],
+[10, 'bdom', 0.97, 0.5, 600, 4.0, 3.0],
+[12, 'bdom', 0.89, 0.5, 100, 2.5, 5.0],
+[8, 'bdom', 0.97, 0.5, 2100, 2.0, 4.0],
+[14, 'bdom', 0.93, 0.5, 1100, 3.5, 4.0],
+[14, 'bdom', 0.65, 0.5, 1600, 1.5, 6.0],
+[14, 'bdom', 0.97, 0.5, 2100, 0.5, 4.0],
+[12, 'bdom', 0.85, 0.5, 600, 2.5, 5.0],
+[14, 'bdom', 0.77, 0.5, 100, 1.5, 6.0],
+[14, 'zitler', 0.81, 0.5, 600, 4.5, 4.0],
+[8, 'zitler', 0.97, 0.5, 1600, 3.0, 4.0],
+[14, 'zitler', 0.93, 0.5, 2600, 1.0, 4.0],
+[10, 'zitler', 0.89, 0.5, 1600, 3.0, 4.0],
+[10, 'bdom', 0.85, 0.5, 100, 4.0, 6.0],
+[6, 'bdom', 0.85, 0.5, 600, 4.5, 5.0],
+[4, 'bdom', 0.97, 0.5, 1600, 1.5, 6.0],
+[14, 'zitler', 0.81, 0.5, 2100, 1.5, 5.0],
+[4, 'bdom', 0.69, 0.5, 1600, 4.5, 3.0],
+[2, 'bdom', 0.85, 0.5, 1600, 3.5, 3.0],
+[10, 'bdom', 0.69, 0.5, 2600, 2.0, 4.0],
+[14, 'bdom', 0.73, 0.5, 2600, 3.5, 2.0],
+[4, 'bdom', 0.65, 0.5, 1100, 3.5, 5.0],
+[4, 'bdom', 0.77, 0.5, 1100, 4.0, 4.0],
+[10, 'bdom', 0.81, 0.5, 2600, 4.0, 4.0],
+[6, 'bdom', 0.69, 0.5, 2100, 2.5, 4.0],
+[6, 'bdom', 0.77, 0.5, 2600, 0.5, 6.0],
+[2, 'bdom', 0.93, 0.5, 2100, 3.5, 4.0],
+[14, 'zitler', 0.69, 0.5, 2600, 4.0, 2.0],
+[2, 'zitler', 0.93, 0.5, 2600, 4.5, 2.0],
+[4, 'bdom', 0.77, 0.5, 100, 4.0, 5.0],
+[4, 'bdom', 0.77, 0.5, 1600, 2.0, 6.0],
+[6, 'bdom', 0.77, 0.5, 1600, 2.5, 4.0],
+[2, 'bdom', 0.73, 0.5, 2600, 2.0, 5.0],
+[14, 'bdom', 0.85, 0.5, 2600, 1.0, 2.0],
+[12, 'bdom', 0.81, 0.5, 600, 3.5, 2.0],
+[6, 'bdom', 0.93, 0.5, 2100, 1.0, 3.0],
+[8, 'bdom', 0.89, 0.5, 1100, 1.5, 3.0],
+[2, 'bdom', 0.97, 0.5, 100, 3.0, 4.0],
+[10, 'bdom', 0.89, 0.5, 1100, 4.0, 2.0],
+[2, 'bdom', 0.93, 0.5, 1600, 1.0, 5.0],
+[4, 'bdom', 0.89, 0.5, 1100, 3.0, 3.0],
+[14, 'bdom', 0.69, 0.5, 2600, 1.5, 3.0],
+[12, 'zitler', 0.81, 0.5, 1600, 4.5, 2.0],
+[14, 'bdom', 0.69, 0.5, 2100, 3.5, 4.0],
+[12, 'bdom', 0.81, 0.5, 2600, 0.5, 3.0],
+[2, 'bdom', 0.89, 0.5, 600, 2.5, 6.0],
+[12, 'bdom', 0.65, 0.5, 1100, 3.0, 5.0],
+[6, 'bdom', 0.85, 0.5, 1600, 2.5, 4.0],
+[12, 'bdom', 0.77, 0.5, 1600, 3.0, 4.0],
 
-[6.8, 'zitler', 0.85, 0.5, 1200, 2.375, 5.55 ],
+# [6.8, 'zitler', 0.85, 0.5, 1200, 2.375, 5.55 ],
 
         [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
     
@@ -522,7 +522,16 @@ def eg_function_26():
     bestXplnEvals = -1
     bestSway = ""
     bestSwayHPs = []
+    
     bestSwayEvals = -1
+    dataSway = None
+    dataXpln = None
+    dataTop = None
+    dataAll = None
+    bestdataSway = None
+    bestdataXpln = None
+    bestdataTop = None
+    dataEvals = 0
     
     for hps in list:
         #Modify global vars based on hyperparameters
@@ -538,19 +547,27 @@ def eg_function_26():
                 currXpln = query.stats(data1)
                 top,_ = data.betters(len(best.rows)) 
                 top = Data.Data(top, data2 = data) 
+                dataTop = top
+                dataSway = best
+                dataXpln = data1
+                dataAll = data
                 
             else:
                 rule,most= data.xpln(best,rest) 
                 print("\n-----------\nexplain=", strings.o(rule.showRule())) 
+                dataAll = data
+                
                 data1= Data.Data(rule.selects(data.rows), datai = data) 
                 print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div))) 
                 print(f"sway1 with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div))) 
                 currSway =  query.stats(best)
                 currXpln = query.stats(data1)
+                dataEvals = evals
                 print(f"xpln1 on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div))) 
                 top,_ = data.betters(len(best.rows)) 
                 top = Data.Data(top, data2 = data) 
                 print(f"top with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
+                
 
             if(bestXpln == ""):
                 bestXpln = query.stats(data1) 
@@ -560,16 +577,22 @@ def eg_function_26():
                 bestSwayHPs = hps
                 bestSwayEvals = evals
                 bestXplnEvals = evals
+                bestdataSway = data1
+                bestdataXpln = data1
             else:
                 if compare_dicts(currSway, bestSway, data):
                     bestSway = currSway
                     bestSwayHPs = hps
+                    bestdataSway = best
                     bestSwayEvals = evals
                 if compare_dicts(currXpln, bestXpln, data):
                     bestXpln = currXpln
                     bestXplnHPs = hps
+                    bestdataXpln = data1
                     bestXplnRule = strings.o(rule.showRule())
                     bestXplnEvals = evals
+            
+            
         except:
             print("Error -> ", hps)
 
@@ -586,7 +609,7 @@ def eg_function_26():
     print("------------------")
     print("------------------")
     print()
-    print(f"sway on {bestSwayEvals} evals",  strings.o(bestSway) )
+    print(f"sway with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
     print("------------------")
     print("explain=", bestXplnRule) 
     print("HPs" ) 
@@ -597,8 +620,73 @@ def eg_function_26():
         index += 1
     print("------------------")
     print("------------------")
-    print(f"xpln on {bestXplnEvals} evals",  strings.o(bestXpln))
-    print("Best Xpln HPs")
+    print(f"xpln1 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
+    
+    runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals)
+
+def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals):
+    print("------------------")
+    print("Stats")
+    print("------------------")
+    print("all               ", strings.o(query.stats(dataAll)), strings.o(query.stats(dataAll, query.div))) 
+    print(f"sway1 with {dataEvals} evals", strings.o(query.stats(dataSway)), strings.o(query.stats(dataSway, query.div))) 
+    print(f"xpln1 on {dataEvals} evals", strings.o(query.stats(dataXpln)), strings.o(query.stats(dataXpln, query.div))) 
+    print(f"top with {len(dataAll.rows)} evals",strings.o(query.stats(dataTop)), strings.o(query.stats(dataTop,query.div))) 
+    print(f"sway2 with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
+    print(f"xpln2 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
+    print("------------------")
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("All to All  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("All to Sway1  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("All to Sway2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway1 to Sway2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataXpln.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway1 to Xpln1  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataXpln.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway2 to Xpln2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway1 to Top  ", ret)
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
+        ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway2 to Top  ", ret)
+    
+    
+
+
+
 
 
 
