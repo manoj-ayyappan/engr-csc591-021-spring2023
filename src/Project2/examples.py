@@ -635,6 +635,8 @@ def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEv
     print(f"sway2 with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
     print(f"xpln2 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
     print("------------------")
+    print("Using Cliffs Delta")
+    print("------------------")
     ret = {}
     for n,i in dataAll.cols.y.items():
         list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
@@ -681,6 +683,57 @@ def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEv
         list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
         list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
         ret[i.txt] = numerics.cliffsDelta(list1,list2)
+    print("Sway2 to Top  ", ret)
+
+    print("------------------")
+    print("Using Bootstrap")
+    print("------------------")
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("All to All  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("All to Sway1  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("All to Sway2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("Sway1 to Sway2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataXpln.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("Sway1 to Xpln1  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in bestdataXpln.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("Sway2 to Xpln2  ", ret)
+    ret = {}
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
+    print("Sway1 to Top  ", ret)
+    for n,i in dataAll.cols.y.items():
+        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
+        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
+        ret[i.txt] = numerics.bootstrap(list1,list2)
     print("Sway2 to Top  ", ret)
     
     
