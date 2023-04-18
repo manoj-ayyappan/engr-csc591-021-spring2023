@@ -6,7 +6,8 @@ N_estimators 50 80
 N_estimators 80 100
 N_estimators 100 130
 N_estimators 130 150
-N_estimators 150 inf
+N_estimators 150 170
+N_estimators 170 inf
 
 criterion absolute_error absolute_error
 criterion poisson poisson
@@ -17,75 +18,102 @@ Min_sample_leaves 2 3
 Min_sample_leaves 3 5
 Min_sample_leaves 5 8
 Min_sample_leaves 8 10
-Min_sample_leaves 10 inf
+Min_sample_leaves 10 13
+Min_sample_leaves 13 15
+Min_sample_leaves 15 inf
 
-Min_impurity_decrease -inf 3
-Min_impurity_decrease 3 4.25
+Min_impurity_decrease -inf 4.25
 Min_impurity_decrease 4.25 5.5
 Min_impurity_decrease 5.5 6.75
 Min_impurity_decrease 6.75 8
 Min_impurity_decrease 8 9.25
 Min_impurity_decrease 9.25 inf
 
-Max_depth -inf 2
-Max_depth 2 3
-Max_depth 3 5
-Max_depth 5 8
-Max_depth 8 10
-Max_depth 10 inf
-{'criterion': ['poisson']}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 3]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 3]], 'Min_impurity_decrease': [[5.5, 6.75]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 3]], 'Min_impurity_decrease': [[5.5, 6.75]], 'N_estimators': [[100, 130]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 6.75]], 'N_estimators': [[100, 130]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 6.75]], 'N_estimators': [[100, 130]], 'Max_depth': [[3, 5]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 6.75]], 'N_estimators': [[100, 130]], 'Max_depth': [[2, 5]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 6.75]], 'N_estimators': [[100, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 8]], 'N_estimators': [[100, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[2, 5]], 'Min_impurity_decrease': [[5.5, 8]], 'N_estimators': [[80, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[5.5, 8]], 'N_estimators': [[80, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[4.25, 8]], 'N_estimators': [[80, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[4.25, 9.25]], 'N_estimators': [[80, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[4.25, 9.25]], 'N_estimators': [[50, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[4.25, 9.25]], 'N_estimators': [[30, 130]], 'Max_depth': [[2, 8]]}
-{'criterion': ['poisson'], 'Min_sample_leaves': [[-inf, 5]], 'Min_impurity_decrease': [[4.25, 9.25]], 'N_estimators': [[30, 130]], 'Max_depth': [[-inf, 8]]}
+Max_depth -inf 10
+Max_depth 10 13
+Max_depth 13 15
+Max_depth 15 17
+Max_depth 17 inf
+{'criterion': ['squared_error']}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[8, 9.25]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[8, 9.25]], 'Min_sample_leaves': [[5, 8]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[8, 9.25]], 'Min_sample_leaves': [[5, 8]], 'N_estimators': [[100, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[8, 9.25]], 'Min_sample_leaves': [[5, 8]], 'N_estimators': [[50, 80], [100, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[5, 8]], 'N_estimators': [[50, 80], [100, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[17, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[5, 10]], 'N_estimators': [[50, 80], [100, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[15, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[5, 10]], 'N_estimators': [[50, 80], [100, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[15, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[5, 10]], 'N_estimators': [[50, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[15, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[5, 13]], 'N_estimators': [[50, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[15, inf]], 'Min_impurity_decrease': [[6.75, 9.25]], 'Min_sample_leaves': [[3, 13]], 'N_estimators': [[50, 130]]}
+{'criterion': ['squared_error'], 'Max_depth': [[15, inf]], 'Min_impurity_decrease': [[5.5, 9.25]], 'Min_sample_leaves': [[3, 13]], 'N_estimators': [[50, 130]]}
 
 -----------
-explain= {'criterion': ['poisson']}
-all                {'MRE-': 75.16, 'ACC+': 7.12, 'PRED40+': 25.0, 'N': 10000} {'MRE-': 11.02, 'ACC+': 3.21, 'PRED40+': 14.53, 'N': 10000}
-sway1 with 8 evals {'MRE-': 73.9, 'ACC+': 7.5, 'PRED40+': 25.0, 'N': 78} {'MRE-': 1.79, 'ACC+': 0.55, 'PRED40+': 9.69, 'N': 78}
-xpln1 on 8 evals {'MRE-': 73.76, 'ACC+': 7.52, 'PRED40+': 25.0, 'N': 3335} {'MRE-': 2.08, 'ACC+': 0.66, 'PRED40+': 9.69, 'N': 3335}
+explain= {'criterion': ['squared_error']}
+all                {'MRE-': 75.16, 'ACC+': 7.15, 'PRED40+': 25.0, 'N': 10000} {'MRE-': 10.82, 'ACC+': 3.21, 'PRED40+': 14.53, 'N': 10000}
+sway1 with 8 evals {'MRE-': 73.53, 'ACC+': 7.61, 'PRED40+': 25.0, 'N': 78} {'MRE-': 2.05, 'ACC+': 0.62, 'PRED40+': 9.69, 'N': 78}
+xpln1 on 8 evals {'MRE-': 73.8, 'ACC+': 7.55, 'PRED40+': 25.0, 'N': 3363} {'MRE-': 2.12, 'ACC+': 0.85, 'PRED40+': 9.69, 'N': 3363}
 top with 10000 evals {'MRE-': 64.91, 'ACC+': 11.4, 'PRED40+': 25.0, 'N': 78} {'MRE-': 4.68, 'ACC+': 3.98, 'PRED40+': 4.84, 'N': 78}
 ------------------
 ------------------
 HPs
 ------------------
-bins :  6.8
-better :  zitler
-Far :  0.85
+bins :  4
+better :  bdom
+Far :  0.89
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  1600
+dist :  1.0
+rest :  2.0
 ------------------
 ------------------
 
-sway on 8 evals {'MRE-': 73.76, 'ACC+': 7.54, 'PRED40+': 25.0, 'N': 78}
+sway with 8 evals {'MRE-': 73.56, 'ACC+': 8.57, 'PRED40+': 25.0, 'N': 78} {'MRE-': 2.57, 'ACC+': 3.33, 'PRED40+': 9.69, 'N': 78}
 ------------------
-explain= {'criterion': ['squared_error']}
+explain= {'criterion': ['squared_error'], 'N_estimators': [[-inf, 90]], 'Max_depth': [[-inf, 9]], 'Min_impurity_decrease': [[4.75, inf]], 'Min_sample_leaves': [[9, inf]]}
 HPs
 ------------------
-bins :  6.8
-better :  zitler
-Far :  0.85
+bins :  4
+better :  bdom
+Far :  0.93
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  100
+dist :  3.0
+rest :  2.0
 ------------------
 ------------------
-xpln on 8 evals {'MRE-': 73.77, 'ACC+': 7.56, 'PRED40+': 25.0, 'N': 3363}
-Best Xpln HPs
+xpln1 on 8 evals {'MRE-': 73.42, 'ACC+': 7.77, 'PRED40+': 25.0, 'N': 166} {'MRE-': 2.78, 'ACC+': 0.82, 'PRED40+': 9.69, 'N': 166}
+------------------
+Stats
+------------------
+all                {'MRE-': 75.16, 'ACC+': 7.15, 'PRED40+': 25.0, 'N': 10000} {'MRE-': 10.82, 'ACC+': 3.21, 'PRED40+': 14.53, 'N': 10000}
+sway1 with 8 evals {'MRE-': 73.58, 'ACC+': 7.59, 'PRED40+': 25.0, 'N': 78} {'MRE-': 1.36, 'ACC+': 0.52, 'PRED40+': 9.69, 'N': 78}
+xpln1 on 8 evals {'MRE-': 73.81, 'ACC+': 7.55, 'PRED40+': 25.0, 'N': 3363} {'MRE-': 2.28, 'ACC+': 0.84, 'PRED40+': 9.69, 'N': 3363}
+top with 10000 evals {'MRE-': 74.66, 'ACC+': 7.39, 'PRED40+': 25.0, 'N': 78} {'MRE-': 11.54, 'ACC+': 3.48, 'PRED40+': 14.53, 'N': 78}
+sway2 with 8 evals {'MRE-': 73.56, 'ACC+': 8.57, 'PRED40+': 25.0, 'N': 78} {'MRE-': 2.57, 'ACC+': 3.33, 'PRED40+': 9.69, 'N': 78}
+xpln2 on 8 evals {'MRE-': 73.42, 'ACC+': 7.77, 'PRED40+': 25.0, 'N': 166} {'MRE-': 2.78, 'ACC+': 0.82, 'PRED40+': 9.69, 'N': 166}
+------------------
+Using Cliffs Delta
+------------------
+All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
+All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
+All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
+Sway1 to Sway2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
+Sway1 to Xpln1   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
+Sway2 to Xpln2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
+Sway1 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
+Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
+------------------
+Using Bootstrap
+------------------
+All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
+All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
+All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
+Sway1 to Sway2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
+Sway1 to Xpln1   {'MRE-': True, 'ACC+': True, 'PRED40+': False}
+Sway2 to Xpln2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
+Sway1 to Top   {'MRE-': False, 'ACC+': True, 'PRED40+': True}
+Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

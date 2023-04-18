@@ -11,19 +11,17 @@ no_cabac 1 1
 no_scenecut 0 0
 no_scenecut 1 1
 
-Aq_strength -inf 1
-Aq_strength 1 3
-Aq_strength 3 inf
+Aq_strength -inf 1.1
+Aq_strength 1.1 3
+Aq_strength 3 7
+Aq_strength 7 9
+Aq_strength 9 inf
 
 Bframes -inf 2
 Bframes 2 4
 Bframes 4 7
-Bframes 7 10
-Bframes 10 13
-Bframes 13 15
-Bframes 15 19
-Bframes 19 22
-Bframes 22 inf
+Bframes 7 9
+Bframes 9 inf
 
 Qcomp -inf 0.6
 Qcomp 0.6 2
@@ -32,139 +30,174 @@ Qcomp 2 inf
 Qp -inf 3
 Qp 3 8
 Qp 8 14
-Qp 14 22
-Qp 22 28
-Qp 28 inf
+Qp 14 21
+Qp 21 27
+Qp 27 34
+Qp 34 46
+Qp 46 inf
 
 Ref -inf 1
 Ref 1 2
 Ref 2 3
 Ref 3 4
-Ref 4 7
-Ref 7 8
+Ref 4 5
+Ref 5 6
+Ref 6 8
 Ref 8 9
 Ref 9 inf
 
-Rc_lookahead -inf 14
-Rc_lookahead 14 43
-Rc_lookahead 43 71
-Rc_lookahead 71 99
-Rc_lookahead 99 inf
+Rc_lookahead -inf 2
+Rc_lookahead 2 43
+Rc_lookahead 43 77
+Rc_lookahead 77 101
+Rc_lookahead 101 140
+Rc_lookahead 140 170
+Rc_lookahead 170 199
+Rc_lookahead 199 222
+Rc_lookahead 222 inf
 
-B_bias -inf -41
-B_bias -41 -22
-B_bias -22 12
-B_bias 12 34
-B_bias 34 62
-B_bias 62 85
-B_bias 85 inf
+B_bias -inf -65
+B_bias -65 -41
+B_bias -41 -13
+B_bias -13 10
+B_bias 10 37
+B_bias 37 62
+B_bias 62 82
+B_bias 82 inf
 
-Threads -inf 6
-Threads 6 23
-Threads 23 35
-Threads 35 46
-Threads 46 86
-Threads 86 101
-Threads 101 114
-Threads 114 inf
+Threads -inf 52
+Threads 52 71
+Threads 71 87
+Threads 87 97
+Threads 97 119
+Threads 119 inf
 
-Keyint -inf 42
-Keyint 42 167
-Keyint 167 306
-Keyint 306 431
-Keyint 431 556
-Keyint 556 667
-Keyint 667 798
-Keyint 798 926
-Keyint 926 inf
+Keyint -inf 168
+Keyint 168 304
+Keyint 304 434
+Keyint 434 559
+Keyint 559 682
+Keyint 682 773
+Keyint 773 909
+Keyint 909 inf
 
 Crf -inf 167
 Crf 167 inf
 
-Scenecut -inf 28
-Scenecut 28 41
-Scenecut 41 55
+Scenecut -inf 18
+Scenecut 18 28
+Scenecut 28 43
+Scenecut 43 55
 Scenecut 55 67
 Scenecut 67 80
-Scenecut 80 92
-Scenecut 92 inf
+Scenecut 80 90
+Scenecut 90 inf
 
-Seek -inf 71
-Seek 71 234
-Seek 234 369
-Seek 369 512
-Seek 512 627
+Seek -inf 1
+Seek 1 209
+Seek 209 364
+Seek 364 537
+Seek 537 627
 Seek 627 836
-Seek 836 inf
+Seek 836 1017
+Seek 1017 1105
+Seek 1105 inf
 
 Ipratio -inf 1.1
 Ipratio 1.1 3
 Ipratio 3 inf
-{'no_cabac': [1]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 12]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 12]], 'Keyint': [[167, 306]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 12]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 3]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 22]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 28]], 'Qcomp': [[-inf, 0.6]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 43]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 71]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[41, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 71]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[28, 55]], 'Ipratio': [[1.1, 3]], 'Qp': [[14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 71]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[28, 55]], 'Ipratio': [[-inf, 3]], 'Qp': [[14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 71]], 'Aq_strength': [[-inf, 1]], 'Scenecut': [[28, 55]], 'Ipratio': [[-inf, 3]], 'Qp': [[-inf, 3], [14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[14, 71]], 'Aq_strength': [[-inf, 3]], 'Scenecut': [[28, 55]], 'Ipratio': [[-inf, 3]], 'Qp': [[-inf, 3], [14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
-{'no_cabac': [1], 'Threads': [[-inf, 6]], 'Bframes': [[2, 4]], 'Seek': [[-inf, 71]], 'no_mbtree': [0], 'no_scenecut': [0], 'no_asm': [0], 'Crf': [[-inf, 167]], 'Ref': [[2, 4]], 'Rc_lookahead': [[-inf, 71]], 'Aq_strength': [[-inf, 3]], 'Scenecut': [[28, 55]], 'Ipratio': [[-inf, 3]], 'Qp': [[-inf, 3], [14, 28]], 'Qcomp': [[-inf, 2]], 'B_bias': [[-22, 34]], 'Keyint': [[167, 431]]}
+{'no_scenecut': [1]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]], 'Aq_strength': [[-inf, 1.1]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[0.6, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 1.1]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101]], 'Keyint': [[304, 434]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[10, 37]], 'Qp': [[14, 21], [27, 34]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
+{'no_scenecut': [1], 'Bframes': [[7, 9]], 'Threads': [[71, 87]], 'Scenecut': [[55, 67]], 'no_asm': [0], 'no_mbtree': [0], 'no_cabac': [0], 'Crf': [[-inf, 167]], 'Seek': [[627, 836]], 'B_bias': [[-41, -13], [10, 37]], 'Qp': [[14, 21], [27, 34]], 'Rc_lookahead': [[77, 101], [140, 170]], 'Keyint': [[304, 434], [559, 682]], 'Ref': [[2, 3], [5, 6]], 'Ipratio': [[-inf, 3]], 'Qcomp': [[-inf, 2]], 'Aq_strength': [[-inf, 3]]}
 
 -----------
-explain= {'no_cabac': [1]}
-all                {'PSNR-': 46.05, 'Energy-': 1210.41, 'N': 53662} {'PSNR-': 5.38, 'Energy-': 1153.63, 'N': 53662}
-sway1 with 9 evals {'PSNR-': 45.37, 'Energy-': 1929.94, 'N': 209} {'PSNR-': 4.12, 'Energy-': 544.62, 'N': 209}
-xpln1 on 9 evals {'PSNR-': 44.31, 'Energy-': 1142.15, 'N': 12556} {'PSNR-': 5.5, 'Energy-': 687.22, 'N': 12556}
+explain= {'no_scenecut': [1]}
+all                {'PSNR-': 45.94, 'Energy-': 1182.9, 'N': 53662} {'PSNR-': 5.48, 'Energy-': 1288.15, 'N': 53662}
+sway1 with 9 evals {'PSNR-': 45.86, 'Energy-': 555.13, 'N': 209} {'PSNR-': 5.04, 'Energy-': 369.24, 'N': 209}
+xpln1 on 9 evals {'PSNR-': 45.91, 'Energy-': 1243.36, 'N': 12556} {'PSNR-': 5.48, 'Energy-': 716.18, 'N': 12556}
 top with 53662 evals {'PSNR-': 26.75, 'Energy-': 467.1, 'N': 209} {'PSNR-': 2.72, 'Energy-': 209.56, 'N': 209}
 ------------------
 ------------------
 HPs
 ------------------
-bins :  6.8
+bins :  6
 better :  zitler
-Far :  0.85
+Far :  0.97
 min_size :  0.5
-Max :  1200
-dist :  2.375
-rest :  5.55
+Max :  1600
+dist :  1.5
+rest :  2.0
 ------------------
 ------------------
 
-sway on 9 evals {'PSNR-': 49.79, 'Energy-': 573.04, 'N': 209}
+sway with 9 evals {'PSNR-': 41.4, 'Energy-': 571.06, 'N': 209} {'PSNR-': 5.35, 'Energy-': 485.85, 'N': 209}
 ------------------
-explain= {'no_cabac': [1]}
+explain= {'Seek': [[615, inf]], 'Qp': [[25, inf]], 'Threads': [[63, inf]], 'no_mbtree': [0], 'no_cabac': [0], 'no_asm': [0], 'no_scenecut': [0]}
 HPs
 ------------------
-bins :  9
-better :  zitler
-Far :  0.95
+bins :  2
+better :  bdom
+Far :  0.93
 min_size :  0.5
-Max :  512
-dist :  2
-rest :  4
+Max :  2100
+dist :  3.5
+rest :  4.0
 ------------------
 ------------------
-xpln on 9 evals {'PSNR-': 44.31, 'Energy-': 1142.15, 'N': 12556}
-Best Xpln HPs
+xpln1 on 9 evals {'PSNR-': 42.43, 'Energy-': 529.75, 'N': 1203} {'PSNR-': 4.92, 'Energy-': 124.7, 'N': 1203}
+------------------
+Stats
+------------------
+all                {'PSNR-': 45.94, 'Energy-': 1182.9, 'N': 53662} {'PSNR-': 5.48, 'Energy-': 1288.15, 'N': 53662}
+sway1 with 9 evals {'PSNR-': 45.93, 'Energy-': 1410.46, 'N': 209} {'PSNR-': 5.64, 'Energy-': 588.08, 'N': 209}
+xpln1 on 9 evals {'PSNR-': 45.91, 'Energy-': 1064.53, 'N': 2063} {'PSNR-': 5.34, 'Energy-': 517.18, 'N': 2063}
+top with 53662 evals {'PSNR-': 40.15, 'Energy-': 777.22, 'N': 209} {'PSNR-': 3.36, 'Energy-': 534.0, 'N': 209}
+sway2 with 9 evals {'PSNR-': 41.4, 'Energy-': 571.06, 'N': 209} {'PSNR-': 5.35, 'Energy-': 485.85, 'N': 209}
+xpln2 on 9 evals {'PSNR-': 42.43, 'Energy-': 529.75, 'N': 1203} {'PSNR-': 4.92, 'Energy-': 124.7, 'N': 1203}
+------------------
+Using Cliffs Delta
+------------------
+All to All   {'PSNR-': True, 'Energy-': True}
+All to Sway1   {'PSNR-': True, 'Energy-': True}
+All to Sway2   {'PSNR-': True, 'Energy-': False}
+Sway1 to Sway2   {'PSNR-': True, 'Energy-': False}
+Sway1 to Xpln1   {'PSNR-': True, 'Energy-': False}
+Sway2 to Xpln2   {'PSNR-': False, 'Energy-': False}
+Sway1 to Top   {'PSNR-': False, 'Energy-': False}
+Sway2 to Top   {'PSNR-': False, 'Energy-': True}
+------------------
+Using Bootstrap
+------------------
+All to All   {'PSNR-': True, 'Energy-': True}
+All to Sway1   {'PSNR-': True, 'Energy-': False}
+All to Sway2   {'PSNR-': True, 'Energy-': False}
+Sway1 to Sway2   {'PSNR-': True, 'Energy-': False}
+Sway1 to Xpln1   {'PSNR-': True, 'Energy-': False}
+Sway2 to Xpln2   {'PSNR-': False, 'Energy-': False}
+Sway1 to Top   {'PSNR-': False, 'Energy-': False}
+Sway2 to Top   {'PSNR-': False, 'Energy-': False}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
