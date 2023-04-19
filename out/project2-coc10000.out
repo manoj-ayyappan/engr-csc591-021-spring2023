@@ -256,27 +256,16 @@ top with 10000 evals {'Loc+': 1143.0, 'Risk-': 6.0, 'Effort-': 20782.0, 'N': 78}
 sway2 with 8 evals {'Loc+': 1253.0, 'Risk-': 2.0, 'Effort-': 21599.0, 'N': 78} {'Loc+': 613.95, 'Risk-': 3.49, 'Effort-': 28344.57, 'N': 78}
 xpln2 on 8 evals {'Loc+': 1196.0, 'Risk-': 3.0, 'Effort-': 10903.0, 'N': 1243} {'Loc+': 617.44, 'Risk-': 4.26, 'Effort-': 16612.4, 'N': 1243}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'Loc+': True, 'Risk-': True, 'Effort-': True}
-All to Sway1   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-All to Sway2   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-Sway1 to Sway2   {'Loc+': True, 'Risk-': True, 'Effort-': True}
-Sway1 to Xpln1   {'Loc+': False, 'Risk-': False, 'Effort-': False}
-Sway2 to Xpln2   {'Loc+': True, 'Risk-': True, 'Effort-': False}
-Sway1 to Top   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-Sway2 to Top   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-------------------
-Using Bootstrap
-------------------
-All to All   {'Loc+': True, 'Risk-': True, 'Effort-': True}
-All to Sway1   {'Loc+': False, 'Risk-': False, 'Effort-': True}
-All to Sway2   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-Sway1 to Sway2   {'Loc+': True, 'Risk-': True, 'Effort-': True}
-Sway1 to Xpln1   {'Loc+': False, 'Risk-': False, 'Effort-': True}
-Sway2 to Xpln2   {'Loc+': True, 'Risk-': True, 'Effort-': False}
-Sway1 to Top   {'Loc+': True, 'Risk-': False, 'Effort-': True}
-Sway2 to Top   {'Loc+': True, 'Risk-': False, 'Effort-': True}
+All to All   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' = '}
+All to Sway1   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
+All to Sway2   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
+Sway1 to Sway2   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' = '}
+Sway1 to Xpln1   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
+Sway2 to Xpln2   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' ! '}
+Sway1 to Top   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
+Sway2 to Top   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

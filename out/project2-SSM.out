@@ -118,27 +118,16 @@ top with 239360 evals {'NUMBERITERATIONS-': 4.0, 'TIMETOSOLUTION-': 88.45, 'N': 
 sway2 with 10 evals {'NUMBERITERATIONS-': 4.0, 'TIMETOSOLUTION-': 87.4, 'N': 467} {'NUMBERITERATIONS-': 0.39, 'TIMETOSOLUTION-': 17.28, 'N': 467}
 xpln2 on 10 evals {'NUMBERITERATIONS-': 5.0, 'TIMETOSOLUTION-': 87.66, 'N': 3366} {'NUMBERITERATIONS-': 4.26, 'TIMETOSOLUTION-': 35.34, 'N': 3366}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'NUMBERITERATIONS-': True, 'TIMETOSOLUTION-': True}
-All to Sway1   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-All to Sway2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Sway2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Xpln1   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway2 to Xpln2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Top   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway2 to Top   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': True}
-------------------
-Using Bootstrap
-------------------
-All to All   {'NUMBERITERATIONS-': True, 'TIMETOSOLUTION-': True}
-All to Sway1   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-All to Sway2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Sway2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Xpln1   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway2 to Xpln2   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway1 to Top   {'NUMBERITERATIONS-': False, 'TIMETOSOLUTION-': False}
-Sway2 to Top   {'NUMBERITERATIONS-': True, 'TIMETOSOLUTION-': True}
+All to All   {'NUMBERITERATIONS-': ' = ', 'TIMETOSOLUTION-': ' = '}
+All to Sway1   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+All to Sway2   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+Sway1 to Sway2   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+Sway1 to Xpln1   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+Sway2 to Xpln2   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+Sway1 to Top   {'NUMBERITERATIONS-': ' ! ', 'TIMETOSOLUTION-': ' ! '}
+Sway2 to Top   {'NUMBERITERATIONS-': ' = ', 'TIMETOSOLUTION-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

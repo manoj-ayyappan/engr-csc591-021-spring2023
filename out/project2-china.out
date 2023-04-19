@@ -107,27 +107,16 @@ top with 499 evals {'N_effort-': 155.0, 'N': 15} {'N_effort-': 35.27, 'N': 15}
 sway2 with 6 evals {'N_effort-': 198.0, 'N': 15} {'N_effort-': 1081.4, 'N': 15}
 xpln2 on 6 evals {'N_effort-': 225.0, 'N': 24} {'N_effort-': 152.33, 'N': 24}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'N_effort-': True}
-All to Sway1   {'N_effort-': False}
-All to Sway2   {'N_effort-': False}
-Sway1 to Sway2   {'N_effort-': True}
-Sway1 to Xpln1   {'N_effort-': False}
-Sway2 to Xpln2   {'N_effort-': False}
-Sway1 to Top   {'N_effort-': False}
-Sway2 to Top   {'N_effort-': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'N_effort-': True}
-All to Sway1   {'N_effort-': False}
-All to Sway2   {'N_effort-': False}
-Sway1 to Sway2   {'N_effort-': True}
-Sway1 to Xpln1   {'N_effort-': False}
-Sway2 to Xpln2   {'N_effort-': True}
-Sway1 to Top   {'N_effort-': True}
-Sway2 to Top   {'N_effort-': True}
+All to All   {'N_effort-': ' = '}
+All to Sway1   {'N_effort-': ' ! '}
+All to Sway2   {'N_effort-': ' ! '}
+Sway1 to Sway2   {'N_effort-': ' = '}
+Sway1 to Xpln1   {'N_effort-': ' ! '}
+Sway2 to Xpln2   {'N_effort-': ' = '}
+Sway1 to Top   {'N_effort-': ' = '}
+Sway2 to Top   {'N_effort-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

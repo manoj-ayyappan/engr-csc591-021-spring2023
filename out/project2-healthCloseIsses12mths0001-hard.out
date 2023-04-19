@@ -93,27 +93,16 @@ top with 10000 evals {'MRE-': 74.66, 'ACC+': 7.39, 'PRED40+': 25.0, 'N': 78} {'M
 sway2 with 8 evals {'MRE-': 73.56, 'ACC+': 8.57, 'PRED40+': 25.0, 'N': 78} {'MRE-': 2.57, 'ACC+': 3.33, 'PRED40+': 9.69, 'N': 78}
 xpln2 on 8 evals {'MRE-': 73.42, 'ACC+': 7.77, 'PRED40+': 25.0, 'N': 166} {'MRE-': 2.78, 'ACC+': 0.82, 'PRED40+': 9.69, 'N': 166}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
-All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway1 to Sway2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
-Sway1 to Xpln1   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-Sway2 to Xpln2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
-Sway1 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
-Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
-All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
-Sway1 to Sway2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
-Sway1 to Xpln1   {'MRE-': True, 'ACC+': True, 'PRED40+': False}
-Sway2 to Xpln2   {'MRE-': True, 'ACC+': False, 'PRED40+': True}
-Sway1 to Top   {'MRE-': False, 'ACC+': True, 'PRED40+': True}
-Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
+All to All   {'MRE-': ' = ', 'ACC+': ' = ', 'PRED40+': ' = '}
+All to Sway1   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' = '}
+All to Sway2   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' = '}
+Sway1 to Sway2   {'MRE-': ' = ', 'ACC+': ' ! ', 'PRED40+': ' = '}
+Sway1 to Xpln1   {'MRE-': ' = ', 'ACC+': ' = ', 'PRED40+': ' = '}
+Sway2 to Xpln2   {'MRE-': ' = ', 'ACC+': ' ! ', 'PRED40+': ' = '}
+Sway1 to Top   {'MRE-': ' ! ', 'ACC+': ' = ', 'PRED40+': ' = '}
+Sway2 to Top   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

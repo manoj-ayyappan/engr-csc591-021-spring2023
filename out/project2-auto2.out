@@ -186,27 +186,16 @@ top with 93 evals {'CityMPG+': 31.0, 'HighwayMPG+': 36.0, 'Weight-': 2705.0, 'Cl
 sway2 with 5 evals {'CityMPG+': 42.0, 'HighwayMPG+': 46.0, 'Weight-': 2345.0, 'Class-': 9.8, 'N': 5} {'CityMPG+': 5.43, 'HighwayMPG+': 5.04, 'Weight-': 149.22, 'Class-': 1.43, 'N': 5}
 xpln2 on 5 evals {'CityMPG+': 46.0, 'HighwayMPG+': 50.0, 'Weight-': 1965.0, 'Class-': 8.6, 'N': 3} {'CityMPG+': 5.81, 'HighwayMPG+': 6.59, 'Weight-': 104.65, 'Class-': 0.47, 'N': 3}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-All to Sway1   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-All to Sway2   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-Sway1 to Sway2   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-Sway1 to Xpln1   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': True, 'Class-': True}
-Sway2 to Xpln2   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': False, 'Class-': False}
-Sway1 to Top   {'CityMPG+': True, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-Sway2 to Top   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-All to Sway1   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-All to Sway2   {'CityMPG+': False, 'HighwayMPG+': False, 'Weight-': False, 'Class-': False}
-Sway1 to Sway2   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-Sway1 to Xpln1   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-Sway2 to Xpln2   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-Sway1 to Top   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
-Sway2 to Top   {'CityMPG+': True, 'HighwayMPG+': True, 'Weight-': True, 'Class-': True}
+All to All   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+All to Sway1   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+All to Sway2   {'CityMPG+': ' ! ', 'HighwayMPG+': ' ! ', 'Weight-': ' ! ', 'Class-': ' ! '}
+Sway1 to Sway2   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+Sway1 to Xpln1   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+Sway2 to Xpln2   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+Sway1 to Top   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+Sway2 to Top   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

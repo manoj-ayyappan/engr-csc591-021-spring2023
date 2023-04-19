@@ -177,27 +177,16 @@ top with 53662 evals {'PSNR-': 40.15, 'Energy-': 777.22, 'N': 209} {'PSNR-': 3.3
 sway2 with 9 evals {'PSNR-': 41.4, 'Energy-': 571.06, 'N': 209} {'PSNR-': 5.35, 'Energy-': 485.85, 'N': 209}
 xpln2 on 9 evals {'PSNR-': 42.43, 'Energy-': 529.75, 'N': 1203} {'PSNR-': 4.92, 'Energy-': 124.7, 'N': 1203}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'PSNR-': True, 'Energy-': True}
-All to Sway1   {'PSNR-': True, 'Energy-': True}
-All to Sway2   {'PSNR-': True, 'Energy-': False}
-Sway1 to Sway2   {'PSNR-': True, 'Energy-': False}
-Sway1 to Xpln1   {'PSNR-': True, 'Energy-': False}
-Sway2 to Xpln2   {'PSNR-': False, 'Energy-': False}
-Sway1 to Top   {'PSNR-': False, 'Energy-': False}
-Sway2 to Top   {'PSNR-': False, 'Energy-': True}
-------------------
-Using Bootstrap
-------------------
-All to All   {'PSNR-': True, 'Energy-': True}
-All to Sway1   {'PSNR-': True, 'Energy-': False}
-All to Sway2   {'PSNR-': True, 'Energy-': False}
-Sway1 to Sway2   {'PSNR-': True, 'Energy-': False}
-Sway1 to Xpln1   {'PSNR-': True, 'Energy-': False}
-Sway2 to Xpln2   {'PSNR-': False, 'Energy-': False}
-Sway1 to Top   {'PSNR-': False, 'Energy-': False}
-Sway2 to Top   {'PSNR-': False, 'Energy-': False}
+All to All   {'PSNR-': ' = ', 'Energy-': ' = '}
+All to Sway1   {'PSNR-': ' = ', 'Energy-': ' = '}
+All to Sway2   {'PSNR-': ' = ', 'Energy-': ' ! '}
+Sway1 to Sway2   {'PSNR-': ' = ', 'Energy-': ' ! '}
+Sway1 to Xpln1   {'PSNR-': ' = ', 'Energy-': ' ! '}
+Sway2 to Xpln2   {'PSNR-': ' ! ', 'Energy-': ' ! '}
+Sway1 to Top   {'PSNR-': ' ! ', 'Energy-': ' ! '}
+Sway2 to Top   {'PSNR-': ' ! ', 'Energy-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

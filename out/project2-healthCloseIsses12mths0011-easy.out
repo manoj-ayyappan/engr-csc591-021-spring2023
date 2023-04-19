@@ -91,27 +91,16 @@ top with 10000 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 78} {'MRE
 sway2 with 8 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 3302} {'MRE-': 39.34, 'ACC+': 0.57, 'PRED40+': 32.3, 'N': 3302}
 xpln2 on 8 evals {'MRE-': 0.0, 'ACC+': 0.0, 'PRED40+': 83.33, 'N': 3302} {'MRE-': 39.34, 'ACC+': 0.57, 'PRED40+': 32.3, 'N': 3302}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': True}
-All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway1 to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway1 to Xpln1   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway2 to Xpln2   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-Sway1 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-All to Sway1   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-All to Sway2   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway1 to Sway2   {'MRE-': False, 'ACC+': True, 'PRED40+': False}
-Sway1 to Xpln1   {'MRE-': False, 'ACC+': True, 'PRED40+': False}
-Sway2 to Xpln2   {'MRE-': True, 'ACC+': True, 'PRED40+': True}
-Sway1 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
-Sway2 to Top   {'MRE-': False, 'ACC+': False, 'PRED40+': False}
+All to All   {'MRE-': ' = ', 'ACC+': ' = ', 'PRED40+': ' = '}
+All to Sway1   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' ! '}
+All to Sway2   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' ! '}
+Sway1 to Sway2   {'MRE-': ' ! ', 'ACC+': ' = ', 'PRED40+': ' ! '}
+Sway1 to Xpln1   {'MRE-': ' ! ', 'ACC+': ' = ', 'PRED40+': ' ! '}
+Sway2 to Xpln2   {'MRE-': ' = ', 'ACC+': ' = ', 'PRED40+': ' = '}
+Sway1 to Top   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' ! '}
+Sway2 to Top   {'MRE-': ' ! ', 'ACC+': ' ! ', 'PRED40+': ' ! '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

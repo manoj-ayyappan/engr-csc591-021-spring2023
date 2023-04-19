@@ -73,27 +73,16 @@ top with 398 evals {'Lbs-': 1955.0, 'Acc+': 20.5, 'Mpg+': 30.0, 'N': 12} {'Lbs-'
 sway2 with 6 evals {'Lbs-': 2320.0, 'Acc+': 19.9, 'Mpg+': 40.0, 'N': 12} {'Lbs-': 544.57, 'Acc+': 3.68, 'Mpg+': 3.88, 'N': 12}
 xpln2 on 6 evals {'Lbs-': 1985.0, 'Acc+': 17.3, 'Mpg+': 40.0, 'N': 11} {'Lbs-': 118.22, 'Acc+': 1.43, 'Mpg+': 3.88, 'N': 11}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-All to Sway1   {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-All to Sway2   {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-Sway1 to Sway2   {'Lbs-': True, 'Acc+': False, 'Mpg+': False}
-Sway1 to Xpln1   {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-Sway2 to Xpln2   {'Lbs-': False, 'Acc+': False, 'Mpg+': True}
-Sway1 to Top   {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-Sway2 to Top   {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-All to Sway1   {'Lbs-': False, 'Acc+': True, 'Mpg+': True}
-All to Sway2   {'Lbs-': False, 'Acc+': False, 'Mpg+': False}
-Sway1 to Sway2   {'Lbs-': True, 'Acc+': True, 'Mpg+': False}
-Sway1 to Xpln1   {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
-Sway2 to Xpln2   {'Lbs-': False, 'Acc+': True, 'Mpg+': True}
-Sway1 to Top   {'Lbs-': False, 'Acc+': False, 'Mpg+': True}
-Sway2 to Top   {'Lbs-': True, 'Acc+': True, 'Mpg+': False}
+All to All   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' = '}
+All to Sway1   {'Lbs-': ' ! ', 'Acc+': ' = ', 'Mpg+': ' = '}
+All to Sway2   {'Lbs-': ' ! ', 'Acc+': ' ! ', 'Mpg+': ' ! '}
+Sway1 to Sway2   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' ! '}
+Sway1 to Xpln1   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' = '}
+Sway2 to Xpln2   {'Lbs-': ' ! ', 'Acc+': ' = ', 'Mpg+': ' = '}
+Sway1 to Top   {'Lbs-': ' ! ', 'Acc+': ' ! ', 'Mpg+': ' = '}
+Sway2 to Top   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' ! '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

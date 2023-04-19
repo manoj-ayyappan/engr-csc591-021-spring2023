@@ -147,27 +147,16 @@ top with 93 evals {'Kloc+': 24.6, 'Effort-': 117.6, 'Defects-': 767.0, 'Months-'
 sway2 with 5 evals {'Kloc+': 8.2, 'Effort-': 31.2, 'Defects-': 256.0, 'Months-': 10.4, 'N': 6} {'Kloc+': 12.4, 'Effort-': 70.23, 'Defects-': 641.09, 'Months-': 4.46, 'N': 6}
 xpln2 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 15} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 15}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-All to Sway1   {'Kloc+': False, 'Effort-': True, 'Defects-': True, 'Months-': True}
-All to Sway2   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-Sway1 to Sway2   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-Sway1 to Xpln1   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-Sway2 to Xpln2   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-Sway1 to Top   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-Sway2 to Top   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-------------------
-Using Bootstrap
-------------------
-All to All   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-All to Sway1   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-All to Sway2   {'Kloc+': False, 'Effort-': False, 'Defects-': False, 'Months-': False}
-Sway1 to Sway2   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': False}
-Sway1 to Xpln1   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-Sway2 to Xpln2   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
-Sway1 to Top   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': False}
-Sway2 to Top   {'Kloc+': True, 'Effort-': True, 'Defects-': True, 'Months-': True}
+All to All   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+All to Sway1   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+All to Sway2   {'Kloc+': ' ! ', 'Effort-': ' ! ', 'Defects-': ' ! ', 'Months-': ' ! '}
+Sway1 to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' ! '}
+Sway1 to Xpln1   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+Sway2 to Xpln2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+Sway1 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' ! '}
+Sway2 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

@@ -203,27 +203,16 @@ top with 1000 evals {'LOC+': 1030.0, 'AEXP-': 3.0, 'PLEX-': 3.0, 'RISK-': 5.0, '
 sway2 with 6 evals {'LOC+': 1156.0, 'AEXP-': 3.0, 'PLEX-': 3.0, 'RISK-': 5.0, 'EFFORT-': 20508.0, 'N': 249} {'LOC+': 605.81, 'AEXP-': 1.16, 'PLEX-': 1.55, 'RISK-': 5.43, 'EFFORT-': 24423.26, 'N': 249}
 xpln2 on 6 evals {'LOC+': 965.0, 'AEXP-': 2.0, 'PLEX-': 3.0, 'RISK-': 2.0, 'EFFORT-': 6608.0, 'N': 18} {'LOC+': 648.06, 'AEXP-': 1.16, 'PLEX-': 1.16, 'RISK-': 3.1, 'EFFORT-': 22515.5, 'N': 18}
 ------------------
-Using Cliffs Delta
+Equals
 ------------------
-All to All   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-All to Sway1   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': False}
-All to Sway2   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-Sway1 to Sway2   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': False}
-Sway1 to Xpln1   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': True}
-Sway2 to Xpln2   {'LOC+': False, 'AEXP-': False, 'PLEX-': True, 'RISK-': False, 'EFFORT-': False}
-Sway1 to Top   {'LOC+': True, 'AEXP-': False, 'PLEX-': True, 'RISK-': False, 'EFFORT-': False}
-Sway2 to Top   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-------------------
-Using Bootstrap
-------------------
-All to All   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-All to Sway1   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': True}
-All to Sway2   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': True}
-Sway1 to Sway2   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': False, 'EFFORT-': True}
-Sway1 to Xpln1   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-Sway2 to Xpln2   {'LOC+': True, 'AEXP-': False, 'PLEX-': True, 'RISK-': False, 'EFFORT-': True}
-Sway1 to Top   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
-Sway2 to Top   {'LOC+': True, 'AEXP-': True, 'PLEX-': True, 'RISK-': True, 'EFFORT-': True}
+All to All   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' = ', 'EFFORT-': ' = '}
+All to Sway1   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' ! ', 'EFFORT-': ' = '}
+All to Sway2   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' = ', 'EFFORT-': ' = '}
+Sway1 to Sway2   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' ! ', 'EFFORT-': ' = '}
+Sway1 to Xpln1   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' = ', 'EFFORT-': ' = '}
+Sway2 to Xpln2   {'LOC+': ' = ', 'AEXP-': ' ! ', 'PLEX-': ' = ', 'RISK-': ' ! ', 'EFFORT-': ' = '}
+Sway1 to Top   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' = ', 'EFFORT-': ' = '}
+Sway2 to Top   {'LOC+': ' = ', 'AEXP-': ' = ', 'PLEX-': ' = ', 'RISK-': ' = ', 'EFFORT-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
