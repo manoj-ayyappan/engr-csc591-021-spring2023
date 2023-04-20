@@ -1,3 +1,4 @@
+from pickle import NONE
 import strings
 import numerics
 import misc
@@ -523,6 +524,15 @@ def eg_function_26():
     bestStuff = {}
     swayCache = {}
 
+    results = {
+        "All": [],
+        "sway": [],
+        "xpln":[],
+        "sway2": [],
+        "xpln2":[],
+        "top":[]
+        }
+
     bestXpln = ""
     bestXplnHPs = []
     bestXplnEvals = -1
@@ -583,7 +593,7 @@ def eg_function_26():
 
 
 
-
+    """
     for hps in list:
         #Modify global vars based on hyperparameters
         d.the.update(dict(zip(parameter_names, hps)))
@@ -675,6 +685,7 @@ def eg_function_26():
     print(f"xpln1 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
     
     runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals)
+    """
 
 def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals):
     print("------------------")
@@ -736,13 +747,8 @@ def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEv
         list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
         ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
     print("Sway2 to Top  ", ret)
-
+  
     
-    
-
-
-
-
 
 
 def add_all_examples():
