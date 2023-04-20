@@ -19,7 +19,7 @@ import functools
 class Data(object):
     # Initialization
     # A container of `i.rows`, to be summarized in `i.cols`
-    def __init__(self, src={}, datai=None, data2=None):
+    def __init__(self, src={}, datai=None, data2=None, col_names=None):
         self.rows, self.cols = {}, None
         if str(type(src)) == "<class 'str'>":
             # load from a csv file on disk
@@ -34,6 +34,10 @@ class Data(object):
                 for i in range(len(src)):
                     tmp.append(src[i])
                 self.cols=Cols.Cols(data2.cols.names)
+            if(col_names):
+                for i in range(len(src)):
+                    tmp.append(src[i])
+                self.cols=Cols.Cols(col_names)
             if len(tmp) > 0:
                 lists.map(tmp, self.add)
             else:

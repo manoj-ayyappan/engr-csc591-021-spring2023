@@ -375,6 +375,8 @@ def compare_dicts(dict1, dict2, data):
 
 
 
+
+
 def eg_function_26():
 
     list = [
@@ -516,6 +518,10 @@ def eg_function_26():
     ]
 
     parameter_names = ["bins", "better", "Far", "min", "Max", "p", "rest"]
+    formatted_parameter_names = ["Bins", "better", "Far", "Min", "Max", "P", "Rest"] 
+
+    bestStuff = {}
+    swayCache = {}
 
     bestXpln = ""
     bestXplnHPs = []
@@ -533,6 +539,51 @@ def eg_function_26():
     bestdataTop = None
     dataEvals = 0
     
+    globals_orig = d.the.copy()
+
+    data=Data.Data(d.the["file"]) 
+    hp_data = Data.Data(list, col_names=formatted_parameter_names)
+
+
+    def custom_better(row1, row2):
+        best1, rest1, eval1, best2, rest2, eval2 = None, None, None, None, None, None
+
+        cachename1 = tuple(row1.cells)
+        cachename2 = tuple(row2.cells)
+
+        if cachename1 in swayCache:
+            best1,rest1, eval1 = swayCache[cachename1]
+        else:
+            #Modify global vars based on hyperparameters
+            d.the.update(dict(zip(parameter_names, row1.cells)))
+            best1,rest1, eval1 = data.sway()
+            swayCache[cachename1] = (best1,rest1, eval1)
+        
+        if cachename2 in swayCache:
+            best2,rest2, eval2 = swayCache[cachename2]
+        else:
+            #Modify global vars based on hyperparameters
+            d.the.update(dict(zip(parameter_names, row2.cells)))
+            best2, rest2, eval2 = data.sway()
+            swayCache[cachename2] = (best2,rest2, eval2)
+
+        better_hyperparams = compare_dicts(query.stats(best1), query.stats(best2), data)
+
+        bestStuff["bestdataSway"] = best1 if better_hyperparams else best2
+        bestStuff["restdataSway"] = rest1 if better_hyperparams else rest2
+        bestStuff["evaldataSway"] = eval1 if better_hyperparams else eval2
+
+        #Reset global vars based on hyperparameters
+        d.the.update(globals_orig)
+        return better_hyperparams
+
+    hp_data.better = custom_better
+    best, rest, evals = hp_data.sway()
+
+
+
+
+
     for hps in list:
         #Modify global vars based on hyperparameters
         d.the.update(dict(zip(parameter_names, hps)))
@@ -593,8 +644,9 @@ def eg_function_26():
                     bestXplnEvals = evals
             
             
-        except:
+        except Exception as e:
             print("Error -> ", hps)
+            print(e)
 
     hpList = ['bins', 'better','Far', 'min_size', 'Max', 'dist', 'rest']
         

@@ -14,7 +14,7 @@ OPTIONS:
   -e  --better       better                  = zitler
   -f  --file    data file                    = data/auto93.csv
   -F  --Far     distance to distant          = .95
-  -m  --min     size of smallest cluster     = .5
+  -m  --min     size of smallest cluster     = .3
   -M  --Max     numbers                      = 512
   -p  --p       dist coefficient             = 2
   -r  --rest    how many of rest to sample   = 4
