@@ -576,11 +576,15 @@ def eg_function_26():
 
     cachename = tuple([row.cells for row in best_hp.rows.values() if tuple(row.cells) in swayCache][0])
 
+    print("Calculate Ours")
+    print("Hyperparameters: ", dict(zip(parameter_names, cachename)))
     best_ours, rest_ours, evals_ours = swayCache[cachename]
     rule_ours, most_ours = data.xpln(best_ours, rest_ours)
     data_ours = Data.Data(rule_ours.selects(data.rows), datai = data) 
 
     #Use baseline model config
+    print("Calculate Baseline")
+    print("Hyperparameters: ", dict(zip(parameter_names, baseline_params)))
     d.the.update(dict(zip(parameter_names, baseline_params)))
     best_baseline, rest_baseline, evals_baseline = data.sway()
     rule_baseline, most_baseline = data.xpln(best_baseline, rest_baseline)
