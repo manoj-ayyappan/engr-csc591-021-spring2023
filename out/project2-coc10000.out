@@ -1,3 +1,5 @@
+Calculate Ours
+Hyperparameters:  {'bins': 4, 'better': 'zitler', 'Far': 0.85, 'min': 0.5, 'Max': 1100, 'p': 2.0, 'rest': 3.0}
 
 Acap -inf 2
 Acap 2 3
@@ -211,6 +213,8 @@ Tool 5 inf
 {'Sced': [[4, inf]], 'Tool': [[3, inf]], 'Pvol': [[4, inf]], 'Site': [[-inf, 3]], 'Acap': [[3, inf]], 'Plex': [[2, 5]], 'Docu': [[2, inf]], 'Stor': [[-inf, 6]], 'Flex': [[3, inf]], 'Ruse': [[-inf, 6]], 'Pcap': [[-inf, 5]], 'Pcon': [[-inf, 5]], 'Time': [[-inf, 6]], 'Ltex': [[2, inf]], 'Cplx': [[2, inf]], 'Data': [[3, inf]], 'Team': [[2, inf]], 'Rely': [[3, inf]], 'Aexp': [[2, 5]], 'Prec': [[2, inf]], 'Arch': [[-inf, 5]], 'Pmat': [[2, 6]]}
 {'Sced': [[4, inf]], 'Tool': [[3, inf]], 'Pvol': [[4, inf]], 'Site': [[-inf, 3]], 'Acap': [[3, inf]], 'Plex': [[2, 5]], 'Docu': [[2, inf]], 'Stor': [[-inf, 6]], 'Flex': [[3, inf]], 'Ruse': [[-inf, 6]], 'Pcap': [[-inf, 5]], 'Pcon': [[-inf, 5]], 'Time': [[-inf, 6]], 'Ltex': [[2, inf]], 'Data': [[3, inf]], 'Team': [[2, inf]], 'Rely': [[3, inf]], 'Aexp': [[2, 5]], 'Prec': [[2, inf]], 'Arch': [[-inf, 5]], 'Pmat': [[2, 6]]}
 {'Sced': [[4, inf]], 'Tool': [[3, inf]], 'Pvol': [[4, inf]], 'Site': [[-inf, 3]], 'Acap': [[3, inf]], 'Plex': [[2, 5]], 'Docu': [[2, inf]], 'Stor': [[-inf, 6]], 'Flex': [[3, inf]], 'Ruse': [[-inf, 6]], 'Pcap': [[-inf, 5]], 'Pcon': [[-inf, 5]], 'Time': [[-inf, 6]], 'Ltex': [[2, inf]], 'Data': [[3, inf]], 'Team': [[2, inf]], 'Rely': [[2, inf]], 'Aexp': [[2, 5]], 'Prec': [[2, inf]], 'Arch': [[-inf, 5]], 'Pmat': [[2, 6]]}
+Calculate Baseline
+Hyperparameters:  {'bins': 16, 'better': 'zitler', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4}
 
 Acap -inf 2
 Acap 2 3
@@ -426,21 +430,21 @@ Tool 5 inf
 
 Mid
 Method, 	Loc+, 	Risk-, 	Effort-
-all, 	1028.0, 	5.0, 	21240.0, 	10000
-sway1, 	826.0, 	3.0, 	10460.0, 	78
-xpln1, 	1084.0, 	4.0, 	16787.0, 	3357
-sway2, 	1066.0, 	3.0, 	21763.0, 	78
-xpln2, 	1000.0, 	3.0, 	14933.0, 	1243
-top, 	1961.0, 	0.0, 	17752.0, 	78
+all, 	1028.0, 	5.0, 	21240.0
+sway1, 	826.0, 	3.0, 	10460.0
+xpln1, 	1084.0, 	4.0, 	16787.0
+sway2, 	1066.0, 	3.0, 	21763.0
+xpln2, 	1000.0, 	3.0, 	14933.0
+top, 	1961.0, 	0.0, 	17752.0
 
 Div
 Method, 	Loc+, 	Risk-, 	Effort-
-all, 	647.29, 	5.43, 	26381.4, 	10000
-sway1, 	651.55, 	4.26, 	16889.53, 	78
-xpln1, 	608.53, 	5.43, 	24913.95, 	3357
-sway2, 	602.33, 	4.65, 	18260.47, 	78
-xpln2, 	617.05, 	4.26, 	16605.04, 	1243
-top, 	47.29, 	0.39, 	9927.52, 	78
+all, 	647.29, 	5.43, 	26381.4
+sway1, 	651.55, 	4.26, 	16889.53
+xpln1, 	608.53, 	5.43, 	24913.95
+sway2, 	602.33, 	4.65, 	18260.47
+xpln2, 	617.05, 	4.26, 	16605.04
+top, 	47.29, 	0.39, 	9927.52
 
 Evals
 Method, 	 Count
@@ -451,25 +455,24 @@ sway2, 	48
 xpln2, 	48
 top, 	10000
 ------------------
-Stats
-------------------
-all                {'Loc+': 1028.0, 'Risk-': 5.0, 'Effort-': 21240.0, 'N': 10000} {'Loc+': 647.29, 'Risk-': 5.43, 'Effort-': 26381.4, 'N': 10000}
-sway1 with 8 evals {'Loc+': 826.0, 'Risk-': 3.0, 'Effort-': 10460.0, 'N': 78} {'Loc+': 651.55, 'Risk-': 4.26, 'Effort-': 16889.53, 'N': 78}
-xpln1 on 8 evals {'Loc+': 1084.0, 'Risk-': 4.0, 'Effort-': 16787.0, 'N': 3357} {'Loc+': 608.53, 'Risk-': 5.43, 'Effort-': 24913.95, 'N': 3357}
-top with 10000 evals {'Loc+': 1961.0, 'Risk-': 0.0, 'Effort-': 17752.0, 'N': 78} {'Loc+': 47.29, 'Risk-': 0.39, 'Effort-': 9927.52, 'N': 78}
-sway2 with 48 evals {'Loc+': 1066.0, 'Risk-': 3.0, 'Effort-': 21763.0, 'N': 78} {'Loc+': 602.33, 'Risk-': 4.65, 'Effort-': 18260.47, 'N': 78}
-xpln2 on 48 evals {'Loc+': 1000.0, 'Risk-': 3.0, 'Effort-': 14933.0, 'N': 1243} {'Loc+': 617.05, 'Risk-': 4.26, 'Effort-': 16605.04, 'N': 1243}
-------------------
 Equals
 ------------------
-All to All   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' = '}
-All to Sway1   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' ! '}
-All to Sway2   {'Loc+': ' = ', 'Risk-': ' ! ', 'Effort-': ' = '}
-Sway1 to Sway2   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' ! '}
-Sway1 to Xpln1   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' ! '}
-Sway2 to Xpln2   {'Loc+': ' = ', 'Risk-': ' = ', 'Effort-': ' = '}
-Sway1 to Top   {'Loc+': ' ! ', 'Risk-': ' ! ', 'Effort-': ' = '}
-Sway2 to Top   {'Loc+': ' ! ', 'Risk-': ' ! ', 'Effort-': ' = '}
+Method, 	Loc+, 	Risk-, 	Effort-
+all to sway1, 	 = , 	 ! , 	 ! 
+all to xpln1, 	 = , 	 = , 	 = 
+all to sway2, 	 = , 	 ! , 	 = 
+all to xpln2, 	 = , 	 = , 	 = 
+all to top, 	 ! , 	 ! , 	 = 
+sway1 to xpln1, 	 = , 	 = , 	 ! 
+sway1 to sway2, 	 = , 	 = , 	 ! 
+sway1 to xpln2, 	 = , 	 = , 	 = 
+sway1 to top, 	 ! , 	 ! , 	 = 
+xpln1 to sway2, 	 = , 	 ! , 	 = 
+xpln1 to xpln2, 	 = , 	 ! , 	 ! 
+xpln1 to top, 	 ! , 	 ! , 	 = 
+sway2 to xpln2, 	 = , 	 = , 	 = 
+sway2 to top, 	 ! , 	 ! , 	 = 
+xpln2 to top, 	 ! , 	 ! , 	 = 
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

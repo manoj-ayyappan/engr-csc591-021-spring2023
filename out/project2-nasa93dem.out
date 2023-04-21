@@ -1,3 +1,5 @@
+Calculate Ours
+Hyperparameters:  {'bins': 6, 'better': 'bdom', 'Far': 0.77, 'min': 0.5, 'Max': 2600, 'p': 0.5, 'rest': 6.0}
 
 prec h h
 
@@ -101,6 +103,8 @@ sced n n
 {'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
 {'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h', 'vl'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
 {'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h', 'vl'], 'ltex': ['h'], 'apex': ['h', 'vh'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
+Calculate Baseline
+Hyperparameters:  {'bins': 16, 'better': 'zitler', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4}
 
 prec h h
 
@@ -200,21 +204,21 @@ sced n n
 
 Mid
 Method, 	Kloc+, 	Effort-, 	Defects-, 	Months-
-all, 	48.5, 	278.0, 	2077.0, 	21.5, 	93
-sway1, 	9.7, 	36.0, 	302.0, 	11.0, 	6
-xpln1, 	14.0, 	60.0, 	437.0, 	12.4, 	16
-sway2, 	151.0, 	600.0, 	6136.0, 	26.2, 	5
-xpln2, 	151.0, 	600.0, 	6136.0, 	26.2, 	5
-top, 	5.5, 	18.0, 	172.0, 	9.1, 	6
+all, 	48.5, 	278.0, 	2077.0, 	21.5
+sway1, 	9.7, 	36.0, 	302.0, 	11.0
+xpln1, 	14.0, 	60.0, 	437.0, 	12.4
+sway2, 	151.0, 	600.0, 	6136.0, 	26.2
+xpln2, 	151.0, 	600.0, 	6136.0, 	26.2
+top, 	5.5, 	18.0, 	172.0, 	9.1
 
 Div
 Method, 	Kloc+, 	Effort-, 	Defects-, 	Months-
-all, 	102.13, 	673.06, 	3200.39, 	10.23, 	93
-sway1, 	24.46, 	132.56, 	762.79, 	5.12, 	6
-xpln1, 	24.46, 	132.56, 	762.79, 	5.12, 	16
-sway2, 	366.67, 	1674.42, 	19149.61, 	31.09, 	5
-xpln2, 	366.67, 	1674.42, 	19149.61, 	31.09, 	5
-top, 	2.13, 	8.84, 	66.28, 	1.36, 	6
+all, 	102.13, 	673.06, 	3200.39, 	10.23
+sway1, 	24.46, 	132.56, 	762.79, 	5.12
+xpln1, 	24.46, 	132.56, 	762.79, 	5.12
+sway2, 	366.67, 	1674.42, 	19149.61, 	31.09
+xpln2, 	366.67, 	1674.42, 	19149.61, 	31.09
+top, 	2.13, 	8.84, 	66.28, 	1.36
 
 Evals
 Method, 	 Count
@@ -225,25 +229,24 @@ sway2, 	30
 xpln2, 	30
 top, 	93
 ------------------
-Stats
-------------------
-all                {'Kloc+': 48.5, 'Effort-': 278.0, 'Defects-': 2077.0, 'Months-': 21.5, 'N': 93} {'Kloc+': 102.13, 'Effort-': 673.06, 'Defects-': 3200.39, 'Months-': 10.23, 'N': 93}
-sway1 with 5 evals {'Kloc+': 9.7, 'Effort-': 36.0, 'Defects-': 302.0, 'Months-': 11.0, 'N': 6} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 6}
-xpln1 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 16} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 16}
-top with 93 evals {'Kloc+': 5.5, 'Effort-': 18.0, 'Defects-': 172.0, 'Months-': 9.1, 'N': 6} {'Kloc+': 2.13, 'Effort-': 8.84, 'Defects-': 66.28, 'Months-': 1.36, 'N': 6}
-sway2 with 30 evals {'Kloc+': 151.0, 'Effort-': 600.0, 'Defects-': 6136.0, 'Months-': 26.2, 'N': 5} {'Kloc+': 366.67, 'Effort-': 1674.42, 'Defects-': 19149.61, 'Months-': 31.09, 'N': 5}
-xpln2 on 30 evals {'Kloc+': 151.0, 'Effort-': 600.0, 'Defects-': 6136.0, 'Months-': 26.2, 'N': 5} {'Kloc+': 366.67, 'Effort-': 1674.42, 'Defects-': 19149.61, 'Months-': 31.09, 'N': 5}
-------------------
 Equals
 ------------------
-All to All   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-All to Sway1   {'Kloc+': ' ! ', 'Effort-': ' ! ', 'Defects-': ' ! ', 'Months-': ' ! '}
-All to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway1 to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway1 to Xpln1   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway2 to Xpln2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway1 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway2 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+Method, 	Kloc+, 	Effort-, 	Defects-, 	Months-
+all to sway1, 	 ! , 	 ! , 	 ! , 	 ! 
+all to xpln1, 	 ! , 	 ! , 	 ! , 	 ! 
+all to sway2, 	 = , 	 = , 	 = , 	 = 
+all to xpln2, 	 = , 	 = , 	 = , 	 = 
+all to top, 	 ! , 	 ! , 	 ! , 	 ! 
+sway1 to xpln1, 	 = , 	 = , 	 = , 	 = 
+sway1 to sway2, 	 = , 	 = , 	 = , 	 = 
+sway1 to xpln2, 	 = , 	 = , 	 = , 	 = 
+sway1 to top, 	 = , 	 = , 	 = , 	 = 
+xpln1 to sway2, 	 = , 	 = , 	 = , 	 = 
+xpln1 to xpln2, 	 = , 	 = , 	 = , 	 = 
+xpln1 to top, 	 = , 	 = , 	 = , 	 ! 
+sway2 to xpln2, 	 = , 	 = , 	 = , 	 = 
+sway2 to top, 	 = , 	 = , 	 = , 	 = 
+xpln2 to top, 	 = , 	 = , 	 = , 	 = 
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
