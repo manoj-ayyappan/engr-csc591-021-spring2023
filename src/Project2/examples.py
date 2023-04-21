@@ -1,4 +1,4 @@
-from pickle import NONE
+import itertools
 import strings
 import numerics
 import misc
@@ -531,22 +531,6 @@ def eg_function_26():
         "xpln2":{},
         "top":{}
         }
-
-    bestXpln = ""
-    bestXplnHPs = []
-    bestXplnEvals = -1
-    bestSway = ""
-    bestSwayHPs = []
-    
-    bestSwayEvals = -1
-    dataSway = None
-    dataXpln = None
-    dataTop = None
-    dataAll = None
-    bestdataSway = None
-    bestdataXpln = None
-    bestdataTop = None
-    dataEvals = 0
     
     globals_orig = d.the.copy()
 
@@ -595,6 +579,7 @@ def eg_function_26():
     rule_ours, most_ours = data.xpln(best_ours, rest_ours)
     data_ours = Data.Data(rule_ours.selects(data.rows), datai = data) 
 
+    #Use baseline model config
     d.the.update(dict(zip(parameter_names, baseline_params)))
     best_baseline, rest_baseline, evals_baseline = data.sway()
     rule_baseline, most_baseline = data.xpln(best_baseline, rest_baseline)
@@ -603,27 +588,32 @@ def eg_function_26():
     top,_ = data.betters(len(best_baseline.rows)) 
     top = Data.Data(top, data2 = data) 
 
-
+    results["all"]["data"] = data
     results["all"]["mid"] = query.stats(data)
     results["all"]["div"] = query.stats(data, query.div)
     results["all"]["evals"] = 0
 
+    results["sway1"]["data"] = best_baseline
     results["sway1"]["mid"] = query.stats(best_baseline)
     results["sway1"]["div"] = query.stats(best_baseline, query.div)
     results["sway1"]["evals"] = evals_baseline
 
+    results["xpln1"]["data"] = data_baseline
     results["xpln1"]["mid"] = query.stats(data_baseline)
     results["xpln1"]["div"] = query.stats(data_baseline, query.div)
     results["xpln1"]["evals"] = evals_baseline
 
+    results["sway2"]["data"] = best_ours
     results["sway2"]["mid"] = query.stats(best_ours)
     results["sway2"]["div"] = query.stats(best_ours, query.div)
     results["sway2"]["evals"] = evals_hp * evals_ours
 
+    results["xpln2"]["data"] = data_ours
     results["xpln2"]["mid"] = query.stats(data_ours)
     results["xpln2"]["div"] = query.stats(data_ours, query.div)
     results["xpln2"]["evals"] = evals_hp * evals_ours
 
+    results["top"]["data"] = top
     results["top"]["mid"] = query.stats(top)
     results["top"]["div"] = query.stats(top, query.div)
     results["top"]["evals"] = len(data.rows)
@@ -633,12 +623,14 @@ def eg_function_26():
     print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
     for name, result_group in results.items():
         vals = [str(i) for i in result_group["mid"].values()]
+        vals = [:-1]
         print(", \t".join([name, *vals]))
 
     print("\nDiv")
     print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
     for name, result_group in results.items():
         vals = [str(i) for i in result_group["div"].values()]
+        vals = [:-1]
         print(", \t".join([name, *vals]))
 
 
@@ -647,69 +639,20 @@ def eg_function_26():
     for name, result_group in results.items():
         print(", \t".join([name, str(result_group["evals"])]))
 
-    runStats(data, best_baseline, data_baseline, top, best_ours, data_ours, evals_baseline, evals_hp * evals_ours, evals_hp * evals_ours)
-    
 
-def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals):
-    print("------------------")
-    print("Stats")
-    print("------------------")
-    print("all               ", strings.o(query.stats(dataAll)), strings.o(query.stats(dataAll, query.div))) 
-    print(f"sway1 with {dataEvals} evals", strings.o(query.stats(dataSway)), strings.o(query.stats(dataSway, query.div))) 
-    print(f"xpln1 on {dataEvals} evals", strings.o(query.stats(dataXpln)), strings.o(query.stats(dataXpln, query.div))) 
-    print(f"top with {len(dataAll.rows)} evals",strings.o(query.stats(dataTop)), strings.o(query.stats(dataTop,query.div))) 
-    print(f"sway2 with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
-    print(f"xpln2 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
     print("------------------")
     print("Equals")
     print("------------------")
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to All  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to Sway1  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to Sway2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Sway2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataXpln.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Xpln1  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataXpln.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway2 to Xpln2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Top  ", ret)
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway2 to Top  ", ret)
+
+    print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
+    for name1, name2 in itertools.combinations(results, 2):
+        ret = {}
+        for n,i in data.cols.y.items():
+            list1 = [r.cells[i.at] for n2,r in results[name1]["data"].rows.items()]
+            list2 =  [r.cells[i.at] for n2,r in results[name2]["data"].rows.items()]
+            ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
+        vals = [str(i) for i in ret.values()]
+        print(", \t".join([name1+" to "+name2, *vals]))
   
     
 
