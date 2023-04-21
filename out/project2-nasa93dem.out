@@ -74,88 +74,175 @@ site n n
 
 sced l l
 sced n n
-{'apex': ['n']}
-{'apex': ['n'], 'ltex': ['l']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh'], 'time': ['vh']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh'], 'time': ['vh', 'xh']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n', 'vh'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh'], 'time': ['vh', 'xh']}
-{'apex': ['n'], 'ltex': ['l'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h', 'n'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n', 'vh'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh'], 'time': ['vh', 'xh']}
-{'apex': ['n'], 'ltex': ['l', 'n'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h', 'n'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n', 'vh'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh'], 'time': ['vh', 'xh']}
-{'apex': ['n'], 'ltex': ['l', 'n'], 'pcap': ['n'], 'pmat': ['n'], 'acap': ['n'], 'pvol': ['h', 'n'], 'rely': ['h'], 'cplx': ['vh'], 'plex': ['l'], 'data': ['n', 'vh'], 'sced': ['n'], 'tool': ['n'], 'stor': ['vh', 'xh'], 'time': ['vh', 'xh']}
+{'pmat': ['l']}
+{'pmat': ['l'], 'stor': ['vh']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n'], 'rely': ['n'], 'tool': ['n'], 'time': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n'], 'tool': ['n'], 'time': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h', 'vl'], 'ltex': ['h'], 'apex': ['h'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
+{'pmat': ['l'], 'stor': ['vh'], 'pcap': ['h'], 'data': ['l'], 'acap': ['h'], 'plex': ['h', 'vl'], 'ltex': ['h'], 'apex': ['h', 'vh'], 'sced': ['l'], 'pvol': ['l'], 'cplx': ['n', 'xh'], 'rely': ['n', 'vh'], 'tool': ['n'], 'time': ['n', 'xh']}
 
------------
-explain= {'apex': ['n']}
-all                {'Kloc+': 48.5, 'Effort-': 278.0, 'Defects-': 2077.0, 'Months-': 21.5, 'N': 93} {'Kloc+': 102.13, 'Effort-': 673.06, 'Defects-': 3200.39, 'Months-': 10.23, 'N': 93}
-sway1 with 5 evals {'Kloc+': 16.3, 'Effort-': 480.0, 'Defects-': 1253.0, 'Months-': 21.5, 'N': 5} {'Kloc+': 10.0, 'Effort-': 508.53, 'Defects-': 1044.19, 'Months-': 8.37, 'N': 5}
-xpln1 on 5 evals {'Kloc+': 24.6, 'Effort-': 117.6, 'Defects-': 887.0, 'Months-': 16.0, 'N': 34} {'Kloc+': 103.68, 'Effort-': 518.6, 'Defects-': 3244.57, 'Months-': 10.31, 'N': 34}
-top with 93 evals {'Kloc+': 5.5, 'Effort-': 18.0, 'Defects-': 172.0, 'Months-': 9.1, 'N': 5} {'Kloc+': 1.47, 'Effort-': 6.05, 'Defects-': 46.12, 'Months-': 1.28, 'N': 5}
-------------------
-------------------
-HPs
-------------------
-bins :  4
-better :  zitler
-Far :  0.93
-min_size :  0.5
-Max :  2600
-dist :  1.5
-rest :  5.0
-------------------
-------------------
+prec h h
 
-sway with 5 evals {'Kloc+': 8.2, 'Effort-': 31.2, 'Defects-': 256.0, 'Months-': 10.4, 'N': 6} {'Kloc+': 12.4, 'Effort-': 70.23, 'Defects-': 641.09, 'Months-': 4.46, 'N': 6}
-------------------
-explain= {'acap': ['n'], 'sced': ['l']}
-HPs
-------------------
-bins :  2
-better :  bdom
-Far :  0.81
-min_size :  0.5
-Max :  100
-dist :  0.5
-rest :  6.0
-------------------
-------------------
-xpln1 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 15} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 15}
+flex h h
+
+resl h h
+
+team vh vh
+
+pmat h h
+pmat l l
+pmat n n
+
+rely h h
+rely n n
+rely vh vh
+
+data h h
+data l l
+data n n
+
+cplx h h
+cplx vh vh
+cplx xh xh
+
+ruse n n
+
+docu n n
+
+time h h
+time n n
+time vh vh
+time xh xh
+
+stor h h
+stor n n
+stor vh vh
+stor xh xh
+
+pvol h h
+pvol l l
+pvol n n
+
+acap h h
+acap n n
+
+pcap h h
+pcap n n
+pcap vh vh
+
+pcon n n
+
+apex h h
+apex l l
+apex n n
+apex vh vh
+
+plex h h
+plex l l
+plex n n
+plex vl vl
+
+ltex h h
+ltex l l
+ltex n n
+ltex vl vl
+
+tool h h
+tool n n
+
+site n n
+
+sced l l
+sced n n
+{'acap': ['n']}
+{'acap': ['n'], 'data': ['l']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+{'acap': ['n'], 'data': ['l'], 'sced': ['l'], 'pcap': ['n'], 'pmat': ['h'], 'apex': ['n'], 'rely': ['h'], 'time': ['n'], 'stor': ['n'], 'plex': ['n'], 'cplx': ['h'], 'ltex': ['h'], 'pvol': ['l'], 'tool': ['n']}
+
+Mid
+Method, 	Kloc+, 	Effort-, 	Defects-, 	Months-
+all, 	48.5, 	278.0, 	2077.0, 	21.5, 	93
+sway1, 	9.7, 	36.0, 	302.0, 	11.0, 	6
+xpln1, 	14.0, 	60.0, 	437.0, 	12.4, 	16
+sway2, 	151.0, 	600.0, 	6136.0, 	26.2, 	5
+xpln2, 	151.0, 	600.0, 	6136.0, 	26.2, 	5
+top, 	5.5, 	18.0, 	172.0, 	9.1, 	6
+
+Div
+Method, 	Kloc+, 	Effort-, 	Defects-, 	Months-
+all, 	102.13, 	673.06, 	3200.39, 	10.23, 	93
+sway1, 	24.46, 	132.56, 	762.79, 	5.12, 	6
+xpln1, 	24.46, 	132.56, 	762.79, 	5.12, 	16
+sway2, 	366.67, 	1674.42, 	19149.61, 	31.09, 	5
+xpln2, 	366.67, 	1674.42, 	19149.61, 	31.09, 	5
+top, 	2.13, 	8.84, 	66.28, 	1.36, 	6
+
+Evals
+Method, 	 Count
+all, 	0
+sway1, 	5
+xpln1, 	5
+sway2, 	30
+xpln2, 	30
+top, 	93
 ------------------
 Stats
 ------------------
 all                {'Kloc+': 48.5, 'Effort-': 278.0, 'Defects-': 2077.0, 'Months-': 21.5, 'N': 93} {'Kloc+': 102.13, 'Effort-': 673.06, 'Defects-': 3200.39, 'Months-': 10.23, 'N': 93}
-sway1 with 5 evals {'Kloc+': 90.0, 'Effort-': 444.0, 'Defects-': 3343.0, 'Months-': 26.7, 'N': 5} {'Kloc+': 66.47, 'Effort-': 724.03, 'Defects-': 3780.62, 'Months-': 7.95, 'N': 5}
-xpln1 on 5 evals {'Kloc+': 50.0, 'Effort-': 370.0, 'Defects-': 2685.0, 'Months-': 25.4, 'N': 12} {'Kloc+': 128.29, 'Effort-': 805.43, 'Defects-': 4395.74, 'Months-': 12.95, 'N': 12}
-top with 93 evals {'Kloc+': 24.6, 'Effort-': 117.6, 'Defects-': 767.0, 'Months-': 15.0, 'N': 5} {'Kloc+': 6.86, 'Effort-': 33.49, 'Defects-': 213.95, 'Months-': 1.9, 'N': 5}
-sway2 with 5 evals {'Kloc+': 8.2, 'Effort-': 31.2, 'Defects-': 256.0, 'Months-': 10.4, 'N': 6} {'Kloc+': 12.4, 'Effort-': 70.23, 'Defects-': 641.09, 'Months-': 4.46, 'N': 6}
-xpln2 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 15} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 15}
+sway1 with 5 evals {'Kloc+': 9.7, 'Effort-': 36.0, 'Defects-': 302.0, 'Months-': 11.0, 'N': 6} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 6}
+xpln1 on 5 evals {'Kloc+': 14.0, 'Effort-': 60.0, 'Defects-': 437.0, 'Months-': 12.4, 'N': 16} {'Kloc+': 24.46, 'Effort-': 132.56, 'Defects-': 762.79, 'Months-': 5.12, 'N': 16}
+top with 93 evals {'Kloc+': 5.5, 'Effort-': 18.0, 'Defects-': 172.0, 'Months-': 9.1, 'N': 6} {'Kloc+': 2.13, 'Effort-': 8.84, 'Defects-': 66.28, 'Months-': 1.36, 'N': 6}
+sway2 with 30 evals {'Kloc+': 151.0, 'Effort-': 600.0, 'Defects-': 6136.0, 'Months-': 26.2, 'N': 5} {'Kloc+': 366.67, 'Effort-': 1674.42, 'Defects-': 19149.61, 'Months-': 31.09, 'N': 5}
+xpln2 on 30 evals {'Kloc+': 151.0, 'Effort-': 600.0, 'Defects-': 6136.0, 'Months-': 26.2, 'N': 5} {'Kloc+': 366.67, 'Effort-': 1674.42, 'Defects-': 19149.61, 'Months-': 31.09, 'N': 5}
 ------------------
 Equals
 ------------------
 All to All   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-All to Sway1   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-All to Sway2   {'Kloc+': ' ! ', 'Effort-': ' ! ', 'Defects-': ' ! ', 'Months-': ' ! '}
-Sway1 to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' ! '}
+All to Sway1   {'Kloc+': ' ! ', 'Effort-': ' ! ', 'Defects-': ' ! ', 'Months-': ' ! '}
+All to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
+Sway1 to Sway2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
 Sway1 to Xpln1   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
 Sway2 to Xpln2   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
-Sway1 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' ! '}
+Sway1 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
 Sway2 to Top   {'Kloc+': ' = ', 'Effort-': ' = ', 'Defects-': ' = ', 'Months-': ' = '}
 ✅ pass:	 hpo
 #W ?k <class 'str'>
