@@ -514,7 +514,8 @@ def eg_function_26():
 
     ]
 
-    baseline_params = [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
+    #baseline_params = [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
+    baseline_params = [16, 'zitler', 0.95, 0.5, 512, 2, 4 ]
 
 
     parameter_names = ["bins", "better", "Far", "min", "Max", "p", "rest"]
@@ -622,15 +623,13 @@ def eg_function_26():
     print("\nMid")
     print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
     for name, result_group in results.items():
-        vals = [str(i) for i in result_group["mid"].values()]
-        vals = [:-1]
+        vals = [str(i) for i in result_group["mid"].values()][:-1]
         print(", \t".join([name, *vals]))
 
     print("\nDiv")
     print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
     for name, result_group in results.items():
-        vals = [str(i) for i in result_group["div"].values()]
-        vals = [:-1]
+        vals = [str(i) for i in result_group["div"].values()][:-1]
         print(", \t".join([name, *vals]))
 
 
