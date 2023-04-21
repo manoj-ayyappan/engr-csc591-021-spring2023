@@ -1,3 +1,5 @@
+Calculate Ours
+Hyperparameters:  {'bins': 14, 'better': 'bdom', 'Far': 0.65, 'min': 0.5, 'Max': 1600, 'p': 1.5, 'rest': 6.0}
 
 maker Acura Acura
 maker Buick Buick
@@ -164,6 +166,8 @@ domestic 1 1
 {'type': ['Small'], 'Engine_revolutions_per_mile': [[2665, 2910], [3285, inf]], 'domestic': [0], 'manual_transmission_available': [1], 'Number_of_cylinders': [[-inf, 5]], 'Horsepower': [[-inf, 82]], 'Fuel_tank_capacity': [[-inf, 12.4]], 'Luggage_capacity': [[9, 11], [15, 16]], 'Air_Bags_standard': [[-inf, 1]], 'Rear_seat_room': [[24, 25], [26.5, 27.5]], 'Passenger_capacity': [[3, 5]], 'maker': ['Geo', 'Subaru', 'Suzuki', 'Toyota'], 'Length': [[-inf, 163], [174, 178]], 'Width': [[-inf, 65]], 'Wheelbase': [[-inf, 97]], 'Drive_train_type': [[1, inf]], 'Engine_size': [[-inf, 2], 1.3], 'U-turn_space': [[-inf, 36]], 'RPM': [[5100, 5300], [5400, 6000]]}
 {'type': ['Small'], 'Engine_revolutions_per_mile': [[2665, 2910], [3285, inf]], 'domestic': [0], 'manual_transmission_available': [1], 'Number_of_cylinders': [[-inf, 5]], 'Horsepower': [[-inf, 105]], 'Fuel_tank_capacity': [[-inf, 12.4]], 'Luggage_capacity': [[9, 11], [15, 16]], 'Air_Bags_standard': [[-inf, 1]], 'Rear_seat_room': [[24, 25], [26.5, 27.5]], 'Passenger_capacity': [[3, 5]], 'maker': ['Geo', 'Subaru', 'Suzuki', 'Toyota'], 'Length': [[-inf, 163], [174, 178]], 'Width': [[-inf, 65]], 'Wheelbase': [[-inf, 97]], 'Drive_train_type': [[1, inf]], 'Engine_size': [[-inf, 2], 1.3], 'U-turn_space': [[-inf, 36]], 'RPM': [[5100, 5300], [5400, 6000]]}
 {'type': ['Small'], 'Engine_revolutions_per_mile': [[2665, 2910], [3285, inf]], 'domestic': [0], 'manual_transmission_available': [1], 'Number_of_cylinders': [[-inf, 5]], 'Horsepower': [[-inf, 105]], 'Fuel_tank_capacity': [[-inf, 12.4], [15.5, 16]], 'Luggage_capacity': [[9, 11], [15, 16]], 'Air_Bags_standard': [[-inf, 1]], 'Rear_seat_room': [[24, 25], [26.5, 27.5]], 'Passenger_capacity': [[3, 5]], 'maker': ['Geo', 'Subaru', 'Suzuki', 'Toyota'], 'Length': [[-inf, 163], [174, 178]], 'Width': [[-inf, 65]], 'Wheelbase': [[-inf, 97]], 'Drive_train_type': [[1, inf]], 'Engine_size': [[-inf, 2], 1.3], 'U-turn_space': [[-inf, 36]], 'RPM': [[5100, 5300], [5400, 6000]]}
+Calculate Baseline
+Hyperparameters:  {'bins': 16, 'better': 'zitler', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4}
 
 maker Audi Audi
 maker BMW BMW
@@ -206,39 +210,47 @@ Number_of_cylinders 4 5
 Number_of_cylinders 5 6
 Number_of_cylinders 6 inf
 
-Engine_size -inf 1.8
-Engine_size 1.8 2.4
-Engine_size 2.4 3
-Engine_size 3 3.8
+Engine_size -inf 2.8
+Engine_size 2.8 2.3
+Engine_size 2.3 3.8
+Engine_size 3.8 3
+Engine_size 3 3.5
+Engine_size 3.5 3.8
 Engine_size 3.8 inf
 
 Horsepower -inf 102
-Horsepower 102 130
-Horsepower 130 165
-Horsepower 165 inf
+Horsepower 102 110
+Horsepower 110 130
+Horsepower 130 155
+Horsepower 155 inf
 
 RPM -inf 3801
 RPM 3801 4801
-RPM 4801 5200
-RPM 5200 5900
-RPM 5900 6000
+RPM 4801 5100
+RPM 5100 5200
+RPM 5200 5750
+RPM 5750 6000
 RPM 6000 inf
 
-Engine_revolutions_per_mile -inf 1351
-Engine_revolutions_per_mile 1351 1970
-Engine_revolutions_per_mile 1970 2210
-Engine_revolutions_per_mile 2210 2565
-Engine_revolutions_per_mile 2565 2875
-Engine_revolutions_per_mile 2875 inf
+Engine_revolutions_per_mile -inf 1691
+Engine_revolutions_per_mile 1691 1790
+Engine_revolutions_per_mile 1790 1970
+Engine_revolutions_per_mile 1970 2130
+Engine_revolutions_per_mile 2130 2330
+Engine_revolutions_per_mile 2330 2510
+Engine_revolutions_per_mile 2510 2650
+Engine_revolutions_per_mile 2650 inf
 
 manual_transmission_available 0 0
 manual_transmission_available 1 1
 
-Fuel_tank_capacity -inf 13.2
-Fuel_tank_capacity 13.2 16.5
-Fuel_tank_capacity 16.5 18.8
-Fuel_tank_capacity 18.8 21.1
-Fuel_tank_capacity 21.1 inf
+Fuel_tank_capacity -inf 15.5
+Fuel_tank_capacity 15.5 16
+Fuel_tank_capacity 16 16.5
+Fuel_tank_capacity 16.5 18
+Fuel_tank_capacity 18 19
+Fuel_tank_capacity 19 20.6
+Fuel_tank_capacity 20.6 inf
 
 Passenger_capacity -inf 5
 Passenger_capacity 5 6
@@ -246,106 +258,122 @@ Passenger_capacity 6 7
 Passenger_capacity 7 8
 Passenger_capacity 8 inf
 
-Length -inf 169
-Length 169 179
-Length 179 190
-Length 190 199
+Length -inf 174
+Length 174 179
+Length 179 188
+Length 188 194
+Length 194 199
 Length 199 inf
 
 Wheelbase -inf 99
 Wheelbase 99 103
-Wheelbase 103 106
-Wheelbase 106 110
-Wheelbase 110 113
+Wheelbase 103 105
+Wheelbase 105 107
+Wheelbase 107 109
+Wheelbase 109 111
+Wheelbase 111 113
 Wheelbase 113 inf
 
-Width -inf 66
-Width 66 68
-Width 68 70
-Width 70 73
-Width 73 inf
+Width -inf 67
+Width 67 68
+Width 68 69
+Width 69 70
+Width 70 71
+Width 71 74
+Width 74 inf
 
-U-turn_space -inf 36
-U-turn_space 36 40
-U-turn_space 40 41
-U-turn_space 41 43
+U-turn_space -inf 38
+U-turn_space 38 39
+U-turn_space 39 40
+U-turn_space 40 43
 U-turn_space 43 inf
 
-Rear_seat_room -inf 24.5
-Rear_seat_room 24.5 26.5
-Rear_seat_room 26.5 30.5
-Rear_seat_room 30.5 inf
+Rear_seat_room -inf 26
+Rear_seat_room 26 26.5
+Rear_seat_room 26.5 27.5
+Rear_seat_room 27.5 28.5
+Rear_seat_room 28.5 30
+Rear_seat_room 30 31
+Rear_seat_room 31 inf
 
-Luggage_capacity -inf 12
-Luggage_capacity 12 14
-Luggage_capacity 14 16
-Luggage_capacity 16 inf
+Luggage_capacity -inf 14
+Luggage_capacity 14 15
+Luggage_capacity 15 16
+Luggage_capacity 16 17
+Luggage_capacity 17 inf
 
 domestic 0 0
 domestic 1 1
 {'manual_transmission_available': [0]}
 {'manual_transmission_available': [0], 'domestic': [1]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile']}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize']}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 6]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[130, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 6]], 'U-turn_space': [[40, 41]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 6]], 'U-turn_space': [[40, 41]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 6]], 'U-turn_space': [[40, 41]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 41]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 2.4]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 190]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[14, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[40, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chrysler', 'Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 7]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2565]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2565]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2565]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'type': ['Compact', 'Midsize'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2565]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2565]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 16.5]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2875]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 18.8]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2875]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 18.8]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 1970], [2210, 2875]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 18.8]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[103, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 2875]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 18.8]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[99, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 2875]]}
-{'manual_transmission_available': [0], 'domestic': [1], 'RPM': [[-inf, 3801], [4801, 5200]], 'Rear_seat_room': [[26.5, 30.5]], 'Horsepower': [[102, 165]], 'Fuel_tank_capacity': [[13.2, 18.8]], 'Luggage_capacity': [[12, 16]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Width': [[66, 68], [70, 73]], 'Engine_size': [[1.8, 3.8]], 'Length': [[179, 199]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'type': ['Compact', 'Midsize', 'Van'], 'Wheelbase': [[99, 106], [110, 113]], 'Passenger_capacity': [[5, 8]], 'U-turn_space': [[36, 43]], 'Engine_revolutions_per_mile': [[1351, 2875]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile']}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize']}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[5100, 5200]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[5100, 5200]], 'Length': [[194, 199]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[5100, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 6]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 6]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 6]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 6]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[16, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 5]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Chrysler', 'Dodge', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.8, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 16.5]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 7]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 15], [16, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 1]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1790, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1691, 1970], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [71, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Air_Bags_standard': [[-inf, 2]], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Fuel_tank_capacity': [[15.5, 18]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Fuel_tank_capacity': [[15.5, 18], [19, 20.6]], 'Wheelbase': [[103, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Fuel_tank_capacity': [[15.5, 18], [19, 20.6]], 'Wheelbase': [[99, 105], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 39], [40, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Fuel_tank_capacity': [[15.5, 18], [19, 20.6]], 'Wheelbase': [[99, 105], [107, 109], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
+{'manual_transmission_available': [0], 'domestic': [1], 'Rear_seat_room': [[27.5, 28.5], [30, 31]], 'Horsepower': [[102, 110], [130, 155]], 'U-turn_space': [[38, 43]], 'Drive_train_type': [[1, 2]], 'Number_of_cylinders': [[4, 6]], 'Engine_size': [[2.8, 2.3], [3.5, 3]], 'maker': ['Chevrolet', 'Chrysler', 'Dodge', 'Mercury', 'Oldsmobile'], 'Fuel_tank_capacity': [[15.5, 18], [19, 20.6]], 'Wheelbase': [[99, 105], [107, 109], [111, 113]], 'Luggage_capacity': [[14, 17]], 'type': ['Compact', 'Midsize', 'Van'], 'RPM': [[-inf, 3801], [4801, 5200]], 'Length': [[179, 188], [194, 199]], 'Passenger_capacity': [[5, 8]], 'Width': [[68, 69], [70, 74]], 'Engine_revolutions_per_mile': [[1691, 2130], [2510, 2650]]}
 
 Mid
 Method, 	CityMPG+, 	HighwayMPG+, 	Weight-, 	Class-
-all, 	21.0, 	28.0, 	3050.0, 	18.2, 	93
-sway1, 	23.0, 	29.0, 	3195.0, 	15.9, 	6
-xpln1, 	19.0, 	27.0, 	3570.0, 	19.5, 	26
-sway2, 	39.0, 	43.0, 	2055.0, 	9.8, 	5
-xpln2, 	29.0, 	33.0, 	2350.0, 	10.1, 	21
-top, 	39.0, 	43.0, 	2055.0, 	9.0, 	6
+all, 	21.0, 	28.0, 	3050.0, 	18.2
+sway1, 	23.0, 	29.0, 	3195.0, 	15.9
+xpln1, 	19.0, 	27.0, 	3570.0, 	19.5
+sway2, 	39.0, 	43.0, 	2055.0, 	9.8
+xpln2, 	29.0, 	33.0, 	2350.0, 	10.1
+top, 	39.0, 	43.0, 	2055.0, 	9.0
 
 Div
 Method, 	CityMPG+, 	HighwayMPG+, 	Weight-, 	Class-
-all, 	4.65, 	5.04, 	625.97, 	9.5, 	93
-sway1, 	1.94, 	1.94, 	308.14, 	1.59, 	6
-xpln1, 	2.71, 	3.1, 	366.28, 	7.36, 	26
-sway2, 	5.43, 	5.04, 	203.49, 	0.97, 	5
-xpln2, 	7.36, 	6.2, 	273.26, 	1.51, 	21
-top, 	5.43, 	5.04, 	149.22, 	1.43, 	6
+all, 	4.65, 	5.04, 	625.97, 	9.5
+sway1, 	1.94, 	1.94, 	308.14, 	1.59
+xpln1, 	2.71, 	3.1, 	366.28, 	7.36
+sway2, 	5.43, 	5.04, 	203.49, 	0.97
+xpln2, 	7.36, 	6.2, 	273.26, 	1.51
+top, 	5.43, 	5.04, 	149.22, 	1.43
 
 Evals
 Method, 	 Count
@@ -356,25 +384,24 @@ sway2, 	30
 xpln2, 	30
 top, 	93
 ------------------
-Stats
-------------------
-all                {'CityMPG+': 21.0, 'HighwayMPG+': 28.0, 'Weight-': 3050.0, 'Class-': 18.2, 'N': 93} {'CityMPG+': 4.65, 'HighwayMPG+': 5.04, 'Weight-': 625.97, 'Class-': 9.5, 'N': 93}
-sway1 with 5 evals {'CityMPG+': 23.0, 'HighwayMPG+': 29.0, 'Weight-': 3195.0, 'Class-': 15.9, 'N': 6} {'CityMPG+': 1.94, 'HighwayMPG+': 1.94, 'Weight-': 308.14, 'Class-': 1.59, 'N': 6}
-xpln1 on 5 evals {'CityMPG+': 19.0, 'HighwayMPG+': 27.0, 'Weight-': 3570.0, 'Class-': 19.5, 'N': 26} {'CityMPG+': 2.71, 'HighwayMPG+': 3.1, 'Weight-': 366.28, 'Class-': 7.36, 'N': 26}
-top with 93 evals {'CityMPG+': 39.0, 'HighwayMPG+': 43.0, 'Weight-': 2055.0, 'Class-': 9.0, 'N': 6} {'CityMPG+': 5.43, 'HighwayMPG+': 5.04, 'Weight-': 149.22, 'Class-': 1.43, 'N': 6}
-sway2 with 30 evals {'CityMPG+': 39.0, 'HighwayMPG+': 43.0, 'Weight-': 2055.0, 'Class-': 9.8, 'N': 5} {'CityMPG+': 5.43, 'HighwayMPG+': 5.04, 'Weight-': 203.49, 'Class-': 0.97, 'N': 5}
-xpln2 on 30 evals {'CityMPG+': 29.0, 'HighwayMPG+': 33.0, 'Weight-': 2350.0, 'Class-': 10.1, 'N': 21} {'CityMPG+': 7.36, 'HighwayMPG+': 6.2, 'Weight-': 273.26, 'Class-': 1.51, 'N': 21}
-------------------
 Equals
 ------------------
-All to All   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
-All to Sway1   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
-All to Sway2   {'CityMPG+': ' ! ', 'HighwayMPG+': ' ! ', 'Weight-': ' ! ', 'Class-': ' ! '}
-Sway1 to Sway2   {'CityMPG+': ' ! ', 'HighwayMPG+': ' ! ', 'Weight-': ' ! ', 'Class-': ' ! '}
-Sway1 to Xpln1   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' ! '}
-Sway2 to Xpln2   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
-Sway1 to Top   {'CityMPG+': ' ! ', 'HighwayMPG+': ' ! ', 'Weight-': ' ! ', 'Class-': ' ! '}
-Sway2 to Top   {'CityMPG+': ' = ', 'HighwayMPG+': ' = ', 'Weight-': ' = ', 'Class-': ' = '}
+Method, 	CityMPG+, 	HighwayMPG+, 	Weight-, 	Class-
+all to sway1, 	 = , 	 = , 	 = , 	 = 
+all to xpln1, 	 ! , 	 ! , 	 ! , 	 = 
+all to sway2, 	 ! , 	 = , 	 ! , 	 ! 
+all to xpln2, 	 ! , 	 ! , 	 ! , 	 ! 
+all to top, 	 ! , 	 ! , 	 ! , 	 ! 
+sway1 to xpln1, 	 = , 	 = , 	 = , 	 ! 
+sway1 to sway2, 	 ! , 	 ! , 	 ! , 	 ! 
+sway1 to xpln2, 	 ! , 	 ! , 	 ! , 	 ! 
+sway1 to top, 	 ! , 	 ! , 	 ! , 	 ! 
+xpln1 to sway2, 	 ! , 	 ! , 	 ! , 	 ! 
+xpln1 to xpln2, 	 ! , 	 ! , 	 ! , 	 ! 
+xpln1 to top, 	 ! , 	 ! , 	 ! , 	 ! 
+sway2 to xpln2, 	 = , 	 = , 	 = , 	 = 
+sway2 to top, 	 = , 	 = , 	 = , 	 = 
+xpln2 to top, 	 ! , 	 ! , 	 = , 	 = 
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>

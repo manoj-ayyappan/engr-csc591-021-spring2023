@@ -1,3 +1,5 @@
+Calculate Ours
+Hyperparameters:  {'bins': 10, 'better': 'zitler', 'Far': 0.93, 'min': 0.5, 'Max': 100, 'p': 3.0, 'rest': 4.0}
 
 Clndrs -inf 5
 Clndrs 5 inf
@@ -25,48 +27,52 @@ origin 3 3
 {'origin': [2], 'Clndrs': [[-inf, 5]], 'Model': [[79, 81]], 'Volume': [[-inf, 113]]}
 {'origin': [2], 'Clndrs': [[-inf, 5]], 'Model': [[79, 81]], 'Volume': [[-inf, 141]]}
 {'origin': [2], 'Clndrs': [[-inf, 5]], 'Model': [[78, 81]], 'Volume': [[-inf, 141]]}
+Calculate Baseline
+Hyperparameters:  {'bins': 16, 'better': 'zitler', 'Far': 0.95, 'min': 0.5, 'Max': 512, 'p': 2, 'rest': 4}
 
 Clndrs -inf 4
 Clndrs 4 5
 Clndrs 5 inf
 
-Volume -inf 72
-Volume 72 120
-Volume 120 inf
+Volume -inf 85
+Volume 85 116
+Volume 116 inf
 
 Model -inf 71
 Model 71 72
 Model 72 74
-Model 74 inf
+Model 74 75
+Model 75 inf
 
 origin 1 1
 origin 2 2
 origin 3 3
 {'origin': [3]}
-{'origin': [3], 'Model': [[72, 74]]}
-{'origin': [3], 'Model': [[72, 74]], 'Clndrs': [[4, 5]]}
-{'origin': [3], 'Model': [[72, 74]], 'Clndrs': [[4, 5]], 'Volume': [[-inf, 72]]}
-{'origin': [3], 'Model': [[72, 74]], 'Clndrs': [[4, 5]], 'Volume': [[-inf, 120]]}
-{'origin': [3], 'Model': [[71, 74]], 'Clndrs': [[4, 5]], 'Volume': [[-inf, 120]]}
-{'origin': [3], 'Model': [[71, 74]], 'Clndrs': [[-inf, 5]], 'Volume': [[-inf, 120]]}
+{'origin': [3], 'Volume': [[-inf, 85]]}
+{'origin': [3], 'Volume': [[-inf, 85]], 'Clndrs': [[4, 5]]}
+{'origin': [3], 'Volume': [[-inf, 85]], 'Clndrs': [[4, 5]], 'Model': [[72, 74]]}
+{'origin': [3], 'Volume': [[-inf, 85]], 'Clndrs': [[4, 5]], 'Model': [[72, 75]]}
+{'origin': [3], 'Volume': [[-inf, 116]], 'Clndrs': [[4, 5]], 'Model': [[72, 75]]}
+{'origin': [3], 'Volume': [[-inf, 116]], 'Clndrs': [[-inf, 5]], 'Model': [[72, 75]]}
+{'origin': [3], 'Volume': [[-inf, 116]], 'Clndrs': [[-inf, 5]], 'Model': [[71, 75]]}
 
 Mid
 Method, 	Lbs-, 	Acc+, 	Mpg+
-all, 	2807.0, 	15.5, 	20.0, 	398
-sway1, 	2100.0, 	18.0, 	30.0, 	12
-xpln1, 	2160.0, 	16.4, 	30.0, 	79
-sway2, 	2188.0, 	17.3, 	40.0, 	13
-xpln2, 	2220.0, 	15.5, 	30.0, 	63
-top, 	2070.0, 	19.2, 	40.0, 	12
+all, 	2807.0, 	15.5, 	20.0
+sway1, 	2100.0, 	18.0, 	30.0
+xpln1, 	2130.0, 	16.5, 	30.0
+sway2, 	2188.0, 	17.3, 	40.0
+xpln2, 	2220.0, 	15.5, 	30.0
+top, 	2070.0, 	19.2, 	40.0
 
 Div
 Method, 	Lbs-, 	Acc+, 	Mpg+
-all, 	886.82, 	2.71, 	7.75, 	398
-sway1, 	282.95, 	2.91, 	7.75, 	12
-xpln1, 	339.15, 	2.02, 	7.75, 	79
-sway2, 	544.57, 	3.91, 	3.88, 	13
-xpln2, 	431.01, 	3.02, 	7.75, 	63
-top, 	197.67, 	2.6, 	3.88, 	12
+all, 	886.82, 	2.71, 	7.75
+sway1, 	282.95, 	2.91, 	7.75
+xpln1, 	234.88, 	1.94, 	3.88
+sway2, 	544.57, 	3.91, 	3.88
+xpln2, 	431.01, 	3.02, 	7.75
+top, 	197.67, 	2.6, 	3.88
 
 Evals
 Method, 	 Count
@@ -77,25 +83,24 @@ sway2, 	36
 xpln2, 	36
 top, 	398
 ------------------
-Stats
-------------------
-all                {'Lbs-': 2807.0, 'Acc+': 15.5, 'Mpg+': 20.0, 'N': 398} {'Lbs-': 886.82, 'Acc+': 2.71, 'Mpg+': 7.75, 'N': 398}
-sway1 with 6 evals {'Lbs-': 2100.0, 'Acc+': 18.0, 'Mpg+': 30.0, 'N': 12} {'Lbs-': 282.95, 'Acc+': 2.91, 'Mpg+': 7.75, 'N': 12}
-xpln1 on 6 evals {'Lbs-': 2160.0, 'Acc+': 16.4, 'Mpg+': 30.0, 'N': 79} {'Lbs-': 339.15, 'Acc+': 2.02, 'Mpg+': 7.75, 'N': 79}
-top with 398 evals {'Lbs-': 2070.0, 'Acc+': 19.2, 'Mpg+': 40.0, 'N': 12} {'Lbs-': 197.67, 'Acc+': 2.6, 'Mpg+': 3.88, 'N': 12}
-sway2 with 36 evals {'Lbs-': 2188.0, 'Acc+': 17.3, 'Mpg+': 40.0, 'N': 13} {'Lbs-': 544.57, 'Acc+': 3.91, 'Mpg+': 3.88, 'N': 13}
-xpln2 on 36 evals {'Lbs-': 2220.0, 'Acc+': 15.5, 'Mpg+': 30.0, 'N': 63} {'Lbs-': 431.01, 'Acc+': 3.02, 'Mpg+': 7.75, 'N': 63}
-------------------
 Equals
 ------------------
-All to All   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' = '}
-All to Sway1   {'Lbs-': ' ! ', 'Acc+': ' ! ', 'Mpg+': ' = '}
-All to Sway2   {'Lbs-': ' ! ', 'Acc+': ' ! ', 'Mpg+': ' ! '}
-Sway1 to Sway2   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' ! '}
-Sway1 to Xpln1   {'Lbs-': ' ! ', 'Acc+': ' = ', 'Mpg+': ' = '}
-Sway2 to Xpln2   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' ! '}
-Sway1 to Top   {'Lbs-': ' = ', 'Acc+': ' ! ', 'Mpg+': ' ! '}
-Sway2 to Top   {'Lbs-': ' = ', 'Acc+': ' = ', 'Mpg+': ' ! '}
+Method, 	Lbs-, 	Acc+, 	Mpg+
+all to sway1, 	 ! , 	 ! , 	 = 
+all to xpln1, 	 ! , 	 = , 	 ! 
+all to sway2, 	 ! , 	 = , 	 ! 
+all to xpln2, 	 ! , 	 ! , 	 ! 
+all to top, 	 ! , 	 ! , 	 ! 
+sway1 to xpln1, 	 = , 	 = , 	 = 
+sway1 to sway2, 	 = , 	 = , 	 ! 
+sway1 to xpln2, 	 ! , 	 = , 	 = 
+sway1 to top, 	 = , 	 ! , 	 ! 
+xpln1 to sway2, 	 = , 	 = , 	 ! 
+xpln1 to xpln2, 	 ! , 	 = , 	 = 
+xpln1 to top, 	 = , 	 ! , 	 ! 
+sway2 to xpln2, 	 = , 	 = , 	 ! 
+sway2 to top, 	 = , 	 = , 	 ! 
+xpln2 to top, 	 ! , 	 ! , 	 ! 
 ✅ pass:	 hpo
 #W ?k <class 'str'>
 #W ?v <class 'dict'>
