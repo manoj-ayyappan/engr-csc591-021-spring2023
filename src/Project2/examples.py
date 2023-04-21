@@ -1,3 +1,4 @@
+import itertools
 import strings
 import numerics
 import misc
@@ -375,6 +376,8 @@ def compare_dicts(dict1, dict2, data):
 
 
 
+
+
 def eg_function_26():
 
     list = [
@@ -509,188 +512,152 @@ def eg_function_26():
 [6, 'bdom', 0.85, 0.5, 1600, 2.5, 4.0],
 [12, 'bdom', 0.77, 0.5, 1600, 3.0, 4.0],
 
-# [6.8, 'zitler', 0.85, 0.5, 1200, 2.375, 5.55 ],
-
-        [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
-    
     ]
 
+    #baseline_params = [9, 'zitler', 0.95, 0.5, 512, 2, 4 ]
+    baseline_params = [16, 'zitler', 0.95, 0.5, 512, 2, 4 ]
+
+
     parameter_names = ["bins", "better", "Far", "min", "Max", "p", "rest"]
+    formatted_parameter_names = ["Bins", "better", "Far", "Min", "Max", "P", "Rest"] 
 
-    bestXpln = ""
-    bestXplnHPs = []
-    bestXplnEvals = -1
-    bestSway = ""
-    bestSwayHPs = []
+    bestStuff = {}
+    swayCache = {}
+
+    results = {
+        "all": {},
+        "sway1": {},
+        "xpln1":{},
+        "sway2": {},
+        "xpln2":{},
+        "top":{}
+        }
     
-    bestSwayEvals = -1
-    dataSway = None
-    dataXpln = None
-    dataTop = None
-    dataAll = None
-    bestdataSway = None
-    bestdataXpln = None
-    bestdataTop = None
-    dataEvals = 0
-    
-    for hps in list:
-        #Modify global vars based on hyperparameters
-        d.the.update(dict(zip(parameter_names, hps)))
+    globals_orig = d.the.copy()
 
-        try:
-            data=Data.Data(d.the["file"]) 
-            best,rest, evals = data.sway() 
-            if hps != list[len(list)-1]:
-                rule,most= data.xpln_noprint(best,rest) 
-                data1= Data.Data(rule.selects(data.rows), datai = data) 
-                currSway =  query.stats(best)
-                currXpln = query.stats(data1)
-                top,_ = data.betters(len(best.rows)) 
-                top = Data.Data(top, data2 = data) 
-                dataTop = top
-                dataSway = best
-                dataXpln = data1
-                dataAll = data
-                
-            else:
-                rule,most= data.xpln(best,rest) 
-                print("\n-----------\nexplain=", strings.o(rule.showRule())) 
-                dataAll = data
-                
-                data1= Data.Data(rule.selects(data.rows), datai = data) 
-                print("all               ", strings.o(query.stats(data)), strings.o(query.stats(data, query.div))) 
-                print(f"sway1 with {evals} evals", strings.o(query.stats(best)), strings.o(query.stats(best, query.div))) 
-                currSway =  query.stats(best)
-                currXpln = query.stats(data1)
-                dataEvals = evals
-                print(f"xpln1 on {evals} evals", strings.o(query.stats(data1)), strings.o(query.stats(data1, query.div))) 
-                top,_ = data.betters(len(best.rows)) 
-                top = Data.Data(top, data2 = data) 
-                print(f"top with {len(data.rows)} evals",strings.o(query.stats(top)), strings.o(query.stats(top,query.div))) 
-                
+    data=Data.Data(d.the["file"]) 
+    hp_data = Data.Data(list, col_names=formatted_parameter_names)
 
-            if(bestXpln == ""):
-                bestXpln = query.stats(data1) 
-                bestXplnRule = strings.o(rule.showRule())
-                bestXplnHPs = hps
-                bestSway = query.stats(best)
-                bestSwayHPs = hps
-                bestSwayEvals = evals
-                bestXplnEvals = evals
-                bestdataSway = data1
-                bestdataXpln = data1
-            else:
-                if compare_dicts(currSway, bestSway, data):
-                    bestSway = currSway
-                    bestSwayHPs = hps
-                    bestdataSway = best
-                    bestSwayEvals = evals
-                if compare_dicts(currXpln, bestXpln, data):
-                    bestXpln = currXpln
-                    bestXplnHPs = hps
-                    bestdataXpln = data1
-                    bestXplnRule = strings.o(rule.showRule())
-                    bestXplnEvals = evals
-            
-            
-        except:
-            print("Error -> ", hps)
 
-    hpList = ['bins', 'better','Far', 'min_size', 'Max', 'dist', 'rest']
+    def custom_better(row1, row2):
+        best1, rest1, eval1, best2, rest2, eval2 = None, None, None, None, None, None
+
+        cachename1 = tuple(row1.cells)
+        cachename2 = tuple(row2.cells)
+
+        if cachename1 in swayCache:
+            best1,rest1, eval1 = swayCache[cachename1]
+        else:
+            #Modify global vars based on hyperparameters
+            d.the.update(dict(zip(parameter_names, row1.cells)))
+            best1,rest1, eval1 = data.sway()
+            swayCache[cachename1] = (best1,rest1, eval1)
         
-    print("------------------")
-    print("------------------")
-    print("HPs") 
-    print("------------------")
-    index = 0
-    for hp in bestSwayHPs:
-        print(hpList[index], ": ", hp)
-        index += 1
-    print("------------------")
-    print("------------------")
-    print()
-    print(f"sway with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
-    print("------------------")
-    print("explain=", bestXplnRule) 
-    print("HPs" ) 
-    print("------------------")
-    index = 0
-    for hp in bestXplnHPs:
-        print(hpList[index], ": ", hp)
-        index += 1
-    print("------------------")
-    print("------------------")
-    print(f"xpln1 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
-    
-    runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals)
+        if cachename2 in swayCache:
+            best2,rest2, eval2 = swayCache[cachename2]
+        else:
+            #Modify global vars based on hyperparameters
+            d.the.update(dict(zip(parameter_names, row2.cells)))
+            best2, rest2, eval2 = data.sway()
+            swayCache[cachename2] = (best2,rest2, eval2)
 
-def runStats(dataAll,dataSway,dataXpln,dataTop,bestdataSway,bestdataXpln, dataEvals, bestSwayEvals, bestXplnEvals):
-    print("------------------")
-    print("Stats")
-    print("------------------")
-    print("all               ", strings.o(query.stats(dataAll)), strings.o(query.stats(dataAll, query.div))) 
-    print(f"sway1 with {dataEvals} evals", strings.o(query.stats(dataSway)), strings.o(query.stats(dataSway, query.div))) 
-    print(f"xpln1 on {dataEvals} evals", strings.o(query.stats(dataXpln)), strings.o(query.stats(dataXpln, query.div))) 
-    print(f"top with {len(dataAll.rows)} evals",strings.o(query.stats(dataTop)), strings.o(query.stats(dataTop,query.div))) 
-    print(f"sway2 with {bestSwayEvals} evals", strings.o(query.stats(bestdataSway)), strings.o(query.stats(bestdataSway, query.div))) 
-    print(f"xpln2 on {bestXplnEvals} evals", strings.o(query.stats(bestdataXpln)), strings.o(query.stats(bestdataXpln, query.div))) 
+        better_hyperparams = compare_dicts(query.stats(best1), query.stats(best2), data)
+
+        bestStuff["bestdataSway"] = best1 if better_hyperparams else best2
+        bestStuff["restdataSway"] = rest1 if better_hyperparams else rest2
+        bestStuff["evaldataSway"] = eval1 if better_hyperparams else eval2
+
+        #Reset global vars based on hyperparameters
+        d.the.update(globals_orig)
+        return better_hyperparams
+
+    hp_data.better = custom_better
+    best_hp, rest_hp, evals_hp = hp_data.sway()
+
+    cachename = tuple([row.cells for row in best_hp.rows.values() if tuple(row.cells) in swayCache][0])
+
+    print("Calculate Ours")
+    print("Hyperparameters: ", dict(zip(parameter_names, cachename)))
+    best_ours, rest_ours, evals_ours = swayCache[cachename]
+    rule_ours, most_ours = data.xpln(best_ours, rest_ours)
+    data_ours = Data.Data(rule_ours.selects(data.rows), datai = data) 
+
+    #Use baseline model config
+    print("Calculate Baseline")
+    print("Hyperparameters: ", dict(zip(parameter_names, baseline_params)))
+    d.the.update(dict(zip(parameter_names, baseline_params)))
+    best_baseline, rest_baseline, evals_baseline = data.sway()
+    rule_baseline, most_baseline = data.xpln(best_baseline, rest_baseline)
+    data_baseline = Data.Data(rule_baseline.selects(data.rows), datai = data) 
+
+    top,_ = data.betters(len(best_baseline.rows)) 
+    top = Data.Data(top, data2 = data) 
+
+    results["all"]["data"] = data
+    results["all"]["mid"] = query.stats(data)
+    results["all"]["div"] = query.stats(data, query.div)
+    results["all"]["evals"] = 0
+
+    results["sway1"]["data"] = best_baseline
+    results["sway1"]["mid"] = query.stats(best_baseline)
+    results["sway1"]["div"] = query.stats(best_baseline, query.div)
+    results["sway1"]["evals"] = evals_baseline
+
+    results["xpln1"]["data"] = data_baseline
+    results["xpln1"]["mid"] = query.stats(data_baseline)
+    results["xpln1"]["div"] = query.stats(data_baseline, query.div)
+    results["xpln1"]["evals"] = evals_baseline
+
+    results["sway2"]["data"] = best_ours
+    results["sway2"]["mid"] = query.stats(best_ours)
+    results["sway2"]["div"] = query.stats(best_ours, query.div)
+    results["sway2"]["evals"] = evals_hp * evals_ours
+
+    results["xpln2"]["data"] = data_ours
+    results["xpln2"]["mid"] = query.stats(data_ours)
+    results["xpln2"]["div"] = query.stats(data_ours, query.div)
+    results["xpln2"]["evals"] = evals_hp * evals_ours
+
+    results["top"]["data"] = top
+    results["top"]["mid"] = query.stats(top)
+    results["top"]["div"] = query.stats(top, query.div)
+    results["top"]["evals"] = len(data.rows)
+
+
+    print("\nMid")
+    print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
+    for name, result_group in results.items():
+        vals = [str(i) for i in result_group["mid"].values()][:-1]
+        print(", \t".join([name, *vals]))
+
+    print("\nDiv")
+    print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
+    for name, result_group in results.items():
+        vals = [str(i) for i in result_group["div"].values()][:-1]
+        print(", \t".join([name, *vals]))
+
+
+    print("\nEvals")
+    print("Method, \t Count")
+    for name, result_group in results.items():
+        print(", \t".join([name, str(result_group["evals"])]))
+
+
     print("------------------")
     print("Equals")
     print("------------------")
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to All  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to Sway1  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataAll.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("All to Sway2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Sway2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataXpln.rows.items()]
-        ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Xpln1  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in bestdataXpln.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway2 to Xpln2  ", ret)
-    ret = {}
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in dataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway1 to Top  ", ret)
-    for n,i in dataAll.cols.y.items():
-        list1 = [r.cells[i.at] for n2,r in bestdataSway.rows.items()]
-        list2 =  [r.cells[i.at] for n2,r in dataTop.rows.items()]
-        ret[i.txt] = " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
-    print("Sway2 to Top  ", ret)
 
+    print(", \t".join(["Method", *[i.txt for i in data.cols.y.values()]]))
+    for name1, name2 in itertools.combinations(results, 2):
+        ret = {}
+        for n,i in data.cols.y.items():
+            list1 = [r.cells[i.at] for n2,r in results[name1]["data"].rows.items()]
+            list2 =  [r.cells[i.at] for n2,r in results[name2]["data"].rows.items()]
+            ret[i.txt] =  " = " if numerics.cliffsDelta(list1,list2) or numerics.bootstrap(list1,list2) else " ! "
+        vals = [str(i) for i in ret.values()]
+        print(", \t".join([name1+" to "+name2, *vals]))
+  
     
-    
-
-
-
-
 
 
 def add_all_examples():
